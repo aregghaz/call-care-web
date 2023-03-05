@@ -1,0 +1,10 @@
+<svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="110" height="110" rx="55" fill="#3F7AAD"/>
+<rect x="25" y="26" width="60" height="57.1429" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_227_38" transform="matrix(0.02 0 0 0.021 0 -0.025)"/>
+</pattern>
+<image id="image0_227_38" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABA5JREFUaEPtmk2oG1UUx38nydy8JJNaP5Ci9dFNN9o+tZs+BUWtoqhbwYUIolRR0dpSQSlutBu/nlqL1A9QFwXdKir6FFTQ6spidaEuLFpQSivtS/L6ZpIcuelEQpjk3RmTND4zm0DmnnPP79z/PfdkJsIKuWSFcDAQEFX1KnWeEOVOYNoxOYdVeds3PCkioaNNz2EDAamGuluVx9MEI8ruUl52pbHttBkISCXU31EuzArXFDz53CWohVCvFeUzhCO+J2tdbPqNGQxIoGon8Y0k8ldJaRcHlGjiXhlJG1Bau/8nyOKirmtkeQphC0p+GQ2fHd3/K6HW3eyEJZT5rMeugshh5xVZUD1f6hxEWZMwsOEOF/7QHDNlkaPdE8XukUqgb0HrTPiiqdzbNPw53Aj7e88GrBFhH3AV8KZv5C5XkGPAOY0m68+akl/OJER77lOndH09w0/AMd/Iea4gqcrpsIH7Vble0pqADHNVBrIibSdxgSY90bt9uPqegHRmOi4bg2oxXH2nXpHlZNRPEmn2Slzilouhfb9v1VrOyX8GZMVI698sdRJpTapWR7YmJ3sS6QxqbOrym/bEXljSDSLcA1wPrItAfgXmVXm9nJdDaeBGBqKqphYyp3AfkOkRbEPglaLHDhEJkgCNBMRCVEM+BK4DloB9Gdhf8GhlfzFkg8IdClsBA3xa8rg5CcxIQKqB7lW43z6nQrnFN3IwLtuVQC9DeN8+BxPYUzLykOuqDB0k2hPfAXVgcydEJdADCs2ykSvbAVcDvVzhAJBV5dJyXn5wgRk6SCXQF4CHgZd8I/bzn6vX5NVAX1Z4AJjzjWwfFxCb0YszsLlo5FsXkFqgs034GjjkG9k4LiAngXLJoywilVqo25vK01Y6XQE2gJ2+kbmjquVCiLVb8I2sGkuQSqCPAM/EgNg99Og4g7SlNVs08o2TtEK9oql8NW7SmgO2xZXTPpv9dLmG530jO8ZCWgtLeokI9tyw0pn1jdhS3LqqgX6poL6Rqzu+26SnN7otvzPlvPw4FiBRwHsUHowOxFs7YTqDrAa6SYX3UC4AXvSNbHOBsGOGfo7YSaIW5QNgCxAIvCrC/kKO71stSp2Nqq0WxTaTtkWZj1oU5/eHIwFpw9RCno20311624m38ttb8tiZ9CXoyEDakUZ75m7gBonaeAXbxn+syhuue6JbciMHcdV80nETkLS/EJNm2nV8mhU5AazKeEwXRX5znWiY42o1nW7msO8PT/hGVnfPFfsUpRrqu6rchvBRJsfWMw1TU72oGfAawo3AO76R251AajVd28xhT+dzh5nlFL6PZzxmiiJHnEDsoAjmOeAmK7MUkw7S5KQIn2QbPDY1JT/HOR7IPx8GGXFaXysG5G8WUsZRodrQmQAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

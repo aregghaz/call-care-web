@@ -15,7 +15,7 @@
 
 header{
     width: 100%;
-    height: 100px;
+    height: 10vh;
     /* border: 1px solid red; */
     display: flex;
     position: fixed;
@@ -244,7 +244,7 @@ header{
 }
 
 .openContentMenu nav > ul > li:hover a{
-    color: #CE767F;
+    color: #EB1C24;
 }
 
 .openContentMenu nav > ul > li > a{
@@ -298,7 +298,7 @@ header{
 }
 
 .openIconsItems:hover{
-    background-color: #C27A80;
+    background-color: #EB1C24;
 }
 
 .openIconsItems img{
@@ -511,7 +511,7 @@ header{
 
 .sec2{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     /* border: 1px solid red; */
 }
@@ -547,12 +547,13 @@ header{
 
 .sec2_contentBox{
     width: 100%;
-    height: 740px;
+    height: auto;
     border: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 70px;
+    padding: 50px 0px;
 }
 
 .sec2_contentItems{
@@ -654,107 +655,208 @@ header{
 
 .sec3{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     /* border: 1px solid red; */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: url(./img/ambulanceSec3.svg);
+    position: relative;
 }
 
-.sec3_titleBox{
+.obj3{
+    z-index: 9999;
+    top: 500px;
+    left: 70%;
+}
+
+.obj3-1{
+    top: 0;
+    left: 400px;
+    z-index: 9999;
+}
+
+.sec3_wrraper{
     width: 100%;
-    height: 250px;
+    max-width: 100%;
+    height: 100%;
+    border: inherit;
+}
+
+.sec3_slidersContent{
+    width: 100%;
+    max-width: 100%;
+    height: 85%;
+    border: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sec3_slide{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border: inherit;
+    display: flex;
+    position: absolute;
+    background-color: #fff;
+    transition: 1s ease-in-out;
+
+}
+
+.slide2{
+    top: 100%;
+}
+
+.slide3{
+    left: 100%;
+}
+
+.slide4{
+    top: -100%;
+}
+
+.slide4Active{
+    top: 0;
+}
+
+.slide2Active{
+    top: 0;
+}
+
+.slide3Active{
+    left: 0;
+    
+}
+
+.sec3_slide1Img{
+    width: 50%;
+    height: 100%;
     border: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.sec3_contentBox{
+    width: 50%;
+    height: 100%;
+    border: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.animArr{
+    position: relative;
+    animation: arrAnim 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes arrAnim {
+    0%{left: 15px;}
+    50%{left: 0px;}
+    100%{left: 15px;}
+}
+
+
+.sec3_slidesButton{
+    width: 100%;
+    height: 10%;
+    border: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #fff;
+    position: relative;
+    top: -30px;
+}
+
+.sec3_slidesButton img{
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+.sec3_slidesButton img:hover{
+    transform: scale(1.1);
+}
+
+.activeShadow{
+    filter: drop-shadow(0px 0px 10px black);
+    
+}
+
+.sec3_titleBox{
+    width: 100%;
+    height: auto;
+    border: inherit;
+    padding: 50px 0px;
+}
+
 .sec3_titleBox p{
-    text-transform: capitalize;
-    text-align: center;
     font-family: 'Rubik', sans-serif;
-    color: #ffffffcb;
-    font-size: 40px;
-    font-weight: 400;
+    color: #000000;
+    font-size: 35px;
+}
+
+.sec3_arrBox{
+    width: 100%;
+    height: auto;
+    border: inherit;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sec3_arrBox img{
+    filter: invert(100%);
+}
+
+.sec3_arrBox p{
+    font-family: 'Rubik', sans-serif;
+    color: #000000;
+    font-size: 20px;
 }
 
 .sec3_infoBox{
     width: 100%;
     height: auto;
     border: inherit;
-    padding: 20px;
+    padding: 30px 0px;
 }
 
 .sec3_infoBox p{
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    color: #ffffffa5;
-    font-size: 20px;
-}
-
-.sec3_checkBox{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    border: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.sec3_continer{
-    width: 602px;
-    height: 100px;
-    border: inherit;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.sec3_checkItems{
-    width: 300px;
-    height: 50px;
-    border: inherit;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-left: 50px;
-}
-
-.sec3_checkItems span{
-    color: #fff;
-    font-family: 'Rubik', sans-serif;
     font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 30px;
 }
 
 .sec3_buttonBox{
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 30px 0px;
     border: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .sec3_buttonBox button{
-    width: 230px;
-    height: 55px;
-    background-color: #DB3030;
+    width: 200px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: #282935;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    color: #fff;
     cursor: pointer;
 }
 
+
 .sec4{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     /* border: 1px solid red; */
     display: flex;
     position: relative;
@@ -850,5 +952,82 @@ header{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
+}
+
+/* ========= art1 ====== */
+
+.art1{
+    width: 100%;
+    height: 80vh;
+    /* border: 1px solid red; */
+    background-color: #F9F9F9;
+}
+
+.art1_titleBox{
+    width: 100%;
+    height: 35%;
+    border: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.art1_titleBox p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #3F7AAD;
+}
+
+.art1_titleBox h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+}
+
+.art1_slideWrapper{
+    width: 100%;
+    height: 65%;
+    border: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art1_slideGlob{
+    width: 80%;
+    height: 70%;
+    border: inherit;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.art1_slidees{
+    min-width: 33.3%;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art1_slidItem{
+    width: 95%;
+    height: 95%;
+    background-color: #0395DC;
+    border-radius: 30px;
+}
+
+.buttLeft{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.buttRight{
+    border: none;
+    background-color: transparent;
+    transform: rotate(180deg);
     cursor: pointer;
 }
