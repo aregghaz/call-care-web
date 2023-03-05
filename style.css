@@ -78,10 +78,7 @@ header{
     justify-content: center;
 }
 
-.head_logoBox img{
-    width: 100px;
-    height: 65px;
-}
+
 
 .head_menuBox{
     width: 40%;
@@ -327,8 +324,7 @@ header{
 }
 
 .picture1{
-    width: 90%;
-    height: 80%;
+    
     position: absolute;
     left: 0;
     top: -20px;
@@ -604,20 +600,7 @@ header{
     justify-content: center;
 }
 
-.sec2_itemsImg .sec2Img1{
-    width: 280px;
-    height: 280px;
-}
 
-.sec2_itemsImg .sec2Img2{
-    width: 230px;
-    height: 230px;
-}
-
-.sec2_itemsImg .sec2Img3{
-    width: 200px;
-    height: 200px;
-}
 
 .sec2_itemArr{
     width: 200px;
@@ -671,7 +654,7 @@ header{
 
 .sec3{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -771,7 +754,7 @@ header{
 
 .sec4{
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     /* border: 1px solid red; */
     display: flex;
     position: relative;
