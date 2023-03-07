@@ -92,21 +92,32 @@ slideButton4.addEventListener("click", () => {
 })
 
 
-const buttLeft = document.querySelector(".buttLeft");
-const buttRight = document.querySelector(".buttRight");
-const art1_slideGlob = document.querySelector(".art1_slideGlob");
-const slidClient = document.querySelector(".slidClient");
+const arrLeft = document.querySelector(".arrLeft");
+const arrRight = document.querySelector(".arrRight");
+const sec5_slideWrraper = document.querySelector(".sec5_slideWrraper");
+const s5Slide1 = document.querySelector(".s5Slide1");
 
-buttRight.onclick = () => {
-    art1_slideGlob.scrollBy({
-        left: slidClient.clientWidth,
+
+let slideSize = 0;
+arrRight?.addEventListener('click', () => {
+    slideSize+=window.innerWidth;
+    if(slideSize >= window.innerWidth * 3){
+        slideSize = 0;
+    }
+    sec5_slideWrraper.scrollTo({
+        left:slideSize,
+        behavior:"smooth"
+        
+    })
+})
+
+arrLeft?.addEventListener('click', () => {
+    slideSize -= window.innerWidth;
+    if(slideSize <= - 1){
+        slideSize = window.innerWidth * 2;
+    }
+    sec5_slideWrraper.scrollTo({
+        left: slideSize,
         behavior: "smooth"
     })
-}
-
-buttLeft.onclick = () => {
-    art1_slideGlob.scrollBy({
-        left: -slidClient.clientWidth,
-        behavior: "smooth"
-    })
-}
+})
