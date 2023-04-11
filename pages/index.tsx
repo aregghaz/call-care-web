@@ -110,6 +110,118 @@ export default function Home(props:any) {
                   <p>At General Medical our staff will be happy to assist you with any home health care need you have. We offer Home Health Services including Intravenous Injection Therapy, Respiratory Therapy, Registered Nurses, Licensed Vocational Nurses and Physical Therapists. We have a professional team that will meet your needs in a timely fashion.</p>
                   <button>View More</button>
               </section>
+              <section className={cls.weOffer}>
+                  <div className={cls.titleBox}>
+                      <h1>What We Offer</h1>
+                  </div>
+                  <div className={cls.contentBox}>
+                      <ul>
+                          <div className={cls.topContent}>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg1.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg2.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg3.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                          </div>
+                         <div className={`${cls.topContent} ${cls.bottomContent}`}>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg4.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg5.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg6.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                         </div>
+                     </ul>
+                  </div>
+                  <div className={cls.infoBox}>
+                      <div className={cls.infoBoxTitle}>
+                          <h2>You can also send us an email and we’ll get in touch shortly, or Call us</h2>
+                      </div>
+                      <div className={cls.infoBoxcontants}>
+                          <button>
+                              <Image src={"/images/mailIcon.svg"} alt={"mail"} width={25} height={25} />
+                              info@mygeneralmed.com
+                          </button>
+                          <button>
+                              <Image src={"/images/phoneIcon.svg"} alt={"phone"} width={25} height={25} />
+                              info@mygeneralmed.com
+                          </button>
+                      </div>
+                  </div>
+              </section>
           </main>
     </>
   )
