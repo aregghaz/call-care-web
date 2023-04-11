@@ -85,7 +85,9 @@ const Header:FC<any> = ():React.ReactElement => {
                 </div>
                 <div className={cls.headerNavigationLeft}>
                     <div className={cls.headerLinks}>
-
+                        
+                    </div>
+                    <div className={cls.headerSearch}>
                     </div>
                 </div>
             </nav>
