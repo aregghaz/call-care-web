@@ -7,17 +7,17 @@ import "swiper/css"
 const HomeMain:FC<any> = ():React.ReactElement => {
     return <>
         <div className={cls.mainGlob}>
-            {/*<Swiper*/}
-            {/*    spaceBetween={50}*/}
-            {/*    slidesPerView={1}*/}
-            {/*    autoplay={true}*/}
-            {/*    onSlideChange={() => console.log('slide change')}*/}
-            {/*    onSwiper={(swiper) => console.log(swiper)}*/}
-            {/*>*/}
-            {/*    <SwiperSlide className={cls.swiperik}>Slide 1</SwiperSlide>*/}
-            {/*    <SwiperSlide className={cls.swiperik}>Slide 2</SwiperSlide>*/}
-            {/*    <SwiperSlide className={cls.swiperik}>Slide 3</SwiperSlide>*/}
-            {/*</Swiper>*/}
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                autoplay={true}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide className={cls.slide}><div className={cls.sliderPage}></div></SwiperSlide>
+                <SwiperSlide className={cls.slide}><div className={cls.sliderPage}></div></SwiperSlide>
+                <SwiperSlide className={cls.slide}><div className={cls.sliderPage}></div></SwiperSlide>
+            </Swiper>
         </div>
 
     </>

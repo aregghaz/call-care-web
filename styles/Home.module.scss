@@ -1,0 +1,194 @@
+@import "./variables";
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 140px);
+  background-color: white;
+}
+
+.heroSlider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.sliderPage {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.2);
+  background-blend-mode: color;
+}
+
+.sliderPage1 {
+  background-image: url($heroimage1)
+}
+
+.sliderPage2 {
+  background-image: url($heroimage2)
+}
+
+.sliderPage3 {
+  background-image: url($heroimage3)
+}
+
+.bulletClass {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #D9D9D9 !important;
+  opacity: 1 !important;
+  margin: 15px 0 !important;
+  cursor: pointer !important;
+}
+
+.activeBulletClass {
+  background-color: red !important;
+}
+
+.bulletsWrapper {
+  right: 3% !important;
+}
+
+.sliderPage {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sliderPageContent {
+  width: 600px;
+  height: 45%;
+  min-height: 400px;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sliderPage1Content {
+  & > h1 {
+    color: white;
+    font-size: 62px;
+    line-height: 73.47px;
+    font-weight: 600;
+  }
+
+  & > p {
+    font-size: 30px;
+    color: white;
+    line-height: 35.55px;
+    font-weight: 400;
+  }
+
+  & > img {
+    @keyframes arrowAnimation {
+      from {
+        left: 0;
+      }
+      to {
+        left: 20px;
+      }
+    }
+    animation: 1s arrowAnimation 0s alternate 4 linear;
+    position: relative;
+    left: 0;
+  }
+}
+
+
+
+
+.services {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+
+  & > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.service {
+  width: 100%;
+  height: 100%;
+  $backgroundColor: #FAFAFA;
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      background-color: $backgroundColor;
+    }
+    $backgroundColor: darken($backgroundColor, 2)
+  };
+  box-shadow: 0.1px 0.1px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  &::before {
+    content: "";
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: $asteriskColor;
+    transition: 0.3s;
+  }
+
+  &::after {
+    content: "";
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: $asteriskColor;
+    transition: 0.3s;
+  }
+
+  &:hover::before {
+    width: 50%;
+  }
+
+  &:hover::after {
+    width: 50%;
+  }
+}
+
+.serviceContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  min-width: 300px;
+  height: 80%;
+  & > h2 {
+    font-size: 25px;
+    color: black;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  & > span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: center;
+    color: #7D7D7D;
+  }
+}

@@ -4,7 +4,13 @@ import { Inter } from 'next/font/google'
 import cls from "../styles/Home.module.scss"
 import Header from "@/components/header/header";
 import HomeMain from "@/components/homeMain/homeMain"
-
+import {Swiper, SwiperSlide} from "swiper/react";
+import {EffectFade, Pagination} from "swiper";
+import "swiper/swiper.css"
+import "swiper/css"
+import React from "react";
+import "swiper/css/effect-fade"
+import 'swiper/css/pagination'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +23,85 @@ export default function Home(props:any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
           <main>
-              <HomeMain />
+              <section className={cls.hero}>
+                  <Swiper
+                      modules={[EffectFade, Pagination]}
+                      direction={"vertical"}
+                      className={cls.heroSlider}
+                      spaceBetween={50}
+                      slidesPerView={1}
+                      pagination={{
+                          clickable: true,
+                          clickableClass: `${cls.bulletsWrapper}`,
+                          bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
+                          bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                      }}
+                      effect={"fade"}
+                      autoplay={true}
+                      onSlideChange={() => console.log('slide change')}
+                      onSwiper={(swiper) => console.log(swiper)}
+                  >
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
+                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                  <h1>A True Devotion <br/> To Health</h1>
+                                  <p>Full service medical provider serving the great state of California</p>
+                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
+                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                  <h1>A True Devotion <br/> To Health 2</h1>
+                                  <p>Full service medical provider serving the great state of California</p>
+                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.sliderPage} ${cls.sliderPage3}`}>
+                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                  <h1>A True Devotion <br/> To Health 3</h1>
+                                  <p>Full service medical provider serving the great state of California</p>
+                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                  </Swiper>
+              </section>
+              <section className={cls.services}>
+                  <ul>
+                      <li className={cls.service}>
+                          <div className={cls.serviceContent}>
+                              <Image src={"/images/service1.svg"} alt={"service 1"} width={100} height={100}/>
+                              <h2>Medical Home <br/> Modification</h2>
+                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          </div>
+                      </li>
+                      <li className={cls.service}>
+                          <div className={cls.serviceContent}>
+                              <Image src={"/images/service2.svg"} alt={"service 2"} width={100} height={100}/>
+                              <h2>Home Health</h2>
+                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          </div>
+                      </li>
+                      <li className={cls.service}>
+                          <div className={cls.serviceContent}>
+                              <Image src={"/images/service3.svg"} alt={"service 3"} width={100} height={100}/>
+                              <h2>Therapy</h2>
+                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          </div>
+                      </li>
+                      <li className={cls.service}>
+                          <div className={cls.serviceContent}>
+                              <Image src={"/images/service4.svg"} alt={"service 4"} width={100} height={100}/>
+                              <h2>Transportation</h2>
+                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          </div>
+                      </li>
+                  </ul>
+              </section>
           </main>
     </>
   )

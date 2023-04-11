@@ -7,3 +7,12 @@
   font-family: "Rubik";
   list-style-type: none;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $asteriskColor;
+  border-radius: 30px;
+}
