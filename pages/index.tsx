@@ -102,6 +102,14 @@ export default function Home(props:any) {
                       </li>
                   </ul>
               </section>
+              <section className={cls.generalMedical}>
+
+              </section>
+              <section className={cls.believeSec}>
+                  <h1>We believe the heart of healthcare is service</h1>
+                  <p>At General Medical our staff will be happy to assist you with any home health care need you have. We offer Home Health Services including Intravenous Injection Therapy, Respiratory Therapy, Registered Nurses, Licensed Vocational Nurses and Physical Therapists. We have a professional team that will meet your needs in a timely fashion.</p>
+                  <button>View More</button>
+              </section>
           </main>
     </>
   )
