@@ -3,17 +3,18 @@
 .header {
   width: 100%;
   height: 140px;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   padding: 0 10%;
   position: relative;
+  //border: 1px solid red;
 }
 
 .headerContent {
   width: 100%;
   height: 100px;
   display: flex;
+  border: inherit;
   justify-content: space-between;
 }
 
@@ -21,6 +22,7 @@
   width: 10%;
   height: 100%;
   display: flex;
+  border: inherit;
 
   & > a {
     height: 100%;
@@ -34,17 +36,19 @@
   align-items: center;
   gap: 10%;
   justify-content: flex-end;
+  border: inherit;
 }
 
 
 .headerInfos {
   display: flex;
   gap: 40px;
+  border: inherit;
 }
 
 .seperator {
   width: 1px;
-  height: 50px;
+  height: 60px;
   background-color: $asteriskColor;
 }
 
@@ -68,6 +72,7 @@
   width: auto;
   height: 100%;
   display: flex;
+  border: inherit;
   align-items: center;
 }
 
@@ -78,6 +83,7 @@
   background-color: white;
   display: flex;
   border-radius: 14px;
+  transition: .5s;
 
   & > a {
     width: 100%;
@@ -87,16 +93,25 @@
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
+    transition: .5s;
     color: #000000;
+  }
+
+  &:hover{
+    background-color: $asteriskColor;
+  }
+
+  &:hover > a{
+    color: #fff;
   }
 }
 
 .headerNav {
   width: 80%;
-  height: 100px;
+  height: 90px;
   background-color: $asteriskColor;
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -106,24 +121,32 @@
 .headerNavigation {
   width: 70%;
   height: 100%;
-  border: 1px solid black;
-  padding: 0 5%;
+  padding: 0 2%;
 
   & > ul {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    //justify-content: center;
     align-items: center;
-
+    gap: 30px;
+  padding-left: 3%;
     a {
-      color: white;
+      color: $greyText;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 17px;
+      transition: .5s;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &:hover{
+        color: #fff;
+      }
+
     }
 
     span {
-      color: white;
+      color: $greyText;
       user-select: none;
     }
   }
@@ -132,7 +155,6 @@
 .headerNavigationLeft {
   width: 30%;
   height: 100%;
-  border: 1px solid black;
   display: flex;
 }
 
@@ -140,11 +162,34 @@
 .headerLinks{
   width: 75%;
   height: 100%;
-  border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 23px;
+  padding-right: 70px;
+
+  & > img{
+    cursor: pointer;
+
+  }
 }
+
 
 .headerSearch{
   width: 25%;
   height: 100%;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > img{
+    cursor: pointer;
+  }
+}
+
+.swiperik{
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
 }

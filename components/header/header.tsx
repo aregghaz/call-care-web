@@ -1,12 +1,13 @@
 import React, {FC} from "react"
 import cls from "./header.module.scss"
 import Link from "next/link";
+import NavLink from "next/link"
 import Image from "next/image";
 
 const headerLinks = [
     {
         name: "Home",
-        link: "/",
+        link: "/homeik",
     },
     {
         name: "About Us",
@@ -63,7 +64,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                     <div className={cls.headerButtons}>
                         <button className={cls.headerButton}>
-                            <Link href={"/login"}>GET A QUOTES</Link>
+                            <Link href={"/login"}>Login</Link>
                         </button>
                     </div>
                 </div>
@@ -75,7 +76,7 @@ const Header:FC<any> = ():React.ReactElement => {
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
                                     <>
-                                        <li key={index}><Link href={link}>{name}</Link></li>
+                                        <li key={index}><NavLink className={((isActive) => isActive ? "zzz" : "bbb")()} href={link}>{name}</NavLink></li>
                                         {index != array.length - 1 && <li><span>/</span></li>}
                                     </>
                                 )
@@ -85,9 +86,14 @@ const Header:FC<any> = ():React.ReactElement => {
                 </div>
                 <div className={cls.headerNavigationLeft}>
                     <div className={cls.headerLinks}>
-                        
+                        <img src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>
+                        <img src="/images/linkedIn.svg" alt="" width={25} height={25}/>
+                        <img src="/images/facebookLogo.svg" alt="" width={25} height={25}/>
+                        <img src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
+
                     </div>
                     <div className={cls.headerSearch}>
+                        <img src="/images/searchIcon.svg" alt="" width={40} height={40}/>
                     </div>
                 </div>
             </nav>
