@@ -352,7 +352,7 @@ export default function Home(props:any) {
                                   </div>
                                   <div className={cls.inputBottomRight}>
                                       <label htmlFor="">
-                                          Upload Your Resume
+                                          Upload red resume
                                       </label>
                                       <div className={cls.fileWrapper}>
                                           <input className={cls.fileInput} type="file" multiple={"multiple"}/>
