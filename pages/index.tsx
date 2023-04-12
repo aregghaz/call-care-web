@@ -13,8 +13,12 @@ import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
+import aos from "aos/dist/aos"
+import "aos/dist/aos.css"
 
 const inter = Inter({ subsets: ['latin'] })
+
+aos.init()
 
 export default function Home(props:any) {
     const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
@@ -273,7 +277,324 @@ export default function Home(props:any) {
                   <p>At General Medical our staff will be happy to assist you with any home health care need you have. We offer Home Health Services including Intravenous Injection Therapy, Respiratory Therapy, Registered Nurses, Licensed Vocational Nurses and Physical Therapists. We have a professional team that will meet your needs in a timely fashion.</p>
                   <button>View More</button>
               </section>
+              <section className={cls.weOffer}>
+                  <div className={cls.titleBox}>
+                      <h1>What We Offer</h1>
+                  </div>
+                  <div className={cls.contentBox}>
+                      <ul>
+                          <div className={cls.topContent}>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg1.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg2.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li className={cls.offerService}>
+                                  <div className={cls.serviceImg}>
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg3.jpg"} alt={"img1"} width={100} height={100} />
+                                  </div>
+                                  <div className={cls.serviceInfo}>
+                                      <div className={cls.serviceTitle}>
+                                          <h2>Ambulatory Service</h2>
+                                          <p>Ambulatory Service is mobility at your front door.</p>
+                                      </div>
+                                      <div className={cls.serviceReadMore}>
+                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                      </div>
+                                  </div>
+                              </li>
+                          </div>
+                         <div className={`${cls.topContent} ${cls.bottomContent}`}>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg4.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg5.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li className={cls.offerService}>
+                                 <div className={cls.serviceImg}>
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg6.jpg"} alt={"img1"} width={100} height={100} />
+                                 </div>
+                                 <div className={cls.serviceInfo}>
+                                     <div className={cls.serviceTitle}>
+                                         <h2>Ambulatory Service</h2>
+                                         <p>Ambulatory Service is mobility at your front door.</p>
+                                     </div>
+                                     <div className={cls.serviceReadMore}>
+                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
+                                     </div>
+                                 </div>
+                             </li>
+                         </div>
+                     </ul>
+                  </div>
+                  <div className={cls.infoBox}>
+                      <div className={cls.infoBoxTitle}>
+                          <h2>You can also send us an email and we’ll get in touch shortly, or Call us</h2>
+                      </div>
+                      <div className={cls.infoBoxcontants}>
+                          <button>
+                              <Image src={"/images/mailIcon.svg"} alt={"mail"} width={25} height={25} />
+                              info@mygeneralmed.com
+                          </button>
+                          <button>
+                              <Image src={"/images/phoneIcon.svg"} alt={"phone"} width={25} height={25} />
+                              info@mygeneralmed.com
+                          </button>
+                      </div>
+                  </div>
+              </section>
+              <section className={cls.applications}>
+                  <Swiper
+                      modules={[Pagination]}
+                      direction={"horizontal"}
+                      className={cls.heroSlider}
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      pagination={{
+                          clickable: true,
+                          clickableClass: `${cls.otherBulletsWrapper}`,
+                          bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                          bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                      }}
+                      autoplay={true}
+                      onSlideChange={() => console.log('slide change')}
+                      onSwiper={(swiper) => console.log(swiper)}
+                  >
+
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
+                                <div className={cls.slidContentBox}>
+                                    <h1>Our Admin Panel</h1>
+                                    <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                    <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Our Admin Panel</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Our Admin Panel</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+
+                  </Swiper>
+              </section>
+              <section className={cls.infoSec}>
+                  <div className={cls.infoSlidWrapper}>
+                        <div className={cls.miniSlid}>
+                            <Swiper
+                                modules={[Pagination]}
+                                direction={"horizontal"}
+                                className={cls.heroSlider}
+                                spaceBetween={0}
+                                slidesPerView={1}
+                                pagination={{
+                                    clickable: true,
+                                    clickableClass: `${cls.otherBulletsWrapper}`,
+                                    bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                                    bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                                }}
+                                autoplay={true}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}
+                            >
+                                <SwiperSlide className={`${cls.slide}`}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className={cls.slide}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className={cls.slide}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                  </div>
+                  <div className={cls.infoSlidImg}>
+                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.jpg"} alt={"ambulanceTeam"} width={500} height={500}/>
+                  </div>
+              </section>
+              <section className={cls.formSection}>
+                  <div className={cls.formTitle}>
+                      <h1>Work With Us</h1>
+                  </div>
+                  <div className={cls.formMenu}>
+                      <h2>Available Positions</h2>
+                      <ul>
+                          <li>Occupational Therapy Assistant</li>
+                          <li>OOccupational Therapist</li>
+                          <li>Physical Therapist</li>
+                          <li>Physical Therapy Assistant</li>
+                          <li>Speech Therapist</li>
+                          <li>Contractors</li>
+                          <li>EMT’s</li>
+                      </ul>
+                  </div>
+                  <div className={cls.formInput} data-aos={"fade-right"}>
+                      <div className={cls.formInputImg}>
+                          {/*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*/}
+                      </div>
+                      <div className={cls.formInputContent}>
+                          <form action="#">
+                              <div className={cls.inputTop}>
+                                  <input className={cls.positionInput} type="text" placeholder={'Position Applying For'}/>
+                                  <input className={cls.fifInputs} type="text" placeholder={'First Name'}/>
+                                  <input className={cls.fifInputs} type="text" placeholder={'Last Name'}/>
+                                  <input className={cls.fifInputs} type="email" placeholder={'Email'}/>
+                                  <input className={cls.fifInputs} type="tel" placeholder={'Phone'}/>
+                              </div>
+                              <div className={cls.inputBottom}>
+                                  <div className={cls.inputBottomLeft}>
+                                      <label htmlFor="">
+                                          Or Copy and Paste Your Resume Bellow
+                                      </label>
+                                      <textarea name="" id="" cols="30" rows="10" />
+                                  </div>
+                                  <div className={cls.inputBottomRight}>
+                                      <label htmlFor="">
+                                          Upload Your Resume
+                                      </label>
+                                      <div className={cls.fileWrapper}>
+                                          <input className={cls.fileInput} type="file" multiple={"multiple"}/>
+                                          <span className={cls.fileButton}>Chose File</span>
+                                      </div>
+                                      <input className={cls.submitButton} type="submit"/>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </section>
           </main>
+        <footer className={cls.footer}>
+            <ul className={cls.footerContent}>
+               <li className={cls.footerContentCol}>
+                   <ul className={cls.footerInfo}>
+                       <li>
+                           <Image src={"/images/logoWhite.svg"} alt={"logo"} width={150} height={100}/>
+                       </li>
+                       <li>888 999 0000</li>
+                       <li>needhelp@linoor.com</li>
+                       <li>855 road, broklyn street</li>
+                       <li>new york 600</li>
+                   </ul>
+               </li>
+                <li className={cls.footerContentCol}>
+                    <ul>
+                        <li className={cls.footerContentTitle}>Explore</li>
+                        <li>About Us</li>
+                        <li>Meet Our Team</li>
+                        <li>Our Portfolio</li>
+                        <li>Latest News</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </li>
+                <li className={cls.footerContentCol}>
+                    <ul>
+                        <li className={cls.footerContentTitle}>Services</li>
+                        <li>Modern Designing</li>
+                        <li>Marketing Strategy</li>
+                        <li>UI/UX designing</li>
+                        <li>App Development</li>
+                    </ul>
+                </li>
+                <li className={cls.footerContentCol}>
+                    <ul>
+                        <li className={cls.footerContentTitle}>Links</li>
+                        <li>Support</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                        <li>Help</li>
+                    </ul>
+                </li>
+                <li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>
+                    <div className={cls.footerContentSearchWrapper}>
+                        <div className={cls.footerContentSearchInput}>
+                            <input
+                                type={"text"}
+                                placeholder={"Search"}
+                            />
+                            <button>
+                                <Image src={"/images/searchWithDots.svg"} alt={"search icon"} width={22} height={23}/>
+                            </button>
+                        </div>
+                        <ul className={cls.footerContentMedia}>
+                            <li><Image src={"/images/pinterestLogo.svg"} alt={"Pinterest logo"} width={14} height={18}/></li>
+                            <li><Image src={"/images/linkedIn.svg"} alt={"Linkedin logo"} width={14} height={18}/></li>
+                            <li><Image src={"/images/facebookLogo.svg"} alt={"Facebook logo"} width={14} height={18}/></li>
+                            <li><Image src={"/images/twitterLogo.svg"} alt={"Twitter logo"} width={14} height={18}/></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </footer>
     </>
   )
 }
