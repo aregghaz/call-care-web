@@ -408,7 +408,7 @@ export default function Home(props:any) {
                           <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
                                 <div className={cls.slidContentBox}>
                                     <h1>Our Admin Panel</h1>
-                                    <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                    <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
                                     <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
                                 </div>
                           </div>
@@ -417,7 +417,7 @@ export default function Home(props:any) {
                           <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
                               <div className={cls.slidContentBox}>
                                   <h1>Our Admin Panel</h1>
-                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
                                   <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
                               </div>
                           </div>
@@ -426,7 +426,7 @@ export default function Home(props:any) {
                           <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>
                               <div className={cls.slidContentBox}>
                                   <h1>Our Admin Panel</h1>
-                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
                                   <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
                               </div>
                           </div>
@@ -512,14 +512,14 @@ export default function Home(props:any) {
                                       <label htmlFor="">
                                           Or Copy and Paste Your Resume Bellow
                                       </label>
-                                      <textarea name="" id="" cols="30" rows="10" />
+                                      <textarea name="" id="" cols={30} rows={10} />
                                   </div>
                                   <div className={cls.inputBottomRight}>
                                       <label htmlFor="">
                                           Upload Your Resume
                                       </label>
                                       <div className={cls.fileWrapper}>
-                                          <input className={cls.fileInput} type="file" multiple={"multiple"}/>
+                                          <input className={cls.fileInput} type="file" multiple={true}/>
                                           <span className={cls.fileButton}>Chose File</span>
                                       </div>
                                       <input className={cls.submitButton} type="submit"/>

@@ -44,7 +44,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     <div className={cls.headerInfos}>
                         <div className={cls.headerInfo}>
                             <div className={cls.infoIcon}>
-                                <img src={"/images/locationIcon.svg"}/>
+                                <Image src={"/images/locationIcon.svg"} alt={""} width={50} height={50}/>
                             </div>
                             <div className={cls.infoText}>
                                 <span>Location:</span>
@@ -54,7 +54,7 @@ const Header:FC<any> = ():React.ReactElement => {
                         <div className={cls.seperator}></div>
                         <div className={cls.headerInfo}>
                             <div className={cls.infoIcon}>
-                                <img src={"/images/letterIcon.svg"}/>
+                                <Image src={"/images/letterIcon.svg"} alt={""} width={50} height={50}/>
                             </div>
                             <div className={cls.infoText}>
                                 <span>Mail us:</span>
@@ -86,14 +86,14 @@ const Header:FC<any> = ():React.ReactElement => {
                 </div>
                 <div className={cls.headerNavigationLeft}>
                     <div className={cls.headerLinks}>
-                        <img src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>
-                        <img src="/images/linkedIn.svg" alt="" width={25} height={25}/>
-                        <img src="/images/facebookLogo.svg" alt="" width={25} height={25}/>
-                        <img src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
+                        <Image src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>
+                        <Image src="/images/linkedIn.svg" alt="" width={25} height={25}/>
+                        <Image src="/images/facebookLogo.svg" alt="" width={25} height={25}/>
+                        <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
 
                     </div>
                     <div className={cls.headerSearch}>
-                        <img src="/images/searchIcon.svg" alt="" width={40} height={40}/>
+                        <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>
                     </div>
                 </div>
             </nav>
