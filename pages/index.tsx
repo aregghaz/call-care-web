@@ -222,6 +222,149 @@ export default function Home(props:any) {
                       </div>
                   </div>
               </section>
+              <section className={cls.applications}>
+                  <Swiper
+                      modules={[Pagination]}
+                      direction={"horizontal"}
+                      className={cls.heroSlider}
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      pagination={{
+                          clickable: true,
+                          clickableClass: `${cls.otherBulletsWrapper}`,
+                          bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                          bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                      }}
+                      autoplay={true}
+                      onSlideChange={() => console.log('slide change')}
+                      onSwiper={(swiper) => console.log(swiper)}
+                  >
+
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
+                                <div className={cls.slidContentBox}>
+                                    <h1>Our Admin Panel</h1>
+                                    <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                    <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Our Admin Panel</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Our Admin Panel</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as "Public Administration and social services, including voluntary social activities</p>
+                                  <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+
+                  </Swiper>
+              </section>
+              <section className={cls.infoSec}>
+                  <div className={cls.infoSlidWrapper}>
+                        <div className={cls.miniSlid}>
+                            <Swiper
+                                modules={[Pagination]}
+                                direction={"horizontal"}
+                                className={cls.heroSlider}
+                                spaceBetween={0}
+                                slidesPerView={1}
+                                pagination={{
+                                    clickable: true,
+                                    clickableClass: `${cls.otherBulletsWrapper}`,
+                                    bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                                    bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                                }}
+                                autoplay={true}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}
+                            >
+                                <SwiperSlide className={`${cls.slide}`}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className={cls.slide}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className={cls.slide}>
+                                    <div className={cls.miniSlidBox}>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                  </div>
+                  <div className={cls.infoSlidImg}>
+                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.jpg"} alt={"ambulanceTeam"} width={500} height={500}/>
+                  </div>
+              </section>
+              <section className={cls.formSection}>
+                  <div className={cls.formTitle}>
+                      <h1>Work With Us</h1>
+                  </div>
+                  <div className={cls.formMenu}>
+                      <h2>Available Positions</h2>
+                      <ul>
+                          <li>Occupational Therapy Assistant</li>
+                          <li>OOccupational Therapist</li>
+                          <li>Physical Therapist</li>
+                          <li>Physical Therapy Assistant</li>
+                          <li>Speech Therapist</li>
+                          <li>Contractors</li>
+                          <li>EMT’s</li>
+                      </ul>
+                  </div>
+                  <div className={cls.formInput}>
+                      <div className={cls.formInputImg}>
+                          {/*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*/}
+                      </div>
+                      <div className={cls.formInputContent}>
+                          <form action="#">
+                              <div className={cls.inputTop}>
+                                  <input className={cls.positionInput} type="text" placeholder={'Position Applying For'}/>
+                                  <input className={cls.fifInputs} type="text" placeholder={'First Name'}/>
+                                  <input className={cls.fifInputs} type="text" placeholder={'Last Name'}/>
+                                  <input className={cls.fifInputs} type="email" placeholder={'Email'}/>
+                                  <input className={cls.fifInputs} type="tel" placeholder={'Phone'}/>
+                              </div>
+                              <div className={cls.inputBottom}>
+                                  <div className={cls.inputBottomLeft}>
+                                      <label htmlFor="">
+                                          Or Copy and Paste Your Resume Bellow
+                                      </label>
+                                      <textarea name="" id="" cols="30" rows="10" />
+                                  </div>
+                                  <div className={cls.inputBottomRight}>
+                                      <label htmlFor="">
+                                          Upload Your Resume
+                                      </label>
+                                      <div className={cls.fileWrapper}>
+                                          <input className={cls.fileInput} type="file" multiple={"multiple"}/>
+                                          <span className={cls.fileButton}>Chose File</span>
+                                      </div>
+                                      <input className={cls.submitButton} type="submit"/>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </section>
           </main>
     </>
   )
