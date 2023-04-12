@@ -5,16 +5,19 @@ import cls from "../styles/Home.module.scss"
 import Header from "@/components/header/header";
 import HomeMain from "@/components/homeMain/homeMain"
 import {Swiper, SwiperSlide} from "swiper/react";
-import {EffectFade, Pagination} from "swiper";
+import {EffectFade, Pagination, Navigation} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
-import React from "react";
+import React, {useState} from "react";
 import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
+import "swiper/css/navigation"
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(props:any) {
+    const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
   return (
     <>
       <Head>
@@ -103,7 +106,167 @@ export default function Home(props:any) {
                   </ul>
               </section>
               <section className={cls.generalMedical}>
-
+                  <div className={cls.generalMedicalTop}>
+                      <h2>General Medical is a full service medical provider <br/> serving the great state of California</h2>
+                      <p>General Medical is a leading healthcare provider, ensuring quality access to quality care</p>
+                  </div>
+                  <div className={cls.generalMedicalBottom}>
+                      <div className={cls.generalSliderControls}>
+                            <button
+                                className={"cardLeft"}
+                                style={{
+                                    backgroundColor: calcarecardsSlides > 0 ? "#D33834FF" : "white",
+                                }}
+                            >
+                                <Image
+                                    src={"/images/arrowLeftSmall.svg"}
+                                    alt={"arrowLeft"} width={40} height={40}
+                                    style={{
+                                        color: "red",
+                                    }}
+                                />
+                            </button>
+                            <button
+                                className={"cardRight"}
+                                style={{
+                                    backgroundColor: calcarecardsSlides >= 5 ? "white" : "#D33834FF",
+                                }}
+                            >
+                                <Image style={{filter: "invert(100%)"}} src={"/images/arrowRightSmall.svg"} alt={"arrowLeft"} width={40} height={40}/>
+                            </button>
+                      </div>
+                      <Swiper
+                          className={cls.generalSlider}
+                          modules={[Navigation]}
+                          spaceBetween={50}
+                          slidesPerView={4}
+                          onSlideChange={swiper => {
+                              setcalcarecardsSlides(swiper.activeIndex)
+                          }}
+                          navigation={{
+                              prevEl: ".cardLeft",
+                              nextEl: ".cardRight",
+                          }}
+                      >
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard1}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard2}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard3}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard4}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard5}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard6}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard7}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard8}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                          <SwiperSlide>
+                              <div className={`${cls.generalCard} ${cls.generalCard9}`}>
+                                  <div className={cls.generalCardContent}>
+                                      <div className={cls.generalCardButton}>
+                                          <Link href={"/"}>
+                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
+                                          </Link>
+                                      </div>
+                                      <h2>About us</h2>
+                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                      </Swiper>
+                  </div>
               </section>
               <section className={cls.believeSec}>
                   <h1>We believe the heart of healthcare is service</h1>
