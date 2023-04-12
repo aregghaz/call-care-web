@@ -13,12 +13,9 @@ import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
-import aos from "aos/dist/aos"
-import "aos/dist/aos.css"
 
 const inter = Inter({ subsets: ['latin'] })
 
-aos.init()
 
 export default function Home(props:any) {
     const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
@@ -497,7 +494,7 @@ export default function Home(props:any) {
                           <li>EMT’s</li>
                       </ul>
                   </div>
-                  <div className={cls.formInput} data-aos={"fade-right"}>
+                  <div className={cls.formInput}>
                       <div className={cls.formInputImg}>
                           {/*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*/}
                       </div>
