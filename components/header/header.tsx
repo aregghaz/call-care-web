@@ -1,4 +1,4 @@
-import React, {FC} from "react"
+import React, {FC, useEffect, useRef, useState} from "react"
 import cls from "./header.module.scss"
 import Link from "next/link";
 import NavLink from "next/link"
@@ -76,8 +76,8 @@ const Header:FC<any> = ():React.ReactElement => {
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
                                     <>
-                                        <li key={index}><NavLink className={((isActive) => isActive ? "zzz" : "bbb")()} href={link}>{name}</NavLink></li>
-                                        {index != array.length - 1 && <li><span>/</span></li>}
+                                        <li key={index}><NavLink href={link}>{name}</NavLink></li>
+                                        {index != array.length - 1 && <li key={index + array.length}><span>/</span></li>}
                                     </>
                                 )
                             })

@@ -131,9 +131,62 @@
     align-items: center;
     gap: 30px;
     list-style: none;
-  padding-left: 3%;
+    padding-left: 3%;
+
+    & > li {
+      position: relative;
+
+      @keyframes liAnim {
+        0% {
+          width: 0;
+          height: 2px;
+        }
+        50% {
+          width: 50%;
+          height: 2px;
+        }
+        100% {
+          width: 50%;
+          height: 100%;
+        }
+      }
+
+      @mixin beforeAfter($side) {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        @if ($side == "left") {
+          left: 0;
+        } @else if ($side == "right") {
+          right: 0;
+        }
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: 0.2s;
+        z-index: 1;
+      }
+
+      &::before {
+        @include beforeAfter("left")
+      }
+
+      &:hover::before {
+        width: 50%;
+      }
+
+      &::after {
+        @include beforeAfter("right")
+      }
+
+      &:hover::after {
+        width: 50%;
+      }
+    }
+
+
     a {
-      color: $greyText;
+      color: white;
       text-decoration: none;
       font-size: 17px;
       transition: .5s;
