@@ -5,7 +5,7 @@ import cls from "../styles/Home.module.scss"
 import Header from "@/components/header/header";
 import HomeMain from "@/components/homeMain/homeMain"
 import {Swiper, SwiperSlide} from "swiper/react";
-import {EffectFade, Pagination, Navigation} from "swiper";
+import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
 import React, {useState} from "react";
@@ -30,7 +30,7 @@ export default function Home(props:any) {
           <main>
               <section className={cls.hero}>
                   <Swiper
-                      modules={[EffectFade, Pagination]}
+                      modules={[EffectFade, Pagination, Autoplay]}
                       direction={"vertical"}
                       className={cls.heroSlider}
                       spaceBetween={50}
@@ -42,7 +42,10 @@ export default function Home(props:any) {
                           bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                       }}
                       effect={"fade"}
-                      autoplay={true}
+                      autoplay={{
+                          delay: 4000,
+                          disableOnInteraction: false,
+                      }}
                   >
                       <SwiperSlide className={cls.slide}>
                           <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
@@ -137,8 +140,9 @@ export default function Home(props:any) {
                       </div>
                       <Swiper
                           className={cls.generalSlider}
-                          modules={[Navigation]}
+                          modules={[Navigation, Autoplay]}
                           spaceBetween={50}
+                          loop={true}
                           slidesPerView={4}
                           onSlideChange={swiper => {
                               setcalcarecardsSlides(swiper.activeIndex)
@@ -146,6 +150,10 @@ export default function Home(props:any) {
                           navigation={{
                               prevEl: ".cardLeft",
                               nextEl: ".cardRight",
+                          }}
+                          autoplay={{
+                              delay: 3000,
+                              disableOnInteraction: false,
                           }}
                       >
                           <SwiperSlide>
@@ -387,7 +395,7 @@ export default function Home(props:any) {
               </section>
               <section className={cls.applications}>
                   <Swiper
-                      modules={[Pagination]}
+                      modules={[Pagination, Autoplay]}
                       direction={"horizontal"}
                       className={cls.heroSlider}
                       spaceBetween={0}
@@ -398,7 +406,10 @@ export default function Home(props:any) {
                           bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
                           bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                       }}
-                      autoplay={true}
+                      autoplay={{
+                          delay: 3000,
+                          disableOnInteraction: false,
+                      }}
                   >
 
                       <SwiperSlide className={cls.slide}>
@@ -435,7 +446,7 @@ export default function Home(props:any) {
                   <div className={cls.infoSlidWrapper}>
                         <div className={cls.miniSlid}>
                             <Swiper
-                                modules={[Pagination]}
+                                modules={[Pagination, Autoplay]}
                                 direction={"horizontal"}
                                 className={cls.heroSlider}
                                 spaceBetween={0}
@@ -446,7 +457,10 @@ export default function Home(props:any) {
                                     bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
                                     bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                                 }}
-                                autoplay={true}
+                                autoplay={{
+                                    delay: 3000,
+                                    disableOnInteraction: false,
+                                }}
                             >
                                 <SwiperSlide className={`${cls.slide}`}>
                                     <div className={cls.miniSlidBox}>
