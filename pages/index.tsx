@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import cls from "../styles/Home.module.scss"
-import Header from "@/components/header/header";
-import HomeMain from "@/components/homeMain/homeMain"
+import Header from "../components/header/header";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
 import "swiper/swiper.css"
@@ -13,12 +12,14 @@ import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
-import Footer from "@/components/footer/footer";
+import Footer from "../components/footer/footer";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home(props:any) {
+    const testNkar = dynamic(() => import("../public/images/herosliderimage1.webp"))
     const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
   return (
     <>
@@ -286,9 +287,9 @@ export default function Home(props:any) {
                       <h1>What We Offer</h1>
                   </div>
                   <div className={cls.contentBox}>
-                      <ul>
+                      <div>
                           <div className={cls.topContent}>
-                              <li className={cls.offerService}>
+                              <div className={cls.offerService}>
                                   <div className={cls.serviceImg}>
                                       <Image className={cls.imgSize} src={"/images/weOfferimg1.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
@@ -301,8 +302,8 @@ export default function Home(props:any) {
                                           <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                       </div>
                                   </div>
-                              </li>
-                              <li className={cls.offerService}>
+                              </div>
+                              <div className={cls.offerService}>
                                   <div className={cls.serviceImg}>
                                       <Image className={cls.imgSize} src={"/images/weOfferimg2.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
@@ -315,8 +316,8 @@ export default function Home(props:any) {
                                           <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                       </div>
                                   </div>
-                              </li>
-                              <li className={cls.offerService}>
+                              </div>
+                              <div className={cls.offerService}>
                                   <div className={cls.serviceImg}>
                                       <Image className={cls.imgSize} src={"/images/weOfferimg3.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
@@ -329,10 +330,10 @@ export default function Home(props:any) {
                                           <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                       </div>
                                   </div>
-                              </li>
+                              </div>
                           </div>
                          <div className={`${cls.topContent} ${cls.bottomContent}`}>
-                             <li className={cls.offerService}>
+                             <div className={cls.offerService}>
                                  <div className={cls.serviceImg}>
                                      <Image className={cls.imgSize} src={"/images/weOfferimg4.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
@@ -345,8 +346,8 @@ export default function Home(props:any) {
                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                      </div>
                                  </div>
-                             </li>
-                             <li className={cls.offerService}>
+                             </div>
+                             <div className={cls.offerService}>
                                  <div className={cls.serviceImg}>
                                      <Image className={cls.imgSize} src={"/images/weOfferimg5.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
@@ -359,8 +360,8 @@ export default function Home(props:any) {
                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                      </div>
                                  </div>
-                             </li>
-                             <li className={cls.offerService}>
+                             </div>
+                             <div className={cls.offerService}>
                                  <div className={cls.serviceImg}>
                                      <Image className={cls.imgSize} src={"/images/weOfferimg6.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
@@ -373,25 +374,11 @@ export default function Home(props:any) {
                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
                                      </div>
                                  </div>
-                             </li>
+                             </div>
                          </div>
-                     </ul>
+                     </div>
                   </div>
-                  <div className={cls.infoBox}>
-                      <div className={cls.infoBoxTitle}>
-                          <h2>You can also send us an email and we’ll get in touch shortly, or Call us</h2>
-                      </div>
-                      <div className={cls.infoBoxcontants}>
-                          <button>
-                              <Image src={"/images/mailIcon.svg"} alt={"mail"} width={25} height={25} />
-                              info@mygeneralmed.com
-                          </button>
-                          <button>
-                              <Image src={"/images/phoneIcon.svg"} alt={"phone"} width={25} height={25} />
-                              info@mygeneralmed.com
-                          </button>
-                      </div>
-                  </div>
+
               </section>
               <section className={cls.applications}>
                   <Swiper

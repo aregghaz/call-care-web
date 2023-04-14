@@ -198,7 +198,7 @@
 .generalMedical{
   width: 100%;
   height: 1000px;
-  border: 1px solid black;
+  //border: 1px solid black;
   padding: 3% 5%;
 
 }
@@ -449,7 +449,7 @@
   border: inherit;
   padding: 60px 0;
 
-  & > ul{
+  & > div{
     width: 100%;
     height: 100%;
     //display: flex;
@@ -585,8 +585,9 @@
 
 .applications{
   width: 100%;
-  height: 900px;
+  height: 800px;
   //border: 1px solid red;
+  //padding-bottom: 100px;
 }
 
 .sliderAdmin{
