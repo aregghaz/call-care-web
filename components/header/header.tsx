@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useRef, useState} from "react"
 import cls from "./header.module.scss"
+
 import Link from "next/link";
 import NavLink from "next/link"
 import Image from "next/image";
@@ -37,6 +38,12 @@ const Header:FC<any> = ():React.ReactElement => {
 
     const handleSearchOpen = () => {
         setSearchOpen(!searchOpen)
+    }
+
+    const [burgerAnim, setBurgerAnim] = useState<boolean>(false)
+
+    const handleBurger = () => {
+      setBurgerAnim(!burgerAnim)
     }
 
     return (
@@ -77,37 +84,56 @@ const Header:FC<any> = ():React.ReactElement => {
                 </div>
             </div>
             <nav className={cls.headerNav}>
+
                 <div className={cls.headerNavigation}>
+                    <div className={cls.burgerMenuWrapper} onClick={handleBurger}>
+                        <span className={`${cls.line} ${cls.lineTop} ${burgerAnim && cls.open}`}></span>
+                        <span className={`${cls.line} ${cls.lineCenter} ${burgerAnim && cls.open}`}></span>
+                        <span className={`${cls.line} ${cls.lineBottom} ${burgerAnim && cls.open}`}></span>
+                    </div>
                     <ul>
                         {
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
                                     <>
                                         <li key={index}><NavLink href={link}>{name}</NavLink></li>
-                                        {index != array.length - 1 && <li key={index + array.length}><span>/</span></li>}
+                                        {index != array.length - 1 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
                                     </>
                                 )
                             })
                         }
                     </ul>
                 </div>
+
+                <div className={`${cls.burgerOpenWrapper} ${burgerAnim && cls.open}`}>
+                    <div className={`${cls.burgerOpenWrapperContent} ${burgerAnim && cls.open}`}>
+                        <h1>HELLO WOLRD TIGO TIGO TIGO</h1>
+                    </div>
+                </div>
                 <div className={cls.headerNavigationLeft}>
-                    <div className={cls.headerLinks}>
+                    <div className={`${cls.headerLinks} ${searchOpen && cls.out}`}>
                         <Image src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>
                         <Image src="/images/linkedIn.svg" alt="" width={25} height={25}/>
                         <Image src="/images/facebookLogo.svg" alt="" width={25} height={25}/>
                         <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
 
                     </div>
+                    <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} ></div>
                     <div className={cls.headerSearch}>
                         <div onClick={handleSearchOpen}>
                             <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>
                         </div>
+
                     </div>
+                    {/*{searchOpen && <div>*/}
+                    {/*    <div className={cls.searchOpenWrapper}></div>*/}
+                    {/*</div>}*/}
                 </div>
+
+
             </nav>
-            {searchOpen && <div>tigo tigo tigo</div>}
         </header>
+
     )
 }
 

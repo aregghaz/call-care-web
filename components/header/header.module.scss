@@ -116,12 +116,14 @@
   transform: translateX(-50%);
   display: flex;
   z-index: 9999;
+  //border: 1px solid black;
 }
 
 .headerNavigation {
   width: 70%;
   height: 100%;
   padding: 0 2%;
+  border: inherit;
 
   & > ul {
     width: 100%;
@@ -132,6 +134,7 @@
     gap: 30px;
     list-style: none;
     padding-left: 3%;
+
 
     & > li {
       position: relative;
@@ -192,11 +195,6 @@
       transition: .5s;
       text-transform: uppercase;
       white-space: nowrap;
-
-      &:hover{
-        color: #fff;
-      }
-
     }
 
     span {
@@ -207,9 +205,10 @@
 }
 
 .headerNavigationLeft {
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
+
 }
 
 
@@ -221,29 +220,201 @@
   align-items: center;
   gap: 23px;
   padding-right: 70px;
+  overflow: hidden;
+  transition: .5s;
 
   & > img{
     cursor: pointer;
 
   }
+
+
+}
+
+.headerLinks.out{
+  width: 0;
 }
 
 
 .headerSearch{
   width: 25%;
   height: 100%;
-  border-left: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   & > img{
     cursor: pointer;
   }
 }
 
+.searchOpenBox{
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.searchOpenBox.open{
+  width: 75%;
+}
+
+//.searchOpenWrapper{
+//  width: 150px;
+//  height: 100px;
+//  background-color: #fff;
+//  position: absolute;
+//}
+
 .swiperik{
   width: 100%;
   height: 100%;
   background-color: aqua;
+}
+
+@media screen and (max-width: 1500px) {
+  .menuSpan{
+    display: none;
+  }
+
+  .headerNavigation > ul{
+    gap: 20px;
+    padding-left: 2%;
+  }
+
+
+  .headerLinks{
+    padding-right: 20px;
+  }
+}
+
+.burgerMenuWrapper{
+  display: none;
+}
+
+.burgerOpenWrapper{
+  display: none;
+}
+
+@media screen and (max-width: 1336px){
+  .header{
+    padding: 0 2%;
+  }
+
+  .headerNav{
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .headerNavigation > ul{
+    display: none;
+  }
+
+  .burgerMenuWrapper{
+    display: flex;
+    width: 100px;
+    height: 100%;
+    //border: 1px solid black;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .headerNavigation{
+    width: 60%;
+    padding: 0;
+
+  }
+
+  .line{
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: 0.4s;
+
+  }
+  .lineTop{
+    transform: translateY(-10px);
+  }
+  .lineBottom{
+    transform: translateY(10px);
+  }
+
+  .lineTop.open {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .lineCenter.open {
+    width: 0;
+    transition: 0.1s;
+  }
+
+  .lineBottom.open {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  .burgerOpenWrapper{
+    display: block;
+    width: 100%;
+    height: 0px;
+    background-color: #fff;
+    position: absolute;
+    top: 90px;
+    transition: 0.5s;
+    visibility: hidden;
+  }
+
+  .burgerOpenWrapper.open {
+    height: 100px;
+    visibility: visible;
+  }
+
+  .burgerOpenWrapperContent {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  .burgerOpenWrapperContent.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .headerSearch{
+    width: 30%;
+  }
+
+  .headerLinks{
+    width: 80%;
+  }
+
+
+}
+
+@media screen and (max-width: 900px){
+  .headerInfos{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .headerNavigation{
+    width: 20%;
+    padding: 0;
+
+  }
+  .headerNavigationLeft{
+    width: 80%;
+  }
+
+  .headerNav{
+    width: 100%;
+  }
+
 }
