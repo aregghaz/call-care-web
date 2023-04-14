@@ -32,6 +32,13 @@ const headerLinks = [
 ]
 
 const Header:FC<any> = ():React.ReactElement => {
+
+    const [searchOpen, setSearchOpen] = useState<boolean>(false)
+
+    const handleSearchOpen = () => {
+        setSearchOpen(!searchOpen)
+    }
+
     return (
         <header className={cls.header}>
             <div className={cls.headerContent}>
@@ -93,10 +100,13 @@ const Header:FC<any> = ():React.ReactElement => {
 
                     </div>
                     <div className={cls.headerSearch}>
-                        <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>
+                        <div onClick={handleSearchOpen}>
+                            <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>
+                        </div>
                     </div>
                 </div>
             </nav>
+            {searchOpen && <div>tigo tigo tigo</div>}
         </header>
     )
 }
