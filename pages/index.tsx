@@ -283,7 +283,7 @@ export default function Home(props:any) {
                           <div className={cls.topContent}>
                               <li className={cls.offerService}>
                                   <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg1.jpg"} alt={"img1"} width={100} height={100} />
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg1.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
                                   <div className={cls.serviceInfo}>
                                       <div className={cls.serviceTitle}>
@@ -297,7 +297,7 @@ export default function Home(props:any) {
                               </li>
                               <li className={cls.offerService}>
                                   <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg2.jpg"} alt={"img1"} width={100} height={100} />
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg2.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
                                   <div className={cls.serviceInfo}>
                                       <div className={cls.serviceTitle}>
@@ -311,7 +311,7 @@ export default function Home(props:any) {
                               </li>
                               <li className={cls.offerService}>
                                   <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg3.jpg"} alt={"img1"} width={100} height={100} />
+                                      <Image className={cls.imgSize} src={"/images/weOfferimg3.webp"} alt={"img1"} width={100} height={100} />
                                   </div>
                                   <div className={cls.serviceInfo}>
                                       <div className={cls.serviceTitle}>
@@ -327,7 +327,7 @@ export default function Home(props:any) {
                          <div className={`${cls.topContent} ${cls.bottomContent}`}>
                              <li className={cls.offerService}>
                                  <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg4.jpg"} alt={"img1"} width={100} height={100} />
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg4.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
                                  <div className={cls.serviceInfo}>
                                      <div className={cls.serviceTitle}>
@@ -341,7 +341,7 @@ export default function Home(props:any) {
                              </li>
                              <li className={cls.offerService}>
                                  <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg5.jpg"} alt={"img1"} width={100} height={100} />
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg5.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
                                  <div className={cls.serviceInfo}>
                                      <div className={cls.serviceTitle}>
@@ -355,7 +355,7 @@ export default function Home(props:any) {
                              </li>
                              <li className={cls.offerService}>
                                  <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg6.jpg"} alt={"img1"} width={100} height={100} />
+                                     <Image className={cls.imgSize} src={"/images/weOfferimg6.webp"} alt={"img1"} width={100} height={100} />
                                  </div>
                                  <div className={cls.serviceInfo}>
                                      <div className={cls.serviceTitle}>
@@ -475,7 +475,7 @@ export default function Home(props:any) {
                         </div>
                   </div>
                   <div className={cls.infoSlidImg}>
-                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.jpg"} alt={"ambulanceTeam"} width={500} height={500}/>
+                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"} width={500} height={500}/>
                   </div>
               </section>
               <section className={cls.formSection}>
@@ -509,18 +509,18 @@ export default function Home(props:any) {
                               </div>
                               <div className={cls.inputBottom}>
                                   <div className={cls.inputBottomLeft}>
-                                      <label htmlFor="">
+                                      <label htmlFor={"contactTextarea"}>
                                           Or Copy and Paste Your Resume Bellow
                                       </label>
-                                      <textarea name="" id="" cols={30} rows={10} />
+                                      <textarea id={"contactTextarea"} cols={30} rows={10} />
                                   </div>
                                   <div className={cls.inputBottomRight}>
-                                      <label htmlFor="">
+                                      <label htmlFor={"contactFile"}>
                                           Upload red resume
                                       </label>
                                       <div className={cls.fileWrapper}>
-                                          <input className={cls.fileInput} type="file" multiple={true}/>
-                                          <span className={cls.fileButton}>Chose File</span>
+                                          <input className={cls.fileInput} id={"contactFile"} type={"file"} multiple={true}/>
+                                          <span className={cls.fileButton}>Choose File</span>
                                       </div>
                                       <input className={cls.submitButton} type="submit"/>
                                   </div>
