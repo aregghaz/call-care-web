@@ -14,6 +14,7 @@ import "swiper/css/navigation"
 import Link from "next/link";
 import Footer from "../components/footer/footer";
 import dynamic from "next/dynamic";
+import Service, {ServiceProps} from "@/components/service/service";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,50 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home(props:any) {
     const testNkar = dynamic(() => import("../public/images/herosliderimage1.webp"))
     const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
+
+    const services:Array<ServiceProps> = [
+        {
+            name: "Medical Home\n" + "Modification",
+            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            image: {
+                src: "/images/service1.svg",
+                alt: "service 1",
+                width: 100,
+                height: 100,
+            }
+        },
+        {
+            name: "Home Health",
+            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            image: {
+                src: "/images/service2.svg",
+                alt: "service 2",
+                width: 100,
+                height: 100,
+            }
+        },
+        {
+            name: "Therapy",
+            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            image: {
+                src: "/images/service3.svg",
+                alt: "service 3",
+                width: 100,
+                height: 100,
+            }
+        },
+        {
+            name: "Transportation",
+            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            image: {
+                src: "/images/service4.svg",
+                alt: "service 4",
+                width: 100,
+                height: 100,
+            }
+        },
+    ]
+
   return (
     <>
       <Head>
@@ -79,34 +124,11 @@ export default function Home(props:any) {
               </section>
               <section className={cls.services}>
                   <ul>
-                      <li className={cls.service}>
-                          <div className={cls.serviceContent}>
-                              <Image src={"/images/service1.svg"} alt={"service 1"} width={100} height={100}/>
-                              <h2>Medical Home <br/> Modification</h2>
-                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          </div>
-                      </li>
-                      <li className={cls.service}>
-                          <div className={cls.serviceContent}>
-                              <Image src={"/images/service2.svg"} alt={"service 2"} width={100} height={100}/>
-                              <h2>Home Health</h2>
-                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          </div>
-                      </li>
-                      <li className={cls.service}>
-                          <div className={cls.serviceContent}>
-                              <Image src={"/images/service3.svg"} alt={"service 3"} width={100} height={100}/>
-                              <h2>Therapy</h2>
-                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          </div>
-                      </li>
-                      <li className={cls.service}>
-                          <div className={cls.serviceContent}>
-                              <Image src={"/images/service4.svg"} alt={"service 4"} width={100} height={100}/>
-                              <h2>Transportation</h2>
-                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          </div>
-                      </li>
+                      {
+                          services.map(({name,description,image}) => {
+                              return <Service name={name} description={description} image={image}/>
+                          })
+                      }
                   </ul>
               </section>
               <section className={cls.generalMedical}>
@@ -426,7 +448,6 @@ export default function Home(props:any) {
                               </div>
                           </div>
                       </SwiperSlide>
-
                   </Swiper>
               </section>
               <section className={cls.infoSec}>
