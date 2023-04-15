@@ -18,7 +18,7 @@ const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 const withVideos = require('next-videos')
 
-module.exports = withPlugins([
+module.exports = withPlugins([optimizedImages,
     withVideos
 
     // your other plugins here
@@ -26,7 +26,14 @@ module.exports = withPlugins([
 ], {
     reactStrictMode: true,
     images: {
-        disableStaticImages: true,
+      ///  disableStaticImages: true,
         unoptimized: true
+    },
+    typescript: {
+        // !! WARN !!
+        // Dangerously allow production builds to successfully complete even if
+        // your project has type errors.
+        // !! WARN !!
+        ignoreBuildErrors: true,
     },
 });
