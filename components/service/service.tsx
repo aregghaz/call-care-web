@@ -11,7 +11,6 @@ export interface ServiceProps {
 }
 
 const Service:FC<ServiceProps> = ({
-<<<<<<< HEAD
     name= "",
     description = "",
     image = {
@@ -21,11 +20,6 @@ const Service:FC<ServiceProps> = ({
         height: 0,
     },
     className= ""
-=======
-    name,
-    description,
-    image,
->>>>>>> 3c04be6986063797f588105a3fab31abf3b09f47
 }) => {
     return (
         <li className={`${cls.service} ${className}`}>

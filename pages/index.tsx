@@ -14,14 +14,10 @@ import "swiper/css/navigation"
 import Link from "next/link";
 import Footer from "../components/footer/footer";
 import dynamic from "next/dynamic";
-<<<<<<< HEAD
-import Service, {ServiceProps} from "../components/service/service";
 
-=======
-import Service, {ServiceProps} from "@/components/service/service";
-import GeneralMedicalCard, {GeneralMedicalCardProps} from "@/components/general-medical-card/general-medical-card";
-import OfferService, {OfferServiceProps} from "@/components/offer-service/offer-service";
->>>>>>> 3c04be6986063797f588105a3fab31abf3b09f47
+import Service, {ServiceProps} from "../components/service/service";
+import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
+import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -314,12 +310,13 @@ export default function Home(props:any) {
                           {
                               generalMedicalCards.map(({name, description, image}, index) => {
                                   return (
-                                      <SwiperSlide>
+                                      <SwiperSlide
+                                          key={index}
+                                      >
                                           <GeneralMedicalCard
                                               name={name}
                                               description={description}
                                               image={image}
-                                              key={index}
                                           />
                                       </SwiperSlide>
                                   )
