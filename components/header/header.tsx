@@ -107,7 +107,20 @@ const Header:FC<any> = ():React.ReactElement => {
 
                 <div className={`${cls.burgerOpenWrapper} ${burgerAnim && cls.open}`}>
                     <div className={`${cls.burgerOpenWrapperContent} ${burgerAnim && cls.open}`}>
-                        <h1>HELLO WOLRD TIGO TIGO TIGO</h1>
+                        <nav>
+                            <ul>
+                                {
+                                    headerLinks.map(({name, link}, index, array) => {
+                                        return (
+                                            <>
+                                                <li key={index}><NavLink href={link}>{name}</NavLink></li>
+                                                {index != array.length - 1 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
+                                            </>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div className={cls.headerNavigationLeft}>
@@ -118,7 +131,9 @@ const Header:FC<any> = ():React.ReactElement => {
                         <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
 
                     </div>
-                    <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} ></div>
+                    <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} >
+                        <input type="text" placeholder={"search.."}/>
+                    </div>
                     <div className={cls.headerSearch}>
                         <div onClick={handleSearchOpen}>
                             <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>

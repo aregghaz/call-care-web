@@ -7,7 +7,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home(props:any) {
-    const testNkar = dynamic(() => import("../public/images/herosliderimage1.webp"))
+    // const testNkar = dynamic(() => import("../public/images/herosliderimage1.webp"))
     const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
 
     const services:Array<ServiceProps> = [
@@ -191,6 +191,15 @@ export default function Home(props:any) {
         ]
     }
 
+    const [windowWidth, setWindowWidth] = useState<number>(0)
+
+    useEffect(() => {
+        if (Object.keys(window).length > 0) {
+            setWindowWidth(window.innerWidth)
+        }
+        console.log(windowWidth)
+    }, [windowWidth])
+
   return (
     <>
       <Head>
@@ -292,9 +301,9 @@ export default function Home(props:any) {
                       <Swiper
                           className={cls.generalSlider}
                           modules={[Navigation, Autoplay]}
-                          spaceBetween={50}
+                          spaceBetween={20}
                           loop={true}
-                          slidesPerView={4}
+                          slidesPerView={windowWidth < 600 ? 1 :windowWidth < 1024 ? 2 : windowWidth < 1300 ? 3 : 4}
                           onSlideChange={swiper => {
                               setcalcarecardsSlides(swiper.activeIndex)
                           }}
@@ -434,7 +443,7 @@ export default function Home(props:any) {
                                     bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                                 }}
                                 autoplay={{
-                                    delay: 3000,
+                                    delay: 4000,
                                     disableOnInteraction: false,
                                 }}
                             >
@@ -460,7 +469,7 @@ export default function Home(props:any) {
                         </div>
                   </div>
                   <div className={cls.infoSlidImg}>
-                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"} width={500} height={500}/>
+                      <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"} width={450} height={600}/>
                   </div>
               </section>
               {/*<section className={cls.formSection}>*/}

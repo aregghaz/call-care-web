@@ -10,6 +10,11 @@
     height: 230px;
   }
 
+  @media screen and (max-width: 720px) {
+    width: 600px;
+    height: 200px;
+  }
+
   .serviceImg{
     width: 38%;
     height: 100%;
