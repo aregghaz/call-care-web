@@ -1,13 +1,7 @@
 import React, {FC} from "react"
 import cls from "./service.module.scss"
 import Image from "next/image";
-
-type imageType = {
-    src: string,
-    alt: string,
-    width: number | string,
-    height: number | string,
-}
+import {imageType} from "../../utils/types";
 
 export interface ServiceProps {
     name: string,
@@ -17,6 +11,7 @@ export interface ServiceProps {
 }
 
 const Service:FC<ServiceProps> = ({
+<<<<<<< HEAD
     name= "",
     description = "",
     image = {
@@ -26,6 +21,11 @@ const Service:FC<ServiceProps> = ({
         height: 0,
     },
     className= ""
+=======
+    name,
+    description,
+    image,
+>>>>>>> 3c04be6986063797f588105a3fab31abf3b09f47
 }) => {
     return (
         <li className={`${cls.service} ${className}`}>
