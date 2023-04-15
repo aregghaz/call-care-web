@@ -15,6 +15,8 @@ import Link from "next/link";
 import Footer from "../components/footer/footer";
 import dynamic from "next/dynamic";
 import Service, {ServiceProps} from "@/components/service/service";
+import GeneralMedicalCard, {GeneralMedicalCardProps} from "@/components/general-medical-card/general-medical-card";
+import OfferService, {OfferServiceProps} from "@/components/offer-service/offer-service";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -65,6 +67,128 @@ export default function Home(props:any) {
             }
         },
     ]
+
+    const generalMedicalCards:Array<GeneralMedicalCardProps> = [
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard1.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard2.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard3.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard4.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard1.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard2.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard3.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard4.webp"
+        },
+        {
+            name: "About us",
+            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            image: "/images/calcarecard2.webp"
+        },
+    ]
+
+    const offerServices:{top: Array<OfferServiceProps>, bottom: Array<OfferServiceProps>} = {
+        top: [
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg1.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            },
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg2.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            },
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg3.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            }
+        ],
+
+        bottom: [
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg4.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            },
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg5.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            },
+            {
+                name: "Ambulatory Service",
+                description: "Ambulatory Service is mobility at your front door.",
+                link: "/",
+                image: {
+                    src: "/images/weOfferimg6.webp",
+                    alt: "img1",
+                    width: 100,
+                    height: 100,
+                }
+            }
+        ]
+    }
 
   return (
     <>
@@ -179,123 +303,20 @@ export default function Home(props:any) {
                               disableOnInteraction: false,
                           }}
                       >
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard1}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard2}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard3}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard4}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard5}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard6}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard7}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard8}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                              <div className={`${cls.generalCard} ${cls.generalCard9}`}>
-                                  <div className={cls.generalCardContent}>
-                                      <div className={cls.generalCardButton}>
-                                          <Link href={"/"}>
-                                              <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
-                                          </Link>
-                                      </div>
-                                      <h2>About us</h2>
-                                      <p>General Medical is equipped to handle all the transportation needs that you can imagine.</p>
-                                  </div>
-                              </div>
-                          </SwiperSlide>
+                          {
+                              generalMedicalCards.map(({name, description, image}, index) => {
+                                  return (
+                                      <SwiperSlide>
+                                          <GeneralMedicalCard
+                                              name={name}
+                                              description={description}
+                                              image={image}
+                                              key={index}
+                                          />
+                                      </SwiperSlide>
+                                  )
+                              })
+                          }
                       </Swiper>
                   </div>
               </section>
@@ -311,92 +332,34 @@ export default function Home(props:any) {
                   <div className={cls.contentBox}>
                       <div>
                           <div className={cls.topContent}>
-                              <div className={cls.offerService}>
-                                  <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg1.webp"} alt={"img1"} width={100} height={100} />
-                                  </div>
-                                  <div className={cls.serviceInfo}>
-                                      <div className={cls.serviceTitle}>
-                                          <h2>Ambulatory Service</h2>
-                                          <p>Ambulatory Service is mobility at your front door.</p>
-                                      </div>
-                                      <div className={cls.serviceReadMore}>
-                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className={cls.offerService}>
-                                  <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg2.webp"} alt={"img1"} width={100} height={100} />
-                                  </div>
-                                  <div className={cls.serviceInfo}>
-                                      <div className={cls.serviceTitle}>
-                                          <h2>Ambulatory Service</h2>
-                                          <p>Ambulatory Service is mobility at your front door.</p>
-                                      </div>
-                                      <div className={cls.serviceReadMore}>
-                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div className={cls.offerService}>
-                                  <div className={cls.serviceImg}>
-                                      <Image className={cls.imgSize} src={"/images/weOfferimg3.webp"} alt={"img1"} width={100} height={100} />
-                                  </div>
-                                  <div className={cls.serviceInfo}>
-                                      <div className={cls.serviceTitle}>
-                                          <h2>Ambulatory Service</h2>
-                                          <p>Ambulatory Service is mobility at your front door.</p>
-                                      </div>
-                                      <div className={cls.serviceReadMore}>
-                                          <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                      </div>
-                                  </div>
-                              </div>
+                              {
+                                  offerServices.top.map(({name,description,link,image}, index) => {
+                                      return (
+                                          <OfferService
+                                              name={name}
+                                              description={description}
+                                              link={link}
+                                              image={image}
+                                              key={index}
+                                          />
+                                      )
+                                  })
+                              }
                           </div>
                          <div className={`${cls.topContent} ${cls.bottomContent}`}>
-                             <div className={cls.offerService}>
-                                 <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg4.webp"} alt={"img1"} width={100} height={100} />
-                                 </div>
-                                 <div className={cls.serviceInfo}>
-                                     <div className={cls.serviceTitle}>
-                                         <h2>Ambulatory Service</h2>
-                                         <p>Ambulatory Service is mobility at your front door.</p>
-                                     </div>
-                                     <div className={cls.serviceReadMore}>
-                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div className={cls.offerService}>
-                                 <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg5.webp"} alt={"img1"} width={100} height={100} />
-                                 </div>
-                                 <div className={cls.serviceInfo}>
-                                     <div className={cls.serviceTitle}>
-                                         <h2>Ambulatory Service</h2>
-                                         <p>Ambulatory Service is mobility at your front door.</p>
-                                     </div>
-                                     <div className={cls.serviceReadMore}>
-                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div className={cls.offerService}>
-                                 <div className={cls.serviceImg}>
-                                     <Image className={cls.imgSize} src={"/images/weOfferimg6.webp"} alt={"img1"} width={100} height={100} />
-                                 </div>
-                                 <div className={cls.serviceInfo}>
-                                     <div className={cls.serviceTitle}>
-                                         <h2>Ambulatory Service</h2>
-                                         <p>Ambulatory Service is mobility at your front door.</p>
-                                     </div>
-                                     <div className={cls.serviceReadMore}>
-                                         <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={40} height={40} /></button>
-                                     </div>
-                                 </div>
-                             </div>
+                             {
+                                 offerServices.bottom.map(({name,description,link,image}, index) => {
+                                     return (
+                                         <OfferService
+                                             name={name}
+                                             description={description}
+                                             link={link}
+                                             image={image}
+                                             key={index}
+                                         />
+                                     )
+                                 })
+                             }
                          </div>
                      </div>
                   </div>
