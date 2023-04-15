@@ -12,8 +12,8 @@ type imageType = {
 export interface ServiceProps {
     name: string,
     description: string,
-    image: imageType
-
+    image: imageType,
+    className?: string,
 }
 
 const Service:FC<ServiceProps> = ({
@@ -24,10 +24,11 @@ const Service:FC<ServiceProps> = ({
         alt: "",
         width: 0,
         height: 0,
-    }
+    },
+    className= ""
 }) => {
     return (
-        <li className={cls.service}>
+        <li className={`${cls.service} ${className}`}>
             <div className={cls.serviceContent}>
                 <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
                 <h2>{name}</h2>

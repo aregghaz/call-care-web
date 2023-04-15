@@ -22,13 +22,24 @@
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.5);
   background-blend-mode: color;
+  position: relative;
 }
 
-.sliderPage1 {
-  background-image: url($heroimage1)
+.slideVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
+
+//.sliderPage1 {
+//  background-image: url($heroimage1);
+//}
 
 .sliderPage2 {
   background-image: url($heroimage2)
@@ -118,8 +129,7 @@
 
 .services {
   width: 100%;
-  height: 400px;
-  background-color: red;
+  height: auto;
   display: flex;
   justify-content: center;
 
@@ -130,6 +140,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     list-style: none;
+    flex-wrap: wrap;
+
   }
 }
 
@@ -318,11 +330,24 @@
   justify-content: center;
   gap: 50px;
 
+  @media screen and (max-width: 900px){
+    gap: 20px;
+    background-size: cover;
+  background-position: left;
+  }
+
+  @media screen and (max-width: 500px){
+    gap: 20px;
+  }
+
   & > h1{
     text-align: center;
     color: #fff;
     font-size: 40px;
     font-weight: 400;
+    @media screen and (max-width: 500px){
+      font-size: 30px;
+    }
   }
 
   & > p{
@@ -331,6 +356,19 @@
     color: $greyInfo;
     font-size: 20px;
     line-height: 32px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 80px;
+    }
+
+    @media screen and (max-width:720px){
+      padding: 20px 20px;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width:470px){
+      font-size: 13px;
+    }
   }
 
   & > button{
@@ -350,6 +388,7 @@
   height: auto;
   //border: 1px solid red;
   padding: 30px;
+  overflow: hidden;
 }
 
 .titleBox{
@@ -525,7 +564,7 @@
 
 .applications{
   width: 100%;
-  height: 800px;
+  height: auto;
   //border: 1px solid red;
   //padding-bottom: 100px;
 }
@@ -583,12 +622,24 @@
   flex-direction: column;
   //align-items: center;
   justify-content: center;
-  padding: 0 60px;
+  padding: 280px 60px;
   gap: 70px;
+
+  @media screen and (max-width: 920px){
+    padding: 150px 20px;
+    gap: 20px;
+  }
 
   & > h1{
     font-size: 50px;
     font-weight: 500;
+    @media screen and (max-width:920px) {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width:600px) {
+      font-size: 20px;
+    }
   }
 
   & > p{
@@ -596,6 +647,11 @@
     color: #6C6C6C;
     font-size: 22px;
     font-weight: 500;
+
+    @media screen and (max-width:1200px) {
+      padding-right: 30px;
+      font-size: 1.5vw;
+    }
   }
 
   & > button{
@@ -609,6 +665,12 @@
     gap: 30px;
     font-size: 16px;
     cursor: pointer;
+
+    @media screen and (max-width: 600px){
+      font-size: 10px;
+      gap: 10px;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -616,6 +678,10 @@
   width: 100%;
   height: 600px;
   display: flex;
+  @media screen and (max-width: 1200px){
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .infoSlidWrapper{
@@ -627,21 +693,31 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  @media screen and (max-width: 1200px){
+    width: 100%;
+    padding: 100px 0;
+  }
+
 }
 
 .infoSlidImg{
   width: 50%;
   height: 100%;
   border: inherit;
+  @media screen and (max-width: 1200px){
+    width: 100%;
+
+  }
 }
 
 .miniSlid{
   width: 70%;
-  height: 70%;
+  height: auto;
   border-radius: 17px;
   background-color: #fff;
   position: relative;
   z-index: 11;
+  padding: 50px 0;
   &::before{
     content: "";
     width: 0;
@@ -654,6 +730,10 @@
     border: 20px solid transparent;
     border-left: 30px solid #fff;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
 }
 
 .imgSlide{
@@ -663,7 +743,7 @@
 
 .miniSlidBox{
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -675,6 +755,11 @@
     text-align: center;
     padding: 0 80px;
     font-size: 22px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 13px;
+      padding: 0 15px;
+    }
   }
 
   & > button{
@@ -688,13 +773,15 @@
     gap: 30px;
     font-size: 16px;
     cursor: pointer;
+    position: relative;
+    top: -50px;
     }
 }
 
 
 .formSection{
   width: 100%;
-  height: 1000px;
+  height: auto;
   //border: 1px solid red;
   padding: 50px 300px;
 
@@ -704,6 +791,10 @@
 
   @media screen and (max-width: 1350px) {
     padding: 50px 100px;
+  }
+
+  @media screen and (max-width: 720px){
+    padding: 50px 20px;
   }
 }
 
@@ -748,57 +839,90 @@
 
 .formInput{
   width: 100%;
-  height: 450px;
+  height:auto;
   //border: 1px solid red;
   display: flex;
   box-shadow: 0 0 35px -11px rgba(0, 0, 0, 0.99);
   border-radius: 26px;
   overflow: hidden;
   margin-top: 80px;
+  padding: 0 2%;
+  @media screen and (max-width: 1200px){
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .formInputImg{
   width: 50%;
-  height: 100%;
+  height: 450px;
   border: inherit;
   background-image: url($formImg);
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 1200px){
+    width: 100%;
+    background-size: 100% 150%;
+  }
+  @media screen and (max-width: 720px){
+    display: none;
+  }
+
 }
 
 .formInputContent{
   width: 70%;
-  height: 100%;
+  height:auto;
   border: inherit;
-  padding-top: 20px;
+  padding: 50px 0;
 
+  @media screen and (max-width: 1200px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 720px){
+
+    width: 95%;
+  }
   & > form{
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
 .inputTop{
   width: 100%;
-  height: 55%;
+  height: auto;
   //border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  column-gap: 20px;
+  //column-gap: 20px;
+  gap: 20px;
   padding: 30px 50px;
+  @media screen and (max-width: 1200px){
+    padding: 0;
+    justify-content: center;
+  }
+
+
 
 }
 
 .positionInput{
-  width: 88%;
+  width: 87%;
   height: 42px;
   background: #EEEEEE;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   outline: none;
   padding-left: 25px;
+
 }
 
 .fifInputs{
@@ -814,9 +938,20 @@
 
 .inputBottom{
   width: 100%;
-  height: 45%;
+  height:auto;
   //border: 1px solid red;
   display: flex;
+
+
+  @media screen and (max-width: 1200px){
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 600px){
+   flex-direction: column;
+    height: auto;
+    //padding: 50px 0;
+  }
 }
 
 .inputBottomLeft{
@@ -827,6 +962,9 @@
   flex-direction: column;
   padding-left: 50px;
   gap: 5px;
+  @media screen and (max-width: 1200px){
+    justify-content: center;
+  }
 
   & > label {
     font-size: 16px;
@@ -844,6 +982,10 @@
     outline: none;
     padding: 10px;
     resize: none;
+
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
   }
 }
 
@@ -860,6 +1002,15 @@
     font-weight: 400;
     color: rgba(0, 0, 0, 0.58);
     white-space: nowrap;
+  }
+
+  @media screen and (max-width: 1200px){
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 620px){
+    width: 100%;
+    padding-left: 50px;
   }
 }
 

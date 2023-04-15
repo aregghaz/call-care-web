@@ -14,7 +14,8 @@ import "swiper/css/navigation"
 import Link from "next/link";
 import Footer from "../components/footer/footer";
 import dynamic from "next/dynamic";
-import Service, {ServiceProps} from "@/components/service/service";
+import Service, {ServiceProps} from "../components/service/service";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -88,13 +89,16 @@ export default function Home(props:any) {
                           bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                       }}
                       effect={"fade"}
-                      autoplay={{
-                          delay: 4000,
-                          disableOnInteraction: false,
-                      }}
+                      // autoplay={{
+                      //     delay: 4000,
+                      //     disableOnInteraction: false,
+                      // }}
                   >
                       <SwiperSlide className={cls.slide}>
                           <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
+                              <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
+                                    <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
+                              </video>
                               <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                   <h1>A True Devotion <br/> To Health</h1>
                                   <p>Full service medical provider serving the great state of California</p>
@@ -125,8 +129,8 @@ export default function Home(props:any) {
               <section className={cls.services}>
                   <ul>
                       {
-                          services.map(({name,description,image}) => {
-                              return <Service name={name} description={description} image={image}/>
+                          services.map(({name,description,image}, index) => {
+                              return <Service key={index} name={name} description={description} image={image}/>
                           })
                       }
                   </ul>
@@ -495,57 +499,57 @@ export default function Home(props:any) {
                       <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"} width={500} height={500}/>
                   </div>
               </section>
-              <section className={cls.formSection}>
-                  <div className={cls.formTitle}>
-                      <h1>Work With Us</h1>
-                  </div>
-                  <div className={cls.formMenu}>
-                      <h2>Available Positions</h2>
-                      <ul>
-                          <li>Occupational Therapy Assistant</li>
-                          <li>OOccupational Therapist</li>
-                          <li>Physical Therapist</li>
-                          <li>Physical Therapy Assistant</li>
-                          <li>Speech Therapist</li>
-                          <li>Contractors</li>
-                          <li>EMT’s</li>
-                      </ul>
-                  </div>
-                  <div className={cls.formInput}>
-                      <div className={cls.formInputImg}>
-                          {/*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*/}
-                      </div>
-                      <div className={cls.formInputContent}>
-                          <form action="#">
-                              <div className={cls.inputTop}>
-                                  <input className={cls.positionInput} type="text" placeholder={'Position Applying For'}/>
-                                  <input className={cls.fifInputs} type="text" placeholder={'First Name'}/>
-                                  <input className={cls.fifInputs} type="text" placeholder={'Last Name'}/>
-                                  <input className={cls.fifInputs} type="email" placeholder={'Email'}/>
-                                  <input className={cls.fifInputs} type="tel" placeholder={'Phone'}/>
-                              </div>
-                              <div className={cls.inputBottom}>
-                                  <div className={cls.inputBottomLeft}>
-                                      <label htmlFor={"contactTextarea"}>
-                                          Or Copy and Paste Your Resume Bellow
-                                      </label>
-                                      <textarea id={"contactTextarea"} cols={30} rows={10} />
-                                  </div>
-                                  <div className={cls.inputBottomRight}>
-                                      <label htmlFor={"contactFile"}>
-                                          Upload red resume
-                                      </label>
-                                      <div className={cls.fileWrapper}>
-                                          <input className={cls.fileInput} id={"contactFile"} type={"file"} multiple={true}/>
-                                          <span className={cls.fileButton}>Choose File</span>
-                                      </div>
-                                      <input className={cls.submitButton} type="submit"/>
-                                  </div>
-                              </div>
-                          </form>
-                      </div>
-                  </div>
-              </section>
+              {/*<section className={cls.formSection}>*/}
+              {/*    <div className={cls.formTitle}>*/}
+              {/*        <h1>Work With Us</h1>*/}
+              {/*    </div>*/}
+              {/*    <div className={cls.formMenu}>*/}
+              {/*        <h2>Available Positions</h2>*/}
+              {/*        <ul>*/}
+              {/*            <li>Occupational Therapy Assistant</li>*/}
+              {/*            <li>OOccupational Therapist</li>*/}
+              {/*            <li>Physical Therapist</li>*/}
+              {/*            <li>Physical Therapy Assistant</li>*/}
+              {/*            <li>Speech Therapist</li>*/}
+              {/*            <li>Contractors</li>*/}
+              {/*            <li>EMT’s</li>*/}
+              {/*        </ul>*/}
+              {/*    </div>*/}
+              {/*    <div className={cls.formInput}>*/}
+              {/*        <div className={cls.formInputImg}>*/}
+              {/*            /!*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*!/*/}
+              {/*        </div>*/}
+              {/*        <div className={cls.formInputContent}>*/}
+              {/*            <form action="#">*/}
+              {/*                <div className={cls.inputTop}>*/}
+              {/*                    <input className={cls.positionInput} type="text" placeholder={'Position Applying For'}/>*/}
+              {/*                    <input className={cls.fifInputs} type="text" placeholder={'First Name'}/>*/}
+              {/*                    <input className={cls.fifInputs} type="text" placeholder={'Last Name'}/>*/}
+              {/*                    <input className={cls.fifInputs} type="email" placeholder={'Email'}/>*/}
+              {/*                    <input className={cls.fifInputs} type="tel" placeholder={'Phone'}/>*/}
+              {/*                </div>*/}
+              {/*                <div className={cls.inputBottom}>*/}
+              {/*                    <div className={cls.inputBottomLeft}>*/}
+              {/*                        <label htmlFor={"contactTextarea"}>*/}
+              {/*                            Or Copy and Paste Your Resume Bellow*/}
+              {/*                        </label>*/}
+              {/*                        <textarea id={"contactTextarea"} cols={30} rows={10} />*/}
+              {/*                    </div>*/}
+              {/*                    <div className={cls.inputBottomRight}>*/}
+              {/*                        <label htmlFor={"contactFile"}>*/}
+              {/*                            Upload red resume*/}
+              {/*                        </label>*/}
+              {/*                        <div className={cls.fileWrapper}>*/}
+              {/*                            <input className={cls.fileInput} id={"contactFile"} type={"file"} multiple={true}/>*/}
+              {/*                            <span className={cls.fileButton}>Choose File</span>*/}
+              {/*                        </div>*/}
+              {/*                        <input className={cls.submitButton} type="submit"/>*/}
+              {/*                    </div>*/}
+              {/*                </div>*/}
+              {/*            </form>*/}
+              {/*        </div>*/}
+              {/*    </div>*/}
+              {/*</section>*/}
           </main>
         <Footer/>
     </>
