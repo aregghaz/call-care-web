@@ -1,0 +1,15 @@
+.headerLinks{
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 23px;
+  padding-right: 70px;
+  overflow: hidden;
+  transition: .5s;
+
+  & > img{
+    cursor: pointer;
+  }
+}

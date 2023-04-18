@@ -7,17 +7,17 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
 import Footer from "../components/footer/footer";
-import dynamic from "next/dynamic";
 
 import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
 import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -191,14 +191,9 @@ export default function Home(props:any) {
         ]
     }
 
-    const [windowWidth, setWindowWidth] = useState<number>(0)
 
-    useEffect(() => {
-        if (Object.keys(window).length > 0) {
-            setWindowWidth(window.innerWidth)
-        }
-        console.log(windowWidth)
-    }, [windowWidth])
+    const screenSize = useScreenSize()
+
 
   return (
     <>
@@ -222,10 +217,10 @@ export default function Home(props:any) {
                           bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                       }}
                       effect={"fade"}
-                      // autoplay={{
-                      //     delay: 4000,
-                      //     disableOnInteraction: false,
-                      // }}
+                      autoplay={{
+                          delay: 20000,
+                          disableOnInteraction: true,
+                      }}
                   >
                       <SwiperSlide className={cls.slide}>
                           <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
@@ -303,7 +298,7 @@ export default function Home(props:any) {
                           modules={[Navigation, Autoplay]}
                           spaceBetween={20}
                           loop={true}
-                          slidesPerView={windowWidth < 600 ? 1 :windowWidth < 1024 ? 2 : windowWidth < 1300 ? 3 : 4}
+                          slidesPerView={screenSize.width < 600 ? 1 :screenSize.width < 1024 ? 2 : screenSize.width < 1300 ? 3 : 4}
                           onSlideChange={swiper => {
                               setcalcarecardsSlides(swiper.activeIndex)
                           }}
@@ -524,7 +519,6 @@ export default function Home(props:any) {
               {/*    </div>*/}
               {/*</section>*/}
           </main>
-        <Footer/>
     </>
   )
 }

@@ -1,34 +1,35 @@
-import React, {FC, useEffect, useRef, useState} from "react"
+import React, {FC, useEffect, useState} from "react"
 import cls from "./header.module.scss"
-
 import Link from "next/link";
 import NavLink from "next/link"
 import Image from "next/image";
+import useScreenSize from "@/hooks/useScreenSize";
+import SocialLinks from "@/components/social-links/social-links";
 
 const headerLinks = [
     {
         name: "Home",
-        link: "/homeik",
+        link: "/",
     },
     {
         name: "About Us",
-        link: "/",
+        link: "/about",
     },
     {
         name: "Our Services",
-        link: "/",
+        link: "/services",
     },
     {
         name: "Work With Us",
-        link: "/",
+        link: "/work",
     },
     {
         name: "Refer",
-        link: "/",
+        link: "/refer",
     },
     {
         name: "Contacts",
-        link: "/",
+        link: "/contact",
     },
 ]
 
@@ -45,6 +46,8 @@ const Header:FC<any> = ():React.ReactElement => {
     const handleBurger = () => {
       setBurgerAnim(!burgerAnim)
     }
+
+    const screenSize = useScreenSize()
 
     return (
         <header className={cls.header}>
@@ -97,7 +100,7 @@ const Header:FC<any> = ():React.ReactElement => {
                                 return (
                                     <>
                                         <li key={index}><NavLink href={link}>{name}</NavLink></li>
-                                        {index != array.length - 1 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
+                                        {index != array.length - 1 && screenSize.width > 1500 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
                                     </>
                                 )
                             })
@@ -114,7 +117,7 @@ const Header:FC<any> = ():React.ReactElement => {
                                         return (
                                             <>
                                                 <li key={index}><NavLink href={link}>{name}</NavLink></li>
-                                                {index != array.length - 1 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
+                                                {index != array.length - 1 && screenSize.width > 1500 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
                                             </>
                                         )
                                     })
@@ -124,13 +127,13 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
                 <div className={cls.headerNavigationLeft}>
-                    <div className={`${cls.headerLinks} ${searchOpen && cls.out}`}>
-                        <Image src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>
-                        <Image src="/images/linkedIn.svg" alt="" width={25} height={25}/>
-                        <Image src="/images/facebookLogo.svg" alt="" width={25} height={25}/>
-                        <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>
-
-                    </div>
+                    <SocialLinks colors={"white"} className={`${searchOpen && cls.out}`}/>
+                    {/*<div className={`${cls.headerLinks} ${searchOpen && cls.out}`}>*/}
+                    {/*    <Image src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>*/}
+                    {/*    <Image src="/images/linkedIn.svg" alt="" width={25} height={25}/>*/}
+                    {/*    <Image src="/images/facebookLogo.svg" alt="" width={25} height={25}/>*/}
+                    {/*    <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>*/}
+                    {/*</div>*/}
                     <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} >
                         <input type="text" placeholder={"search.."}/>
                     </div>
@@ -144,8 +147,6 @@ const Header:FC<any> = ():React.ReactElement => {
                     {/*    <div className={cls.searchOpenWrapper}></div>*/}
                     {/*</div>}*/}
                 </div>
-
-
             </nav>
         </header>
 

@@ -28,8 +28,8 @@
 }
 
 .slideVideo{
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 105%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -461,19 +461,39 @@
 .applications{
   width: 100%;
   height: auto;
-  //border: 1px solid red;
-  //padding-bottom: 100px;
+}
+
+.appSlidePage {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sliderAdmin{
   background-image: url($adminPanel);
-
 }
 
 .sliderMobile{
   background-image: url($adminPanelNout);
-
 }
+
+.sliderApp{
+  background-image: url($mobileApp);
+  background-size: 40%;
+}
+
+.applicationsDetails {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+}
+
 
 
 .horizontalClass {
@@ -506,10 +526,6 @@
 }
 
 
-.sliderApp{
-  background-image: url($mobileApp);
-  background-size: 40%;
-}
 .slidContentBox{
   width: 45%;
   height: 100%;
