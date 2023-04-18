@@ -136,7 +136,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                     <div className={cls.headerSearch}>
                         <div onClick={handleSearchOpen}>
-                            <Image src="/images/searchIcon.svg" alt="" width={40} height={40}/>
+                            <Image src="/images/searchIcon.svg" alt="" width={40} height={40} className={cls.img}/>
                         </div>
 
                     </div>

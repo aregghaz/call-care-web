@@ -140,8 +140,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     list-style: none;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
 
+    @media screen and (max-width: 1300px){
+      flex-wrap: wrap;
+    }
   }
 }
 

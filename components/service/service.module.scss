@@ -1,9 +1,8 @@
 @import "../../styles/variables";
 
 .service {
-  min-width: 25%;
+  min-width: 100px;
   height: 400px;
-  flex-grow: 1;
   $backgroundColor: #FAFAFA;
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
@@ -16,6 +15,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media screen and (max-width: 1300px){
+    flex-grow: 1;
+  }
 
   &::before {
     content: "";
