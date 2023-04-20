@@ -227,18 +227,18 @@ export default function Home(props:any) {
                                   disableOnInteraction: true,
                               }}
                           >
-                              <SwiperSlide className={cls.slide}>
-                                  <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
-                                      <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
-                                          <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
-                                      </video>
-                                      <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                          <h1>A True Devotion <br/> To Health</h1>
-                                          <p>Full service medical provider serving the great state of California</p>
-                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
-                                      </div>
-                                  </div>
-                              </SwiperSlide>
+                              {/*<SwiperSlide className={cls.slide}>*/}
+                              {/*    <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>*/}
+                              {/*        <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>*/}
+                              {/*            <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>*/}
+                              {/*        </video>*/}
+                              {/*        <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>*/}
+                              {/*            <h1>A True Devotion <br/> To Health</h1>*/}
+                              {/*            <p>Full service medical provider serving the great state of California</p>*/}
+                              {/*            <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>*/}
+                              {/*        </div>*/}
+                              {/*    </div>*/}
+                              {/*</SwiperSlide>*/}
                               <SwiperSlide className={cls.slide}>
                                   <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
                                       <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
