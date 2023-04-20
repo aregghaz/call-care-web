@@ -5,6 +5,8 @@ import NavLink from "next/link"
 import Image from "next/image";
 import useScreenSize from "@/hooks/useScreenSize";
 import SocialLinks from "@/components/social-links/social-links";
+import useScroll from "../../hooks/useScroll";
+
 
 const headerLinks = [
     {
@@ -49,8 +51,12 @@ const Header:FC<any> = ():React.ReactElement => {
 
     const screenSize = useScreenSize()
 
+    const scroll = useScroll()
+
     return (
-        <header className={cls.header}>
+        <header
+            className={cls.header}
+        >
             <div className={cls.headerContent}>
                 <div className={cls.headerLeft}>
                     <Link href={"/"}>
@@ -86,9 +92,8 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
             </div>
-            <nav className={cls.headerNav}>
-
-                <div className={cls.headerNavigation}>
+            <nav className={`${cls.headerNav} ${scroll.y > 350 ? cls.headerNavAlternate : ""}`}>
+                <div className={`${cls.headerNavigation}`}>
                     <div className={cls.burgerMenuWrapper} onClick={handleBurger}>
                         <span className={`${cls.line} ${cls.lineTop} ${burgerAnim && cls.open}`}></span>
                         <span className={`${cls.line} ${cls.lineCenter} ${burgerAnim && cls.open}`}></span>

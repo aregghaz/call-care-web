@@ -18,8 +18,12 @@ import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
 import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
 import useScreenSize from "@/hooks/useScreenSize";
+import {rotate} from "next/dist/server/lib/squoosh/impl";
 
 const inter = Inter({ subsets: ['latin'] })
+
+import Fade from "react-reveal/Fade"
+import Flip from "react-reveal/Flip"
 
 
 export default function Home(props:any) {
@@ -203,66 +207,74 @@ export default function Home(props:any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
           <main>
-              <section className={cls.hero}>
-                  <Swiper
-                      modules={[EffectFade, Pagination, Autoplay]}
-                      direction={"vertical"}
-                      className={cls.heroSlider}
-                      spaceBetween={50}
-                      slidesPerView={1}
-                      pagination={{
-                          clickable: true,
-                          clickableClass: `${cls.bulletsWrapper}`,
-                          bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
-                          bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                      }}
-                      effect={"fade"}
-                      autoplay={{
-                          delay: 20000,
-                          disableOnInteraction: true,
-                      }}
-                  >
-                      <SwiperSlide className={cls.slide}>
-                          <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
-                              <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
-                                    <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
-                              </video>
-                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                  <h1>A True Devotion <br/> To Health</h1>
-                                  <p>Full service medical provider serving the great state of California</p>
-                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
-                              </div>
-                          </div>
-                      </SwiperSlide>
-                      <SwiperSlide className={cls.slide}>
-                          <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
-                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                  <h1>A True Devotion <br/> To Health 2</h1>
-                                  <p>Full service medical provider serving the great state of California</p>
-                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
-                              </div>
-                          </div>
-                      </SwiperSlide>
-                      <SwiperSlide className={cls.slide}>
-                          <div className={`${cls.sliderPage} ${cls.sliderPage3}`}>
-                              <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                  <h1>A True Devotion <br/> To Health 3</h1>
-                                  <p>Full service medical provider serving the great state of California</p>
-                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
-                              </div>
-                          </div>
-                      </SwiperSlide>
-                  </Swiper>
-              </section>
-              <section className={cls.services}>
-                  <ul>
-                      {
-                          services.map(({name,description,image}, index) => {
-                              return <Service key={index} name={name} description={description} image={image}/>
-                          })
-                      }
-                  </ul>
-              </section>
+                  <Fade>
+                      <section className={cls.hero}>
+                          <Swiper
+                              modules={[EffectFade, Pagination, Autoplay]}
+                              direction={"vertical"}
+                              className={cls.heroSlider}
+                              spaceBetween={50}
+                              slidesPerView={1}
+                              pagination={{
+                                  clickable: true,
+                                  clickableClass: `${cls.bulletsWrapper}`,
+                                  bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
+                                  bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                              }}
+                              effect={"fade"}
+                              autoplay={{
+                                  delay: 20000,
+                                  disableOnInteraction: true,
+                              }}
+                          >
+                              <SwiperSlide className={cls.slide}>
+                                  <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
+                                      <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
+                                          <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
+                                      </video>
+                                      <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                          <h1>A True Devotion <br/> To Health</h1>
+                                          <p>Full service medical provider serving the great state of California</p>
+                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                      </div>
+                                  </div>
+                              </SwiperSlide>
+                              <SwiperSlide className={cls.slide}>
+                                  <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
+                                      <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                          <h1>A True Devotion <br/> To Health 2</h1>
+                                          <p>Full service medical provider serving the great state of California</p>
+                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                      </div>
+                                  </div>
+                              </SwiperSlide>
+                              <SwiperSlide className={cls.slide}>
+                                  <div className={`${cls.sliderPage} ${cls.sliderPage3}`}>
+                                      <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                          <h1>A True Devotion <br/> To Health 3</h1>
+                                          <p>Full service medical provider serving the great state of California</p>
+                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                      </div>
+                                  </div>
+                              </SwiperSlide>
+                          </Swiper>
+                      </section>
+                  </Fade>
+              <Fade>
+                  <section className={cls.services}>
+                      <ul>
+                          {
+                              services.map(({name,description,image}, index) => {
+                                  return (
+                                      <Flip left delay={index * 200}>
+                                          <Service key={index} name={name} description={description} image={image}/>
+                                      </Flip>
+                                  )
+                              })
+                          }
+                      </ul>
+                  </section>
+              </Fade>
               <section className={cls.generalMedical}>
                   <div className={cls.generalMedicalTop}>
                       <h2>General Medical is a full service medical provider <br/> serving the great state of California</h2>
@@ -273,11 +285,11 @@ export default function Home(props:any) {
                             <button
                                 className={"cardLeft"}
                                 style={{
-                                    backgroundColor: calcarecardsSlides > 0 ? "#D33834FF" : "white",
+                                    backgroundColor: "#D33834FF",
                                 }}
                             >
                                 <Image
-                                    src={"/images/arrowLeftSmall.svg"}
+                                    src={"/images/arrSlide.svg"}
                                     alt={"arrowLeft"} width={40} height={40}
                                     style={{
                                         color: "red",
@@ -290,7 +302,12 @@ export default function Home(props:any) {
                                     backgroundColor: calcarecardsSlides >= 5 ? "white" : "#D33834FF",
                                 }}
                             >
-                                <Image style={{filter: "invert(100%)"}} src={"/images/arrowRightSmall.svg"} alt={"arrowLeft"} width={40} height={40}/>
+                                <Image
+                                    style={{
+                                        rotate: "180deg"
+                                    }}
+                                    src={"/images/arrSlide.svg"} alt={"arrowLeft"} width={40} height={40}
+                                />
                             </button>
                       </div>
                       <Swiper

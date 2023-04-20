@@ -118,6 +118,7 @@ $headerHeight: 140px;
   transform: translateX(-50%);
   display: flex;
   z-index: 9999;
+  transition: 0.5s;
   //border: 1px solid black;
 }
 
@@ -441,7 +442,7 @@ $headerHeight: 140px;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 780px){
   .headerNavigation{
     width: 20%;
     padding: 0;
@@ -455,4 +456,50 @@ $headerHeight: 140px;
     width: 100%;
   }
 
+}
+
+
+@media screen and (max-width: 450px){
+  .headerNavigation{
+    width: 30%;
+    padding: 0;
+  }
+  .headerNavigationLeft{
+    width: 70%;
+    padding-left: 10px;
+
+    & > ul{
+      padding-right: 8px;
+    }
+  }
+
+  .headerNav{
+    width: 100%;
+  }
+
+}
+
+.headerNavAlternate {
+  top: 0;
+  position: fixed;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  animation: 0.5s headerAlternateAnimation 0s forwards;
+
+
+  @keyframes headerAlternateAnimation {
+    from {
+      top: -100px;
+      visibility: hidden;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }

@@ -1,10 +1,10 @@
 import React, {FC} from "react"
 import cls from "./social-links.module.scss";
 import Link from "next/link";
-import PinterestIcon from "@/svgs/pinterest";
-import LinkedinIcon from "@/svgs/linkedin";
-import FacebookIcon from "@/svgs/facebook";
-import TwitterIcon from "@/svgs/twitter";
+import PinterestIcon from "../../svgs/pinterest";
+import LinkedinIcon from "../../svgs/linkedin";
+import FacebookIcon from "../../svgs/facebook";
+import TwitterIcon from "../../svgs/twitter";
 
 interface SocialLinksProps {
     className?: string,
