@@ -3,7 +3,7 @@ import cls from "./header.module.scss"
 import Link from "next/link";
 import NavLink from "next/link"
 import Image from "next/image";
-import useScreenSize from "@/hooks/useScreenSize";
+import useScreenSize from "../../hooks/useScreenSize";
 import SocialLinks from "@/components/social-links/social-links";
 import useScroll from "../../hooks/useScroll";
 

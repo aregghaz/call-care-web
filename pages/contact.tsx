@@ -8,6 +8,7 @@ import PhoneIcon from "../svgs/phone";
 import PinterestIcon from "../svgs/pinterest";
 import Link from "next/link";
 import SocialLinks from "../components/social-links/social-links";
+import useScreenSize from "@/hooks/useScreenSize";
 const Contact = ({
 
 }) => {

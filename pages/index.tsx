@@ -17,7 +17,7 @@ import Footer from "../components/footer/footer";
 import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
 import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
-import useScreenSize from "@/hooks/useScreenSize";
+import useScreenSize from "/hooks/useScreenSize";
 import {rotate} from "next/dist/server/lib/squoosh/impl";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -266,8 +266,8 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-                                      <Flip left key={index} delay={index * 200}>
-                                          <Service name={name} description={description} image={image}/>
+                                      <Flip key={index} left delay={index * 200}>
+                                          <Service key={index} name={name} description={description} image={image}/>
                                       </Flip>
                                   )
                               })
