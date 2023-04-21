@@ -11,15 +11,19 @@ export type optionTypes = {
     name: string,
     disabled?: boolean,
     selected?: boolean,
+    label?: string,
+    id?: string,
 }
 
 const Select:FC<SelectProps> = ({
     options,
     placeholder,
     required = false,
+    label = "",
 }) => {
     return (
         <div className={cls.inputWrapper}>
+            <label>{label}</label>
             <select className={cls.select}>
                 {
                     placeholder ? <option selected={true} disabled={true}>{`${placeholder}${required ? "*" : ""}`}</option> : null

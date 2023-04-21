@@ -3,7 +3,7 @@ import cls from "./input.module.scss"
 interface InputProps {
     required?: boolean,
     type: string,
-    inputMode?: string,
+    inputMode: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search",
     placeholder?: string,
 }
 

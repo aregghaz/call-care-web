@@ -19,6 +19,7 @@
     "next-optimized-images": "^2.6.2",
     "next-videos": "^1.4.1",
     "react": "18.2.0",
+    "react-calendar": "^4.2.1",
     "react-dom": "18.2.0",
     "react-reveal": "^1.2.2",
     "react-svg-loader": "^3.0.3",

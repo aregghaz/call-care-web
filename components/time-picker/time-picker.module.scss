@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.timepicker {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input {
+  width: 60px;
+  height: 100%;
+  @include inputBorder();
+  outline: none;
+  padding: 0 20px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

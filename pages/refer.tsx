@@ -1,11 +1,21 @@
-import React, {FC} from "react"
+import React, {FC, useState} from "react"
 import cls from "../styles/Refer.module.scss"
 import Input from "../components/input/input";
 import Select from "../components/select/select";
+import Datapicker from "@/components/data-picker/data-picker";
+import TimePicker from "@/components/time-picker/time-picker";
 
 const Refer:FC<any> = ({
 
 }) => {
+    const [transportation, setTransportation] = useState<boolean>(true)
+    const transportationHandler = (e) => {
+        if (e.target.id === "transportationYes") {
+            setTransportation(true)
+        } else {
+            setTransportation(false)
+        }
+    }
     return (
         <div className={cls.main}>
             <h1>Refer to us</h1>
@@ -69,9 +79,8 @@ const Refer:FC<any> = ({
                                 {name: "medical4", disabled: false, selected: false},
                             ]}
                         />
-                        <Input
-                            type={"text"}
-                            placeholder={"Date of Birth (DOB)"}
+                        <Datapicker
+                            label={"Date of Birth (DOB)"}
                         />
                         <Input
                             type={"text"}
@@ -88,8 +97,8 @@ const Refer:FC<any> = ({
                     <h2>Submitter</h2>
                     <div className={cls.formRepeat3}>
                         <Select
-                            placeholder={"Medical"}
-                            required={true}
+                            label={"Transportation Service"}
+                            placeholder={"Please Choose"}
                             options={[
                                 {name: "medical1", disabled: false, selected: false},
                                 {name: "medical2", disabled: false, selected: false},
@@ -98,8 +107,8 @@ const Refer:FC<any> = ({
                             ]}
                         />
                         <Select
-                            placeholder={"Medical"}
-                            required={true}
+                            label={"Therapy"}
+                            placeholder={"Please Choose"}
                             options={[
                                 {name: "medical1", disabled: false, selected: false},
                                 {name: "medical2", disabled: false, selected: false},
@@ -108,7 +117,8 @@ const Refer:FC<any> = ({
                             ]}
                         />
                         <Select
-                            placeholder={"Medical"}
+                            label={"Medical Home Modification"}
+                            placeholder={"Please Choose"}
                             required={true}
                             options={[
                                 {name: "medical1", disabled: false, selected: false},
@@ -119,7 +129,30 @@ const Refer:FC<any> = ({
                         />
                     </div>
                     <div className={cls.picker}>
-
+                        <label>Is Translation Service Requested?</label>
+                        <br/>
+                        <input onChange={transportationHandler} id={"transportationYes"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationYes"}>Yes</label>
+                        <br/>
+                        <input onChange={transportationHandler} id={"transportationNo"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationNo"}>No</label>
+                    </div>
+                    {
+                        <Select
+                            label={"Please select language"}
+                            options={[
+                                {name: "English", disabled: false, selected: false},
+                                {name: "medical2", disabled: false, selected: false},
+                                {name: "medical3", disabled: false, selected: false},
+                                {name: "medical4", disabled: false, selected: false},
+                            ]}
+                        />
+                    }
+                    <div className={cls.formRepeat2}>
+                        <Datapicker
+                            label={"Appointment Date"}
+                            width={"small"}
+                            small={true}
+                        />
+                        <TimePicker label={"Appointment Time"}/>
                     </div>
                     <div className={cls.formRepeat2}>
                         <Input
@@ -143,7 +176,7 @@ const Refer:FC<any> = ({
                             placeholder={"City"}
                         />
                         <Select
-                            placeholder={"Medical"}
+                            placeholder={"State"}
                             required={true}
                             options={[
                                 {name: "medical1", disabled: false, selected: false},
