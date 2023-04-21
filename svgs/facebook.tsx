@@ -4,11 +4,7 @@ import {svgUtil} from "@/svgs/util";
 const FacebookIcon:FC<svgUtil> = ({
     width = 25,
     height = 25,
-<<<<<<< HEAD
-    color = ""
-=======
     color= ""
->>>>>>> 5c3f47112f2ecfe936fb352514cba2ff59af14c9
 }) => {
     return (
         <svg width={width} height={height} fill={color} viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">

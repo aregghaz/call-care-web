@@ -266,8 +266,8 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-                                      <Flip left delay={index * 200}>
-                                          <Service key={index} name={name} description={description} image={image}/>
+                                      <Flip left key={index} delay={index * 200}>
+                                          <Service name={name} description={description} image={image}/>
                                       </Flip>
                                   )
                               })

@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 import cls from "../styles/Contact.module.scss"
-// import useScreenSize from "../svgs/hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 import MessageIcon from "../svgs/message";
 import TimeIcon from "../svgs/time";
 import LocationIcon from "../svgs/location";
@@ -34,9 +34,7 @@ const Contact = ({
                             </div>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
-                                <textarea id={"comment"} onChange={handleTextareaHeight}>
-
-                                </textarea>
+                                <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>
                             </div>
                             <button className={cls.sendButton}>Send Message</button>
                         </form>
