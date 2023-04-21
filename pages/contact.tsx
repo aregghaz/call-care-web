@@ -8,6 +8,7 @@ import PhoneIcon from "../svgs/phone";
 import PinterestIcon from "../svgs/pinterest";
 import Link from "next/link";
 import SocialLinks from "../components/social-links/social-links";
+import useScreenSize from "@/hooks/useScreenSize";
 const Contact = ({
 
 }) => {
@@ -34,9 +35,7 @@ const Contact = ({
                             </div>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
-                                <textarea id={"comment"} onChange={handleTextareaHeight}>
-
-                                </textarea>
+                                <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>
                             </div>
                             <button className={cls.sendButton}>Send Message</button>
                         </form>

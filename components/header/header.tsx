@@ -3,7 +3,7 @@ import cls from "./header.module.scss"
 import Link from "next/link";
 import NavLink from "next/link"
 import Image from "next/image";
-import useScreenSize from "@/hooks/useScreenSize";
+import useScreenSize from "../../hooks/useScreenSize";
 import SocialLinks from "@/components/social-links/social-links";
 import useScroll from "../../hooks/useScroll";
 
@@ -92,7 +92,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
             </div>
-            <nav className={`${cls.headerNav} ${scroll.y > 350 ? cls.headerNavAlternate : ""}`}>
+            <nav className={`${cls.headerNav} ${scroll.y > 300 ? cls.headerNavAlternate : ""}`}>
                 <div className={`${cls.headerNavigation}`}>
                     <div className={cls.burgerMenuWrapper} onClick={handleBurger}>
                         <span className={`${cls.line} ${cls.lineTop} ${burgerAnim && cls.open}`}></span>

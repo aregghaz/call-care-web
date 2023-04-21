@@ -1,9 +1,12 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="50" height="50" fill="url(#pattern0)"/>
-<defs>
-<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_376_392" transform="scale(0.0208333)"/>
-</pattern>
-<image id="image0_376_392" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEjElEQVR4nO1ZTYgcVRB+Kq7/gsGfIIoQ48FR18xUdVfNENhbFI3e1oOJXvwDjUGj6EUPiognLyoYD0ZZfyNR1CBkE/XmQZbN7ns9JKy4QTQaiEmMXkJMdqR6MzvVPd0zm9nXu6PmgwdNv+p69b1Xr17Va2PO4D+GiHmZq1Zui0J8zBI8K02e5Z1dfctlph+xp1a7xDI87gh2OYK/HWMjs0kfwS7LsCEaKl281HabMYBzLeHDluG3XKNzmmX4XVZn6vaV5y2J8Q7xWksw3m4YnrQE3zuC9yzhq9Ic4fvyTvoyyIxNhuE1i2r8ZFjh9lmHH2U1JqqDV+Z9J32W4RHHMJ0i/WudgBbF+CgMS5bh6NzghMcswaaoVBqYt45SacASPCXfKiJ/OCrfWKzxzMss4Q9q5g5axqFe9bkq1pIrCdN7AS43RcESfqA24dF6ENy0UJ0TVbzZEvypSIyYImCpApZx5tTMz7hqZW2e7BjAhRHh3eJakwxPyrO8y5OPRLal+2S9imX/BBh3qHj+cZZMw5izxLcd4ZH2MwCPCBmRydH/iVqFr7waHwXBchUCj0dcXpllvITO7mcAjGSRqBPd0DwEZaxO0ez0CVDwkJr9nVky8cynwqpj2HyqJcKmY3wiUwfj1+r7B7wRcISfqc27Id0v/p10G3h739DQ+c1+eXYMW5Q7Hf6O+YKMSdioxtnmjYBlmGrF/Qq0EWS8S8+8Nj5FYm4lbAh3tumpYqBWeq8/AoR/NRXLfmgbOMSn1ey+mauH4a3WRMCmdP+eWvlqHaa9EdAZZtaJm/R/2NwrgahUGlD75Lg/AgwHWgPTVUW5UBQEy5WeA/4IENo5xWF46zw28Zb0JraE76jZP5S1iaNasEq50IQ3Apbgy5biYF2WjBxSqTA6LS4z6zawL5F9EmzM0uFCvE/JfOGNgGN4RofILJn4IGMY6VrIEL6bexpTa5UkMPgjkAxvvzSMOTuPRLwShIfbDYdDMvN5xm8dHj7HEu7vFK57Rqxcpb2W4I5O8uLfkuwJmZhQtbI2y+c1REat0n4Z0/iEI3hZbbDPvSo36X2GL/nWbyziimZC5zvltVQeVLpnXA2u96U7ORDDNuXX233pdYzb1Um+1RRZDzuCE61IAWsWqtOFsEYFiBOF18USRtVm+0kutXrVNRWGl4qObiHaK6To1qlFp+StG6zOjRgPei1iOg8c3KMGnunFleK7Up6tg2M9VRg2iwldw8aHFOKK+X5br5avkxl3XWrsQiHLLaeyIjHe6eahCZGxBLuV3/88vnrVFWYpEF8xqts1y/BhXqogkBTEMnykgsCxRbtSzINjuD+R8zC8kScbX/QmM9YHTT/AEryeMIzguQyZ55My+JrpF6RdI00iUTPP9n3qPVlbKOJ6lmBnytAXHOOLSRfDHadzk72omBgcvMgyfptbzDB+IzKmnzEm9THjaAaB0fmE2b6A+Hf8Z3KWyKgjfLTvfP5fh4ZEGsL1zX+/xTVc3+kw7BmiuNuNg69mc65u/t8EGvL3hYN1jvGVItskw72FuNAZmGLwDwk68Lba7t8bAAAAAElFTkSuQmCC"/>
-</defs>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="64px" height="64px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M19 28C23 24 27 17.447 27 12C27 5.925 22.075 1 16 1C9.925 1 5 5.925 5 12C5 21 16 31 16 31M5 31H27M21 12C21 9.238 18.762 7 16 7C13.238 7 11 9.238 11 12C11 14.762 13.238 17 16 17C18.762 17 21 14.762 21 12Z" stroke="#D33834" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+
 </svg>

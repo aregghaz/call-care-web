@@ -1,0 +1,254 @@
+@import "./variables";
+
+@mixin inputBorder() {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #0000008C;
+}
+
+.hero {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  position: relative;
+}
+
+.heroContent {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10%;
+  gap: 5%;
+
+  @media screen and (max-width: 1680px) {
+    padding: 0 2%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+  }
+  
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+
+  & > h1 {
+    color: black;
+    font-size: 55px;
+    font-weight: 500;
+
+    @media screen and (max-width: 1100px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      color: white;
+    }
+  }
+
+  & > p {
+    color: #000000AB;
+    text-shadow: 0px 4px 4px 0px #00000040;
+    font-size: 26px;
+    font-weight: 400;
+    @media screen and (max-width: 1000px) {
+      color: white;
+    }
+
+  }
+}
+
+.heroRight {
+  width: 70%;
+  height: 100%;
+  background-position: center;
+  background-size: 100%;
+  background-image: url($serviceHero1);
+  max-width: 1500px;
+
+  @media screen and (max-width: 1500px) {
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.services {
+  width: 100%;
+  height: 600px;
+  background-color: #F4F4F4;
+  padding: 2%;
+}
+
+.serviceSlider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.serviceContact {
+  width: 100%;
+  height: 800px;
+  display: flex;
+
+  @media screen and (max-width: 800px) {
+    height: 1000px;
+  }
+}
+
+.contactLeft {
+  width: 30%;
+  height: 100%;
+  background-image: url($serviceContact1);
+  background-size: 80%;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 1650px) {
+    background-position: center;
+  }
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.contactRight {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+.contactContent {
+  width: 50%;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+  box-shadow: 7px 12px 7px 3px #0000004F;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+  @media screen and (max-width: 1400px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
+
+  & > h2 {
+    color: black;
+    font-size: 34px;
+    font-weight: 500;
+  }
+}
+
+.contactForm {
+  width: 100%;
+  height: 100%;
+  //border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-end;
+
+  & > input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    @include inputBorder();
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000B5;
+    outline: none;
+    padding-left: 2%;
+  }
+}
+
+.contactFormMain {
+  width: 100%;
+  display: grid;
+  gap: 50px;
+  padding: 2% 0;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 800px) {
+    grid-template-columns: none;
+  }
+
+  & > input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    @include inputBorder();
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000B5;
+    outline: none;
+    padding-left: 2%;
+  }
+}
+
+.formComment {
+  width: 100%;
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > label {
+    color: #000000B5;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  & > textarea {
+    width: 100%;
+    height: 50px;
+    max-height: 100px;
+    @include inputBorder();
+    resize: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+    padding: 1%;
+    font-weight: 400;
+    line-height: 19px;
+
+  }
+}
+
+.sendButton {
+  width: 200px;
+  height: 50px;
+  background-color: #D33834;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+}

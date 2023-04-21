@@ -12,14 +12,12 @@ import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
-import NavLink from "next/link"
-
 import Footer from "../components/footer/footer";
 
 import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
 import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
-import useScreenSize from "@/hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 import {rotate} from "next/dist/server/lib/squoosh/impl";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -246,9 +244,7 @@ export default function Home(props:any) {
                                       <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                           <h1>A True Devotion <br/> To Health</h1>
                                           <p>Full service medical provider serving the great state of California</p>
-                                          <Link href={"./services"}>
-                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
-                                          </Link>
+                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
                                       </div>
                                   </div>
                               </SwiperSlide>
@@ -279,9 +275,9 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-
+                                      <Flip key={index} left delay={index * 200}>
                                           <Service key={index} name={name} description={description} image={image}/>
-
+                                      </Flip>
                                   )
                               })
                           }
