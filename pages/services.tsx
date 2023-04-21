@@ -48,6 +48,9 @@ const Serivces:FC<any> = ({
                     }}
                     pagination={{
                         clickable: true,
+                        clickableClass: `${cls.otherBulletsWrapper}`,
+                        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                     }}
                     modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"

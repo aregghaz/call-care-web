@@ -26,7 +26,7 @@ const GeneralMedicalCard:FC<GeneralMedicalCardProps> = ({
         >
             <div className={cls.generalCardContent}>
                 <div className={cls.generalCardButton}>
-                    <Link href={{link}}>
+                    <Link href={link}>
                         <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
                     </Link>
                 </div>

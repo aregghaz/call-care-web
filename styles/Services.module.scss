@@ -207,6 +207,24 @@
   }
 }
 
+.horizontalClass {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #D9D9D9 !important;
+  opacity: 1 !important;
+  margin: 0 8px !important;
+  cursor: pointer !important;
+}
+
+.otherBulletsWrapper {
+  bottom: 5% !important;
+}
+
+.activeBulletClass {
+  background-color: red !important;
+}
+
+
 .contactFormMain {
   width: 100%;
   display: grid;

@@ -2,9 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import cls from "../styles/Home.module.scss"
-import Header from "../components/header/header";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
+import {EffectFade, Pagination, Navigation, Autoplay, EffectCreative} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
 import React, {useState} from "react";
@@ -12,7 +11,6 @@ import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
-import Footer from "../components/footer/footer";
 
 import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
@@ -75,59 +73,49 @@ export default function Home(props:any) {
 
     const generalMedicalCards:Array<GeneralMedicalCardProps> = [
         {
-            name: "About",
+            name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard1.webp",
             link: "/about"
         },
         {
-            name: "About us",
+            name: "our services",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard2.webp",
-            link: "/"
+            link: "/services"
         },
         {
-            name: "About us",
+            name: "Work whit us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard3.webp",
-            link: "/"
+            link: "/work"
         },
         {
-            name: "About us",
+            name: "Refer",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard4.webp",
-            link: "/"
+            link: "/refer"
         },
         {
-            name: "About us",
+            name: "Contacts",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard1.webp",
-            link: "/"
+            link: "/contact"
         },
         {
-            name: "About us",
+            name: "Our Admin Panel",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard2.webp",
             link: "/"
         },
         {
-            name: "About us",
+            name: "Mobile App",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard3.webp",
             link: "/"
         },
-        {
-            name: "About us",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard4.webp",
-            link: "/"
-        },
-        {
-            name: "About us",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard2.webp",
-            link: "/"
-        },
+
+
     ]
 
     const offerServices:{top: Array<OfferServiceProps>, bottom: Array<OfferServiceProps>} = {
@@ -135,7 +123,7 @@ export default function Home(props:any) {
             {
                 name: "Ambulatory Service",
                 description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg1.webp",
                     alt: "img1",
@@ -144,9 +132,9 @@ export default function Home(props:any) {
                 }
             },
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                name: "Wheelchair Services",
+                description: "General Medical provides exceptional wheelchair transportation",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg2.webp",
                     alt: "img1",
@@ -155,9 +143,9 @@ export default function Home(props:any) {
                 }
             },
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                name: "Stretcher Services",
+                description: "Patients in need of transportation that require the use of a stretcher",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg3.webp",
                     alt: "img1",
@@ -169,9 +157,9 @@ export default function Home(props:any) {
 
         bottom: [
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                name: "Ambulance Transportation",
+                description: "Ambulance Transportation is for people who need acute",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg4.webp",
                     alt: "img1",
@@ -180,9 +168,9 @@ export default function Home(props:any) {
                 }
             },
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                name: "OUR SERVICES",
+                description: "Ambulatory Transportation, Wheelchair Transportation, Stretcher Transportation",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg5.webp",
                     alt: "img1",
@@ -191,9 +179,9 @@ export default function Home(props:any) {
                 }
             },
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
-                link: "/",
+                name: "QUOTE / REFERRAL",
+                description: "Complete our easy-to-use quote request form to learn how we can serve .",
+                link: "/services",
                 image: {
                     src: "/images/weOfferimg6.webp",
                     alt: "img1",
@@ -245,7 +233,9 @@ export default function Home(props:any) {
                                           <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                               <h1>A True Devotion <br/> To Health</h1>
                                               <p>Full service medical provider serving the great state of California</p>
-                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                              <Link href={"/services"}>
+                                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                              </Link>
                                           </div>
                                       </div>
                                   </SwiperSlide>
@@ -255,7 +245,9 @@ export default function Home(props:any) {
                                       <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                           <h1>A True Devotion <br/> To Health 2</h1>
                                           <p>Full service medical provider serving the great state of California</p>
-                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                          <Link href={"/about"}>
+                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                          </Link>
                                       </div>
                                   </div>
                               </SwiperSlide>
@@ -264,7 +256,9 @@ export default function Home(props:any) {
                                       <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                           <h1>A True Devotion <br/> To Health 3</h1>
                                           <p>Full service medical provider serving the great state of California</p>
-                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                          <Link href={"/work"}>
+                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                          </Link>
                                       </div>
                                   </div>
                               </SwiperSlide>
@@ -340,13 +334,14 @@ export default function Home(props:any) {
                           }}
                       >
                           {
-                              generalMedicalCards.map(({name, description, image}, index) => {
+                              generalMedicalCards.map(({name, description, image,link}, index) => {
                                   return (
                                       <SwiperSlide
                                           key={index}
                                       >
                                           <Fade delay={index < 3 ? index * 200 : 0}>
                                               <GeneralMedicalCard
+                                                  link={link}
                                                   name={name}
                                                   description={description}
                                                   image={image}
@@ -362,7 +357,9 @@ export default function Home(props:any) {
               <section className={cls.believeSec}>
                   <h1>We believe the heart of healthcare is service</h1>
                   <p>At General Medical our staff will be happy to assist you with any home health care need you have. We offer Home Health Services including Intravenous Injection Therapy, Respiratory Therapy, Registered Nurses, Licensed Vocational Nurses and Physical Therapists. We have a professional team that will meet your needs in a timely fashion.</p>
-                  <button>View More</button>
+                  <Link rel="stylesheet" href="/about" className={cls.buttonLink}>
+                      <button>View More</button>
+                  </Link>
               </section>
               <section className={cls.weOffer}>
                   <div className={cls.titleBox}>
@@ -405,21 +402,27 @@ export default function Home(props:any) {
 
               </section>
               <section className={cls.applications}>
+
                   <Swiper
-                      modules={[Pagination, Autoplay]}
-                      direction={"horizontal"}
-                      className={cls.heroSlider}
-                      spaceBetween={0}
-                      slidesPerView={1}
+                      grabCursor={true}
+                      effect={"creative"}
+                      creativeEffect={{
+                          prev: {
+                              shadow: true,
+                              translate: [0, 0, -400],
+                          },
+                          next: {
+                              translate: ["100%", 0, 0],
+                          },
+
+                      }}
+                      modules={[EffectCreative, Pagination]}
+                      className="mySwiper"
                       pagination={{
                           clickable: true,
                           clickableClass: `${cls.otherBulletsWrapper}`,
                           bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
                           bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                      }}
-                      autoplay={{
-                          delay: 3000,
-                          disableOnInteraction: false,
                       }}
                   >
 
@@ -475,19 +478,19 @@ export default function Home(props:any) {
                                 <SwiperSlide className={`${cls.slide}`}>
                                     <div className={cls.miniSlidBox}>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
-                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></Link></button>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className={cls.slide}>
                                     <div className={cls.miniSlidBox}>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
-                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></Link></button>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className={cls.slide}>
                                     <div className={cls.miniSlidBox}>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius et! Praesentium sequi aut ipsa deleniti soluta quam nihil aperiam at cupiditate </p>
-                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></Link></button>
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
@@ -497,63 +500,7 @@ export default function Home(props:any) {
                       <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"} width={450} height={600}/>
                   </div>
               </section>
-              {/*<section className={cls.formSection}>*/}
-              {/*    <div className={cls.formTitle}>*/}
-              {/*        <h1>Work With Us</h1>*/}
-              {/*    </div>*/}
-              {/*    <div className={cls.formMenu}>*/}
-              {/*        <h2>Available Positions</h2>*/}
-              {/*        <ul>*/}
-              {/*            <li>Occupational Therapy Assistant</li>*/}
-              {/*            <li>OOccupational Therapist</li>*/}
-              {/*            <li>Physical Therapist</li>*/}
-              {/*            <li>Physical Therapy Assistant</li>*/}
-              {/*            <li>Speech Therapist</li>*/}
-              {/*            <li>Contractors</li>*/}
-              {/*            <li>EMT’s</li>*/}
-              {/*        </ul>*/}
-              {/*    </div>*/}
-              {/*    <div className={cls.formInput}>*/}
-              {/*        <div className={cls.formInputImg}>*/}
-              {/*            /!*<Image  src={"/images/formImg.jpg"} alt={"Form"} width={482} height={466} />*!/*/}
-              {/*        </div>*/}
-              {/*        <div className={cls.formInputContent}>*/}
-              {/*            <form action="#">*/}
-              {/*                <div className={cls.inputTop}>*/}
-              {/*                    <input className={cls.positionInput} type="text" placeholder={'Position Applying For'}/>*/}
-              {/*                    <input className={cls.fifInputs} type="text" placeholder={'First Name'}/>*/}
-              {/*                    <input className={cls.fifInputs} type="text" placeholder={'Last Name'}/>*/}
-              {/*                    <input className={cls.fifInputs} type="email" placeholder={'Email'}/>*/}
-              {/*                    <input className={cls.fifInputs} type="tel" placeholder={'Phone'}/>*/}
-              {/*                </div>*/}
-              {/*                <div className={cls.inputBottom}>*/}
-              {/*                    <div className={cls.inputBottomLeft}>*/}
-              {/*                        <label htmlFor={"contactTextarea"}>*/}
-              {/*                            Or Copy and Paste Your Resume Bellow*/}
-              {/*                        </label>*/}
-              {/*                        <textarea id={"contactTextarea"} cols={30} rows={10} />*/}
-              {/*                    </div>*/}
-              {/*                    <div className={cls.inputBottomRight}>*/}
-              {/*                        <label htmlFor={"contactFile"}>*/}
-              {/*                            Upload red resume*/}
-              {/*                        </label>*/}
-              {/*                        <div className={cls.fileWrapper}>*/}
-              {/*                            <input className={cls.fileInput} id={"contactFile"} type={"file"} multiple={true}/>*/}
-              {/*                            <span className={cls.fileButton}>Choose File</span>*/}
-              {/*                        </div>*/}
-              {/*                        <input className={cls.submitButton} type="submit"/>*/}
-              {/*                    </div>*/}
-              {/*                </div>*/}
-              {/*            </form>*/}
-              {/*        </div>*/}
-              {/*    </div>*/}
-              {/*</section>*/}
           </main>
     </>
   )
 }
-// export async function getServerSideProps(context) {
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   }
-// }

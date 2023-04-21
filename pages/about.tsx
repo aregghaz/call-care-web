@@ -100,9 +100,9 @@ const About = ({
                     pagination={{
                         enabled: true,
                         clickable: true,
-                        // clickableClass: `${cls.bulletsWrapper}`,
-                        // bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
-                        // bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                        clickableClass: `${cls.otherBulletsWrapper}`,
+                        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                     }}
                     slidesPerView={screenSize.width < 700 ? 1 :screenSize.width < 1024 ? 2 : screenSize.width < 1300 ? 3 : 4}
                     autoplay={{
