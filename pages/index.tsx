@@ -313,9 +313,9 @@ export default function Home(props:any) {
                       <Swiper
                           className={cls.generalSlider}
                           modules={[Navigation, Autoplay]}
-                          spaceBetween={20}
+                          spaceBetween={screenSize.width > 1000 ? 150 : 50}
                           loop={true}
-                          slidesPerView={screenSize.width < 600 ? 1 :screenSize.width < 1024 ? 2 : screenSize.width < 1300 ? 3 : 4}
+                          slidesPerView={screenSize.width < 600 ? 1 :screenSize.width < 800 ? 1 : screenSize.width < 1300 ? 2 : 3}
                           onSlideChange={swiper => {
                               setcalcarecardsSlides(swiper.activeIndex)
                           }}
@@ -334,11 +334,13 @@ export default function Home(props:any) {
                                       <SwiperSlide
                                           key={index}
                                       >
-                                          <GeneralMedicalCard
-                                              name={name}
-                                              description={description}
-                                              image={image}
-                                          />
+                                          <Flip top delay={index < 3 ? index * 200 : 0}>
+                                              <GeneralMedicalCard
+                                                  name={name}
+                                                  description={description}
+                                                  image={image}
+                                              />
+                                          </Flip>
                                       </SwiperSlide>
                                   )
                               })

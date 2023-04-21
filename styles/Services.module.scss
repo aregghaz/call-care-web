@@ -12,6 +12,7 @@
   height: 800px;
   display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .heroContent {
@@ -66,7 +67,7 @@
 }
 
 .heroRight {
-  width: 70%;
+  width: 60%;
   height: 100%;
   background-position: center;
   background-size: 100%;

@@ -1,6 +1,5 @@
 import React, {FC} from "react"
 import cls from "../styles/Contact.module.scss"
-import useScreenSize from "../hooks/useScreenSize";
 import MessageIcon from "../svgs/message";
 import TimeIcon from "../svgs/time";
 import LocationIcon from "../svgs/location";
@@ -8,7 +7,7 @@ import PhoneIcon from "../svgs/phone";
 import PinterestIcon from "../svgs/pinterest";
 import Link from "next/link";
 import SocialLinks from "../components/social-links/social-links";
-import useScreenSize from "@/hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 const Contact = ({
 
 }) => {
