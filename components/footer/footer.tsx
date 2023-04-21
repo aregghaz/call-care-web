@@ -1,10 +1,38 @@
 import cls from "./footer.module.scss";
 import Image from "next/image";
 import React, {FC} from "react";
+import NavLink from "next/link";
 
 const Footer:FC<any> = ({
 
 }) => {
+
+    const headerLinks = [
+        {
+            name: "Home",
+            link: "/",
+        },
+        {
+            name: "About Us",
+            link: "/about",
+        },
+        {
+            name: "Our Services",
+            link: "/services",
+        },
+        {
+            name: "Work With Us",
+            link: "/work",
+        },
+        {
+            name: "Refer",
+            link: "/refer",
+        },
+        {
+            name: "Contacts",
+            link: "/contact",
+        },
+    ]
     return (
         <footer className={cls.footer}>
             <ul className={cls.footerContent}>
@@ -22,20 +50,24 @@ const Footer:FC<any> = ({
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Explore</li>
-                        <li>About Us</li>
-                        <li>Meet Our Team</li>
-                        <li>Our Portfolio</li>
-                        <li>Latest News</li>
-                        <li>Contact Us</li>
+                        {
+                            headerLinks.map(({name, link}, index, array) => {
+                                return (
+                                    <>
+                                        <li key={index}><NavLink className={cls.headerMenu} href={link}>{name}</NavLink></li>
+                                    </>
+                                )
+                            })
+                        }
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Services</li>
-                        <li>Modern Designing</li>
-                        <li>Marketing Strategy</li>
-                        <li>UI/UX designing</li>
-                        <li>App Development</li>
+                        <li>Medical Home Modification</li>
+                        <li>Home Health</li>
+                        <li>Therapy</li>
+                        <li>Transportation</li>
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
@@ -49,15 +81,7 @@ const Footer:FC<any> = ({
                 </li>
                 <li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>
                     <div className={cls.footerContentSearchWrapper}>
-                        <div className={cls.footerContentSearchInput}>
-                            <input
-                                type={"text"}
-                                placeholder={"Search"}
-                            />
-                            <button>
-                                <Image src={"/images/searchWithDots.svg"} alt={"search icon"} width={22} height={23}/>
-                            </button>
-                        </div>
+
                         <ul className={cls.footerContentMedia}>
                             <li><Image src={"/images/pinterestLogo.svg"} alt={"Pinterest logo"} width={14} height={18}/></li>
                             <li><Image src={"/images/linkedIn.svg"} alt={"Linkedin logo"} width={14} height={18}/></li>

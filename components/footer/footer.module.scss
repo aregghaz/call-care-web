@@ -1,4 +1,6 @@
 @import "../../styles/variables";
+
+
 .footer {
   width: 100%;
   height: 500px;
@@ -40,17 +42,20 @@
     color: #FFFFFFAB;
     font-size: 19px !important;
     font-weight: 400;
+    list-style-type: none;
   }
 }
 
 .footerContentTitle {
   color: white !important;
   font-size: 24px !important;
+  list-style-type: none;
   font-weight: 700 !important;
 }
 
 .footerContentCol {
-  ul {
+  list-style-type: none;
+   ul {
     padding-top: 50px;
     width: 100%;
     height: 100%;
@@ -67,7 +72,15 @@
     color: #FFFFFFCF;
     font-size: 20px;
     font-weight: 400;
+    list-style-type: none;
   }
+}
+
+.headerMenu{
+  color: #FFFFFFAB;
+  font-size: 19px !important;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .footerContentSearch {
@@ -148,9 +161,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style-type: none;
 
     & > img {
       filter: invert(100%);
     }
   }
 }
+

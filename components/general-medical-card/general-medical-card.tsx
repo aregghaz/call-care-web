@@ -8,12 +8,14 @@ export interface GeneralMedicalCardProps {
     name: string,
     description: string,
     image: string,
+    link: string,
 }
 
 const GeneralMedicalCard:FC<GeneralMedicalCardProps> = ({
     name,
     description,
     image,
+    link,
 }) => {
     return (
         <div
@@ -24,7 +26,7 @@ const GeneralMedicalCard:FC<GeneralMedicalCardProps> = ({
         >
             <div className={cls.generalCardContent}>
                 <div className={cls.generalCardButton}>
-                    <Link href={"/"}>
+                    <Link href={{link}}>
                         <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
                     </Link>
                 </div>

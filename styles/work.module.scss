@@ -1,0 +1,193 @@
+@import "variables";
+
+
+.work{
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 170px 0;
+
+  @media screen and (max-width: 1100px){
+    flex-direction: column;
+    padding: 100px 0;
+  }
+}
+
+.workInfo{
+  width: 40%;
+  height:auto;
+  border: inherit;
+  display: flex;
+  flex-direction: column;
+  //padding-top: 40px;
+  padding-left: 200px;
+  gap: 50px;
+
+  @media screen and (max-width: 1300px){
+    padding-left: 100px;
+  }
+
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px){
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  & > h1{
+    font-size: 50px;
+    white-space: nowrap;
+    @media screen and (max-width: 400px){
+     font-size: 45px;
+    }
+  }
+}
+
+
+
+.workMenu{
+  width: 100%;
+  height: auto;
+  border: inherit;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+
+
+  & > ul{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media screen and (max-width: 1100px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 45px;
+    }
+
+    @media screen and (max-width: 600px){
+      padding: 0;
+    }
+
+    & > li{
+      color: #6C6C6C;
+      white-space: nowrap;
+
+      @media screen and (max-width: 1100px){
+        white-space: normal;
+
+      }
+    }
+  }
+}
+
+.workForm{
+  width: 60%;
+  height: 100%;
+  border: inherit;
+  & > form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+  }
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+  }
+}
+
+.inputInfos{
+  width: 70%;
+  height:auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 70px;
+
+  & > input{
+    width: 40%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5490196078);
+    outline: none;
+  }
+
+  .inputPosition{
+    width: 82.5%;
+  }
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+.inputComment{
+  width: 70%;
+  height: auto;
+  //border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 20px;
+
+  & > label{
+    width: 250px;
+    //border: 1px solid red;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+  }
+
+  & > textarea{
+    resize: none;
+    width: 82.5%;
+    height: 200px;
+    outline: none;
+    padding: 20px;
+
+    @media screen and (max-width: 1100px){
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 1100px){
+    width: 100%;
+    justify-content: center;
+    padding-left: 9%;
+  }
+
+}
+
+.file{
+  width: 90px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+
+
+  &::before{
+    content: "File";
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    background-color: #0a0062;
+    border-radius: 5px;
+  color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
