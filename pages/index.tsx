@@ -75,10 +75,10 @@ export default function Home(props:any) {
 
     const generalMedicalCards:Array<GeneralMedicalCardProps> = [
         {
-            name: "About us",
+            name: "About",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard1.webp",
-            link: "/"
+            link: "/about"
         },
         {
             name: "About us",
@@ -236,18 +236,20 @@ export default function Home(props:any) {
                                   disableOnInteraction: true,
                               }}
                           >
-                              <SwiperSlide className={cls.slide}>
-                                  <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
-                                      <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
-                                          <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
-                                      </video>
-                                      <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                          <h1>A True Devotion <br/> To Health</h1>
-                                          <p>Full service medical provider serving the great state of California</p>
-                                          <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                              {screenSize.width > 1024 && <>
+                                  <SwiperSlide className={cls.slide}>
+                                      <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
+                                          <video autoPlay={true} loop={true} muted={true} playsInline={true} className={cls.slideVideo}>
+                                              <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
+                                          </video>
+                                          <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
+                                              <h1>A True Devotion <br/> To Health</h1>
+                                              <p>Full service medical provider serving the great state of California</p>
+                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                          </div>
                                       </div>
-                                  </div>
-                              </SwiperSlide>
+                                  </SwiperSlide>
+                              </>}
                               <SwiperSlide className={cls.slide}>
                                   <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
                                       <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
@@ -275,9 +277,9 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-                                      <Flip key={index} left delay={index * 200}>
+                                      <Fade key={index} left delay={index * 200}  className={cls.flipWrapper}>
                                           <Service key={index} name={name} description={description} image={image}/>
-                                      </Flip>
+                                      </Fade>
                                   )
                               })
                           }
@@ -308,7 +310,7 @@ export default function Home(props:any) {
                             <button
                                 className={"cardRight"}
                                 style={{
-                                    backgroundColor: calcarecardsSlides >= 5 ? "white" : "#D33834FF",
+                                    backgroundColor: "#D33834FF",
                                 }}
                             >
                                 <Image
@@ -343,13 +345,13 @@ export default function Home(props:any) {
                                       <SwiperSlide
                                           key={index}
                                       >
-                                          <Flip top delay={index < 3 ? index * 200 : 0}>
+                                          <Fade delay={index < 3 ? index * 200 : 0}>
                                               <GeneralMedicalCard
                                                   name={name}
                                                   description={description}
                                                   image={image}
                                               />
-                                          </Flip>
+                                          </Fade>
                                       </SwiperSlide>
                                   )
                               })

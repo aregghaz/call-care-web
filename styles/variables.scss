@@ -3,6 +3,13 @@
   src: url("/fonts/Rubik-VariableFont_wght.ttf");
 }
 
+@mixin inputBorder() {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #0000008C;
+}
+
 $asteriskColor: #D33834;
 $greyText: #cbcbcb;
 $greyInfo: #D0D0D0;
