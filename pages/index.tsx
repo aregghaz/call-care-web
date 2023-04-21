@@ -17,7 +17,7 @@ import Footer from "../components/footer/footer";
 import Service, {ServiceProps} from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
 import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
-import useScreenSize from "/hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 import {rotate} from "next/dist/server/lib/squoosh/impl";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -77,47 +77,56 @@ export default function Home(props:any) {
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard1.webp"
+            image: "/images/calcarecard1.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard2.webp"
+            image: "/images/calcarecard2.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard3.webp"
+            image: "/images/calcarecard3.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard4.webp"
+            image: "/images/calcarecard4.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard1.webp"
+            image: "/images/calcarecard1.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard2.webp"
+            image: "/images/calcarecard2.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard3.webp"
+            image: "/images/calcarecard3.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard4.webp"
+            image: "/images/calcarecard4.webp",
+            link: "/"
         },
         {
             name: "About us",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard2.webp"
+            image: "/images/calcarecard2.webp",
+            link: "/"
         },
     ]
 

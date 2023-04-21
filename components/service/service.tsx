@@ -2,7 +2,7 @@ import React, {FC} from "react"
 import cls from "./service.module.scss"
 import Image from "next/image";
 import {imageType} from "../../utils/types";
-
+import Link from "next/link";
 export interface ServiceProps {
     name: string,
     description: string,
@@ -22,13 +22,16 @@ const Service:FC<ServiceProps> = ({
     className= ""
 }) => {
     return (
-        <li className={`${cls.service} ${className}`}>
-            <div className={cls.serviceContent}>
-                <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
-                <h2>{name}</h2>
-                <span>{description}</span>
-            </div>
-        </li>
+        <Link href={"../../services"} className={cls.nav}>
+            <li className={`${cls.service} ${className}`}>
+                <div className={cls.serviceContent}>
+                    <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
+                    <h2>{name}</h2>
+                    <span>{description}</span>
+                </div>
+            </li>
+        </Link>
+
     )
 }
 

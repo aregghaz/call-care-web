@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 
+
 .service {
   min-width: 100px;
   height: 400px;
@@ -49,6 +50,10 @@
   &:hover::after {
     width: 50%;
   }
+}
+
+.nav{
+  text-decoration: none;
 }
 
 .serviceContent {
