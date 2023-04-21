@@ -16,3 +16,11 @@
   background-color: $asteriskColor;
   border-radius: 30px;
 }
+
+input,select {
+  border-radius: 0;
+}
+
+input[type="search"],select {
+  -webkit-appearance: none;
+}

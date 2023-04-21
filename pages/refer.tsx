@@ -130,21 +130,25 @@ const Refer:FC<any> = ({
                     </div>
                     <div className={cls.picker}>
                         <label>Is Translation Service Requested?</label>
-                        <br/>
-                        <input onChange={transportationHandler} id={"transportationYes"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationYes"}>Yes</label>
-                        <br/>
-                        <input onChange={transportationHandler} id={"transportationNo"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationNo"}>No</label>
+                        <div className={cls.radio}>
+                            <input onChange={transportationHandler} defaultChecked={true} id={"transportationYes"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationYes"}>Yes</label>
+                        </div>
+                        <div className={cls.radio}>
+                            <input onChange={transportationHandler} id={"transportationNo"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationNo"}>No</label>
+                        </div>
                     </div>
                     {
-                        <Select
-                            label={"Please select language"}
-                            options={[
-                                {name: "English", disabled: false, selected: false},
-                                {name: "medical2", disabled: false, selected: false},
-                                {name: "medical3", disabled: false, selected: false},
-                                {name: "medical4", disabled: false, selected: false},
-                            ]}
-                        />
+                        transportation && <>
+                            <Select
+                                label={"Please select language"}
+                                options={[
+                                    {name: "English", disabled: false, selected: false},
+                                    {name: "medical2", disabled: false, selected: false},
+                                    {name: "medical3", disabled: false, selected: false},
+                                    {name: "medical4", disabled: false, selected: false},
+                                ]}
+                            />
+                        </>
                     }
                     <div className={cls.formRepeat2}>
                         <Datapicker
