@@ -16,7 +16,7 @@
 }
 
 .heroContent {
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -69,11 +69,26 @@
 .heroRight {
   width: 60%;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+
+.heroRightBackground{
+  width: 100%;
+  height: 90%;
   background-position: center;
   background-size: 100%;
   background-image: url($serviceHero1);
   max-width: 1500px;
-
+  background-blend-mode: color;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
   @media screen and (max-width: 1500px) {
     background-size: cover;
   }
@@ -84,24 +99,27 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-
 .services {
   width: 100%;
   height: 600px;
   background-color: #F4F4F4;
-  padding: 2%;
+  display: flex;
+  padding-bottom: 15px;
 }
 
 .serviceSlider {
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  height: 80%;
 }
 
 .slide {
-  width: 100%;
-  height: 100%;
+  width: 500px !important;
+  height: 400px !important;
   color: black;
+  margin-top: 100px;
 }
+
+
 
 .serviceContact {
   width: 100%;

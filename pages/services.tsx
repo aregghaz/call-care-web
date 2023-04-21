@@ -1,8 +1,8 @@
 import React, {FC} from "react"
 import cls from "../styles/Services.module.scss"
 import Image from "next/image";
-import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
-import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.css"
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -29,29 +29,28 @@ const Serivces:FC<any> = ({
                         General Medical is a full service medical service provider serving Greater Southern California
                     </p>
                 </div>
-                <div className={cls.heroRight}></div>
+                <div className={cls.heroRight}>
+                    <div className={cls.heroRightBackground}></div>
+                </div>
             </section>
             <section className={cls.services}>
                 <Swiper
-                    modules={[EffectFade, Pagination, Autoplay, Navigation]}
-                    direction={"horizontal"}
-                    className={cls.serviceSlider}
-                    navigation={{
-                        enabled: true,
+                    effect={"coverflow"}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={"auto"}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
                     }}
-                    spaceBetween={50}
-                    slidesPerView={screen.width > 1350 ? 4 : screen.width < 700 ? 1 : 2}
                     pagination={{
                         clickable: true,
-                        // clickableClass: `${cls.bulletsWrapper} swiper-pagination Services_bulletsWrapper__JIyJm swiper-pagination-bullets swiper-pagination-horizontal}`,
-                        // bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
-                        // bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                     }}
-                    effect={"cards"}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
+                    modules={[EffectCoverflow, Pagination]}
+                    className="mySwiper"
                 >
                     <SwiperSlide className={cls.slide}>
                         <BigService/>

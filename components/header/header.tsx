@@ -53,6 +53,10 @@ const Header:FC<any> = ():React.ReactElement => {
 
     const scroll = useScroll()
 
+    const handleMenuItemClick = () => {
+        setBurgerAnim(false)
+    }
+
     return (
         <header
             className={cls.header}
@@ -121,7 +125,7 @@ const Header:FC<any> = ():React.ReactElement => {
                                     headerLinks.map(({name, link}, index, array) => {
                                         return (
                                             <>
-                                                <li key={index}><NavLink href={link}>{name}</NavLink></li>
+                                                <li key={index} onClick={handleMenuItemClick}><NavLink href={link}>{name}</NavLink></li>
                                                 {index != array.length - 1 && screenSize.width > 1500 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
                                             </>
                                         )
