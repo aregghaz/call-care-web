@@ -222,6 +222,7 @@ export default function Home(props:any) {
                               modules={[EffectFade, Pagination, Autoplay]}
                               direction={"vertical"}
                               className={cls.heroSlider}
+                              aut
                               spaceBetween={50}
                               slidesPerView={1}
                               pagination={{
@@ -275,7 +276,7 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-                                      <Flip key={index} left delay={index * 200}>
+                                      <Flip forever key={index} left delay={index * 200}>
                                           <Service key={index} name={name} description={description} image={image}/>
                                       </Flip>
                                   )
