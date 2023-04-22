@@ -136,13 +136,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
                 <div className={cls.headerNavigationLeft}>
-                    <SocialLinks colors={"white"} className={`${searchOpen && cls.out}`}/>
-                    {/*<div className={`${cls.headerLinks} ${searchOpen && cls.out}`}>*/}
-                    {/*    <Image src="/images/pinterestLogo.svg" alt="" width={25} height={25}/>*/}
-                    {/*    <Image src="/images/linkedIn.svg" alt="" width={25} height={25}/>*/}
-                    {/*    <Image src="/images/facebookLogo.svg" alt="" width={25} height={25}/>*/}
-                    {/*    <Image src="/images/twitterLogo.svg" alt="" width={25} height={25}/>*/}
-                    {/*</div>*/}
+                    <SocialLinks colors={"white"} className={`${searchOpen && cls.out}}`}/>
                     <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} >
                         <input type="text" placeholder={"search.."}/>
                     </div>
@@ -150,11 +144,7 @@ const Header:FC<any> = ():React.ReactElement => {
                         <div onClick={handleSearchOpen}>
                             <Image src="/images/searchIcon.svg" alt="" width={40} height={40} className={cls.img}/>
                         </div>
-
                     </div>
-                    {/*{searchOpen && <div>*/}
-                    {/*    <div className={cls.searchOpenWrapper}></div>*/}
-                    {/*</div>}*/}
                 </div>
             </nav>
         </header>

@@ -121,6 +121,10 @@ $headerHeight: 140px;
   z-index: 9999;
   transition: 0.5s;
   //border: 1px solid black;
+
+  @media screen and (max-width: 1100px){
+    flex-direction: row-reverse;
+  }
 }
 
 .headerNavigation {
@@ -128,6 +132,11 @@ $headerHeight: 140px;
   height: 100%;
   padding: 0 2%;
   border: inherit;
+
+  @media screen and (max-width: 1100px){
+    display: flex;
+    justify-content: flex-end;
+  }
 
   & > ul {
     width: 100%;
@@ -212,10 +221,13 @@ $headerHeight: 140px;
   width: 40%;
   height: 100%;
   display: flex;
-
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 
+
+//
 //.headerLinks{
 //  width: 75%;
 //  height: 100%;
@@ -232,6 +244,7 @@ $headerHeight: 140px;
 //
 //  }
 //}
+
 
 .out{
   width: 0 !important;
@@ -490,6 +503,7 @@ $headerHeight: 140px;
   .headerNavigationLeft{
     width: 70%;
     padding-left: 10px;
+    justify-content: flex-end;
 
     & > ul{
       padding-right: 8px;
@@ -526,3 +540,5 @@ $headerHeight: 140px;
     }
   }
 }
+
+
