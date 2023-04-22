@@ -370,11 +370,9 @@
     @media screen and (max-width:720px){
       padding: 20px 20px;
       font-size: 16px;
+      line-height: 20px;
     }
 
-    @media screen and (max-width:470px){
-      font-size: 13px;
-    }
   }
 
   .buttonLink{
@@ -407,6 +405,10 @@
   padding: 30px;
   overflow: hidden;
   background-color: white;
+
+  @media screen and (max-width: 1024px){
+    padding: 10px;
+  }
 }
 
 .titleBox{
@@ -417,6 +419,10 @@
   align-items: center;
   justify-content: center;
   padding: 70px 0;
+
+  @media screen and (max-width: 450px){
+    padding: 40px 0;
+  }
 
   & > h1{
     color: #000000;
@@ -497,6 +503,11 @@
   & > h2{
     text-align: center;
     font-weight: 500;
+    font-size: 1vw;
+
+    @media screen and (max-width: 1024px){
+      font-size: 0.8vw;
+    }
   }
 }
 
@@ -669,7 +680,7 @@
     cursor: pointer;
 
     @media screen and (max-width: 600px){
-      font-size: 10px;
+      font-size: 14px;
       gap: 10px;
       justify-content: flex-start;
     }
@@ -679,6 +690,13 @@
 
 .sliderAdmin{
   background-image: url($adminPanel);
+  @media screen and (max-width: 600px){
+    background-size: 90%;
+  }
+}
+
+.sliderAdmin3{
+  background-image: url($adminPanel3);
   @media screen and (max-width: 600px){
     background-size: 90%;
   }
@@ -695,6 +713,13 @@
     background-size: 60%;
   }
 
+}
+
+.sliderAdmin2{
+  background-image: url($adminPanelNout1);
+  @media screen and (max-width: 600px){
+    background-size: 90%;
+  }
 }
 
 .infoSec{
