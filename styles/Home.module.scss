@@ -173,6 +173,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  background-color: white;
 
   & > ul {
     width: 100%;
@@ -199,6 +200,7 @@
   height: auto;
   //border: 1px solid black;
   padding: 3% 5%;
+  background-color: white;
 
   @media screen and (max-width: 1500px){
     padding: 3% 2%;
@@ -332,6 +334,7 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
+  background-color: white;
 
   @media screen and (max-width: 900px){
     gap: 20px;
@@ -401,6 +404,7 @@
   //border: 1px solid red;
   padding: 30px;
   overflow: hidden;
+  background-color: white;
 
   @media screen and (max-width: 1024px){
     padding: 10px;
@@ -530,6 +534,7 @@
 .applications{
   width: 100%;
   height: auto;
+  background-color: white;
 }
 
 .appSlidePage {
@@ -721,6 +726,7 @@
   width: 100%;
   height: 600px;
   display: flex;
+  background-color: white;
   @media screen and (max-width: 1200px){
     flex-direction: column;
     height: auto;
@@ -842,6 +848,7 @@
   height: auto;
   //border: 1px solid red;
   padding: 50px 300px;
+  background-color: white;
 
   @media screen and (max-width: 1550px) {
     padding: 50px 200px;

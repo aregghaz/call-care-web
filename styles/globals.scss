@@ -31,4 +31,9 @@ input[type="search"],select {
 body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: darken($asteriskColor, 1%);
+}
+
+textarea {
+  border-radius: 0;
 }

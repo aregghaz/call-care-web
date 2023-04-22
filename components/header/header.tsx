@@ -96,7 +96,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
             </div>
-            <nav className={`${cls.headerNav} ${scroll.y > 300 ? cls.headerNavAlternate : ""}`}>
+            <nav className={`${cls.headerNav} ${scroll.y > 200 ? cls.headerNavAlternate : ""}`}>
                 <div className={`${cls.headerNavigation}`}>
                     <div className={cls.burgerMenuWrapper} onClick={handleBurger}>
                         <span className={`${cls.line} ${cls.lineTop} ${burgerAnim && cls.open}`}></span>

@@ -5,11 +5,12 @@ $headerHeight: 140px;
 .header {
   width: 100%;
   height: $headerHeight;
+  background-color: white;
   display: flex;
   align-items: center;
   padding: 0 10%;
   position: relative;
-  //border: 1px solid red;
+  z-index: 99999;
 }
 
 .headerContent {
@@ -234,6 +235,7 @@ $headerHeight: 140px;
 
 .out{
   width: 0 !important;
+  opacity: 0 !important;
 }
 
 
@@ -288,7 +290,7 @@ $headerHeight: 140px;
   background-color: aqua;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1550px) {
   .menuSpan{
     display: none;
   }
@@ -432,15 +434,35 @@ $headerHeight: 140px;
 
   .headerLinks{
     width: 80%;
+    opacity: 1;
+    transition: 0.5s;
   }
 
 
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
   .headerInfos{
     display: none;
   }
+  //
+  //.headerButtons {
+  //  display: none;
+  //}
+  
+  //.headerNav {
+  //  position: static;
+  //  width: 100%;
+  //  transform: initial;
+  //}
+  //
+  //.headerLeft {
+  //  width: 150px;
+  //}
+  //
+  //.headerContent {
+  //  display: none;
+  //}
 }
 
 @media screen and (max-width: 780px){
