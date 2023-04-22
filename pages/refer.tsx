@@ -153,7 +153,6 @@ const Refer:FC<any> = ({
                     <div className={cls.formRepeat2}>
                         <Datapicker
                             label={"Appointment Date"}
-                            width={"small"}
                             small={true}
                         />
                         <TimePicker label={"Appointment Time"}/>
