@@ -438,21 +438,40 @@ export default function Home(props:any) {
                       <SwiperSlide className={cls.slide}>
                           <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
                               <div className={cls.slidContentBox}>
-                                  <h1>Our Admin Panel</h1>
+                                  <h1>Admin Trips</h1>
                                   <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
                                   <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
                               </div>
                           </div>
                       </SwiperSlide>
                       <SwiperSlide className={cls.slide}>
-                          <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderAdmin2}`}>
                               <div className={cls.slidContentBox}>
-                                  <h1>Our Admin Panel</h1>
+                                  <h1>Price List and More</h1>
                                   <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
                                   <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
                               </div>
                           </div>
                       </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderAdmin3}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Admin Panel Dashboard</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
+                                  <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+                      <SwiperSlide className={cls.slide}>
+                          <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>
+                              <div className={cls.slidContentBox}>
+                                  <h1>Mobile App CallCare</h1>
+                                  <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are to be elected from five vocational panels. The Administrative Panel is defined in Article 18.7.1º(v) as Public Administration and social services, including voluntary social activities</p>
+                                  <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30} /></button>
+                              </div>
+                          </div>
+                      </SwiperSlide>
+
                   </Swiper>
               </section>
               <section className={cls.infoSec}>
