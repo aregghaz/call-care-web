@@ -1,7 +1,8 @@
-import React, {FC, useState} from "react";
+import React, {FC, useRef, useState} from "react";
 import cls from "./data-picker.module.scss"
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"
+import useOnClickOutside from "@/hooks/useOutsideClick";
 interface DataPickerProps {
     id?: string,
     label?: string,
@@ -15,14 +16,16 @@ const Datapicker:FC<DataPickerProps> = ({
 }) => {
     const [show, setShow] = useState<boolean>(false)
     const [value, setValue] = useState<Date>(new Date)
+    const calendarRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
     const handleClose = () => {
         setShow(!show)
     }
 
+    useOnClickOutside(calendarRef, () => {setShow(false)})
 
     return (
-        <div className={cls.inputWrapper} style={{
+        <div ref={calendarRef} className={cls.inputWrapper} style={{
             width: small ? "150px" : ""
         }}>
             <label htmlFor={id}>{label}</label>

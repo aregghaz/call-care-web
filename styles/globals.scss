@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rubik";
+  font-family: "Rubik", serif;
   //list-style-type: none;
   @supports (-webkit-touch-callout: none) {
     background-attachment: initial !important;
@@ -26,4 +26,9 @@ input,select {
 
 input[type="search"],select {
   -webkit-appearance: none;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

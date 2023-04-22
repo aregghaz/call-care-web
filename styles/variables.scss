@@ -1,7 +1,11 @@
-@font-face {
-  font-family: "Rubik";
-  src: url("/fonts/Rubik-VariableFont_wght.ttf");
-}
+//@font-face {
+//  font-family: "Rubik";
+//  src: url("./fonts/Rubik-VariableFont_wght.ttf");
+//}
+
+@import "fontface/rubik.scss";
+
+$mainFont: "Rubik";
 
 @mixin inputBorder() {
   border-top: none;
