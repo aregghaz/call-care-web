@@ -208,7 +208,7 @@ export default function Home(props:any) {
                       <section className={cls.hero}>
                           <Swiper
                               modules={[EffectFade, Pagination, Autoplay]}
-                              direction={"vertical"}
+                              direction={screenSize.width <= 1024 ? "horizontal" : "vertical"}
                               className={cls.heroSlider}
                               spaceBetween={50}
                               slidesPerView={1}

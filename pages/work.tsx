@@ -37,6 +37,11 @@ const Work:FC<any> = ({
                         <label htmlFor={"textCom"}>Or Copy and Paste Your Resume Bellow</label>
                         <textarea name="comment" id="textCom" cols="30" rows="10" />
                     </div>
+                    <div className={cls.buttonWrapper}>
+                        <button className={cls.workSubmit}>
+                            Submit
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
