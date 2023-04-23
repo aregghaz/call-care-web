@@ -19,6 +19,10 @@ $headerHeight: 140px;
   display: flex;
   border: inherit;
   justify-content: space-between;
+
+  @media screen and (max-width: 720px) {
+    transform: translate3d(0,-10%,0);
+  }
 }
 
 .headerLeft {
@@ -529,6 +533,9 @@ $headerHeight: 140px;
   opacity: 0;
   animation: 0.5s headerAlternateAnimation 0s forwards;
 
+  @media screen and (orientation: landscape) {
+    display: none;
+  }
 
   @keyframes headerAlternateAnimation {
     from {
