@@ -234,7 +234,7 @@ export default function Home(props:any) {
                                               <h1>A True Devotion <br/> To Health</h1>
                                               <p>Full service medical provider serving the great state of California</p>
                                               <Link href={"/services"}>
-                                                  <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                                  <Image className={cls.arrowHero} src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
                                               </Link>
                                           </div>
                                       </div>
@@ -246,7 +246,7 @@ export default function Home(props:any) {
                                           <h1>A True Devotion <br/> To Health 2</h1>
                                           <p>Full service medical provider serving the great state of California</p>
                                           <Link href={"/about"}>
-                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                              <Image className={cls.arrowHero} src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
                                           </Link>
                                       </div>
                                   </div>
@@ -257,7 +257,7 @@ export default function Home(props:any) {
                                           <h1>A True Devotion <br/> To Health 3</h1>
                                           <p>Full service medical provider serving the great state of California</p>
                                           <Link href={"/work"}>
-                                              <Image src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
+                                              <Image className={cls.arrowHero} src={"/images/arrowright.svg"} alt={"arrow right"} width={100} height={50}/>
                                           </Link>
                                       </div>
                                   </div>
