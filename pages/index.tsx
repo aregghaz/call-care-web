@@ -271,7 +271,7 @@ export default function Home(props:any) {
                           {
                               services.map(({name,description,image}, index) => {
                                   return (
-                                      <Fade key={index} left delay={index * 200}  className={cls.flipWrapper}>
+                                      <Fade key={index} left delay={index * 200}>
                                           <Service key={index} name={name} description={description} image={image}/>
                                       </Fade>
                                   )
