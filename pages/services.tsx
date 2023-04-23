@@ -34,55 +34,98 @@ const Serivces:FC<any> = ({
                 </div>
             </section>
             <section className={cls.services}>
-                <Swiper
-                    effect={"coverflow"}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={"auto"}
-                    coverflowEffect={{
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: true,
-                    }}
-                    pagination={{
-                        clickable: true,
-                        clickableClass: `${cls.otherBulletsWrapper}`,
-                        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
-                        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                    }}
-                    modules={[EffectCoverflow, Pagination]}
-                    className="mySwiper"
-                >
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                    <SwiperSlide className={cls.slide}>
-                        <BigService/>
-                    </SwiperSlide>
-                </Swiper>
+                {/*<Swiper*/}
+                {/*    effect={"coverflow"}*/}
+                {/*    grabCursor={true}*/}
+                {/*    centeredSlides={true}*/}
+                {/*    slidesPerView={"auto"}*/}
+                {/*    coverflowEffect={{*/}
+                {/*        rotate: 50,*/}
+                {/*        stretch: 0,*/}
+                {/*        depth: 100,*/}
+                {/*        modifier: 1,*/}
+                {/*        slideShadows: true,*/}
+                {/*    }}*/}
+                {/*    pagination={{*/}
+                {/*        clickable: true,*/}
+                {/*        clickableClass: `${cls.otherBulletsWrapper}`,*/}
+                {/*        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,*/}
+                {/*        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,*/}
+                {/*    }}*/}
+                {/*    modules={[EffectCoverflow, Pagination]}*/}
+                {/*    className="mySwiper"*/}
+                {/*>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*    <SwiperSlide className={cls.slide}>*/}
+                {/*        <BigService/>*/}
+                {/*    </SwiperSlide>*/}
+                {/*</Swiper>*/}
+                <div className={cls.servicesNavWrapper}>
+                    <div className={cls.servicesNav}>
+                        <div className={cls.servicesNavInput}>
+                            <input type={"text"}/>
+                        </div>
+                        <div className={cls.servicesNavMenu}>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <span>All</span>
+                                        <div className={cls.line}></div>
+                                    </li>
+                                    <li>
+                                        <span>Home Health</span>
+                                        <div className={cls.line}></div>
+                                    </li>
+                                    <li>
+                                        <span>Therapy</span>
+                                        <div className={cls.line}></div>
+                                    </li>
+                                    <li>
+                                        <span>Transportation</span>
+                                        <div className={cls.line}></div>
+                                    </li>
+                                    <li>
+                                        <span> Medical Home Modification</span>
+                                        <div className={cls.line}></div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div className={cls.serviceContent}>
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                        <BigService />
+                    </div>
+                </div>
             </section>
             <section className={cls.serviceContact}>
                 <div className={cls.contactLeft}>

@@ -9,7 +9,7 @@
 
 .hero {
   width: 100%;
-  height: 800px;
+  height: 1000px;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -83,7 +83,7 @@
   width: 100%;
   height: 90%;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-image: url($serviceHero1);
   max-width: 1500px;
   background-blend-mode: color;
@@ -101,35 +101,140 @@
 }
 .services {
   width: 100%;
-  height: 600px;
-  background-color: #F4F4F4;
+  height: 1000px;
   display: flex;
-  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.serviceSlider {
-  width: 30%;
-  height: 80%;
-  padding-left: 5%;
+.servicesNavWrapper{
+  width: 70%;
+  height: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.13);
+
 }
 
-.slide {
-  width: 500px !important;
-  height: 400px !important;
-  color: black;
-  margin-top: 100px;
+.servicesNav{
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+  display: flex;
+}
 
-  @media screen and (max-width: 600px){
-    width: 95% !important;
+.servicesNavInput{
+  width: 50%;
+  height: 100%;
+  //border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+
+  & > input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    padding-left: 30px;
+  }
+
+}
+
+.servicesNavMenu{
+  width: 50%;
+  height: 100%;
+
+  & > nav{
+    width: 100%;
+    height: 100%;
+
+    & > ul{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      gap: 35px;
+
+      & > li{
+        height: 100%;
+        color: #6C6C6C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 1s;
+        flex-direction: column;
+        overflow: hidden;
+
+        &:hover{
+          color: black;
+        }
+
+        .line{
+          width: 100%;
+          height: 4px;
+          background-color: $asteriskColor;
+          position: relative;
+          top: 50px;
+          transition: .2s;
+        }
+
+        &:hover .line{
+          top: 33px;
+        }
+      }
+    }
   }
 }
+
+.serviceContent{
+  width: 100%;
+  height: auto;
+  //border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  overflow: auto;
+}
+
+//
+//.serviceSlider {
+//  width: 30%;
+//  height: 80%;
+//  padding-left: 5%;
+//}
+//
+//.slide {
+//  width: 500px !important;
+//  height: 400px !important;
+//  color: black;
+//  margin-top: 100px;
+//
+//  @media screen and (max-width: 600px){
+//    width: 95% !important;
+//  }
+//}
 
 
 
 .serviceContact {
   width: 100%;
-  height: 800px;
+  height: 900px;
   display: flex;
+  //border: 1px solid red;
+  flex-direction: row;
 
   @media screen and (max-width: 800px) {
     height: 1000px;
@@ -137,12 +242,13 @@
 }
 
 .contactLeft {
-  width: 30%;
+  width: 40%;
   height: 100%;
   background-image: url($serviceContact1);
   background-size: 80%;
   background-position: 100% 100%;
   background-repeat: no-repeat;
+  //border: 1px solid red;
 
   @media screen and (max-width: 1650px) {
     background-position: center;
@@ -159,6 +265,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  //border: 1px solid red;
 
   @media screen and (max-width: 1000px) {
     width: 100%;
