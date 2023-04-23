@@ -423,10 +423,14 @@ $headerHeight: 140px;
         height: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         list-style-type: none;
         & > li{
           width: 100%;
           height: 30px;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 20px;
 
           & > a{
             color: #000;

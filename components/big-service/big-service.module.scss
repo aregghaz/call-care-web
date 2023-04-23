@@ -1,5 +1,5 @@
 .main {
-  width: 23%;
+  width: 400px;
   height: 330px;
   display: flex;
   flex-direction: column;
@@ -7,8 +7,19 @@
   align-items: center;
   gap: 70px;
   padding: 2%;
-  background: rgba(255, 0, 0, 0.78);
-  backdrop-filter: blur(50px);
+  background: #D33834;
+
+  @media screen and (max-width: 1458px){
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1200px){
+    width: 350px;
+  }
+
+  @media screen and (max-width: 785px){
+    width: 500px;
+  }
 
   & > h2 {
     font-size: 30px;

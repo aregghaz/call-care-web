@@ -97,10 +97,11 @@ const Serivces:FC<any> = ({
     const [services, setServices] = useState<Array<TypeService>>(allServices)
 
     const handleTypeChange = (e) => {
-        setType(e.target.id)
+        setType(e.currentTarget.id)
     }
 
     useEffect(() => {
+        console.log(type)
         setServices(
             allServices.filter(item => {
                 return type === "All" ? item : item.serviceType === type
@@ -174,29 +175,29 @@ const Serivces:FC<any> = ({
                 <div className={cls.servicesNavWrapper}>
                     <div className={cls.servicesNav}>
                         <div className={cls.servicesNavInput}>
-                            <input type={"text"}/>
+                            <h2>Services</h2>
                         </div>
                         <div className={cls.servicesNavMenu}>
                             <nav>
                                 <ul>
-                                    <li>
-                                        <span id={"All"} onClick={handleTypeChange}>All</span>
+                                    <li id={"All"} onClick={handleTypeChange}>
+                                        <span>All</span>
                                         <div className={cls.line}></div>
                                     </li>
-                                    <li>
-                                        <span id={"HomeHealth"} onClick={handleTypeChange}>Home Health</span>
+                                    <li id={"HomeHealth"} onClick={handleTypeChange}>
+                                        <span >Home Health</span>
                                         <div className={cls.line}></div>
                                     </li>
-                                    <li>
-                                        <span id={"Therapy"} onClick={handleTypeChange}>Therapy</span>
+                                    <li id={"Therapy"} onClick={handleTypeChange}>
+                                        <span >Therapy</span>
                                         <div className={cls.line}></div>
                                     </li>
-                                    <li>
-                                        <span id={"Transportation"} onClick={handleTypeChange}>Transportation</span>
+                                    <li id={"Transportation"} onClick={handleTypeChange}>
+                                        <span >Transportation</span>
                                         <div className={cls.line}></div>
                                     </li>
-                                    <li>
-                                        <span id={"MedicalHomeModification"} onClick={handleTypeChange}>Medical Home Modification</span>
+                                    <li id={"MedicalHomeModification"} onClick={handleTypeChange}>
+                                        <span >Medical Home Modification</span>
                                         <div className={cls.line}></div>
                                     </li>
                                 </ul>
@@ -204,9 +205,11 @@ const Serivces:FC<any> = ({
                         </div>
                     </div>
                     <div className={cls.serviceContent}>
+                        {console.log(services)}
                         {
                             services.map(item => {
                                 return (
+                                    // eslint-disable-next-line react/jsx-key
                                     <BigService name={item.serviceName} description={item.description} link={"/"}/>
                                 )
                             })
