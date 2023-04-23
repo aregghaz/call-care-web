@@ -4,17 +4,21 @@ import Link from "next/link";
 import ArrowRight from "@/svgs/arrowRight";
 
 export interface BigServiceProps {
-
+    name: string,
+    description: string,
+    link?: string
 }
 
 const BigService:FC<BigServiceProps> = ({
-
+    name = "",
+    description = "",
+    link = "",
 }) => {
     return (
         <div className={cls.main}>
-            <h2>Service name</h2>
-            <p>Ambulatory Service is mobility at your front door.</p>
-            <Link href={"/"}>
+            <h2>{name}</h2>
+            <p>{description}</p>
+            <Link href={link}>
                 Read More
                 <ArrowRight color={"white"}/>
             </Link>

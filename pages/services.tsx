@@ -1,4 +1,4 @@
-import React, {FC} from "react"
+import React, {FC, useEffect, useState} from "react"
 import cls from "../styles/Services.module.scss"
 import Image from "next/image";
 import {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from "swiper";
@@ -10,6 +10,8 @@ import 'swiper/css/pagination'
 import BigService from "@/components/big-service/big-service";
 import "swiper/css/navigation"
 import useScreenSize from "@/hooks/useScreenSize";
+import {symlink} from "fs";
+import Type = module
 
 const Serivces:FC<any> = ({
 
@@ -19,6 +21,92 @@ const Serivces:FC<any> = ({
         evt.target.style.height = "50px";
         evt.target.style.height = (evt.target.scrollHeight)+"px";
     }
+
+    type serviceTypes = "HomeHealth" | "Therapy" | "Transportation" | "MedicalHomeModification"
+
+    type TypeService = {
+        serviceType: serviceTypes,
+        serviceName: string,
+        description: string,
+    }
+
+    const allServices:Array<TypeService> = [
+        {
+            serviceType: "HomeHealth",
+            serviceName: "Home service",
+            description: "lorem ipsum dolor sit amet 1",
+        },
+        {
+            serviceType: "Therapy",
+            serviceName: "Therapy service",
+            description: "lorem ipsum dolor sit amet 2",
+        },
+        {
+            serviceType: "Transportation",
+            serviceName: "Transportation service",
+            description: "lorem ipsum dolor sit amet 3",
+        },
+        {
+            serviceType: "MedicalHomeModification",
+            serviceName: "Medical Home Modification service",
+            description: "lorem ipsum dolor sit amet 4",
+        },
+        {
+            serviceType: "HomeHealth",
+            serviceName: "Home service",
+            description: "lorem ipsum dolor sit amet 1",
+        },
+        {
+            serviceType: "Therapy",
+            serviceName: "Therapy service",
+            description: "lorem ipsum dolor sit amet 2",
+        },
+        {
+            serviceType: "Transportation",
+            serviceName: "Transportation service",
+            description: "lorem ipsum dolor sit amet 3",
+        },
+        {
+            serviceType: "MedicalHomeModification",
+            serviceName: "Medical Home Modification service",
+            description: "lorem ipsum dolor sit amet 4",
+        },
+        {
+            serviceType: "Transportation",
+            serviceName: "Transportation service",
+            description: "lorem ipsum dolor sit amet 3",
+        },
+        {
+            serviceType: "MedicalHomeModification",
+            serviceName: "Medical Home Modification service",
+            description: "lorem ipsum dolor sit amet 4",
+        },
+        {
+            serviceType: "HomeHealth",
+            serviceName: "Home service",
+            description: "lorem ipsum dolor sit amet 1",
+        },
+        {
+            serviceType: "MedicalHomeModification",
+            serviceName: "Medical Home Modification service",
+            description: "lorem ipsum dolor sit amet 4",
+        },
+    ]
+
+    const [type, setType] = useState<serviceTypes | "All">("All")
+    const [services, setServices] = useState<Array<TypeService>>(allServices)
+
+    const handleTypeChange = (e) => {
+        setType(e.target.id)
+    }
+
+    useEffect(() => {
+        setServices(
+            allServices.filter(item => {
+                return type === "All" ? item : item.serviceType === type
+            })
+        )
+    }, [type])
 
     return (
         <>
@@ -92,23 +180,23 @@ const Serivces:FC<any> = ({
                             <nav>
                                 <ul>
                                     <li>
-                                        <span>All</span>
+                                        <span id={"All"} onClick={handleTypeChange}>All</span>
                                         <div className={cls.line}></div>
                                     </li>
                                     <li>
-                                        <span>Home Health</span>
+                                        <span id={"HomeHealth"} onClick={handleTypeChange}>Home Health</span>
                                         <div className={cls.line}></div>
                                     </li>
                                     <li>
-                                        <span>Therapy</span>
+                                        <span id={"Therapy"} onClick={handleTypeChange}>Therapy</span>
                                         <div className={cls.line}></div>
                                     </li>
                                     <li>
-                                        <span>Transportation</span>
+                                        <span id={"Transportation"} onClick={handleTypeChange}>Transportation</span>
                                         <div className={cls.line}></div>
                                     </li>
                                     <li>
-                                        <span> Medical Home Modification</span>
+                                        <span id={"MedicalHomeModification"} onClick={handleTypeChange}>Medical Home Modification</span>
                                         <div className={cls.line}></div>
                                     </li>
                                 </ul>
@@ -116,14 +204,13 @@ const Serivces:FC<any> = ({
                         </div>
                     </div>
                     <div className={cls.serviceContent}>
-                        <BigService />
-                        <BigService />
-                        <BigService />
-                        <BigService />
-                        <BigService />
-                        <BigService />
-                        <BigService />
-                        <BigService />
+                        {
+                            services.map(item => {
+                                return (
+                                    <BigService name={item.serviceName} description={item.description} link={"/"}/>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section>
