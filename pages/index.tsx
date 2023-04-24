@@ -318,7 +318,7 @@ export default function Home(props:any) {
                       <Swiper
                           className={cls.generalSlider}
                           modules={[Navigation, Autoplay]}
-                          spaceBetween={screenSize.width > 1000 ? 200 : 50}
+                          spaceBetween={screenSize.width > 1000 ? 100 : screenSize.width > 1350 ? 50: 20}
                           loop={true}
                           slidesPerView={screenSize.width < 600 ? 1 :screenSize.width < 800 ? 1 : screenSize.width < 1300 ? 2 : 3}
                           onSlideChange={swiper => {

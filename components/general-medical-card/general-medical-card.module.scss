@@ -1,6 +1,14 @@
 .generalCard {
   width: 100%;
   height: 700px;
+
+  @media screen and (max-width: 800px){
+    height: 800px;
+  }
+
+  @media screen and (max-width: 550px){
+    height: 470px;
+  }
 }
 
 .generalCard {

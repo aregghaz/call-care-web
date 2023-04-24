@@ -64,7 +64,7 @@ const Header:FC<any> = ():React.ReactElement => {
             <div className={cls.headerContent}>
                 <div className={cls.headerLeft}>
                     <Link href={"/"}>
-                        <Image width={100} height={100} src={"/images/logo.svg"} alt={"logo"}/>
+                        <Image className={cls.logo} width={100} height={100} src={"/images/logo.svg"} alt={"logo"}/>
                     </Link>
                 </div>
                 <div className={cls.headerRight}>
