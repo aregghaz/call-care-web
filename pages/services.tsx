@@ -123,55 +123,7 @@ const Serivces:FC<any> = ({
                 </div>
             </section>
             <section className={cls.services}>
-                {/*<Swiper*/}
-                {/*    effect={"coverflow"}*/}
-                {/*    grabCursor={true}*/}
-                {/*    centeredSlides={true}*/}
-                {/*    slidesPerView={"auto"}*/}
-                {/*    coverflowEffect={{*/}
-                {/*        rotate: 50,*/}
-                {/*        stretch: 0,*/}
-                {/*        depth: 100,*/}
-                {/*        modifier: 1,*/}
-                {/*        slideShadows: true,*/}
-                {/*    }}*/}
-                {/*    pagination={{*/}
-                {/*        clickable: true,*/}
-                {/*        clickableClass: `${cls.otherBulletsWrapper}`,*/}
-                {/*        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,*/}
-                {/*        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,*/}
-                {/*    }}*/}
-                {/*    modules={[EffectCoverflow, Pagination]}*/}
-                {/*    className="mySwiper"*/}
-                {/*>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*    <SwiperSlide className={cls.slide}>*/}
-                {/*        <BigService/>*/}
-                {/*    </SwiperSlide>*/}
-                {/*</Swiper>*/}
+
                 <div className={cls.servicesNavWrapper}>
                     <div className={cls.servicesNav}>
                         <div className={cls.servicesNavInput}>
@@ -182,30 +134,24 @@ const Serivces:FC<any> = ({
                                 <ul>
                                     <li id={"All"} onClick={handleTypeChange}>
                                         <span>All</span>
-                                        <div className={cls.line}></div>
                                     </li>
                                     <li id={"HomeHealth"} onClick={handleTypeChange}>
                                         <span >Home Health</span>
-                                        <div className={cls.line}></div>
                                     </li>
                                     <li id={"Therapy"} onClick={handleTypeChange}>
                                         <span >Therapy</span>
-                                        <div className={cls.line}></div>
                                     </li>
                                     <li id={"Transportation"} onClick={handleTypeChange}>
                                         <span >Transportation</span>
-                                        <div className={cls.line}></div>
                                     </li>
                                     <li id={"MedicalHomeModification"} onClick={handleTypeChange}>
                                         <span >Medical Home Modification</span>
-                                        <div className={cls.line}></div>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div className={cls.serviceContent}>
-                        {console.log(services)}
                         {
                             services.map(item => {
                                 return (
