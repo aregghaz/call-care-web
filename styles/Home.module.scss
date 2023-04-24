@@ -5,11 +5,14 @@
   width: 100%;
   height: calc(100vh - 140px);
   @media screen and (orientation: landscape) and (max-width: 1024px) {
-    height: 500px;
+    height: 500px !important;
   }
 
   @media screen and (max-width: 720px){
     height: calc(100vh - 100px);
+    @media screen and (orientation: landscape) {
+      height: 500px;
+    }
   }
   background-color: white;
 }
