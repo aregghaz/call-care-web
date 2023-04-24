@@ -30,6 +30,7 @@ const Serivces:FC<any> = ({
         description: string,
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const allServices:Array<TypeService> = [
         {
             serviceType: "HomeHealth",
@@ -107,7 +108,7 @@ const Serivces:FC<any> = ({
                 return type === "All" ? item : item.serviceType === type
             })
         )
-    }, [type])
+    }, [allServices, type])
 
     return (
         <>
@@ -119,7 +120,9 @@ const Serivces:FC<any> = ({
                     </p>
                 </div>
                 <div className={cls.heroRight}>
-                    <div className={cls.heroRightBackground}></div>
+                    <div className={cls.heroRightBackground}>
+                        
+                    </div>
                 </div>
             </section>
             <section className={cls.services}>
@@ -179,7 +182,9 @@ const Serivces:FC<any> = ({
                             <input type={"text"} placeholder={"Company"}/>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
-                                <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>
+                                <textarea id={"comment"} onChange={handleTextareaHeight}>
+                                    
+                                </textarea>
                             </div>
                             <button className={cls.sendButton}>Send Message</button>
                         </form>
