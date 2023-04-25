@@ -3,6 +3,7 @@ import cls from "./service.module.scss"
 import Image from "next/image";
 import {imageType} from "../../utils/types";
 import Link from "next/link";
+import {AosInterface} from "../../utils/types";
 export interface ServiceProps {
     name: string,
     description: string,
@@ -10,7 +11,7 @@ export interface ServiceProps {
     className?: string,
 }
 
-const Service:FC<ServiceProps> = ({
+const Service:FC<ServiceProps & AosInterface> = ({
     name= "",
     description = "",
     image = {
@@ -19,19 +20,21 @@ const Service:FC<ServiceProps> = ({
         width: 0,
         height: 0,
     },
-    className= ""
+    className= "",
+    dataAos= {}
 }) => {
     return (
-        <Link href={"../../services"} className={cls.nav}>
-            <li className={`${cls.service} ${className}`}>
-                <div className={cls.serviceContent}>
-                    <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
-                    <h2>{name}</h2>
-                    <span>{description}</span>
-                </div>
-            </li>
-        </Link>
-
+        <div data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
+            <Link href={"../../services"} className={cls.nav}>
+                <li className={`${cls.service} ${className}`}>
+                    <div className={cls.serviceContent}>
+                        <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
+                        <h2>{name}</h2>
+                        <span>{description}</span>
+                    </div>
+                </li>
+            </Link>
+        </div>
     )
 }
 

@@ -108,11 +108,11 @@ const Serivces:FC<any> = ({
                 return type === "All" ? item : item.serviceType === type
             })
         )
-    }, [allServices, type])
+    }, [type])
 
     return (
         <>
-            <section className={cls.hero}>
+            <section className={cls.hero} data-aos={"fade-right"}>
                 <div className={cls.heroContent}>
                     <h1>Our Services</h1>
                     <p>
@@ -125,8 +125,7 @@ const Serivces:FC<any> = ({
                     </div>
                 </div>
             </section>
-            <section className={cls.services}>
-
+            <section className={cls.services} data-aos={"fade-up"}>
                 <div className={cls.servicesNavWrapper}>
                     <div className={cls.servicesNav}>
                         <div className={cls.servicesNavInput}>
@@ -156,7 +155,7 @@ const Serivces:FC<any> = ({
                     </div>
                     <div className={cls.serviceContent}>
                         {
-                            services.map(item => {
+                            services.map((item,index) => {
                                 return (
                                     // eslint-disable-next-line react/jsx-key
                                     <BigService name={item.serviceName} description={item.description} link={"/"}/>
@@ -166,7 +165,7 @@ const Serivces:FC<any> = ({
                     </div>
                 </div>
             </section>
-            <section className={cls.serviceContact}>
+            <section className={cls.serviceContact} data-aos={"fade"}>
                 <div className={cls.contactLeft}>
                 </div>
                 <div className={cls.contactRight}>

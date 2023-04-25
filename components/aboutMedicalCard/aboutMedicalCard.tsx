@@ -1,6 +1,7 @@
 import React, {FC} from "react"
 import cls from "./aboutMedicalCard.module.scss"
 import Image from "next/image";
+import {AosInterface} from "@/utils/types";
 
 export interface AboutMedicalCardProps{
     title: string,
@@ -8,13 +9,14 @@ export interface AboutMedicalCardProps{
     arrow: string
 }
 
-const AboutMedicalCard:FC<AboutMedicalCardProps> = ({
+const AboutMedicalCard:FC<AboutMedicalCardProps & AosInterface> = ({
     title,
     icon,
     arrow,
+    dataAos = ""
 }) => {
     return (
-        <div className={cls.aboutCard}>
+        <div className={cls.aboutCard} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
             <div className={cls.titleWrapper}>
                 <h1>{title}</h1>
             </div>

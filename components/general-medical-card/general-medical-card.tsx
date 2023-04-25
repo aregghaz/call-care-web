@@ -2,7 +2,7 @@ import React, {FC} from "react"
 import cls from "./general-medical-card.module.scss"
 import Link from "next/link";
 import Image from "next/image";
-import {imageType} from "../../utils/types";
+import {AosInterface, imageType} from "../../utils/types";
 
 export interface GeneralMedicalCardProps {
     name: string,
@@ -11,11 +11,12 @@ export interface GeneralMedicalCardProps {
     link: string,
 }
 
-const GeneralMedicalCard:FC<GeneralMedicalCardProps> = ({
+const GeneralMedicalCard:FC<GeneralMedicalCardProps & AosInterface> = ({
     name,
     description,
     image,
     link,
+    dataAos = "" ,
 }) => {
     return (
         <div
@@ -23,6 +24,9 @@ const GeneralMedicalCard:FC<GeneralMedicalCardProps> = ({
             style={{
                 backgroundImage: `url(${image})`
             }}
+            data-aos={dataAos.type}
+            data-aos-duration={dataAos.duration}
+            data-aos-delay={dataAos.delay}
         >
             <div className={cls.generalCardContent}>
                 <div className={cls.generalCardButton}>

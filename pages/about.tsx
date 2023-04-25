@@ -11,7 +11,6 @@ import {EffectFade, Pagination, Navigation, Autoplay} from "swiper";
 import AboutMedicalCard, {AboutMedicalCardProps} from "../components/aboutMedicalCard/aboutMedicalCard";
 import useScreenSize from "@/hooks/useScreenSize";
 
-
 const About = ({
 
                  }) => {
@@ -61,8 +60,8 @@ const About = ({
     const screenSize = useScreenSize()
 
     return (
-        <div className={cls.about}>
-            <div className={cls.aboutMain}>
+        <div className={cls.about} data-aos={"zoom-in"}>
+            <section className={cls.aboutMain}>
                 <div className={cls.aboutInfoMain}>
                     <h1>About Us</h1>
                     <h2>Why choose us</h2>
@@ -71,8 +70,8 @@ const About = ({
                         Created in 2010,<br /> the company has enjoyed all that the American <br />
                         dream has to offer and has expanded service to <br/> reputable service agencies.</p>
                 </div>
-            </div>
-            <div className={cls.companyInfo}>
+            </section>
+            <section className={cls.companyInfo} data-aos={"fade-right"}>
                 <div className={cls.companyInfoImg}>
                     <Image className={cls.compImg} src={'/images/ambulanceTeam.webp'} alt={"team"} width={550} height={800} />
                 </div>
@@ -90,7 +89,7 @@ const About = ({
                     <p className={cls.infoText2}>Joe Mkhitaryan</p>
                     <p className={cls.infoText3}>Director, Client Relations General Medical Transportation</p>
                 </div>
-            </div>
+            </section>
             <div className={cls.aboutSlider}>
                 <Swiper
                     className={cls.generalSlider}
@@ -120,7 +119,7 @@ const About = ({
                                             display: "flex",
                                         }}
                                     >
-                                        <AboutMedicalCard title={title} icon={icon} arrow={arrow} />
+                                        <AboutMedicalCard dataAos={{type: "zoom-in", delay: 300 * index}} title={title} icon={icon} arrow={arrow}/>
                                     </SwiperSlide>
                                 )
                             })

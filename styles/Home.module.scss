@@ -181,15 +181,12 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
   background-color: white;
 
   & > ul {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     list-style: none;
     //flex-wrap: wrap;
@@ -199,10 +196,6 @@
       @media screen and (orientation: landscape) {
         flex-wrap: nowrap;
         flex-direction: column;
-
-        & > div {
-          width: 100%;
-        }
       }
     }
   }
