@@ -572,9 +572,13 @@ $headerHeight: 140px;
   opacity: 0;
   animation: 0.5s headerAlternateAnimation 0s forwards;
 
-  @media screen and (orientation: landscape) {
-    display: none;
+  @media screen and (max-width: 720px){
+    @media screen and (orientation: landscape) {
+      display: none;
+    }
   }
+
+
 
   @keyframes headerAlternateAnimation {
     from {

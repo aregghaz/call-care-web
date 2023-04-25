@@ -339,14 +339,14 @@ export default function Home(props:any) {
                                       <SwiperSlide
                                           key={index}
                                       >
-                                          <Fade delay={index < 3 ? index * 200 : 0}>
+                                          {/*<Fade delay={index < 3 ? index * 200 : 0}>*/}
                                               <GeneralMedicalCard
                                                   link={link}
                                                   name={name}
                                                   description={description}
                                                   image={image}
                                               />
-                                          </Fade>
+                                          {/*</Fade>*/}
                                       </SwiperSlide>
                                   )
                               })
