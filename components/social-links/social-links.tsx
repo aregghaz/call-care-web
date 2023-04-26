@@ -23,16 +23,16 @@ const SocialLinks:FC<SocialLinksProps> = ({
             }}
         >
             <li>
-                <Link href={"/"}><PinterestIcon color={colors}/></Link>
+                <Link target={"_blank"} href={"https://www.pinterest.com/"}><PinterestIcon color={colors}/></Link>
             </li>
             <li>
-                <Link href={"/"}><LinkedinIcon color={colors}/></Link>
+                <Link target={"_blank"} href={"https://www.linkedin.com/"}><LinkedinIcon color={colors}/></Link>
             </li>
             <li>
-                <Link href={"/"}><FacebookIcon color={colors}/></Link>
+                <Link target={"_blank"} href={"https://www.facebook.com/"}><FacebookIcon color={colors}/></Link>
             </li>
             <li>
-                <Link href={"/"}><TwitterIcon color={colors}/></Link>
+                <Link target={"_blank"} href={"https://twitter.com/?lang=ru"}><TwitterIcon color={colors}/></Link>
             </li>
         </ul>
     )

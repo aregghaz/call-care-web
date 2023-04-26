@@ -2,6 +2,11 @@ import cls from "./footer.module.scss";
 import Image from "next/image";
 import React, {FC} from "react";
 import NavLink from "next/link";
+import Link from "next/link";
+import PinterestIcon from "@/svgs/pinterest";
+import LinkedinIcon from "@/svgs/linkedin";
+import FacebookIcon from "@/svgs/facebook";
+import TwitterIcon from "@/svgs/twitter";
 
 const Footer:FC<any> = ({
 
@@ -54,7 +59,7 @@ const Footer:FC<any> = ({
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
                                     <>
-                                        <li key={index}><NavLink className={cls.headerMenu} href={link}>{name}</NavLink></li>
+                                        <li key={index}><Link className={cls.headerMenu} href={link}>{name}</Link></li>
                                     </>
                                 )
                             })
@@ -64,29 +69,28 @@ const Footer:FC<any> = ({
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Services</li>
-                        <li>Medical Home Modification</li>
-                        <li>Home Health</li>
-                        <li>Therapy</li>
-                        <li>Transportation</li>
+                        <li><Link href={"/"}>Medical Home Modification</Link></li>
+                        <li><Link href={"/"}>Home Health</Link></li>
+                        <li><Link href={"/"}>Therapy</Link> </li>
+                        <li><Link href={"/"}>Transportation</Link> </li>
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Links</li>
-                        <li>Support</li>
-                        <li>Privacy Policy</li>
-                        <li>Terms of Use</li>
-                        <li>Help</li>
+                        <li><Link href={"/contact"}>Support</Link></li>
+                        <li><Link href={"/privacy"}>Privacy Policy</Link></li>
+                        <li><Link href={"/terms"}>Terms of Use</Link></li>
                     </ul>
                 </li>
                 <li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>
                     <div className={cls.footerContentSearchWrapper}>
 
                         <ul className={cls.footerContentMedia}>
-                            <li><Image src={"/images/pinterestLogo.svg"} alt={"Pinterest logo"} width={14} height={18}/></li>
-                            <li><Image src={"/images/linkedIn.svg"} alt={"Linkedin logo"} width={14} height={18}/></li>
-                            <li><Image src={"/images/facebookLogo.svg"} alt={"Facebook logo"} width={14} height={18}/></li>
-                            <li><Image src={"/images/twitterLogo.svg"} alt={"Twitter logo"} width={14} height={18}/></li>
+                            <li><Link target={"_blank"} href={"https://www.pinterest.com"}><PinterestIcon/></Link></li>
+                            <li><Link target={"_blank"} href={"https://www.linkedin.com"}><LinkedinIcon/></Link></li>
+                            <li><Link target={"_blank"} href={"https://www.facebook.com"}><FacebookIcon/></Link></li>
+                            <li><Link target={"_blank"} href={"https://twitter.com/"}><TwitterIcon/></Link></li>
                         </ul>
                     </div>
                 </li>

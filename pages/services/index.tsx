@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from "react"
-import cls from "../styles/Services.module.scss"
+import cls from "../../styles/Services.module.scss"
 import Image from "next/image";
 import {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide } from "swiper/react";
@@ -10,9 +10,6 @@ import 'swiper/css/pagination'
 import BigService from "@/components/big-service/big-service";
 import "swiper/css/navigation"
 import useScreenSize from "@/hooks/useScreenSize";
-import {symlink} from "fs";
-import Type = module
-
 const Serivces:FC<any> = ({
 
 }) => {
@@ -181,9 +178,7 @@ const Serivces:FC<any> = ({
                             <input type={"text"} placeholder={"Company"}/>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
-                                <textarea id={"comment"} onChange={handleTextareaHeight}>
-                                    
-                                </textarea>
+                                <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>
                             </div>
                             <button className={cls.sendButton}>Send Message</button>
                         </form>

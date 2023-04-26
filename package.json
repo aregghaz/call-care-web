@@ -27,5 +27,8 @@
     "swiper": "^9.2.0",
     "typescript": "5.0.2",
     "webp-loader": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-validate-jsx-nesting": "^0.1.1"
   }
 }

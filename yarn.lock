@@ -2593,6 +2593,13 @@
     "semver" "^6.3.0"
     "string.prototype.matchall" "^4.0.8"
 
+"eslint-plugin-validate-jsx-nesting@^0.1.1":
+  "integrity" "sha512-5MKFBX1Ans4bSunh4YETiIUajtPHGZK2kVrVf2UE3L9geh1TSIQVOmjx7bgm2rFpeua7P/MZSfUva6Du8NXpgA=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-validate-jsx-nesting/-/eslint-plugin-validate-jsx-nesting-0.1.1.tgz"
+  "version" "0.1.1"
+  dependencies:
+    "validate-html-nesting" "^1.2.2"
+
 "eslint-scope@^4.0.3":
   "integrity" "sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg=="
   "resolved" "https://registry.npmjs.org/eslint-scope/-/eslint-scope-4.0.3.tgz"
@@ -2622,7 +2629,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.0.tgz"
   "version" "3.4.0"
 
-"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@8.37.0":
+"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@>=4.0.0", "eslint@8.37.0":
   "integrity" "sha512-NU3Ps9nI05GUoVMxcZx1J8CNR6xOvUT4jAUMH5+z8lpp3aEdPVCImKw6PWG4PY+Vfkpr+jvMpxs/qoE7wq0sPw=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.37.0.tgz"
   "version" "8.37.0"
@@ -6744,6 +6751,11 @@
   "integrity" "sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A=="
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
   "version" "3.4.0"
+
+"validate-html-nesting@^1.2.2":
+  "integrity" "sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg=="
+  "resolved" "https://registry.npmjs.org/validate-html-nesting/-/validate-html-nesting-1.2.2.tgz"
+  "version" "1.2.2"
 
 "validate-npm-package-license@^3.0.1":
   "integrity" "sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew=="

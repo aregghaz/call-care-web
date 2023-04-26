@@ -69,7 +69,7 @@ const Header:FC<any> = ():React.ReactElement => {
                 </div>
                 <div className={cls.headerRight}>
                     <div className={cls.headerInfos}>
-                        <div className={cls.headerInfo}>
+                        <Link href={"/contact"} className={cls.headerInfo}>
                             <div className={cls.infoIcon}>
                                 <Image src={"/images/locationIcon.svg"} alt={""} width={50} height={50}/>
                             </div>
@@ -77,9 +77,9 @@ const Header:FC<any> = ():React.ReactElement => {
                                 <span>Location:</span>
                                 <span>We Answer Calls 24/7</span>
                             </div>
-                        </div>
+                        </Link>
                         <div className={cls.seperator}></div>
-                        <div className={cls.headerInfo}>
+                        <Link href={"mailto:example@mail.com"} className={cls.headerInfo}>
                             <div className={cls.infoIcon}>
                                 <Image src={"/images/letterIcon.svg"} alt={""} width={50} height={50}/>
                             </div>
@@ -87,7 +87,7 @@ const Header:FC<any> = ():React.ReactElement => {
                                 <span>Mail us:</span>
                                 <span>info@mygeneralmed.com</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className={cls.headerButtons}>
                         <button className={cls.headerButton}>
