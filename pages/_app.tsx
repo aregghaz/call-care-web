@@ -7,6 +7,8 @@ import AOS from "aos/dist/aos"
 import "aos/dist/aos.css"
 import {useEffect} from "react";
 import {TermsProps} from "@/pages/terms";
+import {Provider} from "react-redux";
+import store from "../store/store"
 
 const termsData: TermsProps = {
     address: "ADDRESS",
@@ -19,14 +21,18 @@ const termsData: TermsProps = {
 export default function App({Component, pageProps}: AppProps) {
     useEffect(() => {
         AOS.init()
+        //@ts-ignore
+        window.store = store.getState()
     }, [])
     return (
         <>
-            <Header/>
-            <div className={cls.content}>
-                <Component {...pageProps}/>
-            </div>
-            <Footer/>
+            <Provider store={store}>
+                <Header/>
+                <div className={cls.content}>
+                    <Component {...pageProps}/>
+                </div>
+                <Footer/>
+            </Provider>
         </>
     )
 }
