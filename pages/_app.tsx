@@ -21,8 +21,6 @@ const termsData: TermsProps = {
 export default function App({Component, pageProps}: AppProps) {
     useEffect(() => {
         AOS.init()
-        //@ts-ignore
-        window.store = store.getState()
     }, [])
     return (
         <>

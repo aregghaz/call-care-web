@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   gap: 70px;
   padding: 2%;
   background: #D33834;
@@ -35,15 +36,15 @@
     color: #DBDBDB;
     text-align: center;
   }
+}
 
-  & > a {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.47999998927116394px;
-    color: white;
-    text-decoration: none;
-  }
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.47999998927116394px;
+  color: white;
+  text-decoration: none;
 }

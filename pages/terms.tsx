@@ -1,5 +1,9 @@
-import React, {FC} from "react"
+import React, {FC, useEffect, useState} from "react"
 import cls from "../styles/terms.module.scss"
+import {useSelector} from "react-redux";
+import databaseInfo from "@/db/dbdata";
+import axios from "axios";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
 
 export interface TermsProps {
     version: string,
@@ -14,11 +18,24 @@ const Terms:FC<TermsProps> = ({
     address,
     email,
 }) => {
-    return (
+    const [data, setData] = useState<TermsProps>({
+        version: "",
+        url: "",
+        address: "",
+        email: "",
+        date: "",
+    })
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+            setData(response.data)
+        })()
+    }, [])
+    return Object.values(data).every(item => item.length > 0) ? (
         <div className={cls.terms}>
              <h2 className={cls.h2} >Website Terms of Use</h2>
-             <p className={cls.p} >Version {version}</p>
-             <p className={cls.p} >The CalCare website located at {url} is a copyrighted work belonging to CalCare. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
+             <p className={cls.p} >Version {data.version}</p>
+             <p className={cls.p} >The CalCare website located at {data.url} is a copyrighted work belonging to CalCare. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
              <p className={cls.p} >All such additional terms, guidelines, and rules are incorporated by reference into these Terms.</p>
              <p className={cls.p} >These Terms of Use described the legally binding terms and conditions that oversee your use of the Site.&nbsp;BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms.&nbsp;YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p> <p className={cls.p} >
         </p> <p className={cls.p} >These terms require the use of arbitration Section 10.2 on an individual basis to resolve disputes and also limit the remedies available to you in the event of a dispute. These Terms of Use were created with the help of the  <a className={cls.a}  href="https://www.termsfeed.com/terms-use-generator/">Terms Of Use Generator</a>.</p>
@@ -78,10 +95,10 @@ const Terms:FC<TermsProps> = ({
              <p className={cls.p} > <strong className={cls.strong} >Your Privacy.</strong> Please read our Privacy Policy.</p>
              <p className={cls.p} > <strong className={cls.strong} >Copyright/Trademark Information.</strong> Copyright ©. All rights reserved.&nbsp; All trademarks, logos and service marks displayed on the Site are our property or the property of other third-parties. You are not permitted to use these Marks without our prior written consent or the consent of such third party which may own the Marks.</p>
              <h2 className={cls.h2} >Contact Information</h2>
-             <p className={cls.p} >Address: {address}</p>
-             <p className={cls.p} >Email: {email}</p>
+             <p className={cls.p} >Address: {data.address}</p>
+             <p className={cls.p} >Email: {data.email}</p>
         </div>
-    );
+    ) : <LoadingScreen/>
 }
 
 export default Terms

@@ -118,8 +118,8 @@ export default function Home(props: any) {
     const offerServices: { top: Array<OfferServiceProps>, bottom: Array<OfferServiceProps> } = {
         top: [
             {
-                name: "Ambulatory Service",
-                description: "Ambulatory Service is mobility at your front door.",
+                name: "Ambulatory Id",
+                description: "Ambulatory Id is mobility at your front door.",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg1.webp",

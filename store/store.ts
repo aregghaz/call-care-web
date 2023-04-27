@@ -1,9 +1,10 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit";
-import {reducer, actions} from "@/store/reducers/global.slice";
-import {useEffect} from "react";
+import {globalReducer, globalActions} from "@/store/reducers/global.slice";
+import {servicesReducer, servicesActions} from "@/store/reducers/services.slice";
 
 const reducers = combineReducers({
-    global: reducer
+    global: globalReducer,
+    services: servicesReducer
 })
 
 const store = configureStore({

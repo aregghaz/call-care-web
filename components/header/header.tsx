@@ -107,10 +107,10 @@ const Header:FC<any> = ():React.ReactElement => {
                         {
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
-                                    <>
+                                    <React.Fragment key={index}>
                                         <li key={index}><NavLink href={link}>{name}</NavLink></li>
                                         {index != array.length - 1 && screenSize.width > 1500 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
-                                    </>
+                                    </React.Fragment>
                                 )
                             })
                         }
@@ -124,10 +124,10 @@ const Header:FC<any> = ():React.ReactElement => {
                                 {
                                     headerLinks.map(({name, link}, index, array) => {
                                         return (
-                                            <>
+                                            <React.Fragment key={index}>
                                                 <li key={index} onClick={handleMenuItemClick}><NavLink href={link}>{name}</NavLink></li>
                                                 {index != array.length - 1 && screenSize.width > 1500 && <li key={index + array.length}><span className={cls.menuSpan}>/</span></li>}
-                                            </>
+                                            </React.Fragment>
                                         )
                                     })
                                 }

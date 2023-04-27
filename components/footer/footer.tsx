@@ -58,9 +58,7 @@ const Footer:FC<any> = ({
                         {
                             headerLinks.map(({name, link}, index, array) => {
                                 return (
-                                    <>
-                                        <li key={index}><Link className={cls.headerMenu} href={link}>{name}</Link></li>
-                                    </>
+                                    <li key={index}><Link className={cls.headerMenu} href={link}>{name}</Link></li>
                                 )
                             })
                         }

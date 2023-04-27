@@ -1,0 +1,131 @@
+{
+  "global": {
+    "address": "ADDRESS HERE EDIT DB",
+    "version": "1.0",
+    "email": "EMAIL HERE EDIT DB",
+    "url": "WEBSITE URL HERE EDIT DB",
+    "date": "20.20.2020 DATE HERE EDIT DB"
+  },
+  "services": [
+    {
+      "serviceName": "Home service",
+      "serviceDescription": "lorem ipsum dolor sit amet 1",
+      "serviceType": "HomeHealth",
+      "serviceDetails": [
+        {
+          "detailName": "Home Service 1",
+          "detailDescription": "Home Service 1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Home Service 1",
+          "detailDescription": "Home Service 1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Home Service 1",
+          "detailDescription": "Home Service 1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Physical Therapy2",
+          "detailDescription": "2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Physical Therapy3",
+          "detailDescription": "3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 1
+    },
+    {
+      "serviceName": "Therapy service",
+      "serviceDescription": "TEXT lorem picsum dolor sit amet",
+      "serviceType": "Therapy",
+      "serviceDetails": [
+        {
+          "detailName": "Physical Therapy1",
+          "detailDescription": "1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Physical Therapy2",
+          "detailDescription": "2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Physical Therapy3",
+          "detailDescription": "3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 2
+    },
+    {
+      "serviceName": "Transportation service",
+      "serviceDescription": "transportation TEXT lorem picsum dolor sit amet",
+      "serviceType": "Transportation",
+      "serviceDetails": [
+        {
+          "detailName": "Transportation Therapy1",
+          "detailDescription": "Transportation1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Transportation Therapy2",
+          "detailDescription": "Transportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Transportation Therapy3",
+          "detailDescription": "Transportation3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 3
+    },
+    {
+      "serviceName": "Transportation service",
+      "serviceDescription": "transportation TEXT lorem picsum dolor sit amet",
+      "serviceType": "Transportation",
+      "serviceDetails": [
+        {
+          "detailName": "Transportation Therapy1",
+          "detailDescription": "Transportation1Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Transportation Therapy2",
+          "detailDescription": "Transportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "Transportation Therapy3",
+          "detailDescription": "Transportation3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 4
+    },
+    {
+      "serviceName": "MedicalHomeModification service",
+      "serviceDescription": "MedicalHomeModification TEXT lorem picsum dolor sit amet",
+      "serviceType": "MedicalHomeModification",
+      "serviceDetails": [
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 5
+    }
+  ]
+}

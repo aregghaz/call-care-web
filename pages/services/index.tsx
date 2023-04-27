@@ -10,6 +10,13 @@ import 'swiper/css/pagination'
 import BigService from "@/components/big-service/big-service";
 import "swiper/css/navigation"
 import useScreenSize from "@/hooks/useScreenSize";
+import axios from "axios";
+import databaseInfo from "@/db/dbdata";
+import service from "@/components/service/service";
+import {useDispatch} from "react-redux";
+import {servicesActions} from "@/store/reducers/services.slice";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
+
 const Serivces:FC<any> = ({
 
 }) => {
@@ -24,88 +31,43 @@ const Serivces:FC<any> = ({
     type TypeService = {
         serviceType: serviceTypes,
         serviceName: string,
-        description: string,
-    }
+        serviceDescription: string,
+        serviceId: string | number,
+    };
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const allServices:Array<TypeService> = [
-        {
-            serviceType: "HomeHealth",
-            serviceName: "Home service",
-            description: "lorem ipsum dolor sit amet 1",
-        },
-        {
-            serviceType: "Therapy",
-            serviceName: "Therapy service",
-            description: "lorem ipsum dolor sit amet 2",
-        },
-        {
-            serviceType: "Transportation",
-            serviceName: "Transportation service",
-            description: "lorem ipsum dolor sit amet 3",
-        },
-        {
-            serviceType: "MedicalHomeModification",
-            serviceName: "Medical Home Modification service",
-            description: "lorem ipsum dolor sit amet 4",
-        },
-        {
-            serviceType: "HomeHealth",
-            serviceName: "Home service",
-            description: "lorem ipsum dolor sit amet 1",
-        },
-        {
-            serviceType: "Therapy",
-            serviceName: "Therapy service",
-            description: "lorem ipsum dolor sit amet 2",
-        },
-        {
-            serviceType: "Transportation",
-            serviceName: "Transportation service",
-            description: "lorem ipsum dolor sit amet 3",
-        },
-        {
-            serviceType: "MedicalHomeModification",
-            serviceName: "Medical Home Modification service",
-            description: "lorem ipsum dolor sit amet 4",
-        },
-        {
-            serviceType: "Transportation",
-            serviceName: "Transportation service",
-            description: "lorem ipsum dolor sit amet 3",
-        },
-        {
-            serviceType: "MedicalHomeModification",
-            serviceName: "Medical Home Modification service",
-            description: "lorem ipsum dolor sit amet 4",
-        },
-        {
-            serviceType: "HomeHealth",
-            serviceName: "Home service",
-            description: "lorem ipsum dolor sit amet 1",
-        },
-        {
-            serviceType: "MedicalHomeModification",
-            serviceName: "Medical Home Modification service",
-            description: "lorem ipsum dolor sit amet 4",
-        },
-    ]
+    const [allServices, setAllServices] = useState<Array<TypeService>>([])
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.services}`)
+                setAllServices(response.data)
+                setServices(response.data)
+            } catch (error) {
+                console.error(error)
+            }
+        })();
+    }, [])
 
     const [type, setType] = useState<serviceTypes | "All">("All")
-    const [services, setServices] = useState<Array<TypeService>>(allServices)
+    const [services, setServices] = useState<Array<TypeService>>([])
 
     const handleTypeChange = (e) => {
         setType(e.currentTarget.id)
     }
 
     useEffect(() => {
-        console.log(type)
         setServices(
             allServices.filter(item => {
                 return type === "All" ? item : item.serviceType === type
             })
         )
     }, [type])
+
+    const loadSelectedService = (service) => {
+        dispatch(servicesActions.loadService(service))
+    }
 
     return (
         <>
@@ -152,10 +114,21 @@ const Serivces:FC<any> = ({
                     </div>
                     <div className={cls.serviceContent}>
                         {
+                            services.length <= 0 ?
+                                <LoadingScreen fullscreen={false}/>
+                                :
                             services.map((item,index) => {
                                 return (
-                                    // eslint-disable-next-line react/jsx-key
-                                    <BigService name={item.serviceName} description={item.description} link={"/"}/>
+                                    <div onClick={() => {
+                                        loadSelectedService(item)
+                                    }}>
+                                        <BigService
+                                            name={item.serviceName}
+                                            description={item.serviceDescription}
+                                            defaultLink={"/services"}
+                                            link={item.serviceId.toString()}
+                                        />
+                                    </div>
                                 )
                             })
                         }

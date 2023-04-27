@@ -1,14 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    count: 0
+
 }
-// const globalReducer = (state, action) => {
-//     switch (action.type) {
-//         default:
-//             return state
-//     }
-// }
 
 const globalSlice = createSlice({
     name: "global",
@@ -20,4 +14,5 @@ const globalSlice = createSlice({
     },
 })
 
-export const {actions, reducer} = globalSlice
+
+export const {actions:globalActions, reducer:globalReducer} = globalSlice

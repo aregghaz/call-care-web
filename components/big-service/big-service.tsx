@@ -8,23 +8,25 @@ export interface BigServiceProps {
     name: string,
     description: string,
     link?: string
+    defaultLink?: string
 }
 
 const BigService:FC<BigServiceProps & AosInterface> = ({
     name = "",
     description = "",
     link = "",
-    dataAos = ""
+    dataAos = "",
+    defaultLink = "",
 }) => {
     return (
-        <div className={cls.main} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
+        <Link href={`${defaultLink}/${link}`} className={cls.main} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
             <h2>{name}</h2>
             <p>{description}</p>
-            <Link href={link}>
+            <div className={cls.readMore}>
                 Read More
                 <ArrowRight color={"white"}/>
-            </Link>
-        </div>
+            </div>
+        </Link>
     )
 }
 

@@ -1,13 +1,29 @@
-import React, {FC} from "react";
+import React, {FC, useEffect, useState} from "react";
 import cls from "../styles/terms.module.scss"
 import {TermsProps} from "@/pages/terms";
+import axios from "axios";
+import databaseInfo from "@/db/dbdata";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
 
 const Privacy:FC<TermsProps> = ({
     address,
     email,
     date,
 }) => {
-    return (
+    const [data, setData] = useState<TermsProps>({
+        version: "",
+        url: "",
+        address: "",
+        email: "",
+        date: "",
+    })
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+            setData(response.data)
+        })()
+    }, [])
+    return Object.values(data).every(item => item.length > 0) ? (
         <div className={cls.terms}>
              <strong className={cls.strong} >Privacy Policy</strong>  <p className={cls.p} >
             CalCare built the Calcare app as
@@ -100,12 +116,12 @@ const Privacy:FC<TermsProps> = ({
             periodically for any changes. We will
             notify you of any changes by posting the new Privacy Policy on
             this page.
-        </p>  <p className={cls.p} >This policy is effective as of 2023-04-26</p>  <p className={cls.p} > <strong className={cls.strong} >Contact Us</strong></p>  <p className={cls.p} >
+        </p>  <p className={cls.p} >This policy is effective as of {data.date}</p>  <p className={cls.p} > <strong className={cls.strong} >Contact Us</strong></p>  <p className={cls.p} >
             If you have any questions or suggestions about our
-            Privacy Policy, do not hesitate to contact us at {email}.
+            Privacy Policy, do not hesitate to contact us at {data.email}.
         </p>
         </div>
-    )
+    ) : <LoadingScreen/>
 }
 
 export default Privacy

@@ -1,15 +1,34 @@
-import React, {FC} from "react"
+import React, {FC, useEffect, useState} from "react"
 import cls from "../../styles/service.module.scss"
 import Image from "next/image";
+import {useSelector} from "react-redux";
+import {useRouter} from "next/router";
+import axios from "axios";
+import databaseInfo from "@/db/dbdata";
+import {router} from "next/client";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
 
 interface ServiceProps {
 
 }
 
-const Service:FC<ServiceProps> = ({
+const Id:FC<ServiceProps> = ({
 
 }) => {
-    return (
+    const selectedService = useSelector(state => state.services)
+    const [service, setService] = useState({})
+    const selectedId = useRouter().query.id
+    useEffect(() => {
+        if (Object.keys(selectedService).length <= 0 && selectedId) {
+            (async () => {
+                const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
+                setService(result.data[0])
+            })();
+        } else {
+            setService(selectedService)
+        }
+    }, [selectedId])
+    return Object.keys(service).length > 0 ? (
         <div className={cls.serviceContainer}>
             <div className={cls.serviceImg}>
                 <div className={cls.imgWrapper}>
@@ -18,15 +37,15 @@ const Service:FC<ServiceProps> = ({
             </div>
             <div className={cls.serviceInfo}>
                 <div className={`${cls.serviceItem}`}>
-                    <h1>Therapy`</h1>
+                    <h1>{service.serviceName}</h1>
                 </div>
                 <div className={`${cls.serviceText} ${cls.serviceItem}`}>
                     {
-                        new Array(5).fill("").map(item => {
+                        (service.serviceDetails ?? []).map((item, index) => {
                             return (
-                                <div>
-                                    <h3 className={cls.itemsName}>Physical Therapy</h3>
-                                    <p className={cls.itemText}>Physical therapy can be beneficial for a wide range of conditions,  <br/> including sports injuries, chronic pain, arthritis,back pain, post-surgical  <br/> rehabilitation, and neurological disorders such as stroke or Parkinson's disease. </p>
+                                <div key={index}>
+                                    <h3 className={cls.itemsName}>{item.detailName}</h3>
+                                    <p className={cls.itemText}>{item.detailDescription}</p>
                                 </div>
                             )
                         })
@@ -44,7 +63,7 @@ const Service:FC<ServiceProps> = ({
                 </div>
             </div>
         </div>
-    )
+    ) : <LoadingScreen/>
 }
 
-export default Service
+export default Id
