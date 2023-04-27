@@ -1,0 +1,150 @@
+@import "variables";
+
+.serviceContainer{
+  width: 100%;
+  height: 1000px;
+  //border: 1px solid red;
+  display: flex;
+
+  @media screen and (max-width: 1100px){
+    flex-direction: column;
+    padding: 100px 0;
+    height: 1200px;
+  }
+
+  @media screen and (max-width: 420px){
+   height: 1000px;
+    padding: 30px 0;
+  }
+}
+
+.serviceImg{
+  width: 50%;
+  height: 100%;
+  border: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 100px;
+
+  @media screen and (max-width: 1427px){
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 20px;
+  }
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+.imgWrapper{
+  width: 500px;
+  height: 500px;
+  border: 18px solid $asteriskColor;
+  position: relative;
+
+  @media screen and (max-width: 1100px){
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 432px){
+    width: 300px;
+    height: 300px;
+  }
+
+
+
+}
+
+.servicePsImg{
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  filter: grayscale(20%);
+  @media screen and (max-width: 1100px){
+    width: 400px;
+    height: 400px;
+  }
+  @media screen and (max-width: 600px){
+    bottom: -50px;
+    right: -18px;
+  }
+  @media screen and (max-width: 432px){
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+.serviceInfo{
+  width: 50%;
+  height: 100%;
+  border: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 80px;
+  padding-top: 10px;
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px){
+    padding-left: 20px;
+
+  }
+}
+
+.serviceItem{
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: inherit;
+
+
+}
+
+.serviceText{
+  width: 80%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: auto;
+
+  @media screen and (max-width: 1700px){
+    width: 97%;
+  }
+
+}
+.itemsName{
+  line-height: 40px;
+}
+
+.itemText{
+  color: #6C6C6C;
+}
+
+.companyCont{
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+
+  }
+}
+
