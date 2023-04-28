@@ -9,6 +9,7 @@ export interface BigServiceProps {
     description: string,
     link?: string
     defaultLink?: string
+    loadService?: Function
 }
 
 const BigService:FC<BigServiceProps & AosInterface> = ({
@@ -17,9 +18,19 @@ const BigService:FC<BigServiceProps & AosInterface> = ({
     link = "",
     dataAos = "",
     defaultLink = "",
+                                                           loadService
 }) => {
     return (
-        <Link href={`${defaultLink}/${link}`} className={cls.main} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
+        <Link
+            href={`${defaultLink}/${link}`}
+            className={cls.main}
+            data-aos={dataAos.type}
+            data-aos-duration={dataAos.duration}
+            data-aos-delay={dataAos.delay}
+            onClick={() => {
+                if (loadService) loadService() // argument is given by bind
+            }}
+        >
             <h2>{name}</h2>
             <p>{description}</p>
             <div className={cls.readMore}>

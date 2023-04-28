@@ -638,7 +638,7 @@
   flex-direction: column;
   //align-items: center;
   justify-content: center;
-  padding: 150px 60px;
+  padding: 180px 60px;
   gap: 70px;
   @media screen and (max-width: 1600px){
     padding: 150px 20px;
@@ -751,7 +751,11 @@
 
 .sliderApp{
   background-image: url($mobileApp);
-  background-size: 40%;
+  background-size: contain;
+
+  @media screen and (max-width: 1100px){
+    background-size: 50%;
+  }
 
   @media screen and (max-width: 700px){
     background-size: 50%;

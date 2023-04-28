@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from "react"
 import cls from "../../styles/Services.module.scss"
 import Image from "next/image";
 import {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from "swiper";
-import {Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.css"
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -17,13 +17,11 @@ import {useDispatch} from "react-redux";
 import {servicesActions} from "@/store/reducers/services.slice";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 
-const Serivces:FC<any> = ({
-
-}) => {
+const Serivces: FC<any> = ({}) => {
     const screen = useScreenSize()
     const handleTextareaHeight = (evt) => {
         evt.target.style.height = "50px";
-        evt.target.style.height = (evt.target.scrollHeight)+"px";
+        evt.target.style.height = (evt.target.scrollHeight) + "px";
     }
 
     type serviceTypes = "HomeHealth" | "Therapy" | "Transportation" | "MedicalHomeModification"
@@ -80,7 +78,7 @@ const Serivces:FC<any> = ({
                 </div>
                 <div className={cls.heroRight}>
                     <div className={cls.heroRightBackground}>
-                        
+
                     </div>
                 </div>
             </section>
@@ -97,16 +95,16 @@ const Serivces:FC<any> = ({
                                         <span>All</span>
                                     </li>
                                     <li id={"HomeHealth"} onClick={handleTypeChange}>
-                                        <span >Home Health</span>
+                                        <span>Home Health</span>
                                     </li>
                                     <li id={"Therapy"} onClick={handleTypeChange}>
-                                        <span >Therapy</span>
+                                        <span>Therapy</span>
                                     </li>
                                     <li id={"Transportation"} onClick={handleTypeChange}>
-                                        <span >Transportation</span>
+                                        <span>Transportation</span>
                                     </li>
                                     <li id={"MedicalHomeModification"} onClick={handleTypeChange}>
-                                        <span >Medical Home Modification</span>
+                                        <span>Medical Home Modification</span>
                                     </li>
                                 </ul>
                             </nav>
@@ -117,20 +115,18 @@ const Serivces:FC<any> = ({
                             services.length <= 0 ?
                                 <LoadingScreen fullscreen={false}/>
                                 :
-                            services.map((item,index) => {
-                                return (
-                                    <div key={index} onClick={() => {
-                                        loadSelectedService(item)
-                                    }}>
+                                services.map((item, index) => {
+                                    return (
                                         <BigService
+                                            key={index}
+                                            loadService={loadSelectedService.bind(null, item)}
                                             name={item.serviceName}
                                             description={item.serviceDescription}
                                             defaultLink={"/services"}
                                             link={item.serviceId.toString()}
                                         />
-                                    </div>
-                                )
-                            })
+                                    )
+                                })
                         }
                     </div>
                 </div>
