@@ -466,7 +466,7 @@
   width: 100%;
   height: auto;
   border: inherit;
-  padding: 60px 0;
+  //padding: 60px 0;
 
   & > div{
     width: 100%;
@@ -592,7 +592,19 @@
 }
 
 .otherBulletsWrapper {
-  bottom: 5% !important;
+  bottom: 2% !important;
+
+  @media screen and (max-width: 1400px){
+    bottom: 4% !important;
+  }
+
+  @media screen and (max-width: 750px){
+    bottom: 10% !important;
+  }
+
+  @media screen and (max-width: 300px){
+    bottom: 5% !important;
+  }
 }
 
 .activeBulletClass {
@@ -626,10 +638,14 @@
   flex-direction: column;
   //align-items: center;
   justify-content: center;
-  padding: 280px 60px;
+  padding: 150px 60px;
   gap: 70px;
   @media screen and (max-width: 1600px){
     padding: 150px 20px;
+  }
+
+  @media screen and (max-width: 1400px){
+    padding: 50px 20px;
   }
 
   @media screen and (max-width: 1100px){
@@ -640,7 +656,7 @@
   @media screen and (max-width: 650px){
     width: 100%;
     height: auto;
-    padding: 100px 20px;
+    padding: 80px 20px;
     justify-content: flex-end;
     gap: 5px;
     margin-top: 300px;
@@ -648,7 +664,22 @@
 
   @media screen and (max-width: 470px){
     margin-top: 150px;
+    padding: 150px 20px;
+  }
 
+  @media screen and (max-width: 420px){
+    margin-top: 150px;
+    padding: 100px 20px;
+  }
+
+  @media screen and (max-width: 350px){
+    margin-top: 150px;
+    padding: 80px 20px;
+  }
+
+  @media screen and (max-width: 300px){
+    margin-top: 150px;
+    padding: 50px 20px;
   }
 
   & > h1{
