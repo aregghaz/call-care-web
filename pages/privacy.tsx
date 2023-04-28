@@ -63,7 +63,7 @@ const Privacy:FC<TermsProps> = ({
             Cookies are files with a small amount of data that are
             commonly used as anonymous unique identifiers. These are sent
             to your browser from the websites that you visit and are
-            stored on your device's internal memory.
+            stored on your device&apos;s internal memory.
         </p>  <p className={cls.p} >
             This Service does not use these “cookies” explicitly. However,
             the app may use third-party code and libraries that use
@@ -104,7 +104,7 @@ const Privacy:FC<TermsProps> = ({
             identifiable information through
             the Application and/or Services.
             We encourage parents and legal guardians to monitor
-            their children's Internet usage and to help enforce this Policy by instructing
+            their children&apos;s Internet usage and to help enforce this Policy by instructing
             their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child
             has provided personally identifiable information to us through the Application and/or Services,
             please contact us. You must also be at least 16 years of age to consent to the processing
