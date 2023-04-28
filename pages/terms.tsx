@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import databaseInfo from "@/db/dbdata";
 import axios from "axios";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
+import ErrorWindow from "@/components/error-window/error-window";
 
 export interface TermsProps {
     version: string,
@@ -25,10 +26,15 @@ const Terms:FC<TermsProps> = ({
         email: "",
         date: "",
     })
+    const [error, setError] = useState<boolean>(false)
     useEffect(() => {
         (async () => {
-            const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
-            setData(response.data)
+            try {
+                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+                setData(response.data)
+            } catch (error) {
+                setError(true)
+            }
         })()
     }, [])
     return Object.values(data).every(item => item.length > 0) ? (
@@ -98,7 +104,7 @@ const Terms:FC<TermsProps> = ({
              <p className={cls.p} >Address: {data.address}</p>
              <p className={cls.p} >Email: {data.email}</p>
         </div>
-    ) : <LoadingScreen/>
+    ) : error ? <ErrorWindow/> : <LoadingScreen/>
 }
 
 export default Terms

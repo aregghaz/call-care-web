@@ -16,6 +16,7 @@ import service from "@/components/service/service";
 import {useDispatch} from "react-redux";
 import {servicesActions} from "@/store/reducers/services.slice";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
+import ErrorWindow from "@/components/error-window/error-window";
 
 const Serivces: FC<any> = ({}) => {
     const screen = useScreenSize()
@@ -35,6 +36,7 @@ const Serivces: FC<any> = ({}) => {
 
     const [allServices, setAllServices] = useState<Array<TypeService>>([])
     const dispatch = useDispatch()
+    const [error, setError] = useState<boolean>(false)
 
     useEffect(() => {
         (async () => {
@@ -43,7 +45,7 @@ const Serivces: FC<any> = ({}) => {
                 setAllServices(response.data)
                 setServices(response.data)
             } catch (error) {
-                console.error(error)
+                setError(true)
             }
         })();
     }, [])
@@ -112,6 +114,7 @@ const Serivces: FC<any> = ({}) => {
                     </div>
                     <div className={cls.serviceContent}>
                         {
+                            error ? <ErrorWindow fullscreen={false}/> :
                             services.length <= 0 ?
                                 <LoadingScreen fullscreen={false}/>
                                 :
