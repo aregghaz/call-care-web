@@ -17,7 +17,7 @@ const Id:FC<ServiceProps> = ({
 }) => {
     const selectedService = useSelector(state => state.services)
     const [service, setService] = useState({})
-    const selectedId = useRouter().query.id
+    const selectedId: string = useRouter().query.id
     useEffect(() => {
         if (Object.keys(selectedService).length <= 0 && selectedId) {
             (async () => {

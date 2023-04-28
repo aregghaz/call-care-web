@@ -119,7 +119,7 @@ const Serivces:FC<any> = ({
                                 :
                             services.map((item,index) => {
                                 return (
-                                    <div onClick={() => {
+                                    <div key={index} onClick={() => {
                                         loadSelectedService(item)
                                     }}>
                                         <BigService

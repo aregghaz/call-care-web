@@ -354,7 +354,7 @@ export default function Home(props: any) {
                         </Swiper>
                     </div>
                 </section>
-                <section className={cls.believeSec} data-aos={"zoom-in-down"}>
+                <section className={cls.believeSec} data-aos={"fade"}>
                     <h1>We believe the heart of healthcare is service</h1>
                     <p>At General Medical our staff will be happy to assist you with any home health care need you have.
                         We
@@ -417,7 +417,7 @@ export default function Home(props: any) {
                     </div>
 
                 </section>
-                <section className={cls.applications} data-aos={"flip-right"}>
+                <section className={cls.applications} data-aos={"flip-right"} data-aos-duration={2000}>
                     <Swiper
                         grabCursor={true}
                         effect={"creative"}
