@@ -35,7 +35,6 @@ const GeneralMedicalCard:FC<GeneralMedicalCardProps & AosInterface> = ({
                 visibility: "visible",
                 top: 0,
             } : {}}>
-                <Link href={link}>
                     <div className={cls.generalCardButton}>
                         <Link href={link}>
                             <Image src={"/images/arrowRightBlack.svg"} alt={"arror right black"} width={20} height={17}/>
@@ -43,7 +42,6 @@ const GeneralMedicalCard:FC<GeneralMedicalCardProps & AosInterface> = ({
                     </div>
                     <h2>{name}</h2>
                     <p>{description}</p>
-                </Link>
             </div>
         </div>
     )
