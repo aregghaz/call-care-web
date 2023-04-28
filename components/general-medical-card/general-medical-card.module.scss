@@ -43,14 +43,19 @@
   transition: 0.2s;
   top: 100px;
 
-  & > h2 {
+  & > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  & > a > h2 {
     color: white;
     text-transform: uppercase;
     font-size: 26px;
     font-weight: 500;
   }
 
-  & > p {
+  & > a > p {
     color: #DBDBDB;
     font-size: 20px;
     font-weight: 400;

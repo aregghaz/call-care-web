@@ -271,7 +271,7 @@ export default function Home(props: any) {
                         {
                             services.map(({name, description, image}, index) => {
                                 return (
-                                    <Service dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={name} description={description} image={image}/>
+                                    <Service className={cls.service} dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={name} description={description} image={image}/>
                                 )
                             })
                         }

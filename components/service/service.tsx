@@ -24,7 +24,7 @@ const Service:FC<ServiceProps & AosInterface> = ({
     dataAos= {}
 }) => {
     return (
-        <div data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
+        <div className={className} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
             <Link href={"../../services"} className={cls.nav}>
                 <li className={`${cls.service} ${className}`}>
                     <div className={cls.serviceContent}>
