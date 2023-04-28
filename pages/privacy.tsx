@@ -4,6 +4,7 @@ import {TermsProps} from "@/pages/terms";
 import axios from "axios";
 import databaseInfo from "@/db/dbdata";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
+import ErrorWindow from "@/components/error-window/error-window";
 
 const Privacy:FC<TermsProps> = ({
     address,
@@ -17,10 +18,15 @@ const Privacy:FC<TermsProps> = ({
         email: "",
         date: "",
     })
+    const [error, setError] = useState(false)
     useEffect(() => {
         (async () => {
-            const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
-            setData(response.data)
+            try {
+                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+                setData(response.data)
+            } catch (error) {
+                setError(true)
+            }
         })()
     }, [])
     return Object.values(data).every(item => item.length > 0) ? (
@@ -121,7 +127,7 @@ const Privacy:FC<TermsProps> = ({
             Privacy Policy, do not hesitate to contact us at {data.email}.
         </p>
         </div>
-    ) : <LoadingScreen/>
+    ) : error ? <ErrorWindow/> : <LoadingScreen/>
 }
 
 export default Privacy
