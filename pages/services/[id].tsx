@@ -7,6 +7,7 @@ import axios from "axios";
 import databaseInfo from "@/db/dbdata";
 import {router} from "next/client";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
+import ErrorWindow from "../../components/error-window/error-window";
 
 interface ServiceProps {
 
@@ -17,12 +18,17 @@ const Id:FC<ServiceProps> = ({
 }) => {
     const selectedService = useSelector(state => state.services)
     const [service, setService] = useState({})
-    const selectedId: string = useRouter().query.id
+    const [error, setError] = useState<boolean>(false)
+    const selectedId: any = useRouter().query.id
     useEffect(() => {
         if (Object.keys(selectedService).length <= 0 && selectedId) {
             (async () => {
-                const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
-                setService(result.data[0])
+                try {
+                    const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
+                    setService(result.data[0])
+                } catch (error) {
+                    setError(true)
+                }
             })();
         } else {
             setService(selectedService)
@@ -63,7 +69,7 @@ const Id:FC<ServiceProps> = ({
                 </div>
             </div>
         </div>
-    ) : <LoadingScreen/>
+    ) : error ? <ErrorWindow/> : <LoadingScreen/>
 }
 
 export default Id

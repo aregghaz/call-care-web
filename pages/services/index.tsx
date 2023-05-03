@@ -17,6 +17,7 @@ import {useDispatch} from "react-redux";
 import {servicesActions} from "@/store/reducers/services.slice";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
+import database from "../../db/db.json"
 
 const Serivces: FC<any> = ({}) => {
     const screen = useScreenSize()
@@ -34,21 +35,22 @@ const Serivces: FC<any> = ({}) => {
         serviceId: string | number,
     };
 
-    const [allServices, setAllServices] = useState<Array<TypeService>>([])
+    const [allServices, setAllServices] = useState<Array<TypeService>>(database.services)
+    // const [allServices, setAllServices] = useState<Array<TypeService>>([])
     const dispatch = useDispatch()
     const [error, setError] = useState<boolean>(false)
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.services}`)
-                setAllServices(response.data)
-                setServices(response.data)
-            } catch (error) {
-                setError(true)
-            }
-        })();
-    }, [])
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const response = await axios.get(`${databaseInfo.db}/${databaseInfo.services}`)
+    //             setAllServices(response.data)
+    //             setServices(response.data)
+    //         } catch (error) {
+    //             setError(true)
+    //         }
+    //     })();
+    // }, [])
 
     const [type, setType] = useState<serviceTypes | "All">("All")
     const [services, setServices] = useState<Array<TypeService>>([])

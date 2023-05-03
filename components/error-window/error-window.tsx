@@ -13,7 +13,7 @@ const ErrorWindow:FC<ErrorWindowProps> = ({
     const router = useRouter()
     const [pathname, setPathname] = useState(router.pathname)
     useEffect(() => {
-        setPathname(router.pathname)
+        setPathname(router.asPath)
     }, [router])
     return (
         <div
