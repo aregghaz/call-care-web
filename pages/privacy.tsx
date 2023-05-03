@@ -5,6 +5,7 @@ import axios from "axios";
 import databaseInfo from "@/db/dbdata";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
+import jsonData from "../db/db.json"
 
 const Privacy:FC<TermsProps> = ({
     address,
@@ -22,8 +23,10 @@ const Privacy:FC<TermsProps> = ({
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
-                setData(response.data)
+                // const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+                // setData(response.data) // json-server
+
+                setData(jsonData.global)
             } catch (error) {
                 setError(true)
             }

@@ -5,6 +5,7 @@ import databaseInfo from "@/db/dbdata";
 import axios from "axios";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
+import jsonData from "@/db/db.json";
 
 export interface TermsProps {
     version: string,
@@ -30,8 +31,10 @@ const Terms:FC<TermsProps> = ({
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
-                setData(response.data)
+                // const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
+                // setData(response.data) // json-server
+
+                setData(jsonData.global)
             } catch (error) {
                 setError(true)
             }
