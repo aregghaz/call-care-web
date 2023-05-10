@@ -65,10 +65,10 @@ const About = ({
                 <div className={cls.aboutInfoMain}>
                     <h1>About Us</h1>
                     <h2>Why choose us</h2>
-                    <p>General Medical (GM) currently has a staff of over <br /> thirty-five people
-                        including drivers, managers, <br /> EMT’s and accounting specialists.
-                        Created in 2010,<br /> the company has enjoyed all that the American <br />
-                        dream has to offer and has expanded service to <br/> reputable service agencies.</p>
+                    <p>Cal Care currently employs over 35 professionals including drivers,<br /> managers, EMTs, and accounting specialists.
+                        Established in 2010, <br /> our company has experienced tremendous growth and success<br /> in providing quality healthcare services.
+                        We have expanded our services<br />  to partner with reputable agencies, delivering the best possible care to our clients.<br />
+                        At Cal Care, we are committed to maintaining the American<br />  dream of hard work and success, while continuously striving to <br /> improve and innovate our healthcare services.</p>
                 </div>
             </section>
             <section className={cls.companyInfo} data-aos={"fade-right"}>
@@ -77,14 +77,9 @@ const About = ({
                 </div>
                 <div className={cls.companyInfoText}>
                     <h2>For years our company has provided <br/> quality medical transportation.</h2>
-                    <p className={cls.infoText1}>We are growing fast and we are eager to earn your <br/> business.
-                        General Medical is equipped to handle all the <br/> transportation
-                        needs that you can imagine. From <br/> Ambulatory Transportation
-                        to in home care, we provide a  <br/>one stop shop to
-                        aid medical service providers. We look <br/> forward to being
-                        in contact with you, and further look <br/> forward to establish
-                        a business relationship that will last <br/> for many years to come! <br/>
-                        <br/>
+                    <p className={cls.infoText1}>At CalCare, we are committed to providing safe and reliable transportation services to our members. As a company, we are growing fast and are eager to earn your business. We understand that medical transportation needs can vary greatly, which is why we strive to offer a comprehensive range of services to meet your needs.
+                        Whether you require ambulatory transportation, in-home care, or any other type of medical transportation service, we are here to help. Our goal is to provide a one-stop-shop for medical service providers, offering the convenience and peace of mind that comes with knowing that all your transportation needs are being taken care of by a single trusted provider.
+                        We look forward to the opportunity to earn your business and establish a long-lasting business relationship that will benefit both our organizations for many years to come.
                         Sincerely,</p>
                     <p className={cls.infoText2}>Joe Mkhitaryan</p>
                     <p className={cls.infoText3}>Director, Client Relations General Medical Transportation</p>

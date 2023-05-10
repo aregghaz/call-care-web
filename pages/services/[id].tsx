@@ -8,6 +8,7 @@ import databaseInfo from "@/db/dbdata";
 import {router} from "next/client";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "../../components/error-window/error-window";
+import jsonData from "../../db/db.json"
 
 interface ServiceProps {
 
@@ -24,8 +25,11 @@ const Id:FC<ServiceProps> = ({
         if (Object.keys(selectedService).length <= 0 && selectedId) {
             (async () => {
                 try {
-                    const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
-                    setService(result.data[0])
+                    // const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
+                    // setService(result.data[0]) // json-server
+
+                    const result = jsonData.services.filter(item => item.serviceId === +selectedId)
+                    setService(result[0]) // local json
                 } catch (error) {
                     setError(true)
                 }
