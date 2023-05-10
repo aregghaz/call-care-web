@@ -76,7 +76,7 @@ export default function Home(props: any) {
             link: "/about"
         },
         {
-            name: "our services",
+            name: "Our services",
             description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
             image: "/images/calcarecard2.webp",
             link: "/services"
