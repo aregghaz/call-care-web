@@ -136,7 +136,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                 </div>
                 <div className={cls.headerNavigationLeft}>
-                    <SocialLinks colors={"white"} className={`${searchOpen && cls.out}}`}/>
+                    {/*<SocialLinks colors={"white"} className={`${searchOpen && cls.out}}`}/>*/}
                     <div className={`${cls.searchOpenBox} ${searchOpen && cls.open}`} >
                         <input type="text" placeholder={"search.."}/>
                     </div>

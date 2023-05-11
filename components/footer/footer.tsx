@@ -81,17 +81,17 @@ const Footer:FC<any> = ({
                         <li><Link href={"/terms"}>Terms of Use</Link></li>
                     </ul>
                 </li>
-                <li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>
-                    <div className={cls.footerContentSearchWrapper}>
+                {/*<li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>*/}
+                {/*    <div className={cls.footerContentSearchWrapper}>*/}
 
-                        <ul className={cls.footerContentMedia}>
-                            <li><Link target={"_blank"} href={"https://www.pinterest.com"}><PinterestIcon/></Link></li>
-                            <li><Link target={"_blank"} href={"https://www.linkedin.com"}><LinkedinIcon/></Link></li>
-                            <li><Link target={"_blank"} href={"https://www.facebook.com"}><FacebookIcon/></Link></li>
-                            <li><Link target={"_blank"} href={"https://twitter.com/"}><TwitterIcon/></Link></li>
-                        </ul>
-                    </div>
-                </li>
+                {/*        <ul className={cls.footerContentMedia}>*/}
+                {/*            <li><Link target={"_blank"} href={"https://www.pinterest.com"}><PinterestIcon/></Link></li>*/}
+                {/*            <li><Link target={"_blank"} href={"https://www.linkedin.com"}><LinkedinIcon/></Link></li>*/}
+                {/*            <li><Link target={"_blank"} href={"https://www.facebook.com"}><FacebookIcon/></Link></li>*/}
+                {/*            <li><Link target={"_blank"} href={"https://twitter.com/"}><TwitterIcon/></Link></li>*/}
+                {/*        </ul>*/}
+                {/*    </div>*/}
+                {/*</li>*/}
             </ul>
         </footer>
     )

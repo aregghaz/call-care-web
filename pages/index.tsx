@@ -27,8 +27,8 @@ export default function Home(props: any) {
 
     const services: Array<ServiceProps> = [
         {
-            name: "Medical Home\n" + "Modification",
-            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            name: "Ambulatory Service",
+            description: "At CalCare, we understand that  \n mobility can be a challenge for some individuals, which is why we offer \n a comprehensive ambulatory service.",
             image: {
                 src: "/images/service1.svg",
                 alt: "service 1",
@@ -37,8 +37,8 @@ export default function Home(props: any) {
             }
         },
         {
-            name: "Home Health",
-            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            name: "Wheelchair Services",
+            description: "We are tailored to meet the unique needs of our clients. Our vehicles are equipped with electric wheelchair ramps and lifts, making it easy and convenient for our clients to enter and exit the vehicle comfortably and safely.",
             image: {
                 src: "/images/service2.svg",
                 alt: "service 2",
@@ -47,8 +47,8 @@ export default function Home(props: any) {
             }
         },
         {
-            name: "Therapy",
-            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            name: "Stretcher Services",
+            description: "At CalCare, we understand that some patients require transportation on a stretcher, and we are equipped to provide safe and reliable stretcher services to meet their needs.",
             image: {
                 src: "/images/service3.svg",
                 alt: "service 3",
@@ -57,8 +57,8 @@ export default function Home(props: any) {
             }
         },
         {
-            name: "Transportation",
-            description: "Lorem ipsum dolor sit amet \m consectetur adipisicing elit.",
+            name: "Ambulance Transportation",
+            description: "At CalCare, we understand that there are times when urgent medical attention is required outside of a hospital setting. ",
             image: {
                 src: "/images/service4.svg",
                 alt: "service 4",
@@ -71,46 +71,46 @@ export default function Home(props: any) {
     const generalMedicalCards: Array<GeneralMedicalCardProps> = [
         {
             name: "About us",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            description: "At Cal Care, we are proud to have a team of highly skilled and compassionate healthcare professionals who are committed to providing personalized care that meets the unique needs of each patient.",
             image: "/images/calcarecard1.webp",
             link: "/about"
         },
         {
             name: "Our services",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            description: "Cal Care offers a wide range of healthcare services to individuals and families across Greater Southern California. ",
             image: "/images/calcarecard2.webp",
             link: "/services"
         },
         {
             name: "Work whit us",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            description: " We believe that our employees are the foundation of our success, and we are committed to providing a supportive and collaborative work environment where our team members can thrive.",
             image: "/images/calcarecard3.webp",
             link: "/work"
         },
         {
             name: "Refer",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+            description: "At CalCare, we believe that the highest compliment our patients can give us is the referral of their friends and family.",
             image: "/images/calcarecard4.webp",
             link: "/refer"
         },
         {
             name: "Contacts",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard1.webp",
+            description: "If you need to get in touch with Cal Care, we offer multiple ways to contact us. ",
+            image: "/images/calcarecard5.webp",
             link: "/contact"
         },
         {
             name: "Our Admin Panel",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard2.webp",
+            description: "CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management of all aspects of the company's healthcare services.",
+            image: "/images/calcarecard6.webp",
             link: "/"
         },
-        {
-            name: "Mobile App",
-            description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-            image: "/images/calcarecard3.webp",
-            link: "/"
-        },
+        // {
+        //     name: "Mobile App",
+        //     description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
+        //     image: "/images/calcarecard3.webp",
+        //     link: "/"
+        // },
 
 
     ]
@@ -118,8 +118,8 @@ export default function Home(props: any) {
     const offerServices: { top: Array<OfferServiceProps>, bottom: Array<OfferServiceProps> } = {
         top: [
             {
-                name: "Ambulatory Id",
-                description: "Ambulatory Id is mobility at your front door.",
+                name: "Ambulatory Service",
+                description: "Which is why we offer a comprehensive ambulatory service..",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg1.webp",
@@ -130,7 +130,7 @@ export default function Home(props: any) {
             },
             {
                 name: "Wheelchair Services",
-                description: "General Medical provides exceptional wheelchair transportation",
+                description: "We are tailored to meet the unique needs of our clients. ",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg2.webp",
@@ -141,7 +141,7 @@ export default function Home(props: any) {
             },
             {
                 name: "Stretcher Services",
-                description: "Patients in need of transportation that require the use of a stretcher",
+                description: "At CalCare, we understand that some patients require transportation on a stretcher",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg3.webp",
@@ -155,7 +155,7 @@ export default function Home(props: any) {
         bottom: [
             {
                 name: "Ambulance Transportation",
-                description: "Ambulance Transportation is for people who need acute",
+                description: "At CalCare, we understand that there are times when urgent medical attention is required outside of a hospital setting.",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg4.webp",
@@ -165,8 +165,8 @@ export default function Home(props: any) {
                 }
             },
             {
-                name: "OUR SERVICES",
-                description: "Ambulatory Transportation, Wheelchair Transportation, Stretcher Transportation",
+                name: "Basic Life Support",
+                description: "At CalCare, we understand the importance of providing the right level of medical care to patients in need. ",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg5.webp",
@@ -176,8 +176,8 @@ export default function Home(props: any) {
                 }
             },
             {
-                name: "QUOTE / REFERRAL",
-                description: "Complete our easy-to-use quote request form to learn how we can serve .",
+                name: "Advance Life Support ",
+                description: "At CalCare, we understand that some patients require a higher level of medical care during transportation.",
                 link: "/services",
                 image: {
                     src: "/images/weOfferimg6.webp",
@@ -356,14 +356,17 @@ export default function Home(props: any) {
                     </div>
                 </section>
                 <section className={cls.believeSec} data-aos={"fade"}>
-                    <h1>We are here to transport you to and from your destination with care and comfort.</h1>
-                    <p>At CalCare, we hold the belief that the core of healthcare is providing quality service to our clients.
-                        Our team of professionals is dedicated to catering to all your home health care needs with a range of services,
-                        from Intravenous Injection Therapy to Respiratory Therapy, as well as the expertise of Registered Nurses,
-                        Licensed Vocational Nurses, and Physical Therapists. Rest assured that we are committed to providing timely and efficient care.</p>
-                    <Link rel="stylesheet" href="/about" className={cls.buttonLink}>
-                        <button>View More</button>
-                    </Link>
+                    <div className={cls.believeSecWrapper}>
+                        <h1>We are here to transport you to and from your destination with care and comfort.</h1>
+                        <p>At CalCare, we hold the belief that the core of healthcare is providing quality service to our clients.
+                            Our team of professionals is dedicated to catering to all your home health care needs with a range of services,
+                            from Intravenous Injection Therapy to Respiratory Therapy, as well as the expertise of Registered Nurses,
+                            Licensed Vocational Nurses, and Physical Therapists. Rest assured that we are committed to providing timely and efficient care.</p>
+                        <Link rel="stylesheet" href="/about" className={cls.buttonLink}>
+                            <button>View More</button>
+                        </Link>
+                    </div>
+
                 </section>
                 <section className={cls.weOffer}>
                     <div className={cls.titleBox}>
@@ -415,105 +418,107 @@ export default function Home(props: any) {
                     </div>
 
                 </section>
-                <section className={cls.applications} data-aos={"flip-right"} data-aos-duration={2000}>
-                    <Swiper
-                        grabCursor={true}
-                        effect={"creative"}
-                        creativeEffect={{
-                            prev: {
-                                shadow: true,
-                                translate: [0, 0, -400],
-                            },
-                            next: {
-                                translate: ["100%", 0, 0],
-                            },
+                <section className={cls.applications}>
+                    <div className={cls.applicationsWrapper} data-aos={"flip-right"} data-aos-duration={2000}>
+                        <Swiper
+                            grabCursor={true}
+                            effect={"creative"}
+                            creativeEffect={{
+                                prev: {
+                                    shadow: true,
+                                    translate: [0, 0, -400],
+                                },
+                                next: {
+                                    translate: ["100%", 0, 0],
+                                },
 
-                        }}
-                        modules={[EffectCreative, Pagination]}
-                        className="mySwiper"
-                        pagination={{
-                            clickable: true,
-                            clickableClass: `${cls.otherBulletsWrapper}`,
-                            bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
-                            bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                        }}
-                    >
+                            }}
+                            modules={[EffectCreative, Pagination]}
+                            className="mySwiper"
+                            pagination={{
+                                clickable: true,
+                                clickableClass: `${cls.otherBulletsWrapper}`,
+                                bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
+                                bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
+                            }}
+                        >
 
-                        <SwiperSlide className={cls.slide}>
-                            <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
-                                <div className={cls.slidContentBox}>
-                                    <h1>Our Admin Panel</h1>
-                                    <p>CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
-                                        of all aspects of the company's healthcare services. It offers real-time access to key data and metrics,
-                                        allowing for quick decision-making and strategic planning. The panel features patient information management,
-                                        staff scheduling, financial performance monitoring, and easy communication between staff members. It is highly
-                                        customizable, with options for creating custom reports, setting up automated alerts, and integrating with other
-                                        software systems. CalCare's admin panel is an essential tool for any healthcare organization looking to optimize its operations
-                                        , enhance patient care, and improve overall efficiency.</p>
-                                    <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                             height={30}/>
-                                    </button>
+                            <SwiperSlide className={cls.slide}>
+                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
+                                    <div className={cls.slidContentBox}>
+                                        <h1>Our Admin Panel</h1>
+                                        <p>CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
+                                            of all aspects of the company's healthcare services. It offers real-time access to key data and metrics,
+                                            allowing for quick decision-making and strategic planning. The panel features patient information management,
+                                            staff scheduling, financial performance monitoring, and easy communication between staff members. It is highly
+                                            customizable, with options for creating custom reports, setting up automated alerts, and integrating with other
+                                            software systems. CalCare's admin panel is an essential tool for any healthcare organization looking to optimize its operations
+                                            , enhance patient care, and improve overall efficiency.</p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                 height={30}/>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className={cls.slide}>
-                            <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
-                                <div className={cls.slidContentBox}>
-                                    <h1>Admin Trips</h1>
-                                    <p>CalCare's Admin Panel Trips provides a comprehensive solution for managing all aspects of patient transportation.
-                                        With our user-friendly interface, you can easily schedule and manage trips, view trip histories, and access real-time data on trip status.
-                                        Our advanced tracking system allows you to monitor the progress of each trip in real-time, ensuring that patients arrive at
-                                        their destination on time and with the highest level of care. Additionally, our Admin Panel Trips feature provides customizable
-                                        reporting and analytics, allowing you to easily track key performance metrics and make data-driven decisions to improve your transportation
-                                        services. With CalCare's Admin Panel Trips, you can streamline your transportation operations and provide exceptional patient care.</p>
-                                    <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                             height={30}/>
-                                    </button>
+                            </SwiperSlide>
+                            <SwiperSlide className={cls.slide}>
+                                <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
+                                    <div className={cls.slidContentBox}>
+                                        <h1>Admin Trips</h1>
+                                        <p>CalCare's Admin Panel Trips provides a comprehensive solution for managing all aspects of patient transportation.
+                                            With our user-friendly interface, you can easily schedule and manage trips, view trip histories, and access real-time data on trip status.
+                                            Our advanced tracking system allows you to monitor the progress of each trip in real-time, ensuring that patients arrive at
+                                            their destination on time and with the highest level of care. Additionally, our Admin Panel Trips feature provides customizable
+                                            reporting and analytics, allowing you to easily track key performance metrics and make data-driven decisions to improve your transportation
+                                            services. With CalCare's Admin Panel Trips, you can streamline your transportation operations and provide exceptional patient care.</p>
+                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                 height={30}/>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className={cls.slide}>
-                            <div className={`${cls.appSlidePage} ${cls.sliderAdmin2}`}>
-                                <div className={cls.slidContentBox}>
-                                    <h1>Price List and More</h1>
-                                    <p>CalCare's admin panel offers a comprehensive price list for all our healthcare services, from wheelchair transportation to home health care. Our transparent pricing model ensures that clients have full visibility of the costs associated with their care, enabling them to make informed decisions about their healthcare needs.
-                                    </p>
-                                    <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                height={30}/></button>
+                            </SwiperSlide>
+                            <SwiperSlide className={cls.slide}>
+                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin2}`}>
+                                    <div className={cls.slidContentBox}>
+                                        <h1>Price List and More</h1>
+                                        <p>CalCare's admin panel offers a comprehensive price list for all our healthcare services, from wheelchair transportation to home health care. Our transparent pricing model ensures that clients have full visibility of the costs associated with their care, enabling them to make informed decisions about their healthcare needs.
+                                        </p>
+                                        <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                    height={30}/></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className={cls.slide}>
-                            <div className={`${cls.appSlidePage} ${cls.sliderAdmin3}`}>
-                                <div className={cls.slidContentBox}>
-                                    <h1>Admin Panel Dashboard</h1>
-                                    <p>The Cal Care admin panel dashboard is highly customizable, allowing healthcare providers
-                                        to tailor it to their specific needs and preferences. From setting up automated alerts to
-                                        integrating with other software systems, the dashboard offers a range of options to help streamline operations and boost efficiency.
-                                    </p>
-                                    <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                height={30}/></button>
+                            </SwiperSlide>
+                            <SwiperSlide className={cls.slide}>
+                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin3}`}>
+                                    <div className={cls.slidContentBox}>
+                                        <h1>Admin Panel Dashboard</h1>
+                                        <p>The Cal Care admin panel dashboard is highly customizable, allowing healthcare providers
+                                            to tailor it to their specific needs and preferences. From setting up automated alerts to
+                                            integrating with other software systems, the dashboard offers a range of options to help streamline operations and boost efficiency.
+                                        </p>
+                                        <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                    height={30}/></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        {/*<SwiperSlide className={cls.slide}>*/}
-                        {/*    <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>*/}
-                        {/*        <div className={cls.slidContentBox}>*/}
-                        {/*            <h1>Mobile App CallCare</h1>*/}
-                        {/*            <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are*/}
-                        {/*                to be*/}
-                        {/*                elected from five vocational panels. The Administrative Panel is defined in*/}
-                        {/*                Article*/}
-                        {/*                18.7.1º(v) as Public Administration and social services, including voluntary*/}
-                        {/*                social*/}
-                        {/*                activities</p>*/}
-                        {/*            <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}*/}
-                        {/*                                        height={30}/></button>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*</SwiperSlide>*/}
+                            </SwiperSlide>
+                            {/*<SwiperSlide className={cls.slide}>*/}
+                            {/*    <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>*/}
+                            {/*        <div className={cls.slidContentBox}>*/}
+                            {/*            <h1>Mobile App CallCare</h1>*/}
+                            {/*            <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are*/}
+                            {/*                to be*/}
+                            {/*                elected from five vocational panels. The Administrative Panel is defined in*/}
+                            {/*                Article*/}
+                            {/*                18.7.1º(v) as Public Administration and social services, including voluntary*/}
+                            {/*                social*/}
+                            {/*                activities</p>*/}
+                            {/*            <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}*/}
+                            {/*                                        height={30}/></button>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*</SwiperSlide>*/}
 
-                    </Swiper>
+                        </Swiper>
+                    </div>
                 </section>
                 <section className={cls.infoSec}>
                     <div className={cls.infoSlidWrapper}>

@@ -16,42 +16,42 @@ const About = ({
                  }) => {
     const slideContent:Array<AboutMedicalCardProps> = [
         {
-            title: "Physical Therapy",
+            title: "Ambulatory Service",
             icon: "/images/iconCarrier.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Stretcher Services",
             icon: "/images/aboutCard2.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Wheelchair Services",
             icon: "/images/aboutCard3.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Ambulance Transportation",
             icon: "/images/aboutCard4.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Basic Life Support ",
             icon: "/images/iconCarrier.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Advance Life Support ",
             icon: "/images/aboutCard2.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Translation Legal & Medical",
             icon: "/images/aboutCard3.svg",
             arrow: "/images/arrowAbout.svg",
         },
         {
-            title: "Physical Therapy",
+            title: "Critical Care Transport ",
             icon: "/images/aboutCard4.svg",
             arrow: "/images/arrowAbout.svg",
         },

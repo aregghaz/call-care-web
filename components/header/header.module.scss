@@ -263,6 +263,7 @@ $headerHeight: 140px;
   width: 40%;
   height: 100%;
   display: flex;
+  justify-content: flex-end;
 
   @media screen and (max-width: 1100px){
     flex-direction: row-reverse;
