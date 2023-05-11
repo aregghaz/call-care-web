@@ -19,14 +19,18 @@ import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
 import database from "../../db/db.json"
 
-const Serivces: FC<any> = ({}) => {
+interface ServicesProps {
+
+}
+
+const Serivces: FC<ServicesProps> = ({}) => {
     const screen = useScreenSize()
     const handleTextareaHeight = (evt) => {
         evt.target.style.height = "50px";
         evt.target.style.height = (evt.target.scrollHeight) + "px";
     }
 
-    type serviceTypes = "HomeHealth" | "Therapy" | "Transportation" | "MedicalHomeModification"
+    type serviceTypes = "AmbulatoryService" | "" | "Transportation" | "MedicalHomeModification"
 
     type TypeService = {
         serviceType: serviceTypes,

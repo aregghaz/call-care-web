@@ -1,17 +1,18 @@
 import cls from "./footer.module.scss";
 import Image from "next/image";
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 import NavLink from "next/link";
 import Link from "next/link";
 import PinterestIcon from "@/svgs/pinterest";
 import LinkedinIcon from "@/svgs/linkedin";
 import FacebookIcon from "@/svgs/facebook";
 import TwitterIcon from "@/svgs/twitter";
+import database from "../../db/db.json"
+import dbdata from "@/db/db.json";
 
 const Footer:FC<any> = ({
 
 }) => {
-
     const headerLinks = [
         {
             name: "Home",
@@ -46,10 +47,9 @@ const Footer:FC<any> = ({
                         <li>
                             <Image src={"/images/logoWhite.svg"} alt={"logo"} width={150} height={100}/>
                         </li>
-                        <li>888 999 0000</li>
-                        <li>needhelp@linoor.com</li>
-                        <li>855 road, broklyn street</li>
-                        <li>new york 600</li>
+                        <li>{dbdata.global.phoneNumber}</li>
+                        <li>{dbdata.global.email}</li>
+                        <li>{dbdata.global.address}</li>
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
@@ -83,7 +83,6 @@ const Footer:FC<any> = ({
                 </li>
                 {/*<li className={`${cls.footerContentCol} ${cls.footerContentSearch}`}>*/}
                 {/*    <div className={cls.footerContentSearchWrapper}>*/}
-
                 {/*        <ul className={cls.footerContentMedia}>*/}
                 {/*            <li><Link target={"_blank"} href={"https://www.pinterest.com"}><PinterestIcon/></Link></li>*/}
                 {/*            <li><Link target={"_blank"} href={"https://www.linkedin.com"}><LinkedinIcon/></Link></li>*/}

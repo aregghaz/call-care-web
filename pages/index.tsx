@@ -216,7 +216,7 @@ export default function Home(props: any) {
                         }}
                         effect={"fade"}
                         autoplay={{
-                            delay: 20000,
+                            delay: 10500,
                             disableOnInteraction: true,
                         }}
                     >
@@ -225,7 +225,7 @@ export default function Home(props: any) {
                                 <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
                                     <video autoPlay={true} loop={true} muted={true} playsInline={true}
                                            className={cls.slideVideo}>
-                                        <source src={require("../public/videos/homeVideo.mp4")} type={"video/mp4"}/>
+                                        <source src={require("../public/videos/homeVideo.webm")} type={"video/webm"}/>
                                     </video>
                                     <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                         <h1>Your Health is Our Top Priority</h1>
