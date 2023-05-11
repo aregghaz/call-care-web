@@ -3,10 +3,10 @@
   height: 330px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-decoration: none;
-  gap: 70px;
+  gap: 40px;
   padding: 2%;
   background: #D33834;
 
@@ -24,9 +24,10 @@
 
 
   & > h2 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
     color: white;
+    text-align: center;
 
     @media screen and (max-width: 785px){
       font-size: 28px;

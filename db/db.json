@@ -8,8 +8,8 @@
   },
   "services": [
     {
-      "serviceName": "Home service",
-      "serviceDescription": "lorem ipsum dolor sit amet 1",
+      "serviceName": "Ambulatory Service",
+      "serviceDescription": "Our goal is to provide a comfortable, odor-free environment that helps our clients feel at ease throughout their journey.",
       "serviceType": "HomeHealth",
       "serviceDetails": [
         {
@@ -36,8 +36,8 @@
       "serviceId": 1
     },
     {
-      "serviceName": "Therapy service",
-      "serviceDescription": "TEXT lorem picsum dolor sit amet",
+      "serviceName": "Wheelchair Services",
+      "serviceDescription": "We are committed to providing reliable and compassionate transportation services that help our clients reach their destination on time and with dignity.",
       "serviceType": "Therapy",
       "serviceDetails": [
         {
@@ -56,8 +56,8 @@
       "serviceId": 2
     },
     {
-      "serviceName": "Transportation service",
-      "serviceDescription": "transportation TEXT lorem picsum dolor sit amet",
+      "serviceName": "Stretcher Services",
+      "serviceDescription": "We believe that every client deserves personalized attention and a comfortable, stress-free transportation experience.",
       "serviceType": "Transportation",
       "serviceDetails": [
         {
@@ -76,8 +76,8 @@
       "serviceId": 3
     },
     {
-      "serviceName": "Transportation service",
-      "serviceDescription": "transportation TEXT lorem picsum dolor sit amet",
+      "serviceName": "Ambulance Transportation",
+      "serviceDescription": "We provide these services to clients throughout the California area, ensuring that our patients receive the highest level of care and attention during transport.",
       "serviceType": "Transportation",
       "serviceDetails": [
         {
@@ -96,8 +96,8 @@
       "serviceId": 4
     },
     {
-      "serviceName": "MedicalHomeModification service",
-      "serviceDescription": "MedicalHomeModification TEXT lorem picsum dolor sit amet",
+      "serviceName": "Basic Life Support ",
+      "serviceDescription": "At CalCare, we understand the importance of providing the right level of medical care to patients in need. ",
       "serviceType": "MedicalHomeModification",
       "serviceDetails": [
         {
@@ -128,8 +128,8 @@
       "serviceId": 5
     },
     {
-      "serviceName": "Inchvor anun",
-      "serviceDescription": "Nkaragrutyun blablabla",
+      "serviceName": "Advance Life Support",
+      "serviceDescription": "Our team of highly trained ALS Technicians is equipped with the skills, equipment, and knowledge necessary to provide advanced medical care during transport.",
       "serviceType": "MedicalHomeModification",
       "serviceDetails": [
         {
@@ -166,6 +166,166 @@
         }
       ],
       "serviceId": 6
+    },
+    {
+      "serviceName": "Critical Care Transport ",
+      "serviceDescription": "Whether it's a local or long distance transport, General Medical has the expertise to provide top-notch critical care transport services.",
+      "serviceType": "MedicalHomeModification",
+      "serviceDetails": [
+        {
+          "detailName": "detail1",
+          "detailDescription": "shat shat shat karevor inchvor ban"
+        },
+        {
+          "detailName": "laksjdlasjd",
+          "detailDescription": "esim esim esim eism"
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 7
+    },
+    {
+      "serviceName": "Air Transportation",
+      "serviceDescription": "Our air ambulance services provide safe and efficient transportation for patients in need of urgent medical care, both domestically and internationally. ",
+      "serviceType": "MedicalHomeModification",
+      "serviceDetails": [
+        {
+          "detailName": "detail1",
+          "detailDescription": "shat shat shat karevor inchvor ban"
+        },
+        {
+          "detailName": "laksjdlasjd",
+          "detailDescription": "esim esim esim eism"
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 8
+    },
+    {
+      "serviceName": "Translation - Legal & Medical",
+      "serviceDescription": "CalCare offers professional translation services for both legal and medical documents.",
+      "serviceType": "MedicalHomeModification",
+      "serviceDetails": [
+        {
+          "detailName": "detail1",
+          "detailDescription": "shat shat shat karevor inchvor ban"
+        },
+        {
+          "detailName": "laksjdlasjd",
+          "detailDescription": "esim esim esim eism"
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 9
+    },
+    {
+      "serviceName": "Home Health Care",
+      "serviceDescription": "At CalCare, we provide a range of in-home healthcare services to cater to your unique needs. ",
+      "serviceType": "MedicalHomeModification",
+      "serviceDetails": [
+        {
+          "detailName": "detail1",
+          "detailDescription": "shat shat shat karevor inchvor ban"
+        },
+        {
+          "detailName": "laksjdlasjd",
+          "detailDescription": "esim esim esim eism"
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy1",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy2",
+          "detailDescription": "TransMedicalHomeModificationportation2Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        },
+        {
+          "detailName": "MedicalHomeModification Therapy3",
+          "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
+        }
+      ],
+      "serviceId": 10
     }
   ]
 }
