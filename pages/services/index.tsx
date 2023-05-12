@@ -68,7 +68,7 @@ const Services: FC<ServicesProps> = ({}) => {
                     {
                         services.map((item, index) => {
                             return (
-                                <Tilt key={index} tiltMaxAngleX={8} tiltMaxAngleY={8}>
+                                <Tilt style={{display: "flex", justifyContent: "center"}} key={index} tiltMaxAngleX={8} tiltMaxAngleY={8}>
                                     <BigService
                                         name={item.serviceName}
                                         description={item.serviceDescription}

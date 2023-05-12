@@ -3,8 +3,6 @@ import cls from "../../styles/service.module.scss"
 import Image from "next/image";
 import {useSelector} from "react-redux";
 import {useRouter} from "next/router";
-import axios from "axios";
-import databaseInfo from "@/db/dbdata";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "../../components/error-window/error-window";
 import {servicesListSelector} from "@/store/slices/services/services.slice";
@@ -13,9 +11,7 @@ interface ServiceProps {
 
 }
 
-const Id:FC<ServiceProps> = ({
-
-}) => {
+const Id: FC<ServiceProps> = ({}) => {
     const router = useRouter()
     const servicesList = useSelector(servicesListSelector)
     const [service, setService] = useState({})
@@ -27,7 +23,8 @@ const Id:FC<ServiceProps> = ({
         <div className={cls.serviceContainer}>
             <div className={cls.serviceImg}>
                 <div className={cls.imgWrapper}>
-                    <Image className={cls.servicePsImg} src={"/images/serviceImg.webp"} alt={"service"} width={470} height={470} />
+                    <Image className={cls.servicePsImg} src={"/images/serviceImg.webp"} alt={"service"} width={470}
+                           height={470}/>
                 </div>
             </div>
             <div className={cls.serviceInfo}>
@@ -36,14 +33,12 @@ const Id:FC<ServiceProps> = ({
                 </div>
                 <div className={`${cls.serviceText} ${cls.serviceItem}`}>
                     {
-                        (service.serviceDetails ?? []).map((item, index) => {
-                            return (
-                                <div key={index}>
-                                    <h3 className={cls.itemsName}>{item.detailName}</h3>
-                                    <p className={cls.itemText}>{item.detailDescription}</p>
-                                </div>
-                            )
-                        })
+                        <p className={cls.itemText}>{service.serviceDetails}</p>
+                        // (service.serviceDetails ?? []).map((item, index) => {
+                        //     return (
+                        //         <p className={cls.itemText}>{item.detailDescription}</p>
+                        //     )
+                        // })
                     }
                 </div>
                 <div className={`${cls.serviceItem}`}>
@@ -52,7 +47,7 @@ const Id:FC<ServiceProps> = ({
                         <p>info@mygeneralmed.com</p>
                     </div>
                     <div className={cls.companyCont}>
-                        <Image src={"/images/phoneIcon.svg"} alt={"phone"} width={30} height={30} />
+                        <Image src={"/images/phoneIcon.svg"} alt={"phone"} width={30} height={30}/>
                         <p>888-543-9468</p>
                     </div>
                 </div>
@@ -62,3 +57,14 @@ const Id:FC<ServiceProps> = ({
 }
 
 export default Id
+
+
+// <React.Fragment key={index}>
+{/*<div>*/
+}
+{/*    <h3 className={cls.itemsName}>{item.detailName}</h3>*/
+}
+{/*</div>*/
+}
+// {index !== service.serviceDetails.length - 1 ? <div className={cls.separator}></div> : null}
+// </React.Fragment>
