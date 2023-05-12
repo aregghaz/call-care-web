@@ -21,8 +21,7 @@ const BigService:FC<BigServiceProps & AosInterface> = ({
                                                            loadService
 }) => {
     return (
-        <Link
-            href={`${defaultLink}/${link}`}
+        <div
             className={cls.main}
             data-aos={dataAos.type}
             data-aos-duration={dataAos.duration}
@@ -33,11 +32,13 @@ const BigService:FC<BigServiceProps & AosInterface> = ({
         >
             <h2>{name}</h2>
             <p>{description}</p>
-            <div className={cls.readMore}>
-                Read More
-                <ArrowRight color={"white"}/>
-            </div>
-        </Link>
+            <Link className={cls.readMore}  href={`${defaultLink}/${link}`}>
+                <span>
+                    Read More
+                </span>
+                <ArrowRight color={"black"} width={35} height={35} className={cls.arr} />
+            </Link>
+        </div>
     )
 }
 

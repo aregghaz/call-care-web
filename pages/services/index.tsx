@@ -90,56 +90,84 @@ const Serivces: FC<ServicesProps> = ({}) => {
                     </div>
                 </div>
             </section>
-            <section className={cls.services} data-aos={"fade-up"}>
-                <div className={cls.servicesNavWrapper}>
-                    <div className={cls.servicesNav}>
-                        <div className={cls.servicesNavInput}>
-                            <h2>Services</h2>
-                        </div>
-                        <div className={cls.servicesNavMenu}>
-                            <nav>
-                                <ul>
-                                    <li id={"All"} onClick={handleTypeChange}>
-                                        <span>All</span>
-                                    </li>
-                                    <li id={"HomeHealth"} onClick={handleTypeChange}>
-                                        <span>Home Health</span>
-                                    </li>
-                                    <li id={"Therapy"} onClick={handleTypeChange}>
-                                        <span>Therapy</span>
-                                    </li>
-                                    <li id={"Transportation"} onClick={handleTypeChange}>
-                                        <span>Transportation</span>
-                                    </li>
-                                    <li id={"MedicalHomeModification"} onClick={handleTypeChange}>
-                                        <span>Medical Home Modification</span>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+            <section className={cls.servicesGlob}>
+                <div className={cls.serviceGlobTitle}>
+                    <div className={cls.serviceMiniTitle}>
+                        <h3>OUR SERVICES</h3>
                     </div>
-                    <div className={cls.serviceContent}>
-                        {
-                            error ? <ErrorWindow fullscreen={false}/> :
-                            services.length <= 0 ?
-                                <LoadingScreen fullscreen={false}/>
-                                :
-                                services.map((item, index) => {
-                                    return (
-                                        <BigService
-                                            key={index}
-                                            loadService={loadSelectedService.bind(null, item)}
-                                            name={item.serviceName}
-                                            description={item.serviceDescription}
-                                            defaultLink={"/services"}
-                                            link={item.serviceId.toString()}
-                                        />
-                                    )
-                                })
-                        }
+                    <div className={cls.serviceBigTitle}>
+                        <h2>What Services We Offer</h2>
                     </div>
                 </div>
+                <div className={cls.servicesWrapper}>
+                    {
+                        services.map((item, index) => {
+                            return(
+                                <BigService
+                                    key={index}
+                                    loadService={loadSelectedService.bind(null, item)}
+                                    name={item.serviceName}
+                                    description={item.serviceDescription}
+                                    defaultLink={"/services"}
+                                    link={item.serviceId.toString()}
+                                />
+                            )
+                        })
+                    }
+
+                </div>
             </section>
+            {/*<section className={cls.services} data-aos={"fade-up"}>*/}
+            {/*    <div className={cls.servicesNavWrapper}>*/}
+            {/*        <div className={cls.servicesNav}>*/}
+            {/*            <div className={cls.servicesNavInput}>*/}
+            {/*                <h2>Services</h2>*/}
+            {/*            </div>*/}
+            {/*            <div className={cls.servicesNavMenu}>*/}
+            {/*                <nav>*/}
+            {/*                    <ul>*/}
+            {/*                        <li id={"All"} onClick={handleTypeChange}>*/}
+            {/*                            <span>All</span>*/}
+            {/*                        </li>*/}
+            {/*                        <li id={"HomeHealth"} onClick={handleTypeChange}>*/}
+            {/*                            <span>Home Health</span>*/}
+            {/*                        </li>*/}
+            {/*                        <li id={"Therapy"} onClick={handleTypeChange}>*/}
+            {/*                            <span>Therapy</span>*/}
+            {/*                        </li>*/}
+            {/*                        <li id={"Transportation"} onClick={handleTypeChange}>*/}
+            {/*                            <span>Transportation</span>*/}
+            {/*                        </li>*/}
+            {/*                        <li id={"MedicalHomeModification"} onClick={handleTypeChange}>*/}
+            {/*                            <span>Medical Home Modification</span>*/}
+            {/*                        </li>*/}
+            {/*                    </ul>*/}
+            {/*                </nav>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div className={cls.serviceContent}>*/}
+            {/*            {*/}
+            {/*                error ? <ErrorWindow fullscreen={false}/> :*/}
+            {/*                services.length <= 0 ?*/}
+            {/*                    <LoadingScreen fullscreen={false}/>*/}
+            {/*                    :*/}
+            {/*                    services.map((item, index) => {*/}
+            {/*                        return (*/}
+            {/*                            <BigService*/}
+            {/*                                key={index}*/}
+            {/*                                loadService={loadSelectedService.bind(null, item)}*/}
+            {/*                                name={item.serviceName}*/}
+            {/*                                description={item.serviceDescription}*/}
+            {/*                                defaultLink={"/services"}*/}
+            {/*                                link={item.serviceId.toString()}*/}
+            {/*                            />*/}
+            {/*                        )*/}
+            {/*                    })*/}
+            {/*            }*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+
             <section className={cls.serviceContact} data-aos={"fade"}>
                 <div className={cls.contactLeft}>
                 </div>
