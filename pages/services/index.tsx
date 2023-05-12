@@ -1,8 +1,5 @@
-import React, {FC, useEffect, useState} from "react"
+import React, {FC} from "react"
 import cls from "../../styles/Services.module.scss"
-import Image from "next/image";
-import {Autoplay, EffectCoverflow, EffectFade, Navigation, Pagination} from "swiper";
-import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.css"
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -10,17 +7,11 @@ import 'swiper/css/pagination'
 import BigService from "@/components/big-service/big-service";
 import "swiper/css/navigation"
 import useScreenSize from "@/hooks/useScreenSize";
-import axios from "axios";
-import databaseInfo from "@/db/dbdata";
-import service from "@/components/service/service";
-import {useDispatch, useSelector} from "react-redux";
-import {servicesActions, servicesListSelector, servicesSelector} from "@/store/slices/services/services.slice";
-import LoadingScreen from "@/components/loading-screen/loading-screen";
-import ErrorWindow from "@/components/error-window/error-window";
-import database from "../../public/db.json"
-import {fetchServices} from "@/store/slices/services/services.api";
-import {AppDispatch, useAppDispatch} from "@/store/store";
+import {useSelector} from "react-redux";
+import {servicesListSelector} from "@/store/slices/services/services.slice";
 import {useRouter} from "next/router";
+import Tilt from 'react-parallax-tilt';
+
 
 interface ServicesProps {
 
@@ -52,7 +43,10 @@ const Services: FC<ServicesProps> = ({}) => {
                 <div className={cls.heroContent}>
                     <h1>Our Services</h1>
                     <p>
-                        CalCare provides comprehensive medical services to Southern California, with a mission to improve patients' health outcomes through high-quality and affordable healthcare. Our skilled healthcare team is committed to delivering exceptional care and support tailored to each patient's unique needs.
+                        CalCare provides comprehensive medical services to Southern California, with a mission to
+                        improve patients' health outcomes through high-quality and affordable healthcare. Our skilled
+                        healthcare team is committed to delivering exceptional care and support tailored to each
+                        patient's unique needs.
                     </p>
                 </div>
                 <div className={cls.heroRight}>
@@ -73,16 +67,17 @@ const Services: FC<ServicesProps> = ({}) => {
                 <div className={cls.servicesWrapper}>
                     {
                         services.map((item, index) => {
-                            return(
-                                <BigService
-                                    key={index}
-                                    name={item.serviceName}
-                                    description={item.serviceDescription}
-                                    defaultLink={"/services"}
-                                    loadService={() => {
-                                        router.push(`/services/${item.serviceId.toString()}`)
-                                    }}
-                                />
+                            return (
+                                <Tilt key={index} tiltMaxAngleX={8} tiltMaxAngleY={8}>
+                                    <BigService
+                                        name={item.serviceName}
+                                        description={item.serviceDescription}
+                                        defaultLink={"/services"}
+                                        loadService={() => {
+                                            router.push(`/services/${item.serviceId.toString()}`)
+                                        }}
+                                    />
+                                </Tilt>
                             )
                         })
                     }
