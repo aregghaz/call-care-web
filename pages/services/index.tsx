@@ -44,9 +44,9 @@ const Services: FC<ServicesProps> = ({}) => {
                     <h1>Our Services</h1>
                     <p>
                         CalCare provides comprehensive medical services to Southern California, with a mission to
-                        improve patients' health outcomes through high-quality and affordable healthcare. Our skilled
+                        improve patients` health outcomes through high-quality and affordable healthcare. Our skilled
                         healthcare team is committed to delivering exceptional care and support tailored to each
-                        patient's unique needs.
+                        patient`s unique needs.
                     </p>
                 </div>
                 <div className={cls.heroRight}>
