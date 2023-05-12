@@ -13,17 +13,20 @@ import useScreenSize from "@/hooks/useScreenSize";
 import axios from "axios";
 import databaseInfo from "@/db/dbdata";
 import service from "@/components/service/service";
-import {useDispatch} from "react-redux";
-import {servicesActions} from "@/store/reducers/services.slice";
+import {useDispatch, useSelector} from "react-redux";
+import {servicesActions, servicesListSelector, servicesSelector} from "@/store/slices/services/services.slice";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
-import database from "../../db/db.json"
+import database from "../../public/db.json"
+import {fetchServices} from "@/store/slices/services/services.api";
+import {AppDispatch, useAppDispatch} from "@/store/store";
+import {useRouter} from "next/router";
 
 interface ServicesProps {
 
 }
 
-const Serivces: FC<ServicesProps> = ({}) => {
+const Services: FC<ServicesProps> = ({}) => {
     const screen = useScreenSize()
     const handleTextareaHeight = (evt) => {
         evt.target.style.height = "50px";
@@ -39,42 +42,10 @@ const Serivces: FC<ServicesProps> = ({}) => {
         serviceId: string | number,
     };
 
-    const [allServices, setAllServices] = useState<Array<TypeService>>(database.services)
-    // const [allServices, setAllServices] = useState<Array<TypeService>>([])
-    const dispatch = useDispatch()
-    const [error, setError] = useState<boolean>(false)
 
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const response = await axios.get(`${databaseInfo.db}/${databaseInfo.services}`)
-    //             setAllServices(response.data)
-    //             setServices(response.data)
-    //         } catch (error) {
-    //             setError(true)
-    //         }
-    //     })();
-    // }, [])
+    const services = useSelector(servicesListSelector)
 
-    const [type, setType] = useState<serviceTypes | "All">("All")
-    const [services, setServices] = useState<Array<TypeService>>([])
-
-    const handleTypeChange = (e) => {
-        setType(e.currentTarget.id)
-    }
-
-    useEffect(() => {
-        setServices(
-            allServices.filter(item => {
-                return type === "All" ? item : item.serviceType === type
-            })
-        )
-    }, [type])
-
-    const loadSelectedService = (service) => {
-        dispatch(servicesActions.loadService(service))
-    }
-
+    const router = useRouter()
     return (
         <>
             <section className={cls.hero} data-aos={"fade-right"}>
@@ -105,16 +76,16 @@ const Serivces: FC<ServicesProps> = ({}) => {
                             return(
                                 <BigService
                                     key={index}
-                                    loadService={loadSelectedService.bind(null, item)}
                                     name={item.serviceName}
                                     description={item.serviceDescription}
                                     defaultLink={"/services"}
-                                    link={item.serviceId.toString()}
+                                    loadService={() => {
+                                        router.push(`/services/${item.serviceId.toString()}`)
+                                    }}
                                 />
                             )
                         })
                     }
-
                 </div>
             </section>
             {/*<section className={cls.services} data-aos={"fade-up"}>*/}
@@ -194,5 +165,4 @@ const Serivces: FC<ServicesProps> = ({}) => {
         </>
     )
 }
-
-export default Serivces
+export default Services

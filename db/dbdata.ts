@@ -4,8 +4,8 @@ type TypeDatabase = {
     global: string
 }
 
-const databaseInfo =  {
-    db: "http://localhost:4200",
+const databaseInfo:TypeDatabase =  {
+    db: "/db.json",
     services: "services",
     global: "global",
 }

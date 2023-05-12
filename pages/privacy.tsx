@@ -5,7 +5,9 @@ import axios from "axios";
 import databaseInfo from "@/db/dbdata";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
-import jsonData from "../db/db.json"
+import jsonData from "../public/db.json"
+import {useSelector} from "react-redux";
+import {globalError, globalSelector} from "@/store/slices/global/global.slice";
 
 const Privacy:FC<TermsProps> = ({
     address,
@@ -19,22 +21,14 @@ const Privacy:FC<TermsProps> = ({
         email: "",
         date: "",
     })
-    const [error, setError] = useState(false)
+    const privacyData = useSelector(globalSelector)
+    const error = useSelector(globalError)
     useEffect(() => {
-        (async () => {
-            try {
-                // const response = await axios.get(`${databaseInfo.db}/${databaseInfo.global}`)
-                // setData(response.data) // json-server
-
-                setData(jsonData.global)
-            } catch (error) {
-                setError(true)
-            }
-        })()
-    }, [])
-    return Object.values(data).every(item => item.length > 0) ? (
+        setData(privacyData)
+    }, [privacyData])
+    return error ? <ErrorWindow/> : Object.values(data).length > 0 ? (
         <div className={cls.terms}>
-             <strong className={cls.strong} >Privacy Policy</strong>  <p className={cls.p} >
+            <strong className={cls.strong} >Privacy Policy</strong>  <p className={cls.p} >
             CalCare built the Calcare app as
             a Free app. This SERVICE is provided by
             CalCare at no cost and is intended for use as
@@ -130,7 +124,7 @@ const Privacy:FC<TermsProps> = ({
             Privacy Policy, do not hesitate to contact us at {data.email}.
         </p>
         </div>
-    ) : error ? <ErrorWindow/> : <LoadingScreen/>
+    ) : <LoadingScreen/>
 }
 
 export default Privacy

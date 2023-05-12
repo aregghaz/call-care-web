@@ -32,12 +32,12 @@ const BigService:FC<BigServiceProps & AosInterface> = ({
         >
             <h2>{name}</h2>
             <p>{description}</p>
-            <Link className={cls.readMore}  href={`${defaultLink}/${link}`}>
+            <div className={cls.readMore}>
                 <span>
                     Read More
                 </span>
                 <ArrowRight color={"black"} width={35} height={35} className={cls.arr} />
-            </Link>
+            </div>
         </div>
     )
 }

@@ -5,10 +5,9 @@ import {useSelector} from "react-redux";
 import {useRouter} from "next/router";
 import axios from "axios";
 import databaseInfo from "@/db/dbdata";
-import {router} from "next/client";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "../../components/error-window/error-window";
-import jsonData from "../../db/db.json"
+import {servicesListSelector} from "@/store/slices/services/services.slice";
 
 interface ServiceProps {
 
@@ -17,27 +16,13 @@ interface ServiceProps {
 const Id:FC<ServiceProps> = ({
 
 }) => {
-    const selectedService = useSelector(state => state.services)
+    const router = useRouter()
+    const servicesList = useSelector(servicesListSelector)
     const [service, setService] = useState({})
-    const [error, setError] = useState<boolean>(false)
-    const selectedId: any = useRouter().query.id
+    const [error, setError] = useState("")
     useEffect(() => {
-        if (Object.keys(selectedService).length <= 0 && selectedId) {
-            (async () => {
-                try {
-                    // const result = await axios.get(`${databaseInfo.db}/${databaseInfo.services}?serviceId=${selectedId}`)
-                    // setService(result.data[0]) // json-server
-
-                    const result = jsonData.services.filter(item => item.serviceId === +selectedId)
-                    setService(result[0]) // local json
-                } catch (error) {
-                    setError(true)
-                }
-            })();
-        } else {
-            setService(selectedService)
-        }
-    }, [selectedId])
+        setService(servicesList.find(item => item.serviceId === router.query.id) ?? {})
+    }, [router.query, servicesList])
     return Object.keys(service).length > 0 ? (
         <div className={cls.serviceContainer}>
             <div className={cls.serviceImg}>

@@ -34,7 +34,7 @@
           "detailDescription": "3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 1
+      "serviceId": "1"
     },
     {
       "serviceName": "Wheelchair Services",
@@ -54,7 +54,7 @@
           "detailDescription": "3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 2
+      "serviceId": "2"
     },
     {
       "serviceName": "Stretcher Services",
@@ -74,7 +74,7 @@
           "detailDescription": "Transportation3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 3
+      "serviceId": "3"
     },
     {
       "serviceName": "Ambulance Transportation",
@@ -94,7 +94,7 @@
           "detailDescription": "Transportation3Physical therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 4
+      "serviceId": "4"
     },
     {
       "serviceName": "Basic Life Support ",
@@ -126,7 +126,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 5
+      "serviceId": "5"
     },
     {
       "serviceName": "Advance Life Support",
@@ -166,7 +166,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 6
+      "serviceId": "6"
     },
     {
       "serviceName": "Critical Care Transport ",
@@ -206,7 +206,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 7
+      "serviceId": "7"
     },
     {
       "serviceName": "Air Transportation",
@@ -246,7 +246,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 8
+      "serviceId": "8"
     },
     {
       "serviceName": "Translation - Legal & Medical",
@@ -286,7 +286,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 9
+      "serviceId": "9"
     },
     {
       "serviceName": "Home Health Care",
@@ -326,7 +326,7 @@
           "detailDescription": "MedicalHomeModification therapy can be beneficial for a wide range of conditions,\nincluding sports injuries, chronic pain, arthritis,back pain, post-surgical\nrehabilitation, and neurological disorders such as stroke or Parkinson's disease."
         }
       ],
-      "serviceId": 10
+      "serviceId": "10"
     }
   ]
 }

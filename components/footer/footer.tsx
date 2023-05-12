@@ -7,8 +7,8 @@ import PinterestIcon from "@/svgs/pinterest";
 import LinkedinIcon from "@/svgs/linkedin";
 import FacebookIcon from "@/svgs/facebook";
 import TwitterIcon from "@/svgs/twitter";
-import database from "../../db/db.json"
-import dbdata from "@/db/db.json";
+import database from "../../public/db.json"
+import dbdata from "@/public/db.json";
 
 const Footer:FC<any> = ({
 
