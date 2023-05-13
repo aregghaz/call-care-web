@@ -67,10 +67,10 @@ const Footer:FC<any> = ({
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Services</li>
-                        <li><Link href={"/"}>Medical Home Modification</Link></li>
-                        <li><Link href={"/"}>Home Health</Link></li>
-                        <li><Link href={"/"}>Therapy</Link> </li>
-                        <li><Link href={"/"}>Transportation</Link> </li>
+                        <li><Link href={"/services"}>Medical Home Modification</Link></li>
+                        <li><Link href={"/services"}>Home Health</Link></li>
+                        <li><Link href={"/services"}>Therapy</Link> </li>
+                        <li><Link href={"/services"}>Transportation</Link> </li>
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
