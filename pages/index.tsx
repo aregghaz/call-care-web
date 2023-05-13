@@ -82,7 +82,7 @@ export default function Home(props: any) {
             link: "/services"
         },
         {
-            name: "Work whit us",
+            name: "Work with us",
             description: " We believe that our employees are the foundation of our success, and we are committed to providing a supportive and collaborative work environment where our team members can thrive.",
             image: "/images/calcarecard3.webp",
             link: "/work"
