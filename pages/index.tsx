@@ -210,6 +210,7 @@ export default function Home(props: any) {
                         slidesPerView={1}
                         pagination={{
                             clickable: true,
+                            horizontalClass: `${cls.paginationClass}`,
                             clickableClass: `${cls.bulletsWrapper}`,
                             bulletClass: `${cls.bulletClass} swiper-pagination-bullet`,
                             bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
@@ -521,57 +522,13 @@ export default function Home(props: any) {
                     </div>
                 </section>
                 <section className={cls.infoSec}>
-                    <div className={cls.infoSlidWrapper}>
-                        <div className={cls.miniSlid}>
-                            <Swiper
-                                modules={[Pagination, Autoplay]}
-                                direction={"horizontal"}
-                                className={cls.heroSlider}
-                                spaceBetween={0}
-                                slidesPerView={1}
-                                pagination={{
-                                    clickable: true,
-                                    clickableClass: `${cls.otherBulletsWrapper}`,
-                                    bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
-                                    bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                                }}
-                                autoplay={{
-                                    delay: 4000,
-                                    disableOnInteraction: false,
-                                }}
-                            >
-                                <SwiperSlide className={`${cls.slide}`}>
-                                    <div className={cls.miniSlidBox}>
-                                        <p>Cal Care offers transparent pricing with a comprehensive price list for all services, enabling clients to make informed decisions about their healthcare needs. </p>
-                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"}
-                                                                                        alt={"arrow"} width={30}
-                                                                                        height={30}/></Link></button>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className={cls.slide}>
-                                    <div className={cls.miniSlidBox}>
-                                        <p>Cal Care offers a transparent pricing model with no hidden fees, ensuring fair and competitive pricing for all our services. We strive to make the healthcare experience stress-free for both healthcare providers and patients.
-                                        </p>
-                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"}
-                                                                                        alt={"arrow"} width={30}
-                                                                                        height={30}/></Link></button>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className={cls.slide}>
-                                    <div className={cls.miniSlidBox}>
-                                        <p>Cal Care offers dedicated customer support from a team of healthcare professionals who are committed to providing the highest level of care and support. </p>
-                                        <button>Read More <Link href={"/about"}> <Image src={"/images/Arrow 3.svg"}
-                                                                                        alt={"arrow"} width={30}
-                                                                                        height={30}/></Link></button>
-                                    </div>
-                                </SwiperSlide>
-                            </Swiper>
-                        </div>
-                    </div>
-                    <div className={cls.infoSlidImg}>
-                        <Image className={cls.imgSlide} src={"/images/ambulanceTeam.webp"} alt={"ambulanceTeam"}
-                               width={450}
-                               height={600}/>
+                    <div className={cls.infoSecWrapper}>
+                        <h2>How CalCare is Revolutionizing Medical Transportation in California</h2>
+                        <p>CalCare's commitment to excellence is demonstrated by its reputation for reliability, professionalism, and efficiency. The company's licensing and insurance credentials ensure that patients can trust that they are in good hands during transport. If you are in need of medical transportation services in California, CalCare is a reputable and reliable company that can provide safe and efficient transport to your desired destination.</p>
+                        <p>The company's NEMT services are particularly noteworthy, as they cater to patients who require non-emergency medical care, such as medical appointments, outpatient procedures, or dialysis treatments. CalCare's NEMT vehicles are designed with patient comfort and safety in mind, with features like wheelchair accessibility and medical equipment available to transport patients who require additional medical assistance during transport.</p>
+                        <Link href={"/contact"} className={cls.button}>
+                            <button>Our Contacts</button>
+                        </Link>
                     </div>
                 </section>
             </main>
