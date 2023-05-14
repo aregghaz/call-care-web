@@ -12,9 +12,14 @@ const servicesSlice = createSlice<{},{},"services">({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchServices.fulfilled, (state, {payload}) => {
-            return {
-                ...state,
-                list: payload
+            for (let i of payload) {
+                console.log(i)
+                if (i.important) {
+                    state.list.push(i)
+                    state.importantList.push(i)
+                } else {
+                    state.list.push(i)
+                }
             }
         })
         builder.addCase(fetchServices.pending, (state) => {
@@ -32,11 +37,12 @@ const servicesSlice = createSlice<{},{},"services">({
     },
     initialState: {
         list: [],
+        importantList: [],
         error: false,
     }
 })
 
 export const servicesReducer = servicesSlice.reducer
-export const [servicesSelector, servicesListSelector] = [state => state.services, state => state.services.list]
+export const [servicesSelector, servicesListSelector, servicesImportantListSelector] = [state => state.services, state => state.services.list, state => state.services.importantList]
 export const errorSelector = state => state.services.error
 export const servicesActions = servicesSlice.actions

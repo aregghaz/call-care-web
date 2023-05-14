@@ -11,6 +11,10 @@ interface ServiceProps {
 
 }
 
+const serviceImageUrl = "/images/calcareservice"
+const serviceImageExt = "webp"
+const serviceImageCount = 7
+
 const Id: FC<ServiceProps> = ({}) => {
     const router = useRouter()
     const servicesList = useSelector(servicesListSelector)
@@ -23,8 +27,9 @@ const Id: FC<ServiceProps> = ({}) => {
         <div className={cls.serviceContainer}>
             <div className={cls.serviceImg}>
                 <div className={cls.imgWrapper}>
-                    <Image className={cls.servicePsImg} src={"/images/serviceImg.webp"} alt={"service"} width={470}
-                           height={470}/>
+                    <Image onLoad={(e) => {
+                        e.target.style.filter = "blur(0px) grayscale(20%)"
+                    }} className={cls.servicePsImg} src={`${serviceImageUrl}${Math.ceil(Math.random() * serviceImageCount)}.${serviceImageExt}`} alt={"service"} width={470} height={0}/>
                 </div>
             </div>
             <div className={cls.serviceInfo}>

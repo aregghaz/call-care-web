@@ -8,7 +8,7 @@ import SocialLinks from "@/components/social-links/social-links";
 import useScroll from "../../hooks/useScroll";
 
 
-const headerLinks = [
+export const headerLinks = [
     {
         name: "Home",
         link: "/",

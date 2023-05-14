@@ -9,36 +9,16 @@ import FacebookIcon from "@/svgs/facebook";
 import TwitterIcon from "@/svgs/twitter";
 import database from "../../public/db.json"
 import dbdata from "@/public/db.json";
+import {headerLinks} from "@/components/header/header";
+import {useSelector} from "react-redux";
+import {servicesImportantListSelector} from "@/store/slices/services/services.slice";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
 
 const Footer:FC<any> = ({
 
 }) => {
-    const headerLinks = [
-        {
-            name: "Home",
-            link: "/",
-        },
-        {
-            name: "About Us",
-            link: "/about",
-        },
-        {
-            name: "Our Services",
-            link: "/services",
-        },
-        {
-            name: "Work With Us",
-            link: "/work",
-        },
-        {
-            name: "Refer",
-            link: "/refer",
-        },
-        {
-            name: "Contacts",
-            link: "/contact",
-        },
-    ]
+    const importantServicesList = useSelector(servicesImportantListSelector)
+    console.log(importantServicesList, "asdasdasddas")
     return (
         <footer className={cls.footer}>
             <ul className={cls.footerContent}>
@@ -67,10 +47,17 @@ const Footer:FC<any> = ({
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Services</li>
-                        <li><Link href={"/services"}>Medical Home Modification</Link></li>
-                        <li><Link href={"/services"}>Home Health</Link></li>
-                        <li><Link href={"/services"}>Therapy</Link> </li>
-                        <li><Link href={"/services"}>Transportation</Link> </li>
+                        {
+                            importantServicesList.length > 0 ? <>
+                                {
+                                    importantServicesList.map(item => {
+                                        return (
+                                            <li><Link href={`/services/${item.serviceId}`}>{item.serviceName}</Link></li>
+                                        )
+                                    })
+                                }
+                            </> : <LoadingScreen/>
+                        }
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
