@@ -13,7 +13,7 @@ interface ServiceProps {
 
 const serviceImageUrl = "/images/calcareservice"
 const serviceImageExt = "webp"
-const serviceImageCount = 7git s
+const serviceImageCount = 7
 
 const Id: FC<ServiceProps> = ({}) => {
     const router = useRouter()

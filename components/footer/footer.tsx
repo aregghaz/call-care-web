@@ -18,7 +18,6 @@ const Footer:FC<any> = ({
 
 }) => {
     const importantServicesList = useSelector(servicesImportantListSelector)
-    console.log(importantServicesList, "asdasdasddas")
     return (
         <footer className={cls.footer}>
             <ul className={cls.footerContent}>
@@ -50,9 +49,9 @@ const Footer:FC<any> = ({
                         {
                             importantServicesList.length > 0 ? <>
                                 {
-                                    importantServicesList.map(item => {
+                                    importantServicesList.map((item,index) => {
                                         return (
-                                            <li><Link href={`/services/${item.serviceId}`}>{item.serviceName}</Link></li>
+                                            <li key={index}><Link href={`/services/${item.serviceId}`}>{item.serviceName}</Link></li>
                                         )
                                     })
                                 }
