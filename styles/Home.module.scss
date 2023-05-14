@@ -690,7 +690,7 @@
     padding: 50px 20px;
   }
 
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1300px){
     padding: 100px 20px;
     gap: 20px;
   }
@@ -756,29 +756,12 @@
     }
   }
 
-  & > button{
-    width: 170px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    font-size: 16px;
-    cursor: pointer;
 
-    @media screen and (max-width: 600px){
-      font-size: 14px;
-      gap: 10px;
-      justify-content: flex-start;
-    }
-  }
 }
 
 
 .sliderAdmin{
-  background-image: url($adminPanel);
+  background-image: url($adminPanel3);
   @media screen and (max-width: 600px){
     background-size: 90%;
   }
@@ -984,6 +967,30 @@
     display: none;
   }
 
+}
+
+.buttonLinkBox{
+  text-decoration: none;
+
+
+  & > button{
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media screen and (max-width: 600px){
+      font-size: 14px;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .formInputContent{

@@ -455,9 +455,12 @@ export default function Home(props: any) {
                                             customizable, with options for creating custom reports, setting up automated alerts, and integrating with other
                                             software systems. CalCare`s admin panel is an essential tool for any healthcare organization looking to optimize its operations
                                             , enhance patient care, and improve overall efficiency.</p>
-                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                 height={30}/>
-                                        </button>
+                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
+                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                     height={30}/>
+                                            </button>
+                                        </Link>
+
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -471,9 +474,11 @@ export default function Home(props: any) {
                                             their destination on time and with the highest level of care. Additionally, our Admin Panel Trips feature provides customizable
                                             reporting and analytics, allowing you to easily track key performance metrics and make data-driven decisions to improve your transportation
                                             services. With CalCare`s Admin Panel Trips, you can streamline your transportation operations and provide exceptional patient care.</p>
-                                        <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                 height={30}/>
-                                        </button>
+                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
+                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                     height={30}/>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -483,8 +488,11 @@ export default function Home(props: any) {
                                         <h1>Price List and More</h1>
                                         <p>CalCare`s admin panel offers a comprehensive price list for all our healthcare services, from wheelchair transportation to home health care. Our transparent pricing model ensures that clients have full visibility of the costs associated with their care, enabling them to make informed decisions about their healthcare needs.
                                         </p>
-                                        <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                    height={30}/></button>
+                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
+                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                     height={30}/>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -496,8 +504,11 @@ export default function Home(props: any) {
                                             to tailor it to their specific needs and preferences. From setting up automated alerts to
                                             integrating with other software systems, the dashboard offers a range of options to help streamline operations and boost efficiency.
                                         </p>
-                                        <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                    height={30}/></button>
+                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
+                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
+                                                                     height={30}/>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>

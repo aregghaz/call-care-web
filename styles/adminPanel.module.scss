@@ -1,0 +1,193 @@
+@import "variables";
+
+.adminMain{
+  width: 100%;
+  height: 900px;
+  display: flex;
+  padding-left: 100px;
+  //border: 1px solid red;
+
+  @media screen and (max-width: 1024px){
+    flex-direction: column;
+    height: 700px;
+  }
+
+  @media screen and (max-width: 1280px){
+    padding-left: 0;
+  }
+}
+
+.adminMainImg{
+  width: 100%;
+  height: 100%;
+  border: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url($adminPanelNout);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (max-width: 1024px){
+    background-position: top;
+    background-size: 120% 120%;
+  }
+
+  //@media screen and (max-width: 650px){
+  //  background-position: bottom;
+  //  background-size: 100% 100%;
+  //}
+}
+
+.adminMainContent{
+  width: 100%;
+  height: 100%;
+  border: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding-left: 100px;
+
+
+  @media screen and (max-width: 1480px){
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1350px){
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 1024px){
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 650px){
+    padding: 5% 5px;
+    gap: 10px;
+  }
+
+
+  & > h1{
+    font-size: 58px;
+    font-weight: 500;
+    color: #00003b;
+    @media screen and (max-width: 1350px){
+      font-size: 48px;
+    }
+
+    @media screen and (max-width: 650px){
+      font-size: 32px;
+    }
+  }
+
+  & > h2{
+    font-size: 32px;
+    color: #00003b;
+
+    @media screen and (max-width: 1350px){
+      font-size: 28px;
+      padding-right: 15px;
+
+      & > br{
+        display: none;
+      }
+    }
+    @media screen and (max-width: 650px){
+      font-size: 22px;
+      padding: 0;
+    }
+  }
+
+  & > p{
+    padding-right: 30%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 400;
+    @media screen and (max-width: 1350px){
+      font-size: 16px;
+
+      padding-right: 10%;
+    }
+
+    @media screen and (max-width: 1024px){
+      padding: 0;
+    }
+    @media screen and (max-width: 650px){
+      font-size: 14px;
+    }
+  }
+
+  & > button{
+    width: 180px;
+    height: 50px;
+    background-color: $asteriskColor;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+}
+
+.adminMain2{
+  height: 700px;
+  background-color: rgba(0, 64, 159, 0.15);
+  padding-right: 100px;
+
+  @media screen and (max-width: 1280px){
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1024px){
+    height: auto;
+
+  }
+}
+
+.adminMainImg2{
+  background-image: url($adminPanel3);
+
+  @media screen and (max-width: 1024px){
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 720px){
+    height: 400px;
+
+  }
+  @media screen and (max-width: 500px){
+    height: 300px;
+
+  }
+}
+
+.adminMainContent2{
+  @media screen and (max-width: 1024px){
+    order: 2;
+    padding: 30px 0;
+  }
+
+}
+
+.adminMain3{
+  background-color: #fff;
+}
+
+.adminMainImg3{
+  background-image: url($adminPanelNout1);
+}
+
+.adminMainContent3{
+  order: 1;
+}
+
+.adminMainImg4{
+  background-image: url($adminNotification);
+}
