@@ -26,11 +26,9 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
         AOS.init()
-        return () => {
-            dispatch(fetchGlobal())
-            dispatch(fetchServices())
-        }
-    }, [])
+        dispatch(fetchGlobal())
+        dispatch(fetchServices())
+    }, [dispatch])
     return (
         <>
             {/*<Provider store={store}>*/}

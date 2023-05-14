@@ -12,25 +12,29 @@
       "serviceName": "Primary Care Service",
       "serviceDescription": "These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.\n",
       "serviceDetails": "Primary care services are the first line of medical care that patients receive for routine health concerns, preventive care, and treatment of common illnesses and injuries. Primary care providers may include family physicians, pediatricians, internists, and nurse practitioners, among others.Primary care services include a broad range of healthcare services, such as:\n\n 1.Routine check-ups and physical exams\n 2.Diagnosis and treatment of common medical conditions and illnesses\n 3.Management of chronic conditions, such as diabetes, hypertension, and asthma\n 4.Health screenings and preventive care, such as vaccinations, cancer screenings, and cholesterol screenings\n 5.Referrals to specialists when necessary\n 6.Patient education and counseling on healthy lifestyle habits and disease prevention\n\n\nPrimary care providers work with patients of all ages, and they focus on building a long-term relationship with their patients to provide ongoing care and support. They play a critical role in promoting overall health and well-being by identifying and addressing medical concerns early, helping patients manage chronic conditions, and providing guidance on maintaining a healthy lifestyle.",
-      "serviceId": "1"
+      "serviceId": "1",
+      "important": true
     },
     {
       "serviceName": "Specialty Care Service",
       "serviceDescription": "These services are provided by specialists who have advanced training in a particular area of medicine, such as cardiologists, neurologists, or oncologists. They provide more specialized care for patients with complex medical conditions.",
       "serviceDetails": "Specialty care services are medical services provided by healthcare providers who have expertise in a particular area of medicine. These providers are often referred to as specialists and have received advanced training and education in their specific area of practice beyond their general medical education.\n\nSpecialty care services can include a wide range of medical conditions, such as:\n\n1. Cardiology, which focuses on the diagnosis and treatment of heart and blood vessel conditions.\n2. Neurology, which deals with disorders of the nervous system, including the brain, spinal cord, and nerves.\n3. Oncology, which involves the diagnosis and treatment of cancer.\n4. Orthopedics, which specializes in the diagnosis and treatment of disorders and injuries of the musculoskeletal system, including bones, joints, muscles, and ligaments.\n5. Dermatology, which focuses on the diagnosis and treatment of skin conditions.\n6. Gastroenterology, which deals with the digestive system and its disorders.\n7. Psychiatry, which specializes in the diagnosis and treatment of mental illness and emotional disorders.\n\nSpecialty care services may be provided in a variety of settings, such as hospitals, outpatient clinics, medical offices, and specialized treatment centers. Patients are usually referred to a specialist by their primary care provider when a specific medical condition requires specialized care and treatment beyond the scope of primary care.",
-      "serviceId": "2"
+      "serviceId": "2",
+      "important": true
     },
     {
       "serviceName": "Rehabilitation Service",
       "serviceDescription": "These services are designed to help patients recover from injuries or illnesses, such as physical therapy, occupational therapy, and speech therapy.\n",
       "serviceDetails": "Rehabilitation services are medical services that are designed to help patients recover from physical, mental, or emotional conditions that affect their ability to perform daily activities. Rehabilitation services may include a range of treatments and therapies, such as physical therapy, occupational therapy, and speech therapy.\n\nRehabilitation services are often used to help patients recover from:\n\n1. Injuries, such as those resulting from sports, accidents, or falls.\n2. Surgeries, such as joint replacements or other orthopedic procedures.\n3. Stroke or other neurological conditions that cause physical or cognitive impairment.\n4. Chronic conditions, such as arthritis, multiple sclerosis, or chronic obstructive pulmonary disease (COPD).\n\nRehabilitation services may be provided in a variety of settings, such as hospitals, rehabilitation centers, outpatient clinics, or the patient's home. The goal of rehabilitation services is to help patients regain strength, mobility, and independence, and to improve their quality of life. Rehabilitation providers work closely with patients to develop personalized treatment plans that address their specific needs and goals.",
-      "serviceId": "3"
+      "serviceId": "3",
+      "important": true
     },
     {
       "serviceName": "Behavioral Health Service",
       "serviceDescription": "These services provide mental health and substance abuse treatment and support to patients with mental health conditions or substance abuse disorders.\n",
       "serviceDetails": "Behavioral health services are medical services that focus on the prevention, diagnosis, and treatment of mental health and substance use disorders. These services are provided by mental health professionals, such as psychiatrists, psychologists, licensed therapists, and social workers, among others.\n\nBehavioral health services may include:\n\n1. Assessment and diagnosis of mental health and substance use disorders\n2. Counseling and therapy for individuals, couples, and families\n3. Medication management for mental health disorders\n4. Treatment for substance use disorders, including detoxification and rehabilitation services\n5. Support groups and peer support services\n6. Crisis intervention and management\n7. Case management and coordination of care with other healthcare providers\n\nBehavioral health services may be provided in a variety of settings, such as hospitals, outpatient clinics, community health centers, or the patient's home. The goal of behavioral health services is to help patients improve their mental health and well-being, reduce the impact of mental illness and substance use on their lives, and promote recovery and resilience.",
-      "serviceId": "4"
+      "serviceId": "4",
+      "important": true
     },
     {
       "serviceName": "Wellness Service",
