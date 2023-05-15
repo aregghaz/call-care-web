@@ -133,7 +133,7 @@ export default function Home(props: any) {
                 description: "We are tailored to meet the unique needs of our clients. ",
                 link: "/services",
                 image: {
-                    src: "/images/weOfferimg2.webp",
+                    src: "/images/aboutMainImg.webp",
                     alt: "img1",
                     width: 100,
                     height: 100,
@@ -451,10 +451,7 @@ export default function Home(props: any) {
                                         <p>CalCare`s admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
                                             of all aspects of the company`s healthcare services. It offers real-time access to key data and metrics,
                                             allowing for quick decision-making and strategic planning. The panel features patient information management,
-                                            staff scheduling, financial performance monitoring, and easy communication between staff members. It is highly
-                                            customizable, with options for creating custom reports, setting up automated alerts, and integrating with other
-                                            software systems. CalCare`s admin panel is an essential tool for any healthcare organization looking to optimize its operations
-                                            , enhance patient care, and improve overall efficiency.</p>
+                                            staff scheduling, financial performance monitoring, and easy communication between staff members. </p>
                                         <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
                                             <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
                                                                      height={30}/>
@@ -471,9 +468,7 @@ export default function Home(props: any) {
                                         <p>CalCare`s Admin Panel Trips provides a comprehensive solution for managing all aspects of patient transportation.
                                             With our user-friendly interface, you can easily schedule and manage trips, view trip histories, and access real-time data on trip status.
                                             Our advanced tracking system allows you to monitor the progress of each trip in real-time, ensuring that patients arrive at
-                                            their destination on time and with the highest level of care. Additionally, our Admin Panel Trips feature provides customizable
-                                            reporting and analytics, allowing you to easily track key performance metrics and make data-driven decisions to improve your transportation
-                                            services. With CalCare`s Admin Panel Trips, you can streamline your transportation operations and provide exceptional patient care.</p>
+                                            their destination on time and with the highest level of care. </p>
                                         <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
                                             <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
                                                                      height={30}/>
