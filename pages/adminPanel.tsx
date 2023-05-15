@@ -1,6 +1,7 @@
 import cls from "../styles/adminPanel.module.scss"
 import React, {FC} from "react"
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
 
 
 const AdminPanel:FC = ({
@@ -9,9 +10,7 @@ const AdminPanel:FC = ({
         return(
             <>
                 <div className={cls.adminMain}>
-                    <div className={cls.adminMainImg}>
-
-                    </div>
+                    <div className={cls.adminMainImg}></div>
                     <div className={cls.adminMainContent}>
                         <h1>CalCare Admin Panel</h1>
                         <h2>Streamlining Medical Transportation with <br /> CalCare's Advanced Admin Panel</h2>
@@ -22,7 +21,7 @@ const AdminPanel:FC = ({
                             respond quickly to any emergency situations that may arise and ensures
                             that patients are transported safely and efficiently.
                         </p>
-                        <button>Download Now</button>
+                        <button>Visit Now</button>
                     </div>
                 </div>
                 <div className={`${cls.adminMain} ${cls.adminMain2}`}>

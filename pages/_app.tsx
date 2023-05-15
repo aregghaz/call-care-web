@@ -26,8 +26,10 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
         AOS.init()
-        dispatch(fetchGlobal())
-        dispatch(fetchServices())
+        return () => {
+            dispatch(fetchGlobal())
+            dispatch(fetchServices())
+        }
     }, [dispatch])
     return (
         <>
