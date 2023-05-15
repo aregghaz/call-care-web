@@ -633,19 +633,19 @@
 }
 
 .otherBulletsWrapper {
-  bottom: 2% !important;
+  bottom: 6% !important;
 
-  @media screen and (max-width: 1400px){
-    bottom: 4% !important;
-  }
-
-  @media screen and (max-width: 750px){
-    bottom: 10% !important;
-  }
-
-  @media screen and (max-width: 300px){
-    bottom: 5% !important;
-  }
+  //@media screen and (max-width: 1400px){
+  //  bottom: % !important;
+  //}
+  //
+  //@media screen and (max-width: 750px){
+  //  bottom: 10% !important;
+  //}
+  //
+  //@media screen and (max-width: 300px){
+  //  bottom: 5% !important;
+  //}
 }
 
 .activeBulletClass {
@@ -673,7 +673,7 @@
 
 .slidContentBox{
   width: 45%;
-  height: 100%;
+  height: 800px !important;
   //border: 1px solid red;
   display: flex;
   flex-direction: column;
