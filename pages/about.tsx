@@ -114,7 +114,7 @@ const About = ({
                                             display: "flex",
                                         }}
                                     >
-                                        <AboutMedicalCard dataAos={{type: "zoom-in", delay: 300 * index}} title={title} icon={icon} arrow={arrow}/>
+                                        <AboutMedicalCard link={"/services"} dataAos={{type: "zoom-in", delay: 300 * index}} title={title} icon={icon} arrow={arrow}/>
                                     </SwiperSlide>
                                 )
                             })

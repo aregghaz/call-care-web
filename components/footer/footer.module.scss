@@ -73,6 +73,11 @@
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+      color: #9d9d9d;
+    }
   }
 }
 
