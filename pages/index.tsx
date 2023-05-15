@@ -133,7 +133,7 @@ export default function Home(props: any) {
                 description: "We are tailored to meet the unique needs of our clients. ",
                 link: "/services",
                 image: {
-                    src: "/images/weOfferimg2.webp",
+                    src: "/images/aboutMainImg.webp",
                     alt: "img1",
                     width: 100,
                     height: 100,

@@ -1,14 +1,28 @@
+@import "./styles/variables";
+
 .offerService{
-  width: 570px;
-  height: 180px;
+  width: 380px;
+  height: 500px;
   //border: 1px solid red;
+  overflow: hidden;
   display: flex;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: .5s;
+  flex-direction: column;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  transition: .5s !important;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
   @media screen and (max-width: 500px) {
     width: 600px;
     height: 160px;
   }
+
+  & svg {
+    transition: 0.5s;
+    width: 40px;
+  }
+
 
   //@media screen and (max-width: 720px) {
   //  width: 600px;
@@ -16,22 +30,33 @@
   //}
 
   .serviceImg{
-    width: 38%;
-    height: 100%;
+    width: 100%;
+    height: 250px;
     border: inherit;
 
   }
 
   .serviceInfo{
-    width: 62%;
+    width: 100%;
     height: 100%;
     border: inherit;
   }
 
-  &:hover{
-    transform: scale(1.05);
+}
+
+.offerService:hover {
+  transform: scale(0.97) translate(-10px, -10px) !important;
+  background-color: $asteriskColor;
+  color: white;
+
+  & button {
+    color: white;
   }
 
+  & svg {
+    fill: white;
+    margin-left: 45%;
+  }
 }
 
 .imgSize{
@@ -47,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  padding-left: 10px;
+  padding: 0 40px 0 20px;
 
   & > h2{
     font-size: 20px;
@@ -69,20 +94,19 @@
   width: 100%;
   height: 30%;
   border: inherit;
-  & > a {
-    text-decoration: none;
-  }
 
-  & > a > button{
+  & > button{
     border: none;
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
     gap: 20px;
     font-size: 16px;
-    padding-left: 10px;
+    padding-left: 20px;
     cursor: pointer;
     text-decoration: none;
+    font-weight: 500;
   }
 }
