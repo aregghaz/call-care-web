@@ -14,12 +14,7 @@ export interface ServiceProps {
 const Service:FC<ServiceProps & AosInterface> = ({
     name= "",
     description = "",
-    image = {
-        src: "",
-        alt: "",
-        width: 0,
-        height: 0,
-    },
+    image = "",
     className= "",
     dataAos= {}
 }) => {
@@ -28,7 +23,7 @@ const Service:FC<ServiceProps & AosInterface> = ({
             <Link href={"../../services"} className={cls.nav}>
                 <li className={`${cls.service} ${className}`}>
                     <div className={cls.serviceContent}>
-                        <Image src={image.src} alt={image.alt} width={image.width} height={image.height}/>
+                        <Image src={image} alt={"service Icon"} width={100} height={100}/>
                         <h2>{name}</h2>
                         <span>{description}</span>
                     </div>

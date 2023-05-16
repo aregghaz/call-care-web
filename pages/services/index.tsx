@@ -11,6 +11,7 @@ import {useSelector} from "react-redux";
 import {servicesListSelector} from "@/store/slices/services/services.slice";
 import {useRouter} from "next/router";
 import Tilt from 'react-parallax-tilt';
+import Input from "@/components/input/input";
 
 
 interface ServicesProps {
@@ -142,12 +143,12 @@ const Services: FC<ServicesProps> = ({}) => {
                         <h2>Contact Us</h2>
                         <form className={cls.contactForm}>
                             <div className={cls.contactFormMain}>
-                                <input type={"text"} placeholder={"Name"}/>
-                                <input type={"email"} placeholder={"Email"}/>
-                                <input type={"tel"} placeholder={"Phone"}/>
-                                <input type={"text"} placeholder={"City"}/>
+                                <Input type={"text"} placeholder={"Name"} inputMode={"text"}/>
+                                <Input type={"email"} placeholder={"Email"} inputMode={"email"}/>
+                                <Input type={"tel"} placeholder={"Phone"} inputMode={"tel"}/>
+                                <Input type={"text"} placeholder={"City"} inputMode={"text"}/>
                             </div>
-                            <input type={"text"} placeholder={"Company"}/>
+                            <Input type={"text"} inputMode={"text"} placeholder={"Company"}/>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
                                 <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>

@@ -97,7 +97,7 @@ const Refer:FC<any> = ({
                     <h2>Submitter</h2>
                     <div className={cls.formRepeat3}>
                         <Select
-                            label={"Transportation Id"}
+                            label={"Transportation Service"}
                             placeholder={"Please Choose"}
                             options={[
                                 {name: "medical1", disabled: false, selected: false},
@@ -163,7 +163,7 @@ const Refer:FC<any> = ({
                             placeholder={"Facility Name"}
                         />
                         <Input
-                            type={"text"}
+                            type={"tel"}
                             placeholder={"Facility Phone"}
                         />
                     </div>

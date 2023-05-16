@@ -8,6 +8,7 @@ import PinterestIcon from "../svgs/pinterest";
 import Link from "next/link";
 import SocialLinks from "../components/social-links/social-links";
 import useScreenSize from "../hooks/useScreenSize";
+import Input from "@/components/input/input";
 const Contact = ({
 
 }) => {
@@ -27,10 +28,10 @@ const Contact = ({
                         <h2>Have any questions or ideas? <br/> Feel free to contact us!</h2>
                         <form className={cls.form}>
                             <div className={cls.formDetails}>
-                                <input type={"text"} placeholder={"Name"}/>
-                                <input type={"email"} placeholder={"E-mail"}/>
-                                <input type={"tel"} placeholder={"Phone"}/>
-                                <input type={"city"} placeholder={"City"}/>
+                                <Input type={"text"} placeholder={"Name"} inputMode={"text"}/>
+                                <Input type={"email"} placeholder={"E-mail"}/>
+                                <Input type={"tel"} inputMode={"tel"} placeholder={"Phone"}/>
+                                <Input type={"text"} inputMode={"text"} placeholder={"City"}/>
                             </div>
                             <div className={cls.formComment}>
                                 <label htmlFor={"comment"}>Your message</label>
@@ -78,7 +79,6 @@ const Contact = ({
                                     </div>
                                 </li>
                             </ul>
-                            <SocialLinks className={cls.socialLinks} colors={"black"}/>
                         </div>
                     </div>
                 </div>

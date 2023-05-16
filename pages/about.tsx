@@ -14,48 +14,48 @@ import useScreenSize from "@/hooks/useScreenSize";
 const About = ({
 
                  }) => {
-    const slideContent:Array<AboutMedicalCardProps> = [
-        {
-            title: "Ambulatory Service",
-            icon: "/images/iconCarrier.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Stretcher Services",
-            icon: "/images/aboutCard2.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Wheelchair Services",
-            icon: "/images/aboutCard3.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Ambulance Transportation",
-            icon: "/images/aboutCard4.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Basic Life Support ",
-            icon: "/images/iconCarrier.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Advance Life Support ",
-            icon: "/images/aboutCard2.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Translation Legal & Medical",
-            icon: "/images/aboutCard3.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-        {
-            title: "Critical Care Transport ",
-            icon: "/images/aboutCard4.svg",
-            arrow: "/images/arrowAbout.svg",
-        },
-    ]
+    // const slideContent:Array<AboutMedicalCardProps> = [
+    //     {
+    //         title: "Ambulatory Service",
+    //         icon: "/images/iconCarrier.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Stretcher Services",
+    //         icon: "/images/aboutCard2.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Wheelchair Services",
+    //         icon: "/images/aboutCard3.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Ambulance Transportation",
+    //         icon: "/images/aboutCard4.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Basic Life Support ",
+    //         icon: "/images/iconCarrier.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Advance Life Support ",
+    //         icon: "/images/aboutCard2.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Translation Legal & Medical",
+    //         icon: "/images/aboutCard3.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    //     {
+    //         title: "Critical Care Transport ",
+    //         icon: "/images/aboutCard4.svg",
+    //         arrow: "/images/arrowAbout.svg",
+    //     },
+    // ]
 
     const screenSize = useScreenSize()
 
@@ -81,46 +81,9 @@ const About = ({
                         Whether you require ambulatory transportation, in-home care, or any other type of medical transportation service, we are here to help. Our goal is to provide a one-stop-shop for medical service providers, offering the convenience and peace of mind that comes with knowing that all your transportation needs are being taken care of by a single trusted provider.
                         We look forward to the opportunity to earn your business and establish a long-lasting business relationship that will benefit both our organizations for many years to come.
                         Sincerely,</p>
-                    <p className={cls.infoText2}>Joe Mkhitaryan</p>
                     <p className={cls.infoText3}>Director, Client Relations General Medical Transportation</p>
                 </div>
             </section>
-            <div className={cls.aboutSlider}>
-                <Swiper
-                    className={cls.generalSlider}
-                    modules={[Pagination, EffectFade, Autoplay]}
-                    spaceBetween={10}
-                    loop={true}
-                    pagination={{
-                        enabled: true,
-                        clickable: true,
-                        clickableClass: `${cls.otherBulletsWrapper}`,
-                        bulletClass: ` ${cls.horizontalClass} swiper-pagination-bullet`,
-                        bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
-                    }}
-                    slidesPerView={screenSize.width < 700 ? 1 :screenSize.width < 1024 ? 2 : screenSize.width < 1300 ? 3 : 4}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                >
-                        {
-                            slideContent.map(({title,icon,arrow}, index) => {
-                                return (
-                                    <SwiperSlide
-                                        className={cls.slide}
-                                        key={index}
-                                        style={{
-                                            display: "flex",
-                                        }}
-                                    >
-                                        <AboutMedicalCard link={"/services"} dataAos={{type: "zoom-in", delay: 300 * index}} title={title} icon={icon} arrow={arrow}/>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                </Swiper>
-            </div>
         </div>
 
     )
