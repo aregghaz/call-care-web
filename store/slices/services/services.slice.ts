@@ -1,7 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchServices} from "@/store/slices/services/services.api";
 
-const servicesSlice = createSlice<{},{},"services">({
+type TService = {
+    serviceName: string,
+    serviceDescription: string,
+    serviceDetails: string,
+    serviceId: string,
+    important?: boolean,
+    shortcut?: boolean,
+    serviceIcon?: string
+}
+
+type TServiceState = {
+    list: Array<TService>
+    importantList: Array<TService & {important: boolean, serviceIcon: boolean}>
+
+    shortcutList: Array<TService & {shortcut: boolean}>
+}
+
+const servicesSlice = createSlice<TServiceState,{},"services">({
     name: "services",
     reducers: {
         sayHi: ((state, {payload}) => {
@@ -12,11 +29,17 @@ const servicesSlice = createSlice<{},{},"services">({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchServices.fulfilled, (state, {payload}) => {
-            for (let i of payload) {
-                console.log(i)
-                if (i.important) {
+            for (let i of payload as TService & {important: boolean, serviceIcon: boolean, shortcut: boolean}) {
+                if (i.important && i.shortcut) {
                     state.list.push(i)
                     state.importantList.push(i)
+                    state.shortcutList.push(i)
+                } else if (i.important) {
+                    state.list.push(i)
+                    state.importantList.push(i)
+                } else if (i.shortcut) {
+                    state.list.push(i)
+                    state.shortcutList.push(i)
                 } else {
                     state.list.push(i)
                 }
@@ -38,11 +61,14 @@ const servicesSlice = createSlice<{},{},"services">({
     initialState: {
         list: [],
         importantList: [],
+        shortcutList: [],
         error: false,
     }
 })
 
 export const servicesReducer = servicesSlice.reducer
-export const [servicesSelector, servicesListSelector, servicesImportantListSelector] = [state => state.services, state => state.services.list, state => state.services.importantList]
+export const [servicesSelector, servicesListSelector, servicesImportantListSelector, servicesShortcutListSelector]
+    =
+    [state => state.services, state => state.services.list, state => state.services.importantList, state => state.services.shortcutList]
 export const errorSelector = state => state.services.error
 export const servicesActions = servicesSlice.actions

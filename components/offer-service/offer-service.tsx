@@ -10,7 +10,7 @@ export interface OfferServiceProps {
     name: string,
     description: string,
     link: string,
-    image: imageType
+    image: string,
 }
 
 const OfferService:FC<OfferServiceProps & AosInterface> = ({
@@ -28,7 +28,7 @@ const OfferService:FC<OfferServiceProps & AosInterface> = ({
             <Link href={link} style={{textDecoration: "none"}}>
                 <div className={cls.offerService} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
                     <div className={cls.serviceImg}>
-                        <Image className={cls.imgSize} src={image.src} alt={image.alt} width={image.width} height={image.height} />
+                        <Image className={cls.imgSize} src={image} alt={"service image"} width={0} height={0} />
                     </div>
                     <div className={cls.serviceInfo}>
                         <div className={cls.serviceTitle}>

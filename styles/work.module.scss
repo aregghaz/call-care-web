@@ -179,6 +179,7 @@
   border: none;
   background-color: transparent;
   border-radius: 10px;
+  cursor: pointer;
 
 
   &::before{
@@ -213,4 +214,5 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  cursor: pointer;
 }

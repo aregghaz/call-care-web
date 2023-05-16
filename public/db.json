@@ -13,46 +13,58 @@
       "serviceDescription": "These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.\n",
       "serviceDetails": "Primary care services are the first line of medical care that patients receive for routine health concerns, preventive care, and treatment of common illnesses and injuries. Primary care providers may include family physicians, pediatricians, internists, and nurse practitioners, among others.Primary care services include a broad range of healthcare services, such as:\n\n 1.Routine check-ups and physical exams\n 2.Diagnosis and treatment of common medical conditions and illnesses\n 3.Management of chronic conditions, such as diabetes, hypertension, and asthma\n 4.Health screenings and preventive care, such as vaccinations, cancer screenings, and cholesterol screenings\n 5.Referrals to specialists when necessary\n 6.Patient education and counseling on healthy lifestyle habits and disease prevention\n\n\nPrimary care providers work with patients of all ages, and they focus on building a long-term relationship with their patients to provide ongoing care and support. They play a critical role in promoting overall health and well-being by identifying and addressing medical concerns early, helping patients manage chronic conditions, and providing guidance on maintaining a healthy lifestyle.",
       "serviceId": "1",
-      "important": true
+      "important": true,
+      "shortcut": true,
+      "image": "/images/weOfferimg1.webp",
+      "serviceIcon": "/images/service1.svg"
     },
     {
       "serviceName": "Specialty Care Service",
       "serviceDescription": "These services are provided by specialists who have advanced training in a particular area of medicine, such as cardiologists, neurologists, or oncologists. They provide more specialized care for patients with complex medical conditions.",
       "serviceDetails": "Specialty care services are medical services provided by healthcare providers who have expertise in a particular area of medicine. These providers are often referred to as specialists and have received advanced training and education in their specific area of practice beyond their general medical education.\n\nSpecialty care services can include a wide range of medical conditions, such as:\n\n1. Cardiology, which focuses on the diagnosis and treatment of heart and blood vessel conditions.\n2. Neurology, which deals with disorders of the nervous system, including the brain, spinal cord, and nerves.\n3. Oncology, which involves the diagnosis and treatment of cancer.\n4. Orthopedics, which specializes in the diagnosis and treatment of disorders and injuries of the musculoskeletal system, including bones, joints, muscles, and ligaments.\n5. Dermatology, which focuses on the diagnosis and treatment of skin conditions.\n6. Gastroenterology, which deals with the digestive system and its disorders.\n7. Psychiatry, which specializes in the diagnosis and treatment of mental illness and emotional disorders.\n\nSpecialty care services may be provided in a variety of settings, such as hospitals, outpatient clinics, medical offices, and specialized treatment centers. Patients are usually referred to a specialist by their primary care provider when a specific medical condition requires specialized care and treatment beyond the scope of primary care.",
       "serviceId": "2",
-      "important": true
+      "important": true,
+      "serviceIcon": "/images/service2.svg"
     },
     {
       "serviceName": "Rehabilitation Service",
       "serviceDescription": "These services are designed to help patients recover from injuries or illnesses, such as physical therapy, occupational therapy, and speech therapy.\n",
       "serviceDetails": "Rehabilitation services are medical services that are designed to help patients recover from physical, mental, or emotional conditions that affect their ability to perform daily activities. Rehabilitation services may include a range of treatments and therapies, such as physical therapy, occupational therapy, and speech therapy.\n\nRehabilitation services are often used to help patients recover from:\n\n1. Injuries, such as those resulting from sports, accidents, or falls.\n2. Surgeries, such as joint replacements or other orthopedic procedures.\n3. Stroke or other neurological conditions that cause physical or cognitive impairment.\n4. Chronic conditions, such as arthritis, multiple sclerosis, or chronic obstructive pulmonary disease (COPD).\n\nRehabilitation services may be provided in a variety of settings, such as hospitals, rehabilitation centers, outpatient clinics, or the patient's home. The goal of rehabilitation services is to help patients regain strength, mobility, and independence, and to improve their quality of life. Rehabilitation providers work closely with patients to develop personalized treatment plans that address their specific needs and goals.",
       "serviceId": "3",
-      "important": true
+      "important": true,
+      "serviceIcon": "/images/service3.svg"
     },
     {
       "serviceName": "Behavioral Health Service",
       "serviceDescription": "These services provide mental health and substance abuse treatment and support to patients with mental health conditions or substance abuse disorders.\n",
       "serviceDetails": "Behavioral health services are medical services that focus on the prevention, diagnosis, and treatment of mental health and substance use disorders. These services are provided by mental health professionals, such as psychiatrists, psychologists, licensed therapists, and social workers, among others.\n\nBehavioral health services may include:\n\n1. Assessment and diagnosis of mental health and substance use disorders\n2. Counseling and therapy for individuals, couples, and families\n3. Medication management for mental health disorders\n4. Treatment for substance use disorders, including detoxification and rehabilitation services\n5. Support groups and peer support services\n6. Crisis intervention and management\n7. Case management and coordination of care with other healthcare providers\n\nBehavioral health services may be provided in a variety of settings, such as hospitals, outpatient clinics, community health centers, or the patient's home. The goal of behavioral health services is to help patients improve their mental health and well-being, reduce the impact of mental illness and substance use on their lives, and promote recovery and resilience.",
       "serviceId": "4",
-      "important": true
+      "important": true,
+      "serviceIcon": "/images/service4.svg"
     },
     {
       "serviceName": "Wellness Service",
       "serviceDescription": "These services offer outpatient medical care and support, including nutrition counseling, weight management, and fitness programs, without hospitalization. They are a convenient and cost-effective option for medical treatment.",
       "serviceDetails": "Wellness services are health services that focus on promoting and maintaining optimal physical, mental, and emotional well-being. These services are designed to help individuals improve their overall health and quality of life by promoting healthy behaviors, preventing illness and injury, and managing chronic conditions.\n\nWellness services may include:\n\n1. Health screenings and assessments, such as blood pressure checks, cholesterol screenings, and diabetes screenings.\n2. Nutrition counseling and education to help individuals make healthy food choices and manage their weight.\n3. Fitness programs and classes to improve strength, flexibility, and cardiovascular health.\n4. Stress management and relaxation techniques, such as meditation, yoga, or massage therapy.\n5. Smoking cessation programs and support groups.\n6. Education and support for managing chronic conditions, such as diabetes or hypertension.\n7. Mental health services, such as counseling or therapy, to help individuals manage stress, anxiety, or depression.\n\nWellness services may be provided in a variety of settings, such as workplaces, community centers, fitness facilities, and healthcare clinics. The goal of wellness services is to empower individuals to take an active role in their health and well-being and to provide the resources and support needed to achieve and maintain a healthy lifestyle.",
-      "serviceId": "5"
+      "serviceId": "5",
+      "image": "/images/weOfferimg3.webp",
+      "shortcut": true
     },
     {
       "serviceName": "Sleep Disorder Service",
       "serviceDescription": "These services involve the diagnosis and treatment of sleep disorders, such as sleep apnea or insomnia.\n",
       "serviceDetails": "Sleep disorder services are medical services that focus on the diagnosis and treatment of sleep disorders. Sleep disorders are conditions that affect the ability to get restful and restorative sleep, which can lead to a variety of health problems such as fatigue, depression, and other medical conditions. Sleep disorder services may include sleep studies, evaluation and diagnosis of sleep disorders, and treatment options such as lifestyle changes, medication, or devices like CPAP machines. The goal of sleep disorder services is to improve the quality of sleep and overall health and well-being of patients with sleep disorders.",
-      "serviceId": "6"
+      "serviceId": "6",
+      "image": "/images/weOfferimg4.webp",
+      "shortcut": true
     },
     {
       "serviceName": "Diagnostic Service",
       "serviceDescription": "These services include a range of diagnostic tests, such as X-rays, MRIs, CT scans, and blood tests, which are used to diagnose and monitor medical conditions.\n",
       "serviceDetails": "Diagnostics services refer to a range of medical tests and procedures that are used to identify and diagnose various health conditions and diseases. These services are typically provided by medical professionals, such as doctors, nurses, and laboratory technicians, and may include a variety of different tests and exams.The purpose of diagnostics services is to help healthcare providers determine the underlying cause of a patient's symptoms or health problems, so that they can develop an appropriate treatment plan. Depending on the condition being diagnosed, diagnostic tests may be performed on a patient's blood, urine, or other bodily fluids, or on various parts of the body, such as the heart, lungs, or digestive system.Some examples of commonly used diagnostic tests and procedures include: \n\n 1. Blood tests to measure levels of certain substances in the blood, such as glucose, cholesterol, or electrolytes \n 2.Imaging tests such as X-rays, CT scans, MRI scans, or ultrasounds, to visualize internal organs and tissues and detect any abnormalities \n 3. Biopsies to collect samples of tissue for further analysis and testing \n 4. Electrocardiograms (ECGs) to measure the electrical activity of the heart \n 5. Pulmonary function tests to measure how well a patient's lungs are functioningOverall, diagnostics services are a critical part of modern healthcare, as they help doctors and other medical professionals diagnose and treat a wide range of medical conditions and diseases.",
-      "serviceId": "7"
+      "serviceId": "7",
+      "image": "/images/weOfferimg5.webp",
+      "shortcut": true
     },
     {
       "serviceName": "Urgent Care Service",
@@ -88,13 +100,17 @@
       "serviceName": "Wheel Chair Service",
       "serviceDescription": "Wheelchair services provide mobility assistance, including chair rental or purchase, fitting, repair, and training, to individuals with disabilities or illnesses to enhance their independence and activity level.",
       "serviceDetails": "Wheelchair services are services that provide mobility aids, including manual and electric wheelchairs, to individuals who have difficulty walking or cannot walk at all. These services are typically provided by healthcare organizations, such as hospitals and clinics, or by specialized companies that specialize in mobility aids.\n\nThe goal of wheelchair services is to improve the quality of life for individuals who require mobility assistance by providing them with appropriate equipment and support. Wheelchair services may involve an assessment of the individual's needs and physical abilities, the selection of the most appropriate type of wheelchair or mobility aid, and ongoing maintenance and support for the equipment.\n\nSome wheelchair services also provide training for individuals and their caregivers on how to use the equipment safely and effectively, and may also provide advice on other mobility aids and adaptations to make the home or workplace more accessible.",
-      "serviceId": "13"
+      "serviceId": "13",
+      "image": "/images/weOfferimg6.webp",
+      "shortcut": true
     },
     {
       "serviceName": "Stretcher Service",
       "serviceDescription": "Stretcher services provide safe and comfortable medical transportation for immobile patients who require a stretcher, including a trained medical professional for care during transport.",
       "serviceDetails": "Stretcher services are transportation services that use stretchers or gurneys to transport patients who are unable to sit upright or move around on their own due to a medical condition, injury, or disability. Stretcher services are commonly used to transport patients to and from medical facilities, such as hospitals, clinics, or long-term care facilities.\n\nStretcher services may be provided by healthcare organizations, such as hospitals or ambulance services, or by private companies that specialize in medical transportation. These services are typically staffed by trained healthcare professionals, such as paramedics or emergency medical technicians, who can provide medical care and support during transport.\n\nStretcher services may also provide specialized equipment and accommodations to meet the needs of patients with specific medical conditions or disabilities, such as oxygen tanks or specialized restraints. These services may be necessary for patients who require continuous medical care or monitoring during transport, or who are unable to travel in a seated position.",
-      "serviceId": "14"
+      "serviceId": "14",
+      "image": "/images/weOfferimg6.webp",
+      "shortcut": true
     },
     {
       "serviceName": "Basic Life Support Service",
