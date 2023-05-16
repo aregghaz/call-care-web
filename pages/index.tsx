@@ -443,87 +443,78 @@ export default function Home(props: any) {
                                 bulletActiveClass: `${cls.activeBulletClass} swiper-pagination-bullet-active`,
                             }}
                         >
-
                             <SwiperSlide className={cls.slide}>
-                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin}`}>
-                                    <div className={cls.slidContentBox}>
+                                <div className={cls.adminItem}>
+                                    <div className={`${cls.adminLeftImg} ${cls.sliderAdmin}`}></div>
+                                    <div className={cls.adminRightContent}>
                                         <h1>Our Admin Panel</h1>
                                         <p>CalCare`s admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
                                             of all aspects of the company`s healthcare services. It offers real-time access to key data and metrics,
                                             allowing for quick decision-making and strategic planning. The panel features patient information management,
                                             staff scheduling, financial performance monitoring, and easy communication between staff members. </p>
                                         <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
-                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                     height={30}/>
-                                            </button>
-                                        </Link>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className={cls.slide}>
-                                <div className={`${cls.appSlidePage} ${cls.sliderMobile}`}>
-                                    <div className={cls.slidContentBox}>
-                                        <h1>Admin Trips</h1>
-                                        <p>CalCare`s Admin Panel Trips provides a comprehensive solution for managing all aspects of patient transportation.
-                                            With our user-friendly interface, you can easily schedule and manage trips, view trip histories, and access real-time data on trip status.
-                                            Our advanced tracking system allows you to monitor the progress of each trip in real-time, ensuring that patients arrive at
-                                            their destination on time and with the highest level of care. </p>
-                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
-                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                     height={30}/>
+                                            <button>
+                                                Read More
+                                                <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30}/>
                                             </button>
                                         </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className={cls.slide}>
-                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin2}`}>
-                                    <div className={cls.slidContentBox}>
-                                        <h1>Price List and More</h1>
-                                        <p>CalCare`s admin panel offers a comprehensive price list for all our healthcare services, from wheelchair transportation to home health care. Our transparent pricing model ensures that clients have full visibility of the costs associated with their care, enabling them to make informed decisions about their healthcare needs.
-                                        </p>
+                                <div className={cls.adminItem}>
+                                    <div className={`${cls.adminLeftImg} ${cls.sliderAdmin}`}></div>
+                                    <div className={cls.adminRightContent}>
+                                        <h1>Our Admin Panel</h1>
+                                        <p>CalCare`s admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
+                                            of all aspects of the company`s healthcare services. It offers real-time access to key data and metrics,
+                                            allowing for quick decision-making and strategic planning. The panel features patient information management,
+                                            staff scheduling, financial performance monitoring, and easy communication between staff members. </p>
                                         <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
-                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                     height={30}/>
+                                            <button>
+                                                Read More
+                                                <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30}/>
                                             </button>
                                         </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className={cls.slide}>
-                                <div className={`${cls.appSlidePage} ${cls.sliderAdmin3}`}>
-                                    <div className={cls.slidContentBox}>
-                                        <h1>Admin Panel Dashboard</h1>
-                                        <p>The Cal Care admin panel dashboard is highly customizable, allowing healthcare providers
-                                            to tailor it to their specific needs and preferences. From setting up automated alerts to
-                                            integrating with other software systems, the dashboard offers a range of options to help streamline operations and boost efficiency.
-                                        </p>
+                                <div className={cls.adminItem}>
+                                    <div className={`${cls.adminLeftImg} ${cls.sliderAdmin}`}></div>
+                                    <div className={cls.adminRightContent}>
+                                        <h1>Our Admin Panel</h1>
+                                        <p>CalCare`s admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
+                                            of all aspects of the company`s healthcare services. It offers real-time access to key data and metrics,
+                                            allowing for quick decision-making and strategic planning. The panel features patient information management,
+                                            staff scheduling, financial performance monitoring, and easy communication between staff members. </p>
                                         <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
-                                            <button>Read More <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}
-                                                                     height={30}/>
+                                            <button>
+                                                Read More
+                                                <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30}/>
                                             </button>
                                         </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            {/*<SwiperSlide className={cls.slide}>*/}
-                            {/*    <div className={`${cls.appSlidePage} ${cls.sliderApp}`}>*/}
-                            {/*        <div className={cls.slidContentBox}>*/}
-                            {/*            <h1>Mobile App CallCare</h1>*/}
-                            {/*            <p>Article 18 of the Constitution of Ireland provides that 43 of the 60 senators are*/}
-                            {/*                to be*/}
-                            {/*                elected from five vocational panels. The Administrative Panel is defined in*/}
-                            {/*                Article*/}
-                            {/*                18.7.1º(v) as Public Administration and social services, including voluntary*/}
-                            {/*                social*/}
-                            {/*                activities</p>*/}
-                            {/*            <button>Download now <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30}*/}
-                            {/*                                        height={30}/></button>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</SwiperSlide>*/}
-
+                            <SwiperSlide className={cls.slide}>
+                                <div className={cls.adminItem}>
+                                    <div className={`${cls.adminLeftImg} ${cls.sliderAdmin}`}></div>
+                                    <div className={cls.adminRightContent}>
+                                        <h1>Our Admin Panel</h1>
+                                        <p>CalCare`s admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management
+                                            of all aspects of the company`s healthcare services. It offers real-time access to key data and metrics,
+                                            allowing for quick decision-making and strategic planning. The panel features patient information management,
+                                            staff scheduling, financial performance monitoring, and easy communication between staff members. </p>
+                                        <Link href={"/adminPanel"} className={cls.buttonLinkBox}>
+                                            <button>
+                                                Read More
+                                                <Image src={"/images/Arrow 3.svg"} alt={"arrow"} width={30} height={30}/>
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
                         </Swiper>
                     </div>
                 </section>

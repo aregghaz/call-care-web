@@ -28,6 +28,7 @@
   height: 100%;
 }
 
+
 .sliderPage {
   width: 100%;
   height: 100%;
@@ -584,43 +585,13 @@
   height: auto;
   background-color: white;
   overflow: hidden;
+  //border: 1px solid red;
 }
 
 .applicationsWrapper {
   width: 100%;
   height: 100%;
 }
-
-.appSlidePage {
-  width: 100%;
-  height: 900px !important;
-  background-attachment: fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 10% 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: flex-end;
-
-  @media screen and (max-width: 1300px) {
-    height: 800px !important;
-  }
-}
-
-
-
-.sliderMobile{
-  background-image: url($adminPanelNout);
-}
-
-
-
-.applicationsDetails {
-  width: 50%;
-  height: 100%;
-  border: 1px solid black;
-}
-
 
 
 .horizontalClass {
@@ -634,168 +605,105 @@
 
 .otherBulletsWrapper {
   bottom: 6% !important;
-
-  //@media screen and (max-width: 1400px){
-  //  bottom: % !important;
-  //}
-  //
-  //@media screen and (max-width: 750px){
-  //  bottom: 10% !important;
-  //}
-  //
-  //@media screen and (max-width: 300px){
-  //  bottom: 5% !important;
-  //}
 }
 
 .activeBulletClass {
   background-color: red !important;
 }
 
-.appSlidePage {
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: 10% 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  //border: 1px solid red;
 
-  @media screen and (max-width: 650px){
-    background-size: 80%;
-    background-position: 50% 0;
+.adminItem{
+  width: 100%;
+  height: 800px;
+  //border: 1px solid red;
+  background-color: #FFFFFF;
+  display: flex;
+
+  @media screen and (max-width: 1320px){
+    height: 600px;
+  }
+
+  @media screen and (max-width: 1024px){
+    height: auto;
+    flex-direction: column;
   }
 }
 
 
-.slidContentBox{
-  width: 45%;
-  height: 800px !important;
-  //border: 1px solid red;
+
+.adminLeftImg{
+  width: 100%;
+  height: 100%;
+  border: inherit;
+
+  @media screen and (max-width: 1024px){
+    height: 600px;
+  }
+
+  @media screen and (max-width: 720px){
+    height: 400px;
+  }
+
+  @media screen and (max-width: 480px){
+    height: 300px;
+  }
+}
+
+.adminRightContent{
+  width: 100%;
+  height: 100%;
+  border: inherit;
   display: flex;
   flex-direction: column;
-  //align-items: center;
   justify-content: center;
-  padding: 180px 60px;
-  gap: 70px;
-  @media screen and (max-width: 1600px){
-    padding: 150px 20px;
-  }
-
-  @media screen and (max-width: 1400px){
-    padding: 50px 20px;
-  }
-
-  @media screen and (max-width: 1300px){
-    //padding: 100px 20px;
-    gap: 20px;
-  }
-
-  @media screen and (max-width: 650px){
-    width: 100%;
-    height: auto;
-    //padding: 80px 20px;
-    justify-content: flex-start;
-    gap: 5px;
-    margin-top: 300px;
-  }
-
-  //@media screen and (max-width: 470px){
-  //  margin-top: 150px;
-  //  padding: 150px 20px;
-  //}
-  //
-  //@media screen and (max-width: 420px){
-  //  margin-top: 150px;
-  //  padding: 100px 20px;
-  //}
-  //
-  //@media screen and (max-width: 350px){
-  //  margin-top: 150px;
-  //  padding: 80px 20px;
-  //}
-  //
-  //@media screen and (max-width: 300px){
-  //  margin-top: 150px;
-  //  padding: 50px 20px;
-  //}
+  gap: 40px;
+  padding-left: 5%;
 
   & > h1{
     font-size: 50px;
     font-weight: 500;
-    @media screen and (max-width:920px) {
-      font-size: 35px;
+    @media screen and (max-width: 480px){
+      font-size: 40px;
     }
 
-    @media screen and (max-width:600px) {
-      font-size: 25px;
-    }
-
-    @media screen and (max-width:470px) {
-      font-size: 18px;
-    }
   }
 
   & > p{
-    padding-right: 150px;
-    color: #6C6C6C;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
+    padding-right: 25%;
+    color: #6C6C6C;
 
-    @media screen and (max-width:1200px) {
-      padding-right: 30px;
-      font-size: 1.8vw;
+    @media screen and (max-width: 1320px){
+      font-size: 18px;
+      padding-right: 10%;
     }
 
-    @media screen and (max-width:600px) {
-      font-size: 16px;
+    @media screen and (max-width: 480px){
+      font-size: 14px;
     }
+
+
+  }
+  @media screen and (max-width: 1024px){
+    padding-bottom: 100px;
   }
 
+  @media screen and (max-width: 480px){
+    padding-bottom: 70px;
 
+  }
 }
 
 
 .sliderAdmin{
   background-image: url($adminPanel3);
-  @media screen and (max-width: 600px){
-    background-size: 90%;
-  }
-}
-
-.sliderAdmin3{
-  background-image: url($adminPanel3);
-  @media screen and (max-width: 600px){
-    background-size: 90%;
-  }
-}
-
-.sliderApp{
-  background-image: url($mobileApp);
-  background-size: contain;
-
-  @media screen and (max-width: 1100px){
-    background-size: 50%;
-  }
-
-  @media screen and (max-width: 700px){
-    background-size: 50%;
-  }
-  @media screen and (max-width: 470px){
-    background-size: 60%;
-  }
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 
-.sliderAdmin2{
-  background-image: url($adminPanelNout1);
-  @media screen and (max-width: 600px){
-    background-size: 90%;
-  }
-}
 
 .infoSec{
   width: 100%;
@@ -804,8 +712,6 @@
   background-color: white;
   //border:1px solid red;
   background-image: url($lastSecBg);
-  //background-attachment: fixed;
-  //background-size: 100% 100%;
   background-size: cover;
 }
 
@@ -980,7 +886,7 @@
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
     font-size: 16px;
     cursor: pointer;
