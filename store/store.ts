@@ -2,11 +2,13 @@ import {configureStore, combineReducers} from "@reduxjs/toolkit";
 import {globalReducer, globalActions} from "@/store/slices/global/global.slice";
 import {servicesReducer} from "@/store/slices/services/services.slice";
 import {createWrapper} from "next-redux-wrapper";
+import {workReducer} from "@/store/slices/work/work.slice";
 
 const makeStore = () => configureStore({
     reducer: {
         global: globalReducer,
         services: servicesReducer,
+        work: workReducer,
     },
     middleware: getDefaultMiddleware => {
         return getDefaultMiddleware()

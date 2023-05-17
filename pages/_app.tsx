@@ -12,18 +12,12 @@ import {AppDispatch} from "../store/store"
 import {fetchServices} from "@/store/slices/services/services.api";
 import {AppDispatch, wrapper} from "@/store/store";
 import {fetchGlobal} from "@/store/slices/global/global.api";
-import {store} from "next/dist/build/output/store";
-
-const termsData: TermsProps = {
-    address: "ADDRESS",
-    version: "1.0",
-    email: "EMAIL",
-    url: "WEBSITE URL",
-    date: "20.20.2020",
-}
+import {globalSelector} from "@/store/slices/global/global.slice";
+import LoadingScreen from "@/components/loading-screen/loading-screen";
 
 export default wrapper.withRedux(function App({Component, pageProps}: AppProps) {
     const dispatch = useDispatch<AppDispatch>()
+    const globalData = useSelector(globalSelector)
     useEffect(() => {
         AOS.init()
         return () => {
@@ -34,11 +28,17 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
     return (
         <>
             {/*<Provider store={store}>*/}
-                <Header/>
-                <div className={cls.content}>
-                    <Component {...pageProps}/>
-                </div>
-                <Footer/>
+            {
+                globalData.loaded ? <>
+                    <Header/>
+                    <div className={cls.content}>
+                        <Component {...pageProps}/>
+                    </div>
+                    <Footer/>
+                </> : <>
+                    <LoadingScreen/>
+                </>
+            }
             {/*</Provider>*/}
         </>
     )

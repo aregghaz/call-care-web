@@ -6,6 +6,8 @@ import Image from "next/image";
 import useScreenSize from "../../hooks/useScreenSize";
 import SocialLinks from "@/components/social-links/social-links";
 import useScroll from "../../hooks/useScroll";
+import {useSelector} from "react-redux";
+import {globalSelector} from "@/store/slices/global/global.slice";
 
 
 export const headerLinks = [
@@ -57,6 +59,8 @@ const Header:FC<any> = ():React.ReactElement => {
         setBurgerAnim(false)
     }
 
+    const globalInfo = useSelector(globalSelector)
+
     return (
         <header
             className={cls.header}
@@ -79,13 +83,13 @@ const Header:FC<any> = ():React.ReactElement => {
                             </div>
                         </Link>
                         <div className={cls.seperator}></div>
-                        <Link href={"mailto:example@mail.com"} className={cls.headerInfo}>
+                        <Link href={`mailto:${globalInfo.email}`} className={cls.headerInfo}>
                             <div className={cls.infoIcon}>
                                 <Image src={"/images/letterIcon.svg"} alt={""} width={50} height={50}/>
                             </div>
                             <div className={cls.infoText}>
                                 <span>Mail us:</span>
-                                <span>info@mygeneralmed.com</span>
+                                <span>{globalInfo.email}</span>
                             </div>
                         </Link>
                     </div>

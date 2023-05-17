@@ -1,7 +1,19 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchGlobal} from "@/store/slices/global/global.api";
 
-const globalSlice = createSlice({
+type TGlobalState = {
+    error: boolean,
+    static: any,
+    address: string,
+    version: string,
+    phoneNumber: string,
+    email: string,
+    url: string,
+    date: string,
+    loaded: boolean,
+}
+
+const globalSlice = createSlice<TGlobalState,{},"global">({
     name: "global",
     reducers: {
         sayHi: ((state, {payload}) => {
@@ -15,12 +27,14 @@ const globalSlice = createSlice({
             return {
                 ...state,
                 ...payload,
+                loaded: true,
             }
         })
         builder.addCase(fetchGlobal.pending, state => {
             return {
                 ...state,
                 error: false,
+                loaded: false,
             }
         })
         builder.addCase(fetchGlobal.rejected, state => {
@@ -40,7 +54,8 @@ const globalSlice = createSlice({
         phoneNumber: "",
         email: "",
         url: "",
-        date: ""
+        date: "",
+        loaded: false,
     }
 })
 

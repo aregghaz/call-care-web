@@ -7,6 +7,17 @@
     "url": "WEBSITE URL HERE EDIT DB",
     "date": "20.20.2020 DATE HERE EDIT DB"
   },
+  "work": {
+    "availablePositions": [
+      "Physical Therapist",
+      "Physical Therapy Assistant",
+      "Speech Therapist",
+      "Occupational Therapist",
+      "Occupational Therapy Assistant",
+      "EMT’s",
+      "Contractors"
+    ]
+  },
   "services": [
     {
       "serviceName": "Primary Care Service",

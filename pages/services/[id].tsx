@@ -29,7 +29,7 @@ const Id: FC<ServiceProps> = ({}) => {
                 <div className={cls.imgWrapper}>
                     <Image onLoad={(e) => {
                         e.target.style.filter = "blur(0px) grayscale(20%)"
-                    }} className={cls.servicePsImg} src={`${serviceImageUrl}${Math.ceil(Math.random() * serviceImageCount)}.${serviceImageExt}`} alt={"service"} width={470} height={0}/>
+                    }} className={cls.servicePsImg} src={service.image} alt={"service"} width={470} height={0}/>
                 </div>
             </div>
             <div className={cls.serviceInfo}>

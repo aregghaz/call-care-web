@@ -1,9 +1,18 @@
-import React, {FC} from "react"
+import React, {FC, useEffect} from "react"
 import cls from '../styles/work.module.scss'
+import {useDispatch, useSelector} from "react-redux";
+import {availablePositionsSelector} from "@/store/slices/work/work.slice";
+import {fetchWork} from "@/store/slices/work/work.api";
+import {AppDispatch} from "@/store/store";
 
 const Work:FC<any> = ({
 
-                        }) => {
+}) => {
+    const availablePositions = useSelector(availablePositionsSelector)
+    const dispatch = useDispatch<AppDispatch>()
+    useEffect(() => {
+        dispatch(fetchWork())
+    }, [])
     return (
         <div className={cls.work}>
             <div className={cls.workInfo}>
@@ -11,13 +20,13 @@ const Work:FC<any> = ({
                 <div className={cls.workMenu}>
                     <h2>Available Positions</h2>
                     <ul>
-                        <li>Physical Therapist</li>
-                        <li>Physical Therapy Assistant</li>
-                        <li>Speech Therapist</li>
-                        <li>Occupational Therapist</li>
-                        <li>Occupational Therapy Assistant</li>
-                        <li>EMT’s</li>
-                        <li>Contractors</li>
+                        {
+                            availablePositions.map((position, index) => {
+                                return (
+                                    <li key={index}>{position}</li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             </div>
