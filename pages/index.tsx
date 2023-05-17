@@ -19,6 +19,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import {rotate} from "next/dist/server/lib/squoosh/impl";
 import {servicesImportantListSelector, servicesShortcutListSelector} from "@/store/slices/services/services.slice";
 import {useSelector} from "react-redux";
+import sortInSubarray from "@/utils/sortInSubArr";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -200,13 +201,7 @@ export default function Home(props: any) {
 
     let indexCount = 0 // offerServices
 
-    const sortInSubarray = (array, sortCount) => {
-        const result = []
-        for (let i = 0; i < array.length; i += sortCount) {
-            result.push(array.slice(i, i + sortCount))
-        }
-        return result
-    }
+
 
 
     return (
