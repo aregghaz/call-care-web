@@ -84,8 +84,51 @@ const About = ({
                     <p className={cls.infoText3}>Director, Client Relations General Medical Transportation</p>
                 </div>
             </section>
+            <section className={cls.aboutBottomWrapper}>
+                <div className={cls.aboutWrapperLeft}>
+                    <div className={cls.aboutLeftText}>
+                        <p>Thank you for choosing Calcare as your healthcare partner.
+                            We look forward to serving you and being a part of your journey towards a healthier,
+                            happier life.</p>
+                    </div>
+                    <div className={cls.aboutLeftImg}>
+                        <Image src={"/images/aboutLeftImg.webp"} alt={"about"} width={200} height={200} className={cls.aboutImg}/>
+                    </div>
+                </div>
+                <div className={cls.aboutWrapperRight}>
+                    <div className={cls.aboutItemsTop}>
+                        <div className={cls.aboutItems}>
+                            <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />
+                            <h2>Primary Care Service</h2>
+                            <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>
+                        </div>
+                        <div className={cls.aboutItems}>
+                            <div className={cls.aboutItems}>
+                                <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />
+                                <h2>Primary Care Service</h2>
+                                <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cls.aboutItemsBottom}>
+                        <div className={cls.aboutItems}>
+                            <div className={cls.aboutItems}>
+                                <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />
+                                <h2>Primary Care Service</h2>
+                                <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>
+                            </div>
+                        </div>
+                        <div className={cls.aboutItems}>
+                            <div className={cls.aboutItems}>
+                                <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />
+                                <h2>Primary Care Service</h2>
+                                <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
     )
 }
 
