@@ -124,7 +124,7 @@ const About = ({}) => {
                                                         serviceId,
                                                   }, index) => {
                                             return (
-                                                <Tilt tiltMaxAngleX={8} tiltMaxAngleY={8}>
+                                                <Tilt tiltMaxAngleX={8} tiltMaxAngleY={8} key={index}>
                                                     <Link href={`/services/${serviceId}`} style={{textDecoration: "none", color: "black"}}>
                                                         <div className={cls.aboutItems} key={index}>
                                                             <Image src={serviceIcon} alt={"service"} width={80}
