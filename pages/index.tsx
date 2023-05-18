@@ -386,9 +386,9 @@ export default function Home(props: any) {
                     <div className={cls.contentBox}>
                         <div>
                             {
-                                sortInSubarray(offerServices, 3).map(item => {
+                                sortInSubarray(offerServices, 3).map((item,index) => {
                                     return (
-                                        <div className={cls.topContent}>
+                                        <div className={cls.topContent} key={index}>
                                             {
                                                 item.map(({
                                                     serviceName,
@@ -397,7 +397,7 @@ export default function Home(props: any) {
                                                     image,
                                                 }, index) => {
                                                     return (
-                                                        <OfferService name={serviceName} description={serviceDescription} link={`/services/${serviceId}`} image={image}/>
+                                                        <OfferService key={index} name={serviceName} description={serviceDescription} link={`/services/${serviceId}`} image={image}/>
                                                     )
                                                 })
                                             }

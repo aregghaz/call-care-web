@@ -18,13 +18,13 @@ import LoadingScreen from "@/components/loading-screen/loading-screen";
 export default wrapper.withRedux(function App({Component, pageProps}: AppProps) {
     const dispatch = useDispatch<AppDispatch>()
     const globalData = useSelector(globalSelector)
+    const state = useSelector(state => state)
+    console.log(state)
     useEffect(() => {
         AOS.init()
-        return () => {
-            dispatch(fetchGlobal())
-            dispatch(fetchServices())
-        }
-    }, [dispatch])
+        dispatch(fetchGlobal())
+        dispatch(fetchServices())
+    }, [])
     return (
         <>
             {/*<Provider store={store}>*/}

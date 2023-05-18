@@ -12,7 +12,7 @@ const Work:FC<any> = ({
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
         dispatch(fetchWork())
-    }, [])
+    }, [dispatch])
     return (
         <div className={cls.work}>
             <div className={cls.workInfo}>

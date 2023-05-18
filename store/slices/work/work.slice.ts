@@ -1,6 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchWork} from "@/store/slices/work/work.api";
-
 type TWork = {
     error: boolean,
     availablePositions: Array<any>,
