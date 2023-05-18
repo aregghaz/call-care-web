@@ -19,7 +19,6 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
     const dispatch = useDispatch<AppDispatch>()
     const globalData = useSelector(globalSelector)
     const state = useSelector(state => state)
-    console.log(state)
     useEffect(() => {
         AOS.init()
         dispatch(fetchGlobal())

@@ -24,7 +24,6 @@ const TimePicker:FC<TimePickerProps> = ({
                     value = "00";
                 }
                 setHours(value);
-                console.log(value,'value');
                 break;
             case "minutes":
                 [min, max] = minutesMinMax;
