@@ -108,7 +108,7 @@ export default function Home(props: any) {
             name: "Our Admin Panel",
             description: "CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management of all aspects of the company's healthcare services.",
             image: "/images/calcarecard6.webp",
-            link: "/"
+            link: "/adminPanel"
         },
         // {
         //     name: "Mobile App",
@@ -281,9 +281,9 @@ export default function Home(props: any) {
                 <section className={cls.services}>
                     <ul>
                         {
-                            services.map(({serviceName, serviceDescription, serviceIcon}, index) => {
+                            services.map(({serviceName, serviceDescription, serviceIcon, serviceId}, index) => {
                                 return (
-                                    <Service className={cls.service} dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={serviceName} description={serviceDescription} image={serviceIcon}/>
+                                    <Service id={serviceId} className={cls.service} dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={serviceName} description={serviceDescription} image={serviceIcon}/>
                                 )
                             })
                         }

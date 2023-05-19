@@ -9,6 +9,7 @@ export interface ServiceProps {
     description: string,
     image: imageType,
     className?: string,
+    id?: string
 }
 
 const Service:FC<ServiceProps & AosInterface> = ({
@@ -16,11 +17,12 @@ const Service:FC<ServiceProps & AosInterface> = ({
     description = "",
     image = "",
     className= "",
-    dataAos= {}
+    dataAos= {},
+    id
 }) => {
     return (
         <div className={className} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
-            <Link href={"../../services"} className={cls.nav}>
+            <Link href={`/services/${id}`} className={cls.nav}>
                 <li className={`${cls.service} ${className}`}>
                     <div className={cls.serviceContent}>
                         <Image src={image} alt={"service Icon"} width={100} height={100}/>
