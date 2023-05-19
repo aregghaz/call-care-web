@@ -18,7 +18,7 @@ const workSlice = createSlice<TWork,{},"work">({
         builder.addCase(fetchWork.fulfilled, (state, {payload}) => {
             return {
                 ...state,
-                ...payload,
+                availablePositions: payload.availablePositions,
                 error: false
             }
         })

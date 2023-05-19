@@ -26,7 +26,14 @@ const globalSlice = createSlice<TGlobalState,{},"global">({
         builder.addCase(fetchGlobal.fulfilled, (state, {payload}) => {
             return {
                 ...state,
-                ...payload,
+                // ...payload,
+                error: false,
+                address: payload.address,
+                version: payload.version,
+                phoneNumber: payload.phoneNumber,
+                email: payload.email,
+                url: payload.url,
+                date: payload.date,
                 loaded: true,
             }
         })

@@ -29,6 +29,9 @@ const servicesSlice = createSlice<TServiceState,{},"services">({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchServices.fulfilled, (state, {payload}) => {
+            state.list.splice(0)
+            state.shortcutList.splice(0)
+            state.importantList.splice(0)
             for (let i of payload as TService & {important: boolean, serviceIcon: boolean, shortcut: boolean}) {
                 if (i.important && i.shortcut) {
                     state.list.push(i)
