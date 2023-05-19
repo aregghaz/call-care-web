@@ -6,9 +6,7 @@ import cls from "../styles/App.module.scss"
 import AOS from "aos/dist/aos"
 import "aos/dist/aos.css"
 import {useEffect} from "react";
-import {TermsProps} from "@/pages/terms";
 import {useDispatch, useSelector} from "react-redux";
-import {AppDispatch} from "../store/store"
 import {fetchServices} from "@/store/slices/services/services.api";
 import {AppDispatch, wrapper} from "@/store/store";
 import {fetchGlobal} from "@/store/slices/global/global.api";
@@ -27,14 +25,14 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
         <>
             {/*<Provider store={store}>*/}
             {
-                globalData.loaded ? <>
+              <>
                     <Header/>
-                    <div className={cls.content}>
+                    <div
+                        className={cls.content}
+                    >
                         <Component {...pageProps}/>
                     </div>
                     <Footer/>
-                </> : <>
-                    <LoadingScreen/>
                 </>
             }
             {/*</Provider>*/}
