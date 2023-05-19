@@ -6,72 +6,23 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {EffectFade, Pagination, Navigation, Autoplay, EffectCreative} from "swiper";
 import "swiper/swiper.css"
 import "swiper/css"
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
 import Link from "next/link";
-
-import Service, {ServiceProps} from "../components/service/service";
+import Service from "../components/service/service";
 import GeneralMedicalCard, {GeneralMedicalCardProps} from "../components/general-medical-card/general-medical-card";
-import OfferService, {OfferServiceProps} from "../components/offer-service/offer-service";
+import OfferService from "../components/offer-service/offer-service";
 import useScreenSize from "../hooks/useScreenSize";
-import {rotate} from "next/dist/server/lib/squoosh/impl";
 import {servicesImportantListSelector, servicesShortcutListSelector} from "@/store/slices/services/services.slice";
 import {useSelector} from "react-redux";
 import sortInSubarray from "@/utils/sortInSubArr";
 
-const inter = Inter({subsets: ['latin']})
-
 
 export default function Home(props: any) {
-    // const testNkar = dynamic(() => import("../public/images/herosliderimage1.webp"))
-    const [calcarecardsSlides, setcalcarecardsSlides] = useState(0)
 
     const services = useSelector(servicesImportantListSelector)
-
-    // const services: Array<ServiceProps> = [
-    //     {
-    //         name: "Ambulatory Service",
-    //         description: "At CalCare, we understand that  \n mobility can be a challenge for some individuals, which is why we offer \n a comprehensive ambulatory service.",
-    //         image: {
-    //             src: "/images/service1.svg",
-    //             alt: "service 1",
-    //             width: 100,
-    //             height: 100,
-    //         }
-    //     },
-    //     {
-    //         name: "Wheelchair Services",
-    //         description: "We are tailored to meet the unique needs of our clients. Our vehicles are equipped with electric wheelchair ramps and lifts, making it easy and convenient for our clients to enter and exit the vehicle comfortably and safely.",
-    //         image: {
-    //             src: "/images/service2.svg",
-    //             alt: "service 2",
-    //             width: 100,
-    //             height: 100,
-    //         }
-    //     },
-    //     {
-    //         name: "Stretcher Services",
-    //         description: "At CalCare, we understand that some patients require transportation on a stretcher, and we are equipped to provide safe and reliable stretcher services to meet their needs.",
-    //         image: {
-    //             src: "/images/service3.svg",
-    //             alt: "service 3",
-    //             width: 100,
-    //             height: 100,
-    //         }
-    //     },
-    //     {
-    //         name: "Ambulance Transportation",
-    //         description: "At CalCare, we understand that there are times when urgent medical attention is required outside of a hospital setting. ",
-    //         image: {
-    //             src: "/images/service4.svg",
-    //             alt: "service 4",
-    //             width: 100,
-    //             height: 100,
-    //         }
-    //     },
-    // ]
 
     const generalMedicalCards: Array<GeneralMedicalCardProps> = [
         {
@@ -110,99 +61,12 @@ export default function Home(props: any) {
             image: "/images/calcarecard6.webp",
             link: "/adminPanel"
         },
-        // {
-        //     name: "Mobile App",
-        //     description: "General Medical is equipped to handle all the transportation needs that you can imagine.",
-        //     image: "/images/calcarecard3.webp",
-        //     link: "/"
-        // },
-
 
     ]
 
     const offerServices = useSelector(servicesShortcutListSelector)
 
-    // const offerServices: { top: Array<OfferServiceProps>, bottom: Array<OfferServiceProps> } = {
-    //     top: [
-    //         {
-    //             name: "Ambulatory Service",
-    //             description: "Which is why we offer a comprehensive ambulatory service..",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/weOfferimg1.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         },
-    //         {
-    //             name: "Wheelchair Services",
-    //             description: "We are tailored to meet the unique needs of our clients. ",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/aboutMainImg.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         },
-    //         {
-    //             name: "Stretcher Services",
-    //             description: "At CalCare, we understand that some patients require transportation on a stretcher",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/weOfferimg3.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         }
-    //     ],
-    //
-    //     bottom: [
-    //         {
-    //             name: "Ambulance Transportation",
-    //             description: "At CalCare, we understand that there are times when urgent medical attention is required outside of a hospital setting.",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/weOfferimg4.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         },
-    //         {
-    //             name: "Basic Life Support",
-    //             description: "At CalCare, we understand the importance of providing the right level of medical care to patients in need. ",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/weOfferimg5.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         },
-    //         {
-    //             name: "Advance Life Support ",
-    //             description: "At CalCare, we understand that some patients require a higher level of medical care during transportation.",
-    //             link: "/services",
-    //             image: {
-    //                 src: "/images/weOfferimg6.webp",
-    //                 alt: "img1",
-    //                 width: 100,
-    //                 height: 100,
-    //             }
-    //         }
-    //     ]
-    // }
-
-
     const screenSize = useScreenSize()
-
-    let indexCount = 0 // offerServices
-
-
-
 
     return (
         <>
@@ -332,9 +196,7 @@ export default function Home(props: any) {
                             spaceBetween={screenSize.width > 1000 ? 100 : screenSize.width > 1350 ? 50 : 20}
                             loop={true}
                             slidesPerView={screenSize.width < 600 ? 1 : screenSize.width < 800 ? 1 : screenSize.width < 1300 ? 2 : 3}
-                            onSlideChange={swiper => {
-                                setcalcarecardsSlides(swiper.activeIndex)
-                            }}
+
                             navigation={{
                                 prevEl: ".cardLeft",
                                 nextEl: ".cardRight",
@@ -405,46 +267,7 @@ export default function Home(props: any) {
                                     )
                                 })
                             }
-                            {/*<div className={cls.topContent}>*/}
-                            {/*    {*/}
-                            {/*        offerServices.top.map(({name, description, link, image}, index) => {*/}
-                            {/*            return (*/}
-                            {/*                <OfferService*/}
-                            {/*                    dataAos={{*/}
-                            {/*                        type: "zoom-in",*/}
-                            {/*                        delay: 200 * index,*/}
-                            {/*                        duration: 1000,*/}
-                            {/*                    }}*/}
-                            {/*                    name={name}*/}
-                            {/*                    description={description}*/}
-                            {/*                    link={link}*/}
-                            {/*                    image={image}*/}
-                            {/*                    key={index}*/}
-                            {/*                />*/}
-                            {/*            )*/}
-                            {/*        })*/}
-                            {/*    }*/}
-                            {/*</div>*/}
-                            {/*<div className={`${cls.topContent} ${cls.bottomContent}`}>*/}
-                            {/*    {*/}
-                            {/*        offerServices.bottom.map(({name, description, link, image}, index) => {*/}
-                            {/*            return (*/}
-                            {/*                <OfferService*/}
-                            {/*                    dataAos={{*/}
-                            {/*                        type: "zoom-in",*/}
-                            {/*                        delay: 300 * index,*/}
-                            {/*                        duration: 1000,*/}
-                            {/*                    }}*/}
-                            {/*                    name={name}*/}
-                            {/*                    description={description}*/}
-                            {/*                    link={link}*/}
-                            {/*                    image={image}*/}
-                            {/*                    key={index}*/}
-                            {/*                />*/}
-                            {/*            )*/}
-                            {/*        })*/}
-                            {/*    }*/}
-                            {/*</div>*/}
+
                         </div>
                     </div>
 
