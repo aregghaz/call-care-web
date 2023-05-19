@@ -20,8 +20,8 @@ export default wrapper.withRedux(function App({Component, pageProps}: AppProps) 
     const globalData = useSelector(globalSelector)
     useEffect(() => {
         AOS.init()
-        dispatch(fetchGlobal())
-        dispatch(fetchServices())
+        // dispatch(fetchGlobal())
+        // dispatch(fetchServices())
     }, [dispatch])
     return (
         <>

@@ -1,5 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchWork} from "@/store/slices/work/work.api";
+import jsonFileData from "@/db.json"
+
 type TWork = {
     error: boolean,
     availablePositions: Array<any>,
@@ -15,31 +17,31 @@ const workSlice = createSlice<TWork,{},"work">({
         })
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchWork.fulfilled, (state, {payload}) => {
-            return {
-                ...state,
-                availablePositions: payload.availablePositions,
-                error: false
-            }
-        })
-
-        builder.addCase(fetchWork.pending, state => {
-            return {
-                ...state,
-                error: false,
-            }
-        })
-
-        builder.addCase(fetchWork.rejected, state => {
-            return {
-                ...state,
-                error: true
-            }
-        })
+        // builder.addCase(fetchWork.fulfilled, (state, {payload}) => {
+        //     return {
+        //         ...state,
+        //         availablePositions: payload.availablePositions,
+        //         error: false
+        //     }
+        // })
+        //
+        // builder.addCase(fetchWork.pending, state => {
+        //     return {
+        //         ...state,
+        //         error: false,
+        //     }
+        // })
+        //
+        // builder.addCase(fetchWork.rejected, state => {
+        //     return {
+        //         ...state,
+        //         error: true
+        //     }
+        // })
     },
     initialState: {
         error: false,
-        availablePositions: []
+        availablePositions: jsonFileData.work.availablePositions
     }
 })
 
