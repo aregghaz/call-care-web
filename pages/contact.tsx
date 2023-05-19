@@ -9,11 +9,15 @@ import Link from "next/link";
 import SocialLinks from "../components/social-links/social-links";
 import useScreenSize from "../hooks/useScreenSize";
 import Input from "@/components/input/input";
+import {useSelector} from "react-redux";
+import {globalSelector} from "@/store/slices/global/global.slice";
 const Contact = ({
 
 }) => {
 
     const screenSize = useScreenSize()
+
+    const globalData = useSelector(globalSelector)
 
     const handleTextareaHeight = (evt) => {
         evt.target.style.height = "50px";
@@ -46,7 +50,7 @@ const Contact = ({
                             <ul className={cls.infoOffline}>
                                 <li>
                                     <MessageIcon/>
-                                    <span className={cls.infoTitile}>info@mygeneralmed.com</span>
+                                    <span className={cls.infoTitile}>{globalData.email}</span>
                                 </li>
                                 <li>
                                     <LocationIcon/>
@@ -55,8 +59,7 @@ const Contact = ({
                                 <li>
                                     <PhoneIcon/>
                                     <div className={cls.infoSub}>
-                                        <span className={cls.infoTitile}>(877) 930-9595</span>
-                                        <span className={cls.infoTitile}>(877) 930-9595</span>
+                                        <span className={cls.infoTitile}>{globalData.phoneNumber}</span>
                                     </div>
                                 </li>
                                 <li>

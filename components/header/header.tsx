@@ -95,7 +95,7 @@ const Header:FC<any> = ():React.ReactElement => {
                     </div>
                     <div className={cls.headerButtons}>
                         <button className={cls.headerButton}>
-                            <Link href={"/login"}>Login</Link>
+                            <Link href={"http://dashboard.calcarela.com/login"} target={"_blank"}>Login</Link>
                         </button>
                     </div>
                 </div>

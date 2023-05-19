@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchServices} from "@/store/slices/services/services.api";
+import jsonFileData from "@/db.json"
 
 type TService = {
     serviceName: string,
@@ -28,43 +29,43 @@ const servicesSlice = createSlice<TServiceState,{},"services">({
         })
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchServices.fulfilled, (state, {payload}) => {
-            state.list.splice(0)
-            state.shortcutList.splice(0)
-            state.importantList.splice(0)
-            for (let i of payload as TService & {important: boolean, serviceIcon: boolean, shortcut: boolean}) {
-                if (i.important && i.shortcut) {
-                    state.list.push(i)
-                    state.importantList.push(i)
-                    state.shortcutList.push(i)
-                } else if (i.important) {
-                    state.list.push(i)
-                    state.importantList.push(i)
-                } else if (i.shortcut) {
-                    state.list.push(i)
-                    state.shortcutList.push(i)
-                } else {
-                    state.list.push(i)
-                }
-            }
-        })
-        builder.addCase(fetchServices.pending, (state) => {
-            return {
-                ...state,
-                error: false
-            }
-        })
-        builder.addCase(fetchServices.rejected, (state) => {
-            return {
-                ...state,
-                error: true,
-            }
-        })
+        // builder.addCase(fetchServices.fulfilled, (state, {payload}) => {
+        //     state.list.splice(0)
+        //     state.shortcutList.splice(0)
+        //     state.importantList.splice(0)
+        //     for (let i of payload as TService & {important: boolean, serviceIcon: boolean, shortcut: boolean}) {
+        //         if (i.important && i.shortcut) {
+        //             state.list.push(i)
+        //             state.importantList.push(i)
+        //             state.shortcutList.push(i)
+        //         } else if (i.important) {
+        //             state.list.push(i)
+        //             state.importantList.push(i)
+        //         } else if (i.shortcut) {
+        //             state.list.push(i)
+        //             state.shortcutList.push(i)
+        //         } else {
+        //             state.list.push(i)
+        //         }
+        //     }
+        // })
+        // builder.addCase(fetchServices.pending, (state) => {
+        //     return {
+        //         ...state,
+        //         error: false
+        //     }
+        // })
+        // builder.addCase(fetchServices.rejected, (state) => {
+        //     return {
+        //         ...state,
+        //         error: true,
+        //     }
+        // })
     },
     initialState: {
-        list: [],
-        importantList: [],
-        shortcutList: [],
+        list: jsonFileData.services,
+        importantList: jsonFileData.services.filter(item => item.important),
+        shortcutList: jsonFileData.services.filter(item => item.shortcut),
         error: false,
     }
 })
