@@ -1,13 +1,9 @@
 import React, {FC, useEffect, useState} from "react"
 import cls from "../styles/terms.module.scss"
 import {useSelector} from "react-redux";
-import databaseInfo from "@/db/dbdata";
-import axios from "axios";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
-import jsonData from "@/public/db.json";
 import {globalError, globalSelector} from "@/store/slices/global/global.slice";
-import {error} from "next/dist/build/output/log";
 
 export interface TermsProps {
     version: string,

@@ -1,18 +1,13 @@
 import React, {FC, useEffect, useState} from "react";
 import cls from "../styles/terms.module.scss"
 import {TermsProps} from "@/pages/terms";
-import axios from "axios";
-import databaseInfo from "@/db/dbdata";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
 import ErrorWindow from "@/components/error-window/error-window";
-import jsonData from "../public/db.json"
 import {useSelector} from "react-redux";
 import {globalError, globalSelector} from "@/store/slices/global/global.slice";
 
 const Privacy:FC<TermsProps> = ({
-    address,
-    email,
-    date,
+
 }) => {
     const [data, setData] = useState<TermsProps>({
         version: "",

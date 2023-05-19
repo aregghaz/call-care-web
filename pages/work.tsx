@@ -1,18 +1,16 @@
 import React, {FC, useEffect} from "react"
 import cls from '../styles/work.module.scss'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {availablePositionsSelector} from "@/store/slices/work/work.slice";
-import {fetchWork} from "@/store/slices/work/work.api";
-import {AppDispatch} from "@/store/store";
 
 const Work:FC<any> = ({
 
 }) => {
     const availablePositions = useSelector(availablePositionsSelector)
-    const dispatch = useDispatch<AppDispatch>()
-    useEffect(() => {
-        dispatch(fetchWork())
-    }, [dispatch])
+    // const dispatch = useDispatch<AppDispatch>()
+    // useEffect(() => {
+    //     dispatch(fetchWork())
+    // }, [dispatch])
     return (
         <div className={cls.work}>
             <div className={cls.workInfo}>

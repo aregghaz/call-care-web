@@ -1,7 +1,5 @@
 import cls from "../styles/adminPanel.module.scss"
 import React, {FC} from "react"
-import Image from "next/image";
-import Tilt from "react-parallax-tilt";
 
 
 const AdminPanel:FC = ({
