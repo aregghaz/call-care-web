@@ -6,7 +6,6 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import 'swiper/css/pagination'
 import "swiper/css/navigation"
-// import AboutMedicalCard, {AboutMedicalCardProps} from "../components/aboutMedicalCard/aboutMedicalCard";
 import sortInSubarray from "@/utils/sortInSubArr";
 import useScreenSize from "@/hooks/useScreenSize";
 import {useSelector} from "react-redux";
@@ -15,50 +14,7 @@ import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
 const About = ({}) => {
-    // const slideContent:Array<AboutMedicalCardProps> = [
-    //     {
-    //         title: "Ambulatory Service",
-    //         icon: "/images/iconCarrier.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Stretcher Services",
-    //         icon: "/images/aboutCard2.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Wheelchair Services",
-    //         icon: "/images/aboutCard3.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Ambulance Transportation",
-    //         icon: "/images/aboutCard4.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Basic Life Support ",
-    //         icon: "/images/iconCarrier.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Advance Life Support ",
-    //         icon: "/images/aboutCard2.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Translation Legal & Medical",
-    //         icon: "/images/aboutCard3.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    //     {
-    //         title: "Critical Care Transport ",
-    //         icon: "/images/aboutCard4.svg",
-    //         arrow: "/images/arrowAbout.svg",
-    //     },
-    // ]
-
-    const screenSize = useScreenSize()
+    // const screenSize = useScreenSize()
 
     const importantServices = useSelector(servicesImportantListSelector)
 
@@ -141,36 +97,6 @@ const About = ({}) => {
                             )
                         })
                     }
-                    {/*<div className={cls.aboutItemsTop}>*/}
-                    {/*    <div className={cls.aboutItems}>*/}
-                    {/*        <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />*/}
-                    {/*        <h2>Primary Care Service</h2>*/}
-                    {/*        <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>*/}
-                    {/*    </div>*/}
-                    {/*    <div className={cls.aboutItems}>*/}
-                    {/*        <div className={cls.aboutItems}>*/}
-                    {/*            <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />*/}
-                    {/*            <h2>Primary Care Service</h2>*/}
-                    {/*            <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    {/*<div className={cls.aboutItemsBottom}>*/}
-                    {/*    <div className={cls.aboutItems}>*/}
-                    {/*        <div className={cls.aboutItems}>*/}
-                    {/*            <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />*/}
-                    {/*            <h2>Primary Care Service</h2>*/}
-                    {/*            <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*    <div className={cls.aboutItems}>*/}
-                    {/*        <div className={cls.aboutItems}>*/}
-                    {/*            <Image src={"/images/service1.svg"} alt={"service"} width={80} height={80} />*/}
-                    {/*            <h2>Primary Care Service</h2>*/}
-                    {/*            <p>These services are provided by healthcare professionals, such as family physicians, pediatricians, and internists, who diagnose and treat a variety of health conditions, manage chronic diseases, and provide preventative care.</p>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                 </div>
             </section>
         </div>
