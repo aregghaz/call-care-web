@@ -26,7 +26,7 @@ module.exports = withPlugins([optimizedImages,
 ], {
     reactStrictMode: true,
     images: {
-      ///  disableStaticImages: true,
+        minimumCacheTTL: 60,
         unoptimized: true
     },
     typescript: {
