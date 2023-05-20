@@ -28,7 +28,7 @@ const OfferService:FC<OfferServiceProps & AosInterface> = ({
             <Link href={link} style={{textDecoration: "none"}}>
                 <div className={cls.offerService} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>
                     <div className={cls.serviceImg}>
-                        <Image className={cls.imgSize} src={image} alt={"service image"} width={0} height={0} />
+                        <Image className={cls.imgSize} src={image} alt={"service image"} width={380} height={250} />
                     </div>
                     <div className={cls.serviceInfo}>
                         <div className={cls.serviceTitle}>
