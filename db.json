@@ -3,19 +3,18 @@
     "address": "ADDRESS HERE EDIT DB",
     "version": "1.0",
     "phoneNumber": "888 999 0000",
-    "email": "info@mygeneralmed.com",
+    "email": "Iinfo.calcerala.com",
     "url": "WEBSITE URL HERE EDIT DB",
     "date": "20.20.2020 DATE HERE EDIT DB"
   },
   "work": {
     "availablePositions": [
-      "Physical Therapist",
-      "Physical Therapy Assistant",
-      "Speech Therapist",
-      "Occupational Therapist",
-      "Occupational Therapy Assistant",
+      "Sub Contract",
       "EMT’s",
-      "Contractors"
+      "Drivers",
+      "BERACIK SERVICE",
+      "BERIACIK GURNEY SERVICE"
+
     ]
   },
   "services": [

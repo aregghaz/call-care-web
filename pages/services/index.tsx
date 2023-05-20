@@ -50,10 +50,10 @@ const Services: FC<ServicesProps> = ({}) => {
                 <div className={cls.heroContent}>
                     <h1>Our Services</h1>
                     <p>
-                        CalCare provides comprehensive medical services to Southern California, with a mission to
-                        improve patients` health outcomes through high-quality and affordable healthcare. Our skilled
-                        healthcare team is committed to delivering exceptional care and support tailored to each
-                        patient`s unique needs.
+                        CalCare provides comprehensive transportation services in Southern California,
+                        with a mission to enhance patients' transportation experience through reliable and affordable solutions.
+                        Our experienced transportation team is dedicated to delivering exceptional service and
+                        support customized to meet each patient's specific needs.
                     </p>
                 </div>
                 <div className={cls.heroRight}>

@@ -73,10 +73,8 @@ const Refer:FC<any> = ({
                             placeholder={"Gender"}
                             required={true}
                             options={[
-                                {name: "medical1", disabled: false, selected: false},
-                                {name: "medical2", disabled: false, selected: false},
-                                {name: "medical3", disabled: false, selected: false},
-                                {name: "medical4", disabled: false, selected: false},
+                                {name: "male", disabled: false, selected: false},
+                                {name: "female", disabled: false, selected: false},
                             ]}
                         />
                         <Datapicker
@@ -96,16 +94,16 @@ const Refer:FC<any> = ({
                 <div className={cls.submitter}>
                     <h2>Submitter</h2>
                     <div className={cls.formRepeat3}>
-                        <Select
-                            label={"Transportation Service"}
-                            placeholder={"Please Choose"}
-                            options={[
-                                {name: "medical1", disabled: false, selected: false},
-                                {name: "medical2", disabled: false, selected: false},
-                                {name: "medical3", disabled: false, selected: false},
-                                {name: "medical4", disabled: false, selected: false},
-                            ]}
-                        />
+                        {/*<Select*/}
+                        {/*    label={"Transportation Service"}*/}
+                        {/*    placeholder={"Please Choose"}*/}
+                        {/*    options={[*/}
+                        {/*        {name: "medical1", disabled: false, selected: false},*/}
+                        {/*        {name: "medical2", disabled: false, selected: false},*/}
+                        {/*        {name: "medical3", disabled: false, selected: false},*/}
+                        {/*        {name: "medical4", disabled: false, selected: false},*/}
+                        {/*    ]}*/}
+                        {/*/>*/}
                         <Select
                             label={"Therapy"}
                             placeholder={"Please Choose"}
@@ -117,39 +115,47 @@ const Refer:FC<any> = ({
                             ]}
                         />
                         <Select
-                            label={"Medical Home Modification"}
+                            label={"Oxygen Stair Chair "}
                             placeholder={"Please Choose"}
-                            required={true}
                             options={[
-                                {name: "medical1", disabled: false, selected: false},
-                                {name: "medical2", disabled: false, selected: false},
-                                {name: "medical3", disabled: false, selected: false},
-                                {name: "medical4", disabled: false, selected: false},
+                                {name: "yes", disabled: false, selected: false},
+                                {name: "no", disabled: false, selected: false},
                             ]}
                         />
+                        {/*<Select*/}
+                        {/*    label={"Medical Home Modification"}*/}
+                        {/*    placeholder={"Please Choose"}*/}
+                        {/*    required={true}*/}
+                        {/*    options={[*/}
+                        {/*        {name: "medical1", disabled: false, selected: false},*/}
+                        {/*        {name: "medical2", disabled: false, selected: false},*/}
+                        {/*        {name: "medical3", disabled: false, selected: false},*/}
+                        {/*        {name: "medical4", disabled: false, selected: false},*/}
+                        {/*    ]}*/}
+                        {/*/>*/}
                     </div>
-                    <div className={cls.picker}>
-                        <label>Is Translation Service Requested?</label>
-                        <div className={cls.radio}>
-                            <input onChange={transportationHandler} defaultChecked={true} id={"transportationYes"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationYes"}>Yes</label>
-                        </div>
-                        <div className={cls.radio}>
-                            <input onChange={transportationHandler} id={"transportationNo"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationNo"}>No</label>
-                        </div>
-                    </div>
-                    {
-                        transportation && <>
-                            <Select
-                                label={"Please select language"}
-                                options={[
-                                    {name: "English", disabled: false, selected: false},
-                                    {name: "medical2", disabled: false, selected: false},
-                                    {name: "medical3", disabled: false, selected: false},
-                                    {name: "medical4", disabled: false, selected: false},
-                                ]}
-                            />
-                        </>
-                    }
+                    {/*<div className={cls.picker}>*/}
+                    {/*    <label>Is Translation Service Requested?</label>*/}
+                    {/*    <div className={cls.radio}>*/}
+                    {/*        <input onChange={transportationHandler} defaultChecked={true} id={"transportationYes"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationYes"}>Yes</label>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={cls.radio}>*/}
+                    {/*        <input onChange={transportationHandler} id={"transportationNo"} type={"radio"} name={"transportation"}/><label htmlFor={"transportationNo"}>No</label>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    {/*{*/}
+                    {/*    transportation && <>*/}
+                    {/*        <Select*/}
+                    {/*            label={"Please select language"}*/}
+                    {/*            options={[*/}
+                    {/*                {name: "English", disabled: false, selected: false},*/}
+                    {/*                {name: "medical2", disabled: false, selected: false},*/}
+                    {/*                {name: "medical3", disabled: false, selected: false},*/}
+                    {/*                {name: "medical4", disabled: false, selected: false},*/}
+                    {/*            ]}*/}
+                    {/*        />*/}
+                    {/*    </>*/}
+                    {/*}*/}
                     <div className={cls.formRepeat2}>
                         <Datapicker
                             label={"Appointment Date"}

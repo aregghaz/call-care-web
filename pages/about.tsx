@@ -24,14 +24,12 @@ const About = ({}) => {
                 <div className={cls.aboutInfoMain}>
                     <h1>About Us</h1>
                     <h2>Why choose us</h2>
-                    <p>Cal Care currently employs over 35 professionals including drivers,<br/> managers, EMTs, and
-                        accounting specialists.
-                        Established in 2010, <br/> our company has experienced tremendous growth and success<br/> in
-                        providing quality healthcare services.
-                        We have expanded our services<br/> to partner with reputable agencies, delivering the best
-                        possible care to our clients.<br/>
-                        At Cal Care, we are committed to maintaining the American<br/> dream of hard work and success,
-                        while continuously striving to <br/> improve and innovate our healthcare services.</p>
+                    <p>"Cal Care currently employs over 35 transportation professionals,<br /> including drivers,
+                        logistics managers, and dispatchers. Established in 2010, <br />our company has experienced
+                        remarkable growth and success in providing reliable<br /> transportation services.
+                        We have expanded our services to collaborate with reputable agencies,<br /> ensuring the highest standards of
+                        transportation for our clients.<br />  At Cal Care, we are committed to upholding the American dream of diligence and achievement,<br />
+                        while constantly seeking ways to enhance and innovate our transportation solutions."</p>
                 </div>
             </section>
             <section className={cls.companyInfo} data-aos={"fade-right"}>
@@ -41,26 +39,26 @@ const About = ({}) => {
                 </div>
                 <div className={cls.companyInfoText}>
                     <h2>For years our company has provided <br/> quality medical transportation.</h2>
-                    <p className={cls.infoText1}>At CalCare, we are committed to providing safe and reliable
-                        transportation services to our members. As a company, we are growing fast and are eager to earn
-                        your business. We understand that medical transportation needs can vary greatly, which is why we
-                        strive to offer a comprehensive range of services to meet your needs.
-                        Whether you require ambulatory transportation, in-home care, or any other type of medical
-                        transportation service, we are here to help. Our goal is to provide a one-stop-shop for medical
-                        service providers, offering the convenience and peace of mind that comes with knowing that all
-                        your transportation needs are being taken care of by a single trusted provider.
-                        We look forward to the opportunity to earn your business and establish a long-lasting business
-                        relationship that will benefit both our organizations for many years to come.
-                        Sincerely,</p>
+                    <p className={cls.infoText1}>At CalCare, we are dedicated to delivering secure and dependable
+                        transportation solutions tailored to our clients' specific requirements.
+                        As a company, we are rapidly expanding and are excited to earn your trust.
+                        We recognize the diverse nature of transportation needs in the medical field,
+                        which is why we strive to offer a comprehensive array of transportation services.
+                        Whether you need non-emergency medical transportation, wheelchair-accessible vehicles,
+                        or specialized medical transportation, our team is here to assist you.
+                        Our objective is to serve as your primary resource for all your transportation needs,
+                        offering the convenience and assurance that comes with relying on a single, reputable provider.
+                        We eagerly anticipate the opportunity to earn your trust and establish a mutually beneficial,
+                        enduring partnership between our organizations. Sincerely,</p>
                     <p className={cls.infoText3}>Director, Client Relations General Medical Transportation</p>
                 </div>
             </section>
             <section className={cls.aboutBottomWrapper}>
                 <div className={cls.aboutWrapperLeft}>
                     <div className={cls.aboutLeftText}>
-                        <p>Thank you for choosing Calcare as your healthcare partner.
-                            We look forward to serving you and being a part of your journey towards a healthier,
-                            happier life.</p>
+                        <p>Thank you for choosing CalCare as your transportation provider.
+                            We are committed to your safety and comfort, providing reliable solutions tailored to your needs.
+                            Your trust in us is valued, and we look forward to serving you with care and dedication.</p>
                     </div>
                     <div className={cls.aboutLeftImg}>
                         <Image src={"/images/aboutLeftImg.webp"} alt={"about"} width={200} height={200}
