@@ -32,25 +32,25 @@ export default function Home(props: any) {
     const generalMedicalCards: Array<GeneralMedicalCardProps> = [
         {
             name: "About us",
-            description: "At Cal Care, we are proud to have a team of highly skilled and compassionate healthcare professionals who are committed to providing personalized care that meets the unique needs of each patient.",
+            description: "At Cal Care, we are proud to have a team of highly skilled and compassionate transportation professionals who are committed to providing personalized transportation services that meet the unique needs of each passenger.",
             image: "/images/calcarecard1.webp",
             link: "/about"
         },
         {
             name: "Our services",
-            description: "Cal Care offers a wide range of healthcare services to individuals and families across Greater Southern California. ",
+            description: "Cal Care offers a wide range of transportation services to individuals and families across Greater Southern California.",
             image: "/images/calcarecard2.webp",
             link: "/services"
         },
         {
             name: "Work with us",
-            description: " We believe that our employees are the foundation of our success, and we are committed to providing a supportive and collaborative work environment where our team members can thrive.",
+            description: "We value our transportation professionals and foster a supportive, collaborative environment where they can thrive in delivering exceptional services.",
             image: "/images/calcarecard3.webp",
             link: "/work"
         },
         {
             name: "Refer",
-            description: "At CalCare, we believe that the highest compliment our patients can give us is the referral of their friends and family.",
+            description: "At CalCare, we believe that the highest compliment our clients can give us is the referral of their friends and family for transportation services.",
             image: "/images/calcarecard4.webp",
             link: "/refer"
         },
@@ -62,7 +62,7 @@ export default function Home(props: any) {
         },
         {
             name: "Our Admin Panel",
-            description: "CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management of all aspects of the company's healthcare services.",
+            description: "CalCare's admin panel is a powerful, user-friendly tool that streamlines operations and enables efficient management of all aspects of the company's transportation services.",
             image: "/images/calcarecard6.webp",
             link: "/adminPanel"
         },
@@ -109,8 +109,8 @@ export default function Home(props: any) {
                                         <source src={require("../public/videos/homeVideo.webm")} type={"video/webm"}/>
                                     </video>
                                     <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                        <h1>Your Health is Our Top Priority</h1>
-                                        <p>Comprehensive Healthcare Services for Californians: Your Partner in Health and Wellness</p>
+                                        <h1>Your safe transportation is our top priority</h1>
+                                        <p>Transportation Services for Californians: Your partner in Transportation and safety</p>
                                         <Link href={"/services"}>
                                             <Image className={cls.arrowHero} src={"/images/arrowright.svg"}
                                                    alt={"arrow right"} width={100} height={50}/>
@@ -123,7 +123,7 @@ export default function Home(props: any) {
                             <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
                                 <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
                                     <h1>The first wealth is health.</h1>
-                                    <p>The patient is not a customer, but a partner in the medical process</p>
+                                    <p>The patient is not a customer, but a partner in the transportation process</p>
                                     <Link href={"/about"}>
                                         <Image className={cls.arrowHero} src={"/images/arrowright.svg"}
                                                alt={"arrow right"}
@@ -135,8 +135,8 @@ export default function Home(props: any) {
                         <SwiperSlide className={cls.slide}>
                             <div className={`${cls.sliderPage} ${cls.sliderPage3}`}>
                                 <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                    <h1>True Care for Your Health</h1>
-                                    <p>The greatest satisfaction for a healthcare provider is to see their patient healthy and happy</p>
+                                    <h1>Dependable Transportation Solutions for You</h1>
+                                    <p>The greatest satisfaction for a healthcare provider is to see their patient healthy, happy, and safely transported to their destination.</p>
                                     <Link href={"/contact"}>
                                         <Image className={cls.arrowHero} src={"/images/arrowright.svg"}
                                                alt={"arrow right"}
@@ -160,10 +160,8 @@ export default function Home(props: any) {
                 </section>
                 <section className={cls.generalMedical}>
                     <div className={cls.generalMedicalTop}>
-                        <h2> Cal Care is a comprehensive healthcare provider, offering a wide range of medical services to individuals throughout California.</h2>
-                        <p>Cal Care is dedicated to providing high-quality and comprehensive healthcare services to individuals and families.<br />
-                            Our team of healthcare professionals is committed to helping patients achieve their best possible health outcomes by <br />offering personalized care that meets their unique needs.
-                        </p>
+                        <h2>Cal Care is a comprehensive transportation provider, offering reliable transportation solutions to individuals throughout California.</h2>
+                        <p>Cal Care is dedicated to providing high-quality and comprehensive transportation services to individuals and families. Our team of transportation professionals is committed to ensuring safe and efficient travel for patients, helping them reach their healthcare destinations with ease. We prioritize personalized transportation solutions that meet the unique needs of each patient, allowing them to access the care they require for their best possible health outcomes.</p>
                     </div>
                     <div className={cls.generalMedicalBottom}>
                         <div className={cls.generalSliderControls}>
@@ -237,10 +235,7 @@ export default function Home(props: any) {
                 <section className={cls.believeSec} data-aos={"fade"}>
                     <div className={cls.believeSecWrapper}>
                         <h1>We are here to transport you to and from your destination with care and comfort.</h1>
-                        <p>At CalCare, we hold the belief that the core of healthcare is providing quality service to our clients.
-                            Our team of professionals is dedicated to catering to all your home health care needs with a range of services,
-                            from Intravenous Injection Therapy to Respiratory Therapy, as well as the expertise of Registered Nurses,
-                            Licensed Vocational Nurses, and Physical Therapists. Rest assured that we are committed to providing timely and efficient care.</p>
+                        <p>At CalCare, we hold the belief that the core of transportation services is providing quality service to our clients. Our team of professionals is dedicated to catering to all your transportation needs with a range of services, from reliable medical transportation to specialized transportation for individuals with unique requirements. We have a fleet of vehicles equipped to ensure comfortable and safe travel, accompanied by experienced drivers and trained staff. Rest assured that we are committed to providing timely and efficient transportation services, prioritizing the well-being and convenience of our clients.</p>
                         <Link rel="stylesheet" href="/about" className={cls.buttonLink}>
                             <button>View More</button>
                         </Link>
@@ -380,7 +375,6 @@ export default function Home(props: any) {
                     <div className={cls.infoSecWrapper}>
                         <h2>How CalCare is Revolutionizing Medical Transportation in California</h2>
                         <p>CalCare&apos;s commitment to excellence is demonstrated by its reputation for reliability, professionalism, and efficiency. The company&apos;s licensing and insurance credentials ensure that patients can trust that they are in good hands during transport. If you are in need of medical transportation services in California, CalCare is a reputable and reliable company that can provide safe and efficient transport to your desired destination.</p>
-                        <p>The company&apos;s NEMT services are particularly noteworthy, as they cater to patients who require non-emergency medical care, such as medical appointments, outpatient procedures, or dialysis treatments. CalCare&apos;s NEMT vehicles are designed with patient comfort and safety in mind, with features like wheelchair accessibility and medical equipment available to transport patients who require additional medical assistance during transport.</p>
                         <Link href={"/contact"} className={cls.button}>
                             <button>Our Contacts</button>
                         </Link>
