@@ -18,6 +18,12 @@ interface ServicesProps {
 
 }
 
+export async function getStaticProps(context) {
+    return {
+        props: {}, // will be passed to the page component as props
+    }
+}
+
 const Services: FC<ServicesProps> = ({}) => {
     const screen = useScreenSize()
     const handleTextareaHeight = (evt) => {

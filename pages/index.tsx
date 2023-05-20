@@ -18,8 +18,13 @@ import useScreenSize from "../hooks/useScreenSize";
 import {servicesImportantListSelector, servicesShortcutListSelector} from "@/store/slices/services/services.slice";
 import {useSelector} from "react-redux";
 import sortInSubarray from "@/utils/sortInSubArr";
+import type { InferGetStaticPropsType, GetStaticProps } from 'next';
 
-
+export async function getStaticProps(context) {
+    return {
+        props: {}, // will be passed to the page component as props
+    }
+}
 export default function Home(props: any) {
 
     const services = useSelector(servicesImportantListSelector)
