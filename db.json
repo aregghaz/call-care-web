@@ -23,7 +23,7 @@
       "serviceDescription": "Ambulatory Service is transportation for independent patients to medical appointments.",
       "serviceDetails": "Ambulatory Service refers to transportation assistance provided to individuals who are able to walk or move around independently but require transportation to medical appointments, clinics, or other healthcare-related destinations. This service is designed to accommodate patients who do not require a stretcher or specialized medical support during transit. Ambulatory Service providers typically offer comfortable vehicles with trained drivers who ensure a safe and timely transport experience for patients to and from their healthcare appointments.",
       "serviceId": "1",
-      "image": "/images/weOfferimg5.webp",
+      "image": "/images/ambulatory.webp",
       "shortcut": true
     },
     {
@@ -33,6 +33,7 @@
       "serviceDetails": "Basic Life Support (BLS) services refer to a set of emergency medical services designed to provide immediate care and support to individuals experiencing life-threatening medical emergencies. BLS services are typically provided by trained healthcare professionals, such as emergency medical technicians (EMTs) or paramedics, who are trained in basic life support techniques.\n\nBLS services include a range of interventions designed to stabilize and support the patient's vital signs and basic life functions, including airway management, oxygen therapy, cardiopulmonary resuscitation (CPR), and defibrillation. These interventions are used to address medical emergencies such as cardiac arrest, respiratory distress, severe bleeding, or choking.\n\nBLS services may be provided in a variety of settings, including hospitals, clinics, emergency medical services (EMS) vehicles, or at the scene of an emergency. The goal of BLS services is to provide immediate care and support to individuals experiencing life-threatening medical emergencies, with the aim of stabilizing the patient and ensuring that they can be safely transported to a medical facility for further treatment.",
       "serviceId": "2",
       "important": true,
+      "serviceIcon": "/images/bls.svg",
       "shortcut": true
     },
     {
@@ -42,14 +43,16 @@
       "serviceDetails": "Advanced Life Support (ALS) services are a set of emergency medical services designed to provide advanced medical care and support to individuals experiencing life-threatening medical emergencies. ALS services are typically provided by highly trained healthcare professionals, such as paramedics or advanced practice registered nurses (APRNs), who are trained in advanced life support techniques.\n\nALS services involve a range of advanced interventions designed to stabilize and support the patient's vital signs and advanced life functions, including advanced airway management, advanced medication administration, cardiac monitoring and defibrillation, and more advanced life-saving techniques such as needle thoracostomy and intraosseous infusion.\n\nALS services may be provided in a variety of settings, including hospitals, clinics, emergency medical services (EMS) vehicles, or at the scene of an emergency. ALS services are typically dispatched in response to more complex or critical medical emergencies, such as cardiac arrest, severe trauma, or severe respiratory distress.\n\nThe goal of ALS services is to provide advanced medical care and support to individuals experiencing life-threatening medical emergencies, with the aim of stabilizing the patient and ensuring that they can be safely transported to a medical facility for further treatment. ALS services are an essential component of emergency medical services, working in conjunction with BLS services to provide comprehensive emergency medical care.",
       "serviceId": "3",
       "important": true,
+      "serviceIcon": "/images/als.svg",
       "shortcut": true
     },
     {
       "serviceName": "Critical Care Transportation (CCT)",
-      "image": "/images/ambulatory.webp",
+      "image": "/images/critical.webp",
       "serviceDescription": "Critical care transportation services provide specialized medical transport for critically ill or injured patients requiring advanced life support interventions during transport.",
       "serviceDetails": "CCT stands for Critical Care Transport. It refers to a specialized medical transportation service that is designed to provide advanced medical care and monitoring during transportation for critically ill or injured patients. CCT services are typically provided by trained healthcare professionals, such as critical care nurses, respiratory therapists, or paramedics, who have advanced training in critical care medicine and are equipped with specialized medical equipment.\n\nCCT services are used to transport critically ill or injured patients between medical facilities or from the scene of an emergency to a medical facility. CCT services provide a higher level of care than traditional ambulance services, and are designed to transport patients who require more advanced medical interventions and monitoring during transport, such as patients on ventilators, with hemodynamic instability, or requiring advanced medication support.\n\nCCT services typically involve specialized vehicles that are equipped with advanced medical equipment and technology, such as ventilators, defibrillators, and infusion pumps, as well as specialized monitoring equipment, such as cardiac monitors and pulse oximeters. The healthcare professionals providing CCT services are trained to provide advanced medical interventions and support during transport, such as advanced airway management, hemodynamic support, and medication administration.\n\nThe goal of CCT services is to provide safe and effective transport for critically ill or injured patients, with the aim of maintaining or improving their condition during transport, and ensuring that they arrive at their destination with the highest level of care and support possible.",
       "serviceId": "4",
+      "serviceIcon": "/images/cct.svg",
       "important": true,
       "shortcut": true
     },
