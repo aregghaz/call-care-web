@@ -8,15 +8,16 @@ import LinkedinIcon from "@/svgs/linkedin";
 import FacebookIcon from "@/svgs/facebook";
 import TwitterIcon from "@/svgs/twitter";
 import database from "../../public/db.json"
-import dbdata from "@/public/db.json";
 import {headerLinks} from "@/components/header/header";
 import {useSelector} from "react-redux";
 import {servicesImportantListSelector} from "@/store/slices/services/services.slice";
 import LoadingScreen from "@/components/loading-screen/loading-screen";
+import {globalSelector} from "@/store/slices/global/global.slice";
 
 const Footer:FC<any> = ({
 
 }) => {
+    const globalInfo = useSelector(globalSelector)
     const importantServicesList = useSelector(servicesImportantListSelector)
     return (
         <footer className={cls.footer}>
@@ -26,9 +27,9 @@ const Footer:FC<any> = ({
                         <li>
                             <Image src={"/images/logoWhite.svg"} alt={"logo"} width={150} height={100}/>
                         </li>
-                        <li>{dbdata.global.phoneNumber}</li>
-                        <li>{dbdata.global.email}</li>
-                        <li>{dbdata.global.address}</li>
+                        <li>{globalInfo.phoneNumber}</li>
+                        <li>{globalInfo.email}</li>
+                        <li>{globalInfo.address}</li>
                     </ul>
                 </li>
                 <li className={cls.footerContentCol}>
