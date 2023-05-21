@@ -24,12 +24,12 @@ const About = ({}) => {
                 <div className={cls.aboutInfoMain}>
                     <h1>About Us</h1>
                     <h2>Why choose us</h2>
-                    <p>"Cal Care currently employs over 35 transportation professionals,<br /> including drivers,
+                    <p>Cal Care currently employs over 35 transportation professionals,<br /> including drivers,
                         logistics managers, and dispatchers. Established in 2010, <br />our company has experienced
                         remarkable growth and success in providing reliable<br /> transportation services.
                         We have expanded our services to collaborate with reputable agencies,<br /> ensuring the highest standards of
                         transportation for our clients.<br />  At Cal Care, we are committed to upholding the American dream of diligence and achievement,<br />
-                        while constantly seeking ways to enhance and innovate our transportation solutions."</p>
+                        while constantly seeking ways to enhance and innovate our transportation solutions.</p>
                 </div>
             </section>
             <section className={cls.companyInfo} data-aos={"fade-right"}>
@@ -40,7 +40,7 @@ const About = ({}) => {
                 <div className={cls.companyInfoText}>
                     <h2>For years our company has provided <br/> quality medical transportation.</h2>
                     <p className={cls.infoText1}>At CalCare, we are dedicated to delivering secure and dependable
-                        transportation solutions tailored to our clients' specific requirements.
+                        transportation solutions tailored to our clients&apos; specific requirements.
                         As a company, we are rapidly expanding and are excited to earn your trust.
                         We recognize the diverse nature of transportation needs in the medical field,
                         which is why we strive to offer a comprehensive array of transportation services.

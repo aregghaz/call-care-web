@@ -51,9 +51,9 @@ const Services: FC<ServicesProps> = ({}) => {
                     <h1>Our Services</h1>
                     <p>
                         CalCare provides comprehensive transportation services in Southern California,
-                        with a mission to enhance patients' transportation experience through reliable and affordable solutions.
+                        with a mission to enhance patients&apos; transportation experience through reliable and affordable solutions.
                         Our experienced transportation team is dedicated to delivering exceptional service and
-                        support customized to meet each patient's specific needs.
+                        support customized to meet each patient&apos;s specific needs.
                     </p>
                 </div>
                 <div className={cls.heroRight}>
