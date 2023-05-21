@@ -26,52 +26,50 @@
       "image": "/images/weOfferimg5.webp",
       "shortcut": true
     },
-    {
-      "serviceName": "Interfacility Transportation (IFT)",
-      "serviceDescription": "Interfacility Transportation Service: Safe patient transfer between healthcare facilities.",
-      "serviceDetails": "Interfacility Transportation Service refers to the transportation of patients between different healthcare facilities or medical centers. This service is typically provided for individuals who require specialized medical care, diagnostic tests, or procedures that are not available at their current facility. Interfacility Transportation Service ensures a safe and efficient transfer of patients, often by trained medical personnel, to the appropriate facility where they can receive the necessary medical attention or continue their treatment.",
-      "serviceId": "2",
-      "image": "/images/weOfferimg5.webp",
-      "shortcut": true,
-      "important": true
-    },
+
     {
       "serviceName": "Basic Life Support (BLS)",
       "image": "/images/weOfferimg6.webp",
       "serviceDescription": "BLS services provide immediate care for life-threatening emergencies, such as CPR, AED use, and oxygen administration, by trained EMTs or paramedics in various settings until further medical treatment is possible.",
       "serviceDetails": "Basic Life Support (BLS) services refer to a set of emergency medical services designed to provide immediate care and support to individuals experiencing life-threatening medical emergencies. BLS services are typically provided by trained healthcare professionals, such as emergency medical technicians (EMTs) or paramedics, who are trained in basic life support techniques.\n\nBLS services include a range of interventions designed to stabilize and support the patient's vital signs and basic life functions, including airway management, oxygen therapy, cardiopulmonary resuscitation (CPR), and defibrillation. These interventions are used to address medical emergencies such as cardiac arrest, respiratory distress, severe bleeding, or choking.\n\nBLS services may be provided in a variety of settings, including hospitals, clinics, emergency medical services (EMS) vehicles, or at the scene of an emergency. The goal of BLS services is to provide immediate care and support to individuals experiencing life-threatening medical emergencies, with the aim of stabilizing the patient and ensuring that they can be safely transported to a medical facility for further treatment.",
-      "serviceId": "3",
-      "important": true
+      "serviceId": "2",
+      "important": true,
+      "shortcut": true
     },
     {
       "serviceName": "Advanced Life Support (ALS)",
       "image": "/images/weOfferimg3.webp",
       "serviceDescription": "Advanced life support provides immediate, advanced medical care for emergencies by trained professionals to stabilize the patient until further treatment is available.",
       "serviceDetails": "Advanced Life Support (ALS) services are a set of emergency medical services designed to provide advanced medical care and support to individuals experiencing life-threatening medical emergencies. ALS services are typically provided by highly trained healthcare professionals, such as paramedics or advanced practice registered nurses (APRNs), who are trained in advanced life support techniques.\n\nALS services involve a range of advanced interventions designed to stabilize and support the patient's vital signs and advanced life functions, including advanced airway management, advanced medication administration, cardiac monitoring and defibrillation, and more advanced life-saving techniques such as needle thoracostomy and intraosseous infusion.\n\nALS services may be provided in a variety of settings, including hospitals, clinics, emergency medical services (EMS) vehicles, or at the scene of an emergency. ALS services are typically dispatched in response to more complex or critical medical emergencies, such as cardiac arrest, severe trauma, or severe respiratory distress.\n\nThe goal of ALS services is to provide advanced medical care and support to individuals experiencing life-threatening medical emergencies, with the aim of stabilizing the patient and ensuring that they can be safely transported to a medical facility for further treatment. ALS services are an essential component of emergency medical services, working in conjunction with BLS services to provide comprehensive emergency medical care.",
-      "serviceId": "4",
-      "important": true
+      "serviceId": "3",
+      "important": true,
+      "shortcut": true
     },
     {
       "serviceName": "Critical Care Transportation (CCT)",
       "image": "/images/weOfferimg4.webp",
       "serviceDescription": "Critical care transportation services provide specialized medical transport for critically ill or injured patients requiring advanced life support interventions during transport.",
       "serviceDetails": "CCT stands for Critical Care Transport. It refers to a specialized medical transportation service that is designed to provide advanced medical care and monitoring during transportation for critically ill or injured patients. CCT services are typically provided by trained healthcare professionals, such as critical care nurses, respiratory therapists, or paramedics, who have advanced training in critical care medicine and are equipped with specialized medical equipment.\n\nCCT services are used to transport critically ill or injured patients between medical facilities or from the scene of an emergency to a medical facility. CCT services provide a higher level of care than traditional ambulance services, and are designed to transport patients who require more advanced medical interventions and monitoring during transport, such as patients on ventilators, with hemodynamic instability, or requiring advanced medication support.\n\nCCT services typically involve specialized vehicles that are equipped with advanced medical equipment and technology, such as ventilators, defibrillators, and infusion pumps, as well as specialized monitoring equipment, such as cardiac monitors and pulse oximeters. The healthcare professionals providing CCT services are trained to provide advanced medical interventions and support during transport, such as advanced airway management, hemodynamic support, and medication administration.\n\nThe goal of CCT services is to provide safe and effective transport for critically ill or injured patients, with the aim of maintaining or improving their condition during transport, and ensuring that they arrive at their destination with the highest level of care and support possible.",
-      "serviceId": "5",
-      "important": true
+      "serviceId": "4",
+      "important": true,
+      "shortcut": true
     },
     {
       "serviceName": "Air Medical Transportation (AMTS)",
       "image": "/images/weOfferimg5.webp",
       "serviceDescription": "Medical air transportation services provide rapid emergency transportation via aircraft for critically ill or injured patients to distant or inaccessible medical facilities.",
       "serviceDetails": "Air Medical Transportation Service (AMTS) refers to a specialized form of medical transport that involves the use of aircraft, such as helicopters or fixed-wing planes, to transport critically ill or injured patients to medical facilities. AMTS is typically used when ground transportation, such as ambulances or CCT services, is not fast enough to transport the patient or when the patient is located in a remote or difficult-to-reach location.\n\nAMTS involves highly trained medical professionals, such as flight nurses and paramedics, who are equipped with advanced medical equipment and technology, such as ventilators, defibrillators, and infusion pumps, as well as specialized monitoring equipment, such as cardiac monitors and pulse oximeters. The aircraft used for AMTS are typically specially designed and equipped to accommodate medical equipment and staff, and are able to take off and land in a variety of locations, including airports, helipads, and remote landing zones.\n\nAMTS is often used in emergency situations, such as in response to a trauma, cardiac arrest, or other life-threatening medical condition, where time is critical and immediate medical intervention is necessary. AMTS is also used for inter-facility transfers, when a patient needs to be transported between medical facilities for specialized care.\n\nThe goal of AMTS is to provide rapid and efficient transport for critically ill or injured patients, with the aim of maintaining or improving their condition during transport, and ensuring that they arrive at their destination with the highest level of care and support possible. AMTS plays a vital role in emergency medical services, helping to save lives and improve patient outcomes.",
-      "serviceId": "6"
+      "serviceId": "5",
+      "shortcut": true,
+      "important": true
     },
     {
       "serviceName": "Legal Medical Transportation",
       "image": "/images/weOfferimg6.webp",
       "serviceDescription": "Legal medical transport provides secure medical transport during legal procedures, ensuring confidentiality and proper care.",
       "serviceDetails": "Legal medical translation refers to the translation of legal documents related to healthcare, medicine, and medical research. Legal medical translation is a specialized field of translation that requires a deep understanding of medical terminology, legal concepts, and cultural differences.\n\nLegal medical translation is typically used for a variety of purposes, such as translating medical reports, patient records, informed consent forms, regulatory documents, clinical trial protocols, and medical device documentation. These documents are often used in legal proceedings, such as court cases, insurance claims, or regulatory submissions, and therefore need to be translated accurately and clearly to ensure that they are legally binding and admissible in court.\n\nLegal medical translation requires a high level of expertise and accuracy, as even minor errors or mistranslations can have serious consequences. Legal medical translators must have a deep understanding of medical terminology and the legal systems of the countries involved, as well as the ability to translate complex technical documents in a clear and concise manner.\n\nLegal medical translation is often subject to strict regulations and guidelines, such as those set by government agencies, professional associations, and regulatory bodies. Legal medical translators must adhere to these regulations and guidelines to ensure that their translations are accurate, reliable, and legally valid.\n\nIn summary, legal medical translation is a specialized field of translation that involves the accurate and reliable translation of legal documents related to healthcare, medicine, and medical research, and is essential for ensuring the legal validity and admissibility of these documents in legal proceedings.",
-      "serviceId": "7"
+      "serviceId": "6",
+      "shortcut": true
     }
   ]
 }
