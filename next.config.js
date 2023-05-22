@@ -24,6 +24,7 @@ module.exports = withPlugins([optimizedImages,
     // your other plugins here
 
 ], {
+    trailingSlash: true,
     reactStrictMode: true,
     images: {
         minimumCacheTTL: 60,
