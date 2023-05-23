@@ -32,12 +32,16 @@ const Work:FC<any> = ({
             <div className={cls.workForm}>
                 <form action="#">
                     <div className={cls.inputInfos}>
-                        <Input type={"text"} inputMode={"text"} name={"position"} className={cls.inputPosition}/>
+                        <Input type={"text"} inputMode={"text"} name={"position"} className={cls.inputPosition} placeholder={"Position Applying For"}/>
                         {/*<input type="text" placeholder={"Position Applying For"} className={cls.inputPosition}/>*/}
-                        <input type="text" placeholder={"First Name"}/>
-                        <input type="text" placeholder={"Last Name"}/>
-                        <input type="email" placeholder={"Email"}/>
-                        <input type="tel" placeholder={"Phone"}/>
+                        {/*<input type="text" placeholder={"First Name"}/>*/}
+                        <Input type={"text"} inputMode={"text"} name={"First Name"} placeholder={"First Name"} className={cls.inputsWork}/>
+                        <Input type={"text"} inputMode={"text"} name={"Last Name"} placeholder={"Last Name"} className={cls.inputsWork} />
+                        <Input type={"email"} inputMode={"Email"} name={"Email"} placeholder={"Email"} className={cls.inputsWork}/>
+                        <Input type={"tel"} inputMode={"tel"} name={"Phone"} placeholder={"Phone"} className={cls.inputsWork}/>
+                        {/*<input type="text" placeholder={"Last Name"}/>*/}
+                        {/*<input type="email" placeholder={"Email"}/>*/}
+                        {/*<input type="tel" placeholder={"Phone"}/>*/}
                     </div>
                     <div className={cls.inputComment}>
                         <label htmlFor={"file"}>Upload Your Resume</label>
