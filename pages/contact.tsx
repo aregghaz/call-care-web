@@ -1,4 +1,4 @@
-import React, {FC} from "react"
+import React, {FC, useState} from "react"
 import cls from "../styles/Contact.module.scss"
 import MessageIcon from "../svgs/message";
 import TimeIcon from "../svgs/time";
@@ -8,6 +8,9 @@ import useScreenSize from "../hooks/useScreenSize";
 import Input from "@/components/input/input";
 import {useSelector} from "react-redux";
 import {globalSelector} from "@/store/slices/global/global.slice";
+import {TContactForm} from "@/utils/types";
+import validate from "@/utils/validate";
+import Textarea from "@/components/textarea/textarea";
 const Contact = ({
 
 }) => {
@@ -16,9 +19,46 @@ const Contact = ({
 
     const globalData = useSelector(globalSelector)
 
-    const handleTextareaHeight = (evt) => {
-        evt.target.style.height = "50px";
-        evt.target.style.height = (evt.target.scrollHeight)+"px";
+    const [formValues, setFormValues] = useState<TContactForm>({
+        name: "",
+        email: "",
+        phone: "",
+        city: "",
+        message: "",
+    })
+
+    const [fieldsErrors, setFieldsError] = useState<TContactForm>({} as TContactForm)
+
+    const handleFormValuesChange:Function = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, name: string):void => {
+        setFieldsError({...fieldsErrors, [name]: ""})
+        switch (name) {
+            case "name":
+                setFormValues({...formValues, name: e.target.value})
+                break
+            case "email":
+                setFormValues({...formValues, email: e.target.value})
+                break
+            case "phone":
+                setFormValues({...formValues, phone: e.target.value})
+                break
+            case "city":
+                setFormValues({...formValues, city: e.target.value})
+                break
+            case "message":
+                setFormValues({...formValues, message: e.target.value})
+                break
+
+        }
+    }
+
+    const handleContactSend = async (e:any) => {
+        e.preventDefault()
+        const errors = validate(formValues,["name","email","phone","city","message"])
+        if (Object.keys(errors)) {
+            setFieldsError(errors)
+        } else {
+            // send code here
+        }
     }
 
     return (
@@ -27,18 +67,22 @@ const Contact = ({
                 <div className={cls.contactContent}>
                     <div className={cls.formWrapper}>
                         <h2>Have any questions or ideas? <br/> Feel free to contact us!</h2>
-                        <form className={cls.form}>
+                        <form className={cls.form} onSubmit={handleContactSend}>
                             <div className={cls.formDetails}>
-                                <Input type={"text"} placeholder={"Name"} inputMode={"text"}/>
-                                <Input type={"email"} placeholder={"E-mail"}/>
-                                <Input type={"tel"} inputMode={"tel"} placeholder={"Phone"}/>
-                                <Input type={"text"} inputMode={"text"} placeholder={"City"}/>
+                                <Input changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.name} name={"name"} placeholder={"Name"} inputMode={"text"}/>
+                                <Input changeHandler={handleFormValuesChange} type={"email"} error={fieldsErrors.email} name={"email"} placeholder={"E-mail"} inputMode={"email"}/>
+                                <Input changeHandler={handleFormValuesChange} type={"tel"} error={fieldsErrors.phone} name={"phone"} inputMode={"tel"} placeholder={"Phone"}/>
+                                <Input changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.city} name={"city"} inputMode={"text"} placeholder={"City"}/>
                             </div>
-                            <div className={cls.formComment}>
-                                <label htmlFor={"comment"}>Your message</label>
-                                <textarea id={"comment"} onChange={handleTextareaHeight}></textarea>
-                            </div>
-                            <button className={cls.sendButton}>Send Message</button>
+                            <Textarea
+                                changeHandler={handleFormValuesChange}
+                                error={fieldsErrors.message}
+                                name={"message"}
+                                label={"Your message"}
+                                htmlFor={"message"}
+                            />
+                            <input type={"submit"} value={"Send Message"} className={cls.sendButton}/>
+                            {/*<button className={cls.sendButton}>Send Message</button>*/}
                         </form>
                     </div>
                     <div className={cls.info}>
@@ -92,7 +136,7 @@ const Contact = ({
                     style={{
                         border: "none",
                     }}
-                    allowFullScreen=""
+                    allowFullScreen={false}
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

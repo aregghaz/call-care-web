@@ -19,15 +19,16 @@ import {servicesImportantListSelector, servicesShortcutListSelector} from "@/sto
 import {useSelector} from "react-redux";
 import sortInSubarray from "@/utils/sortInSubArr";
 import type { InferGetStaticPropsType, GetStaticProps } from 'next';
+import {TService} from "@/utils/types";
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context:any) {
     return {
         props: {}, // will be passed to the page component as props
     }
 }
 export default function Home(props: any) {
 
-    const services = useSelector(servicesImportantListSelector)
+    const importantServices:Array<TService> = useSelector(servicesImportantListSelector)
 
     const generalMedicalCards: Array<GeneralMedicalCardProps> = [
         {
@@ -150,9 +151,9 @@ export default function Home(props: any) {
                 <section className={cls.services}>
                     <ul>
                         {
-                            services.map(({serviceName, serviceDescription, serviceIcon, serviceId}, index) => {
+                            importantServices.map(({serviceName, serviceDescription, serviceIcon, serviceId}, index:number) => {
                                 return (
-                                    <Service id={serviceId} className={cls.service} dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={serviceName} description={serviceDescription} image={serviceIcon}/>
+                                    <Service id={serviceId} className={cls.service} dataAos={{type: "fade-right", duration: 0, delay: index * 200}} key={index} name={serviceName} description={serviceDescription} image={serviceIcon as string}/>
                                 )
                             })
                         }
@@ -248,7 +249,7 @@ export default function Home(props: any) {
                     <div className={cls.contentBox}>
                         <div>
                             {
-                                sortInSubarray(offerServices, 3).map((item,index) => {
+                                sortInSubarray(offerServices, 3).map((item:Array<TService>,index:number) => {
                                     return (
                                         <div className={cls.topContent} key={index}>
                                             {
@@ -257,7 +258,7 @@ export default function Home(props: any) {
                                                     serviceDescription,
                                                     serviceId,
                                                     image,
-                                                }, index) => {
+                                                }:TService, index:number) => {
                                                     return (
                                                         <OfferService key={index} name={serviceName} description={serviceDescription} link={`/services/${serviceId}`} image={image}/>
                                                     )

@@ -57,3 +57,24 @@ $searchIcon: "/images/searchIcon.svg";
 $lastSecBg: "/images/lastImage.webp";
 
 $calcareavto: "/images/calcareavto.webp";
+
+@mixin errorMessage() {
+  .inputError {
+    & > label {
+      color: crimson;
+    }
+
+    & > input, & > textarea {
+      border-color: crimson;
+
+      &::placeholder {
+        color: crimson;
+      }
+    }
+  }
+
+  .errorMessage {
+    color: crimson;
+    font-size: 12px;
+  }
+}

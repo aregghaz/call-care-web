@@ -15,3 +15,22 @@ export type TypeAos = {
     duration?: number | string,
     delay?: number | string,
 }
+
+export type TService = {
+    serviceName: string,
+    serviceDescription: string,
+    serviceDetails: string,
+    serviceId: string,
+    image: string,
+    shortcut?: boolean,
+    important?: boolean,
+    serviceIcon?: string,
+}
+
+export type TContactForm = {
+    name: string,
+    email: string,
+    phone: string,
+    city: string,
+    message: string
+}

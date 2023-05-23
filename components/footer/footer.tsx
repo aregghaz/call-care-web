@@ -31,7 +31,7 @@ const Footer:FC<any> = ({
                         <li>{globalInfo.email}</li>
                         <li>{globalInfo.address}</li>
                     </ul>
-                </li>
+                </li>bo
                 <li className={cls.footerContentCol}>
                     <ul>
                         <li className={cls.footerContentTitle}>Explore</li>
@@ -50,7 +50,7 @@ const Footer:FC<any> = ({
                         {
                             importantServicesList.length > 0 ? <>
                                 {
-                                    importantServicesList.map((item,index) => {
+                                    importantServicesList.map((item:any,index:number) => {
                                         return (
                                             <li key={index}><Link href={`/services/${item.serviceId}`}>{item.serviceName}</Link></li>
                                         )

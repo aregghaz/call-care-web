@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react"
+    import React, {FC, useState} from "react"
 import cls from "../styles/Refer.module.scss"
 import Input from "../components/input/input";
 import Select from "../components/select/select";

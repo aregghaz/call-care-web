@@ -7,18 +7,18 @@ import {AosInterface} from "../../utils/types";
 export interface ServiceProps {
     name: string,
     description: string,
-    image: imageType,
+    image: string,
     className?: string,
     id?: string
 }
 
 const Service:FC<ServiceProps & AosInterface> = ({
-    name= "",
-    description = "",
-    image = "",
-    className= "",
+    name,
+    description,
+    image,
+    className,
     dataAos= {},
-    id
+    id,
 }) => {
     return (
         <div className={className} data-aos={dataAos.type} data-aos-duration={dataAos.duration} data-aos-delay={dataAos.delay}>

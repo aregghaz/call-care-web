@@ -2,6 +2,7 @@ import React, {FC, useEffect} from "react"
 import cls from '../styles/work.module.scss'
 import {useSelector} from "react-redux";
 import {availablePositionsSelector} from "@/store/slices/work/work.slice";
+import Input from "@/components/input/input";
 
 const Work:FC<any> = ({
 
@@ -31,12 +32,12 @@ const Work:FC<any> = ({
             <div className={cls.workForm}>
                 <form action="#">
                     <div className={cls.inputInfos}>
-                        <input type="text" placeholder={"Position Applying For"} className={cls.inputPosition}/>
+                        <Input type={"text"} inputMode={"text"} name={"position"}/>
+                        {/*<input type="text" placeholder={"Position Applying For"} className={cls.inputPosition}/>*/}
                         <input type="text" placeholder={"First Name"}/>
                         <input type="text" placeholder={"Last Name"}/>
                         <input type="email" placeholder={"Email"}/>
                         <input type="tel" placeholder={"Phone"}/>
-
                     </div>
                     <div className={cls.inputComment}>
                         <label htmlFor={"file"}>Upload Your Resume</label>
