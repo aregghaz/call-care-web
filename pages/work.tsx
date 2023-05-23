@@ -32,7 +32,7 @@ const Work:FC<any> = ({
             <div className={cls.workForm}>
                 <form action="#">
                     <div className={cls.inputInfos}>
-                        <Input type={"text"} inputMode={"text"} name={"position"}/>
+                        <Input type={"text"} inputMode={"text"} name={"position"} className={cls.inputPosition}/>
                         {/*<input type="text" placeholder={"Position Applying For"} className={cls.inputPosition}/>*/}
                         <input type="text" placeholder={"First Name"}/>
                         <input type="text" placeholder={"Last Name"}/>

@@ -8,7 +8,8 @@ interface InputProps {
     placeholder?: string,
     name: string,
     changeHandler?: Function,
-    error?: string
+    error?: string,
+    className?: string,
 }
 
 const Input:FC<InputProps> = ({
@@ -18,14 +19,15 @@ const Input:FC<InputProps> = ({
     placeholder = "",
     name = "",
     changeHandler = () => {},
-    error = ""
+    error = "",
+    className,
 }) => {
     const [value, setValue] = useState("")
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value)
     }
     return (
-        <div className={`${cls.inputWrapper} ${error && cls.inputError}`}>
+        <div className={`${cls.inputWrapper} ${className} ${error && cls.inputError}`}>
             <input
                 className={cls.input}
                 type={type}
