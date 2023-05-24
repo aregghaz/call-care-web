@@ -19,6 +19,14 @@ const Contact = ({
 
     const globalData = useSelector(globalSelector)
 
+    const requiredFields = [
+        "name",
+        "email",
+        "phone",
+        "city",
+        "message",
+    ]
+
     const [formValues, setFormValues] = useState<TContactForm>({
         name: "",
         email: "",
@@ -29,23 +37,23 @@ const Contact = ({
 
     const [fieldsErrors, setFieldsError] = useState<TContactForm>({} as TContactForm)
 
-    const handleFormValuesChange:Function = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, name: string):void => {
+    const handleFormValuesChange:Function = (value: string, name: string):void => {
         setFieldsError({...fieldsErrors, [name]: ""})
         switch (name) {
             case "name":
-                setFormValues({...formValues, name: e.target.value})
+                setFormValues({...formValues, name: value})
                 break
             case "email":
-                setFormValues({...formValues, email: e.target.value})
+                setFormValues({...formValues, email: value})
                 break
             case "phone":
-                setFormValues({...formValues, phone: e.target.value})
+                setFormValues({...formValues, phone: value})
                 break
             case "city":
-                setFormValues({...formValues, city: e.target.value})
+                setFormValues({...formValues, city: value})
                 break
             case "message":
-                setFormValues({...formValues, message: e.target.value})
+                setFormValues({...formValues, message: value})
                 break
 
         }
@@ -53,10 +61,11 @@ const Contact = ({
 
     const handleContactSend = async (e:any) => {
         e.preventDefault()
-        const errors = validate(formValues,["name","email","phone","city","message"])
-        if (Object.keys(errors)) {
+        const errors = validate(formValues,requiredFields)
+        if (Object.keys(errors).length > 0) {
             setFieldsError(errors)
         } else {
+            alert("all okay")
             // send code here
         }
     }
@@ -69,10 +78,10 @@ const Contact = ({
                         <h2>Have any questions or ideas? <br/> Feel free to contact us!</h2>
                         <form className={cls.form} onSubmit={handleContactSend}>
                             <div className={cls.formDetails}>
-                                <Input changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.name} name={"name"} placeholder={"Name"} inputMode={"text"}/>
-                                <Input changeHandler={handleFormValuesChange} type={"email"} error={fieldsErrors.email} name={"email"} placeholder={"E-mail"} inputMode={"email"}/>
-                                <Input changeHandler={handleFormValuesChange} type={"tel"} error={fieldsErrors.phone} name={"phone"} inputMode={"tel"} placeholder={"Phone"}/>
-                                <Input changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.city} name={"city"} inputMode={"text"} placeholder={"City"}/>
+                                <Input required={true} changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.name} name={"name"} placeholder={"Name"} inputMode={"text"}/>
+                                <Input required={true} changeHandler={handleFormValuesChange} type={"email"} error={fieldsErrors.email} name={"email"} placeholder={"E-mail"} inputMode={"email"}/>
+                                <Input required={true} changeHandler={handleFormValuesChange} type={"tel"} error={fieldsErrors.phone} name={"phone"} inputMode={"tel"} placeholder={"Phone"}/>
+                                <Input required={true} changeHandler={handleFormValuesChange} type={"text"} error={fieldsErrors.city} name={"city"} inputMode={"text"} placeholder={"City"}/>
                             </div>
                             <Textarea
                                 changeHandler={handleFormValuesChange}
@@ -80,6 +89,8 @@ const Contact = ({
                                 name={"message"}
                                 label={"Your message"}
                                 htmlFor={"message"}
+                                autoResize={true}
+                                required={true}
                             />
                             <input type={"submit"} value={"Send Message"} className={cls.sendButton}/>
                             {/*<button className={cls.sendButton}>Send Message</button>*/}

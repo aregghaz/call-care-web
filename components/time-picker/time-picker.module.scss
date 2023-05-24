@@ -5,6 +5,7 @@
   height: 60px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .inputs {
@@ -27,4 +28,11 @@
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+@include errorMessage();
+
+.errorMessage {
+  position: absolute;
+  top: 110%;
 }

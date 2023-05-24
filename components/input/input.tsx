@@ -33,7 +33,7 @@ const Input:FC<InputProps> = ({
                 value={value}
                 onChange={(e) => {
                     handleChange(e)
-                    changeHandler(e,name)
+                    changeHandler(e.target.value,name)
                 }}
                 placeholder={`${placeholder}${required ? "*" : ""}`}
             />

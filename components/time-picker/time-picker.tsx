@@ -1,12 +1,18 @@
-import React, {FC, useState} from "react"
+import React, {FC, useEffect, useState} from "react"
 import cls from "./time-picker.module.scss"
 
 interface TimePickerProps {
-    label?: string
+    label?: string,
+    changeHandler?: Function
+    name?: string,
+    error?: string,
 }
 
 const TimePicker:FC<TimePickerProps> = ({
-    label= ""
+    label= "",
+                                            changeHandler = () => {},
+    name = "",
+    error = "",
 }) => {
     const time: Array<string> = [];
     const hoursMinMax: Array<number> = [0, 23];
@@ -36,10 +42,14 @@ const TimePicker:FC<TimePickerProps> = ({
         }
     };
 
+    useEffect(() => {
+        changeHandler(hours || minutes ? `${hours}:${minutes}` : "", name);
+    }, [hours,minutes])
+
     return (
-        <div className={cls.timepicker}>
+        <div className={`${cls.timepicker} ${error && cls.inputError}`}>
             <label>{label}</label>
-            <div className={cls.inputs}>
+            <div className={`${cls.inputs} ${error && cls.inputError}`}>
                 <input
                     className={cls.input}
                     type="number"
@@ -66,6 +76,7 @@ const TimePicker:FC<TimePickerProps> = ({
                     value={minutes}
                 />
             </div>
+            {error && <span className={cls.errorMessage}>{error}</span>}
         </div>
     )
 }

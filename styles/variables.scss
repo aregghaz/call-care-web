@@ -64,8 +64,9 @@ $calcareavto: "/images/calcareavto.webp";
       color: crimson;
     }
 
-    & > input, & > textarea {
+    & > input, & > textarea, & > select {
       border-color: crimson;
+      color: crimson;
 
       &::placeholder {
         color: crimson;

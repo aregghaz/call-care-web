@@ -40,3 +40,10 @@
   color: #000000B5;
   cursor: pointer;
 }
+
+@include errorMessage();
+
+.errorMessage {
+  position: absolute;
+  top: 110%;
+}

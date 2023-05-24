@@ -22,4 +22,13 @@
   position: absolute;
   top: 100%;
   left: 0;
+  z-index: 100;
 }
+
+.errorMessage {
+  position: absolute;
+  top: 110%;
+  z-index: 1;
+}
+
+@include errorMessage()
