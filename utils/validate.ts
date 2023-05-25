@@ -5,6 +5,6 @@ export default function validate(fields:any,requiredFields:Array<string>) {
             errors[currentField] = "Field Required"
         }
     }
-    console.log(errors)
+    console.log("Field Required")
     return errors
 }

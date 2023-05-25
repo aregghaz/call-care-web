@@ -9,7 +9,8 @@ interface DataPickerProps {
     small?: boolean,
     name?: string,
     changeHandler: Function,
-    error?: string
+    error?: string,
+    required?: boolean,
 }
 
 const Datapicker:FC<DataPickerProps> = ({
@@ -19,6 +20,7 @@ const Datapicker:FC<DataPickerProps> = ({
     name = "",
     changeHandler = () => {},
     error = "",
+    required = false
 }) => {
     const [show, setShow] = useState<boolean>(false)
     const [value, setValue] = useState<Date>(new Date)
@@ -34,7 +36,7 @@ const Datapicker:FC<DataPickerProps> = ({
         <div ref={calendarRef} className={`${cls.inputWrapper} ${error && cls.inputError}`} style={{
             width: small ? "150px" : "auto"
         }}>
-            <label htmlFor={id}>{label}</label>
+            <label htmlFor={id}>{label}{required ? "*" : ""}</label>
             <input id={id} className={cls.input} value={value.toLocaleDateString()} type={"text"} readOnly={true} onClick={handleClose}/>
             {show && <div className={cls.calendarInput}>
                 <Calendar onChange={(date:any) => {

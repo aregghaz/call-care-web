@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react"
+import React, {FC, useCallback, useState} from "react"
 import cls from "../styles/Refer.module.scss"
 import Input from "../components/input/input";
 import Select from "../components/select/select";
@@ -8,6 +8,7 @@ import Textarea from "@/components/textarea/textarea";
 import {TContactForm} from "@/utils/types";
 import validate from "@/utils/validate";
 import {usStates} from "@/utils/states";
+import {string} from "prop-types";
 
 type TReferForm = {
     patientFullname: string,
@@ -95,8 +96,12 @@ const Refer: FC<any> = ({}) => {
     const handleFormValuesChange:Function = (value: string, name: string):void => {
         setFieldsError({...fieldsErrors, [name]: ""})
         setFormValues({...formValues, [name]: value})
-        console.log(formValues)
     }
+
+    const handleSend = useCallback(() => {
+        alert("all okay")
+        console.log(formValues)
+    }, [formValues])
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -104,8 +109,7 @@ const Refer: FC<any> = ({}) => {
         if (Object.keys(errors).length > 0) {
             setFieldsError(errors)
         } else {
-            // send code here
-            alert("all okay!")
+            handleSend()
         }
     }
 
@@ -169,6 +173,7 @@ const Refer: FC<any> = ({}) => {
                         <Input
                             type={"text"}
                             placeholder={"Zip Code"}
+                            required={true}
                             inputMode={"text"}
                             name={"patientZipcode"}
                             changeHandler={handleFormValuesChange}
@@ -183,6 +188,7 @@ const Refer: FC<any> = ({}) => {
                             name={"patientEmail"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["patientEmail"]}
+                            required={true}
                         />
                         <Input
                             type={"tel"}
@@ -191,6 +197,7 @@ const Refer: FC<any> = ({}) => {
                             name={"patientPhone"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["patientPhone"]}
+                            required={true}
                         />
                         <Select
                             placeholder={"Gender"}
@@ -207,6 +214,7 @@ const Refer: FC<any> = ({}) => {
                             label={"Date of Birth (DOB)"}
                             name={"patientDateOfBirth"}
                             changeHandler={handleFormValuesChange}
+                            required={true}
                             error={fieldsErrors["patientDateOfBirth"]}
                         />
                         <Input
@@ -214,6 +222,7 @@ const Refer: FC<any> = ({}) => {
                             placeholder={"Height"}
                             inputMode={"numeric"}
                             name={"patientHeight"}
+                            required={true}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["patientHeight"]}
                         />
@@ -222,6 +231,7 @@ const Refer: FC<any> = ({}) => {
                             placeholder={"Weight"}
                             inputMode={"numeric"}
                             name={"patientWeight"}
+                            required={true}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["patientWeight"]}
                         />
@@ -253,6 +263,7 @@ const Refer: FC<any> = ({}) => {
                             changeHandler={handleFormValuesChange}
                             name={"facilityTherapy"}
                             error={fieldsErrors["facilityTherapy"]}
+                            required={true}
                         />
                         <Select
                             label={"Oxygen Stair Chair "}
@@ -261,6 +272,7 @@ const Refer: FC<any> = ({}) => {
                                 {name: "Yes", disabled: false, selected: false},
                                 {name: "No", disabled: false, selected: false},
                             ]}
+                            required={true}
                             changeHandler={handleFormValuesChange}
                             name={"facilityOxygen"}
                             error={fieldsErrors["facilityOxygen"]}
@@ -303,6 +315,7 @@ const Refer: FC<any> = ({}) => {
                         <Datapicker
                             label={"Appointment Date"}
                             small={true}
+                            required={true}
                             changeHandler={handleFormValuesChange}
                             name={"facilityAppointmentDate"}
                             error={fieldsErrors["facilityAppointmentDate"]}
@@ -310,6 +323,7 @@ const Refer: FC<any> = ({}) => {
                         <TimePicker
                             label={"Appointment Time"}
                             changeHandler={handleFormValuesChange}
+                            required={true}
                             name={"facilityAppointmentTime"}
                             error={fieldsErrors["facilityAppointmentTime"]}
                         />
@@ -320,6 +334,7 @@ const Refer: FC<any> = ({}) => {
                             placeholder={"Facility Name"}
                             inputMode={"text"}
                             name={"facilityName"}
+                            required={true}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["facilityName"]}
                         />
@@ -327,6 +342,7 @@ const Refer: FC<any> = ({}) => {
                             type={"tel"}
                             placeholder={"Facility Phone"}
                             inputMode={"tel"}
+                            required={true}
                             name={"facilityPhone"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["facilityPhone"]}
@@ -337,6 +353,7 @@ const Refer: FC<any> = ({}) => {
                             type={"text"}
                             placeholder={"Facility Street Address"}
                             inputMode={"text"}
+                            required={true}
                             name={"facilityStreet"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["facilityStreet"]}
@@ -347,6 +364,7 @@ const Refer: FC<any> = ({}) => {
                             type={"text"}
                             placeholder={"City"}
                             inputMode={"text"}
+                            required={true}
                             name={"facilityCity"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["facilityCity"]}
@@ -365,6 +383,7 @@ const Refer: FC<any> = ({}) => {
                             type={"text"}
                             placeholder={"Zip Code"}
                             inputMode={"text"}
+                            required={true}
                             name={"facilityZipcode"}
                             changeHandler={handleFormValuesChange}
                             error={fieldsErrors["facilityZipcode"]}
@@ -372,7 +391,7 @@ const Refer: FC<any> = ({}) => {
                     </div>
                     <div className={cls.formRepeat1}>
                         <Textarea className={cls.textarea} label={"Special Instructions"} name={"instructions"}
-                                  changeHandler={handleFormValuesChange} autoResize={false} error={fieldsErrors["instructions"]}/>
+                                  changeHandler={handleFormValuesChange} autoResize={false} required={true} error={fieldsErrors["instructions"]}/>
                     </div>
                     <div className={cls.buttonSubmit}>
                         <input type="Submit"/>

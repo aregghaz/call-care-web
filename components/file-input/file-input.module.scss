@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+.file{
+  width: 90px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+
+
+  &::before{
+    content: "File";
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    background-color: #0a0062;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+.fileWrapper {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.errorMessage {
+  margin-top: 10px;
+}
+
+.label {
+  display: flex;
+  gap: 20px;
+
+  & > sub {
+    align-self: flex-end;
+  }
+}
+
+@include errorMessage();

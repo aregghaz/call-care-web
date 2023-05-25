@@ -1,8 +1,21 @@
-import React, {FC, useEffect} from "react"
+import React, {FC, useCallback, useState} from "react"
 import cls from '../styles/work.module.scss'
 import {useSelector} from "react-redux";
 import {availablePositionsSelector} from "@/store/slices/work/work.slice";
 import Input from "@/components/input/input";
+import FileInput from "@/components/file-input/file-input";
+import Textarea from "@/components/textarea/textarea";
+import validate from "@/utils/validate";
+
+type TWorkForm = {
+    position: string,
+    firstName: string,
+    lastName: string,
+    email: string,
+    phone: string,
+    resumeFile: string,
+    resumeText: string,
+}
 
 const Work:FC<any> = ({
 
@@ -12,6 +25,61 @@ const Work:FC<any> = ({
     // useEffect(() => {
     //     dispatch(fetchWork())
     // }, [dispatch])
+    const requiredFields:Array<string> = [
+        "position",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "resumeFile",
+        "resumeText",
+    ]
+
+    const [formValues, setFormValues] = useState<TWorkForm>({
+        position: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        resumeFile: "",
+        resumeText: "",
+    })
+
+    const [fieldsErrors, setFieldsErrors] = useState<TWorkForm>({} as TWorkForm)
+
+    const handleFormValuesChange:Function = (value: string, name: string):void => {
+        if (name === "resumeText") {
+            setFieldsErrors({...fieldsErrors, [name]: "", resumeFile: ""})
+        } else if (name === "resumeFile") {
+            setFieldsErrors({...fieldsErrors, [name]: "", resumeText: ""})
+        } else {
+            setFieldsErrors({...fieldsErrors, [name]: ""})
+        }
+        setFormValues({...formValues, [name]: value})
+    }
+
+    const sendData = useCallback( () => {
+        alert("all okay!")
+        console.log(formValues)
+    }, [formValues])
+
+    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        const errors = validate(formValues,requiredFields)
+        if (Object.keys(errors).length > 0 && errors.resumeFile && errors.resumeText === undefined || Object.keys(errors).length > 0 && errors.resumeText && errors.resumeFile === undefined) {
+            sendData()
+        } else if (Object.keys(errors).length > 0) {
+            if (errors.resumeFile === undefined && errors.resumeText) {
+                delete errors.resumeText
+            } else if (errors.resumeText === undefined && errors.resumeFile) {
+                delete errors.resumeFile
+            }
+            setFieldsErrors(errors)
+        } else {
+            sendData()
+        }
+    }
+
     return (
         <div className={cls.work}>
             <div className={cls.workInfo}>
@@ -20,7 +88,7 @@ const Work:FC<any> = ({
                     <h2>Available Positions</h2>
                     <ul>
                         {
-                            availablePositions.map((position, index) => {
+                            availablePositions.map((position:string, index:number) => {
                                 return (
                                     <li key={index}>{position}</li>
                                 )
@@ -30,24 +98,32 @@ const Work:FC<any> = ({
                 </div>
             </div>
             <div className={cls.workForm}>
-                <form action="#">
+                <form action="#" onSubmit={handleSubmit}>
                     <div className={cls.inputInfos}>
-                        <Input type={"text"} inputMode={"text"} name={"position"} className={cls.inputPosition} placeholder={"Position Applying For"}/>
-                        {/*<input type="text" placeholder={"Position Applying For"} className={cls.inputPosition}/>*/}
-                        {/*<input type="text" placeholder={"First Name"}/>*/}
-                        <Input type={"text"} inputMode={"text"} name={"First Name"} placeholder={"First Name"} className={cls.inputsWork}/>
-                        <Input type={"text"} inputMode={"text"} name={"Last Name"} placeholder={"Last Name"} className={cls.inputsWork} />
-                        <Input type={"email"} inputMode={"Email"} name={"Email"} placeholder={"Email"} className={cls.inputsWork}/>
-                        <Input type={"tel"} inputMode={"tel"} name={"Phone"} placeholder={"Phone"} className={cls.inputsWork}/>
-                        {/*<input type="text" placeholder={"Last Name"}/>*/}
-                        {/*<input type="email" placeholder={"Email"}/>*/}
-                        {/*<input type="tel" placeholder={"Phone"}/>*/}
+                        <Input error={fieldsErrors["position"]} required={true} changeHandler={handleFormValuesChange} type={"text"} inputMode={"text"} name={"position"} className={cls.inputPosition} placeholder={"Position Applying For"}/>
+                        <Input error={fieldsErrors["firstName"]} required={true} changeHandler={handleFormValuesChange} type={"text"} inputMode={"text"} name={"firstName"} placeholder={"First Name"} className={cls.inputsWork}/>
+                        <Input error={fieldsErrors["lastName"]} required={true} changeHandler={handleFormValuesChange} type={"text"} inputMode={"text"} name={"lastName"} placeholder={"Last Name"} className={cls.inputsWork} />
+                        <Input error={fieldsErrors["email"]} required={true} changeHandler={handleFormValuesChange} type={"email"} inputMode={"email"} name={"email"} placeholder={"Email"} className={cls.inputsWork}/>
+                        <Input error={fieldsErrors["phone"]} required={true} changeHandler={handleFormValuesChange} type={"tel"} inputMode={"tel"} name={"phone"} placeholder={"Phone"} className={cls.inputsWork}/>
                     </div>
                     <div className={cls.inputComment}>
-                        <label htmlFor={"file"}>Upload Your Resume</label>
-                        <input type="file" id={"file"} className={cls.file}/>
-                        <label htmlFor={"textCom"}>Or Copy and Paste Your Resume Bellow</label>
-                        <textarea name="comment" id="textCom" cols="30" rows="10" />
+                        <FileInput
+                            label={"Upload Your Resume"}
+                            maxFileSize={25600}
+                            allowedFileExt={["pdf"]}
+                            name={"resumeFile"}
+                            changeHandler={handleFormValuesChange}
+                            error={fieldsErrors["resumeFile"]}
+                        />
+                        <Textarea
+                            required={true}
+                            error={fieldsErrors["resumeText"]}
+                            label={"Or Copy and Paste Your Resume Bellow"}
+                            className={cls.commentTextarea}
+                            name={"resumeText"}
+                            changeHandler={handleFormValuesChange}
+                            autoResize={false}
+                        />
                     </div>
                     <div className={cls.buttonWrapper}>
                         <button className={cls.workSubmit}>

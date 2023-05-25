@@ -6,6 +6,7 @@ interface TimePickerProps {
     changeHandler?: Function
     name?: string,
     error?: string,
+    required?: boolean,
 }
 
 const TimePicker:FC<TimePickerProps> = ({
@@ -13,6 +14,7 @@ const TimePicker:FC<TimePickerProps> = ({
                                             changeHandler = () => {},
     name = "",
     error = "",
+    required = false
 }) => {
     const time: Array<string> = [];
     const hoursMinMax: Array<number> = [0, 23];
@@ -48,7 +50,7 @@ const TimePicker:FC<TimePickerProps> = ({
 
     return (
         <div className={`${cls.timepicker} ${error && cls.inputError}`}>
-            <label>{label}</label>
+            <label>{label}{required ? "*" : ""}</label>
             <div className={`${cls.inputs} ${error && cls.inputError}`}>
                 <input
                     className={cls.input}

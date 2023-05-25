@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react"
+import React, {FC, useCallback, useState} from "react"
 import cls from "../styles/Contact.module.scss"
 import MessageIcon from "../svgs/message";
 import TimeIcon from "../svgs/time";
@@ -59,14 +59,18 @@ const Contact = ({
         }
     }
 
+    const sendData = useCallback(() => {
+        alert("All okay")
+        console.log(formValues)
+    }, [formValues])
+
     const handleContactSend = async (e:any) => {
         e.preventDefault()
         const errors = validate(formValues,requiredFields)
         if (Object.keys(errors).length > 0) {
             setFieldsError(errors)
         } else {
-            alert("all okay")
-            // send code here
+            sendData()
         }
     }
 

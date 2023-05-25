@@ -184,30 +184,6 @@
 
 }
 
-.file{
-  width: 90px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-
-
-  &::before{
-    content: "File";
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    background-color: #0a0062;
-    border-radius: 5px;
-  color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-}
-
 .buttonWrapper{
   width: 100%;
   height: auto;
@@ -226,4 +202,9 @@
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+}
+
+.commentTextarea > textarea {
+  height: 250px !important;
+  border: 1px solid #0a0062 !important;
 }
