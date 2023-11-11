@@ -102,24 +102,24 @@ export default function Home(props: any) {
                             disableOnInteraction: true,
                         }}
                     >
-                        {screenSize.width > 1024 && <>
-                            <SwiperSlide className={cls.slide}>
-                                <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>
-                                    <video autoPlay={true} loop={true} muted={true} playsInline={true}
-                                           className={cls.slideVideo}>
-                                        <source src={require("../public/videos/homeVideo.webm")} type={"video/webm"}/>
-                                    </video>
-                                    <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>
-                                        <h1>Your safe transportation is our top priority</h1>
-                                        <p>Transportation Services for Californians: Your partner in Transportation and safety</p>
-                                        <Link href={"/services"}>
-                                            <Image className={cls.arrowHero} src={"/images/arrowright.svg"}
-                                                   alt={"arrow right"} width={100} height={50}/>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </>}
+                        {/*{screenSize.width > 1024 && <>*/}
+                        {/*    <SwiperSlide className={cls.slide}>*/}
+                        {/*        <div className={`${cls.sliderPage} ${cls.sliderPage1}`}>*/}
+                        {/*            /!*<video autoPlay={true} loop={true} muted={true} playsInline={true}*!/*/}
+                        {/*            /!*       className={cls.slideVideo}>*!/*/}
+                        {/*            /!*    <source src={require("../public/videos/homeVideo.webm")} type={"video/webm"}/>*!/*/}
+                        {/*            /!*</video>*!/*/}
+                        {/*            <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>*/}
+                        {/*                <h1>Your safe transportation is our top priority</h1>*/}
+                        {/*                <p>Transportation Services for Californians: Your partner in Transportation and safety</p>*/}
+                        {/*                <Link href={"/services"}>*/}
+                        {/*                    <Image className={cls.arrowHero} src={"/images/arrowright.svg"}*/}
+                        {/*                           alt={"arrow right"} width={100} height={50}/>*/}
+                        {/*                </Link>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </SwiperSlide>*/}
+                        {/*</>}*/}
                         <SwiperSlide className={cls.slide}>
                             <div className={`${cls.sliderPage} ${cls.sliderPage2}`}>
                                 <div className={`${cls.sliderPageContent} ${cls.sliderPage1Content}`}>

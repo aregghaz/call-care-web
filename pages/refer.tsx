@@ -252,13 +252,11 @@ const Refer: FC<any> = ({}) => {
                         {/*    ]}*/}
                         {/*/>*/}
                         <Select
-                            label={"Therapy"}
+                            label={"Oxygen"}
                             placeholder={"Please Choose"}
                             options={[
-                                {name: "medical1", disabled: false, selected: false},
-                                {name: "medical2", disabled: false, selected: false},
-                                {name: "medical3", disabled: false, selected: false},
-                                {name: "medical4", disabled: false, selected: false},
+                                {name: "Yes", disabled: false, selected: false},
+                                {name: "No", disabled: false, selected: false},
                             ]}
                             changeHandler={handleFormValuesChange}
                             name={"facilityTherapy"}
@@ -266,7 +264,7 @@ const Refer: FC<any> = ({}) => {
                             required={true}
                         />
                         <Select
-                            label={"Oxygen Stair Chair "}
+                            label={"Stair Chair"}
                             placeholder={"Please Choose"}
                             options={[
                                 {name: "Yes", disabled: false, selected: false},

@@ -13,7 +13,7 @@ interface FileInputProps {
 
 }
 
-const fileInput:FC<FileInputProps> = ({
+const FileInput:FC<FileInputProps> = ({
     error= "",
     maxFileSize = Infinity,
     allowedFileExt= [],
@@ -80,4 +80,4 @@ const fileInput:FC<FileInputProps> = ({
     )
 }
 
-export default fileInput
+export default FileInput

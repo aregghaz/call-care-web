@@ -9,11 +9,10 @@
   },
   "work": {
     "availablePositions": [
-      "Sub Contract",
+      "Sub Contractors",
       "EMT’s",
       "Drivers",
-      "Beriacik Services",
-      "Beriacik Gurney Service"
+      "Beriatric Services"
 
     ]
   },
@@ -67,11 +66,19 @@
       "shortcut": true
     },
     {
-      "serviceName": "Legal Medical Transportation",
-      "image": "/images/legal.webp",
-      "serviceDescription": "Legal medical transport provides secure medical transport during legal procedures, ensuring confidentiality and proper care.",
-      "serviceDetails": "Legal medical translation refers to the translation of legal documents related to healthcare, medicine, and medical research. Legal medical translation is a specialized field of translation that requires a deep understanding of medical terminology, legal concepts, and cultural differences.\n\nLegal medical translation is typically used for a variety of purposes, such as translating medical reports, patient records, informed consent forms, regulatory documents, clinical trial protocols, and medical device documentation. These documents are often used in legal proceedings, such as court cases, insurance claims, or regulatory submissions, and therefore need to be translated accurately and clearly to ensure that they are legally binding and admissible in court.\n\nLegal medical translation requires a high level of expertise and accuracy, as even minor errors or mistranslations can have serious consequences. Legal medical translators must have a deep understanding of medical terminology and the legal systems of the countries involved, as well as the ability to translate complex technical documents in a clear and concise manner.\n\nLegal medical translation is often subject to strict regulations and guidelines, such as those set by government agencies, professional associations, and regulatory bodies. Legal medical translators must adhere to these regulations and guidelines to ensure that their translations are accurate, reliable, and legally valid.\n\nIn summary, legal medical translation is a specialized field of translation that involves the accurate and reliable translation of legal documents related to healthcare, medicine, and medical research, and is essential for ensuring the legal validity and admissibility of these documents in legal proceedings.",
+      "serviceName": "Wheelchair Service",
+      "image": "/images/whelchair.jpg",
+      "serviceDescription": "Our comprehensive wheelchair services are designed to cater to a diverse range of mobility challenges, ensuring that every client receives personalized care and solutions.",
+      "serviceDetails": "CalCareLa provides exceptional wheelchair transportation to fit the needs of our clientele. General Medical vehicles are equipped with electric wheelchair ramps and lifts that allows easy entry and exit from our vehicles. GMT can also provide its wheelchair bound clients with an EMT, if necessary, to ensure the highest level of care.",
       "serviceId": "6",
+      "shortcut": true
+    },
+    {
+      "serviceName": "Gurney Services",
+      "image": "/images/gurney.jpeg",
+      "serviceDescription": "Our professional team is dedicated to providing safe and comfortable transportation for individuals with unique mobility needs.",
+      "serviceDetails":"At CalCareLa, we specialize in providing top-notch gurney services for various industries. Our dedicated team is committed to ensuring the safe and efficient transportation of individuals who require specialized care",
+      "serviceId": "7",
       "shortcut": true
     }
   ]
